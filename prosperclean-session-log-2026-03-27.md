@@ -13,16 +13,19 @@
 - [x] **Instagram @prosper.clean** - Backup en progreso, cuenta en proceso de eliminacion
 
 ### PENDIENTE - Fase 0
-- [ ] **Remover Hang Bach** del Business Portfolio "Prosper Clean" (business_id: 2275126392953799) - verificar si ya fue removida (en portfolio "prosper.clean" no aparece)
 - [ ] **Meta refund** - Esperando respuesta de Meta sobre cargos fraudulentos de "Comercial Patricia"
-- [ ] **Visa ...1484** en ad account Susie Vu (342763379) - Verificar que NO sea tarjeta de Paul (pago programado 31 Mar 2026, saldo: 1,566,137 dong ~$65 USD)
+- [x] **Visa ...1484** - Confirmado NO es tarjeta de Paul, es de Susie Vu (saldo pendiente 1,566,137 dong es deuda de ella)
+- [x] **Google Ads** (697-093-3047) - ACTIVO, acceso confirmado via API, auto-tagging on, conversion tracking configurado
+
+### PENDIENTE - Acciones Manuales para Manana (28 Mar)
+- [ ] **Crear Instagram @prosperclean.au** (2 min) - instagram.com → Sign up → email: prosperclean.au@gmail.com → activar 2FA → Business/Cleaning Service
+- [ ] **Crear Google Business Profile** (5 min) - business.google.com → ProsperClean → 34B Templeton Street, Cook, ACT 2614 → categoria: House cleaning service
+- [ ] **Corregir timezone Google Ads** (1 min) - ads.google.com → Settings → Time Zone → Australia/Sydney
 
 ### PENDIENTE - Fase 1: Creacion de Presencia Digital
-- [ ] **Crear Instagram @prosperclean.au** - usar email prosperclean.au@gmail.com, activar 2FA, cuenta Business/Cleaning Service
 - [ ] **Conectar Instagram al Business Portfolio** "prosper.clean" en Meta
 - [ ] **Crear nueva Facebook Page** para ProsperClean Canberra
 - [ ] **Crear nuevo Ad Account** en Business Portfolio (reemplaza el de Susie Vu)
-- [ ] **Aceptar invitacion Google Ads** (Customer ID: 697-093-3047)
 - [ ] **Crear Google Business Profile** - Canberra (ALTA PRIORIDAD para SEO local)
 - [ ] **Crear TikTok Business** para ProsperClean
 - [ ] **Reconstruir web en GoDaddy** Website Builder (Shopify cancelado, site puede caerse)
@@ -41,6 +44,8 @@
 ## Datos Clave del Negocio
 - **Nombre:** ProsperClean
 - **Ubicacion:** Canberra, ACT, Australia
+- **Direccion:** 34B Templeton Street, Cook, ACT 2614
+- **Google Ads Status:** ENABLED, AUD, Conversion Tracking ID: 17760687703, Timezone: Australia/Perth (CAMBIAR a Sydney)
 - **Owner:** Paul Agusto (Pablo Agusto)
 - **Email personal:** pagusto@gmail.com
 - **Email negocio:** prosperclean.au@gmail.com
