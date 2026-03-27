@@ -1,116 +1,118 @@
 ---
 name: roi-calculator
-description: Calculates marketing ROI, ROAS, CPA, LTV, CAC and provides budget allocation recommendations across channels
+description: Calculates marketing ROI, ROAS, CPA, LTV, CAC and provides budget allocation recommendations with break-even analysis
 ---
 
-# ROI Calculator
+# Marketing ROI Calculator
 
 ## Overview
 
-This skill calculates and analyzes marketing return on investment across campaigns, channels, and time periods. It computes key financial metrics, projects future performance based on historical data, and delivers actionable budget allocation recommendations in formatted tables.
+This skill calculates key marketing performance metrics across campaigns and channels. It computes ROI, ROAS, CPA, LTV, and CAC, then projects future performance based on historical data. The output includes formatted comparison tables with actionable budget allocation recommendations.
 
 ## When to Use This Skill
 
-- When a user asks to calculate ROI, ROAS, CPA, LTV, or CAC for marketing campaigns
-- When comparing performance across multiple advertising channels
-- When projecting future campaign returns based on historical data
-- When determining break-even points for marketing investments
-- When deciding how to allocate or reallocate marketing budgets
-- When building a business case for increasing or decreasing spend on a channel
+- When evaluating the financial performance of marketing campaigns
+- When comparing ROI across multiple channels (paid search, social, email, display, etc.)
+- When deciding how to allocate or reallocate marketing budget
+- When projecting future returns based on historical campaign data
+- When performing break-even analysis on new campaigns or channels
+- When calculating customer lifetime value relative to acquisition cost
 
 ## How It Works
 
-1. **Data Collection**: Gather campaign spend, revenue, conversions, and customer data from the user
-2. **Metric Calculation**: Compute all relevant financial metrics using standard formulas
-3. **Cross-Channel Comparison**: Normalize metrics across channels for fair comparison
-4. **Projection Modeling**: Use historical trends to forecast future performance
-5. **Break-Even Analysis**: Determine the point at which investment recovers cost
-6. **Recommendation Generation**: Produce budget allocation advice based on the analysis
+1. Collect campaign data: spend, revenue, conversions, time period, and channel
+2. Calculate core metrics for each campaign and channel
+3. Compare performance across channels using normalized metrics
+4. Project future ROI based on historical trends and stated assumptions
+5. Run break-even analysis to determine minimum performance thresholds
+6. Output formatted tables with clear recommendations
 
-## Instructions
-
-### Core Metrics and Formulas
-
-Always calculate these metrics when sufficient data is provided:
+## Key Metrics and Formulas
 
 - **ROI** = ((Revenue - Cost) / Cost) x 100
 - **ROAS** = Revenue / Ad Spend
-- **CPA** = Total Campaign Cost / Number of Conversions
-- **LTV** = Average Purchase Value x Purchase Frequency x Average Customer Lifespan
-- **CAC** = Total Sales and Marketing Cost / Number of New Customers Acquired
-- **LTV:CAC Ratio** = Customer Lifetime Value / Customer Acquisition Cost
+- **CPA** = Total Cost / Number of Conversions
+- **LTV** = Average Purchase Value x Purchase Frequency x Customer Lifespan
+- **CAC** = Total Sales & Marketing Cost / Number of New Customers Acquired
+- **Break-even ROAS** = 1 / Profit Margin (as a decimal)
 
-### Input Requirements
+## Instructions
 
-Ask the user for the following data points (at minimum):
+### Step 1: Gather Input Data
 
-- Campaign name or channel identifier
-- Total spend (broken down by channel if comparing)
-- Revenue generated or number of conversions
-- Time period covered
-- Conversion value (if not revenue-based)
-- For LTV calculations: average order value, purchase frequency, retention period
+Ask the user for the following information per campaign or channel:
 
-### Output Format
+- Campaign/channel name
+- Total spend (ad spend + associated costs)
+- Revenue generated (or conversion value)
+- Number of conversions or customers acquired
+- Time period (start and end dates)
+- Average order value (if available)
+- Customer retention rate and repeat purchase data (for LTV)
+- Profit margin on products/services (for break-even analysis)
 
-Always present results in structured tables. Example format:
+If the user provides partial data, calculate what is possible and note which metrics require additional inputs.
+
+### Step 2: Calculate Core Metrics
+
+For each campaign or channel, compute:
+
+| Metric | Formula | Good Benchmark |
+|--------|---------|----------------|
+| ROI | ((Revenue - Cost) / Cost) x 100 | > 100% |
+| ROAS | Revenue / Ad Spend | > 3.0x |
+| CPA | Total Cost / Conversions | Varies by industry |
+| LTV | Avg Value x Frequency x Lifespan | > 3x CAC |
+| CAC | Total Cost / New Customers | < 1/3 of LTV |
+
+### Step 3: Build the Comparison Table
+
+Present results in a clear markdown table:
 
 ```
-| Channel        | Spend     | Revenue   | ROI    | ROAS  | CPA    |
-|----------------|-----------|-----------|--------|-------|--------|
-| Google Ads     | $10,000   | $35,000   | 250%   | 3.5x  | $28.57 |
-| Meta Ads       | $8,000    | $22,400   | 180%   | 2.8x  | $35.56 |
-| LinkedIn Ads   | $5,000    | $11,000   | 120%   | 2.2x  | $62.50 |
+| Channel       | Spend    | Revenue  | ROI    | ROAS  | CPA    | LTV:CAC |
+|---------------|----------|----------|--------|-------|--------|---------|
+| Google Ads    | $10,000  | $35,000  | 250%   | 3.5x  | $25.00 | 4.2:1   |
+| Meta Ads      | $8,000   | $20,000  | 150%   | 2.5x  | $32.00 | 3.1:1   |
+| Email         | $2,000   | $15,000  | 650%   | 7.5x  | $8.00  | 6.8:1   |
 ```
 
-### Break-Even Analysis
+### Step 4: Project Future ROI
 
-When performing break-even analysis:
+When projecting, clearly state assumptions:
 
-1. Calculate the break-even point: Spend / Average Revenue Per Conversion
-2. Determine time to break-even based on current conversion rates
-3. Factor in fixed costs vs. variable costs where applicable
-4. Present a clear statement: "At the current CPA of $X and average deal value of $Y, the campaign breaks even after Z conversions (approximately N days at current pace)"
+- Historical growth rate or trend direction
+- Diminishing returns at higher spend levels (assume 10-20% efficiency loss per 50% budget increase unless told otherwise)
+- Seasonal adjustments if applicable
+- Market saturation considerations
 
-### Projection Guidelines
+### Step 5: Break-Even Analysis
 
-When projecting ROI:
+Calculate the break-even point for each channel:
 
-- Use at least 3 data points (ideally monthly or weekly) for trend analysis
-- Apply diminishing returns curves for scaling projections (do not assume linear growth)
-- State all assumptions explicitly (e.g., "Assuming consistent conversion rates and no seasonality adjustments")
-- Provide conservative, moderate, and aggressive scenarios
-- Flag any data quality concerns or insufficient sample sizes
+- Break-even ROAS = 1 / Profit Margin
+- Break-even CPA = Average Order Value x Profit Margin
+- Months to break even = CAC / (Monthly Revenue per Customer x Profit Margin)
 
-### Budget Allocation Recommendations
+### Step 6: Provide Recommendations
 
-Structure recommendations as follows:
+Always conclude with:
 
-1. **Current allocation** vs. **recommended allocation** side by side
-2. **Rationale** for each reallocation tied to specific metrics
-3. **Expected impact** of the reallocation in concrete numbers
-4. **Risk factors** that could affect the recommendation
-5. **Suggested test**: recommend a phased approach rather than abrupt shifts
+1. **Top performing channel** by ROI and by ROAS
+2. **Recommended budget reallocation** with specific percentages
+3. **Channels to scale** (high ROI with room to grow)
+4. **Channels to optimize** (moderate ROI, potential for improvement)
+5. **Channels to reconsider** (below break-even or negative ROI)
+6. **Projected impact** of the recommended reallocation
 
-### Best Practices
+## Best Practices
 
-- Always clarify whether figures are gross or net revenue
-- Account for attribution models (last-click, first-click, multi-touch) and note which is being used
-- Distinguish between blended and channel-specific CAC
-- For LTV:CAC ratio, flag if it falls below 3:1 (unhealthy) or above 5:1 (potential underinvestment)
-- Include confidence intervals or ranges rather than single-point estimates when projecting
-- Consider seasonality, market changes, and competitive dynamics in projections
-- Round financial figures to two decimal places; round percentages to one decimal place
-- When data is incomplete, state what additional data would improve the analysis
-- Never present projections as guarantees; always frame them as estimates based on stated assumptions
-
-### Example Interaction
-
-User provides: "We spent $15,000 on Google Ads and $10,000 on Meta last month. Google generated $52,500 in revenue from 150 conversions. Meta generated $28,000 from 200 conversions."
-
-Response should include:
-1. A comparison table with ROI, ROAS, CPA for both channels
-2. Observation that Meta has lower CPA but Google has higher ROAS
-3. Note about different conversion values ($350 Google vs $140 Meta)
-4. Recommendation to investigate conversion quality differences
-5. Suggestion for budget reallocation with expected outcomes
+- Always distinguish between blended ROI and channel-specific ROI
+- Account for attribution models when comparing channels (last-click vs. multi-touch)
+- Flag when data samples are too small for reliable conclusions (fewer than 100 conversions)
+- Include confidence intervals on projections when possible
+- Remind users that correlation between spend and revenue does not imply direct causation
+- Consider the full funnel impact -- some channels drive awareness that converts elsewhere
+- When LTV data is unavailable, note that CPA-only analysis may undervalue channels that attract high-retention customers
+- Use consistent time periods when comparing across channels
+- Round currency to two decimal places and percentages to one decimal place
