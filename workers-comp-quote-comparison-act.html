@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers' Compensation ACT - Tabla de Cotizacion</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .header {
+            background: linear-gradient(135deg, #003366 0%, #005599 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,51,102,0.3);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; font-size: 15px; line-height: 1.5; }
+
+        .current-policy {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-left: 5px solid #e74c3c;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .current-policy h2 { color: #e74c3c; margin-bottom: 12px; font-size: 18px; }
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .policy-item { }
+        .policy-item label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+        .policy-item .value { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+        .policy-item .value.highlight { color: #e74c3c; font-size: 22px; }
+
+        .table-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .table-section h2 { margin-bottom: 16px; font-size: 20px; color: #003366; }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14px;
+        }
+        .comparison-table thead th {
+            background: #003366;
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .comparison-table thead th:first-child { border-radius: 8px 0 0 0; }
+        .comparison-table thead th:last-child { border-radius: 0 8px 0 0; }
+
+        .comparison-table tbody td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: #f8f9ff; }
+        .comparison-table tbody tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+        .comparison-table tbody tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+        .insurer-name {
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .insurer-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .badge-current { background: #e74c3c; color: white; }
+        .badge-recommended { background: #27ae60; color: white; }
+        .badge-good { background: #3498db; color: white; }
+
+        .stars { color: #f39c12; font-size: 16px; letter-spacing: 2px; }
+
+        .contact-info { font-size: 13px; line-height: 1.8; }
+        .contact-info a { color: #005599; text-decoration: none; }
+        .contact-info a:hover { text-decoration: underline; }
+
+        .features-list { list-style: none; font-size: 13px; }
+        .features-list li { padding: 2px 0; }
+        .features-list li::before { content: "✓ "; color: #27ae60; font-weight: bold; }
+
+        .recommendation {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(39,174,96,0.3);
+        }
+        .recommendation h2 { margin-bottom: 12px; font-size: 20px; }
+        .recommendation ol { margin-left: 20px; line-height: 2; }
+        .recommendation li { font-size: 15px; }
+
+        .tips {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-left: 5px solid #f39c12;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .tips h2 { color: #f39c12; margin-bottom: 12px; }
+        .tips ul { margin-left: 20px; line-height: 2; }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .premium-estimate {
+            font-size: 20px;
+            font-weight: 800;
+            color: #003366;
+        }
+        .premium-note {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #005599;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+        .action-btn:hover { background: #003d73; }
+
+        @media (max-width: 768px) {
+            .comparison-table { font-size: 12px; }
+            .comparison-table thead th, .comparison-table tbody td { padding: 10px 8px; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>Workers' Compensation Insurance - ACT</h1>
+            <p>Tabla Comparativa de Aseguradoras Licenciadas en Australian Capital Territory</p>
+            <p>Negocio: Smile Air Duct Installation Pty Ltd | Dunlop, ACT 2615 | Industria: HVAC / Instalacion de Ductos</p>
+        </div>
+
+        <div class="current-policy">
+            <h2>Poliza Actual - Allianz Australia</h2>
+            <div class="policy-grid">
+                <div class="policy-item">
+                    <label>Aseguradora</label>
+                    <div class="value">Allianz</div>
+                </div>
+                <div class="policy-item">
+                    <label>No. Poliza</label>
+                    <div class="value">CWC0004220</div>
+                </div>
+                <div class="policy-item">
+                    <label>Periodo</label>
+                    <div class="value">24/07/25 - 24/07/26</div>
+                </div>
+                <div class="policy-item">
+                    <label>Prima (sin GST)</label>
+                    <div class="value">$2,486.96</div>
+                </div>
+                <div class="policy-item">
+                    <label>GST</label>
+                    <div class="value">$248.70</div>
+                </div>
+                <div class="policy-item">
+                    <label>Total a Pagar</label>
+                    <div class="value highlight">$2,735.66</div>
+                </div>
+                <div class="policy-item">
+                    <label>No. Cuenta</label>
+                    <div class="value">C5399089</div>
+                </div>
+                <div class="policy-item">
+                    <label>Tipo</label>
+                    <div class="value">Direct Client</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>Aseguradoras Licenciadas en ACT - Comparacion</h2>
+            <p style="margin-bottom:16px; color:#666; font-size:14px;">
+                El esquema de Workers' Compensation en ACT es de mercado privado, regulado por
+                <strong>WorkSafe ACT</strong> bajo la <em>Workers Compensation Act 1951</em>.
+                Solo las aseguradoras licenciadas pueden emitir polizas.
+            </p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aseguradora</th>
+                        <th>Estado</th>
+                        <th>Cotizacion Estimada*</th>
+                        <th>Contacto</th>
+                        <th>Ventajas Clave</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Allianz -->
+                    <tr>
+                        <td>
+                            <div class="insurer-name">
+                                <div class="insurer-logo" style="background:#003781;">AZ</div>
+                                <div>
+                                    Allianz Australia
+                                    <br><span class="badge badge-current">ACTUAL</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Licenciada ACT</td>
+                        <td>
+                            <div class="premium-estimate">$2,735.66</div>
+                            <div class="premium-note">Precio actual confirmado (inc. GST)</div>
+                        </td>
+                        <td class="contact-info">
+                            Tel: <a href="tel:1300130664">1300 130 664</a><br>
+                            Web: <a href="https://www.allianz.com.au/business-insurance/workers-compensation/act.html" target="_blank">allianz.com.au</a><br>
+                            ABN: 15 000 122 850
+                        </td>
+                        <td>
+                            <ul class="features-list">
+                                <li>Portal online 24/7</li>
+                                <li>Gestion de claims digital</li>
+                                <li>Fuerte en SME</li>
+                                <li>Programas de retorno al trabajo</li>
+                            </ul>
+                        </td>
+                        <td><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div></td>
+                    </tr>
+
+                    <!-- QBE -->
+                    <tr>
+                        <td>
+                            <div class="insurer-name">
+                                <div class="insurer-logo" style="background:#0066cc;">QBE</div>
+                                <div>
+                                    QBE Insurance
+                                    <br><span class="badge badge-recommended">RECOMENDADA</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Licenciada ACT</td>
+                        <td>
+                            <div class="premium-estimate">$2,400 - $2,900</div>
+                            <div class="premium-note">Estimado - solicitar cotizacion</div>
+                        </td>
+                        <td class="contact-info">
+                            Tel: <a href="tel:133723">13 37 23</a><br>
+                            Web: <a href="https://www.qbe.com/au/business-insurance/workers-compensation/act" target="_blank">qbe.com/au</a><br>
+                            Cotiza online disponible
+                        </td>
+                        <td>
+                            <ul class="features-list">
+                                <li>Cotizacion online rapida</li>
+                                <li>Excelente servicio SME</li>
+                                <li>Injury management proactivo</li>
+                                <li>Descuentos por buen historial</li>
+                                <li>App movil de gestion</li>
+                            </ul>
+                        </td>
+                        <td><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></td>
+                    </tr>
+
+                    <!-- GIO -->
+                    <tr>
+                        <td>
+                            <div class="insurer-name">
+                                <div class="insurer-logo" style="background:#e30613;">GIO</div>
+                                <div>
+                                    GIO (Suncorp Group)
+                                    <br><span class="badge badge-good">BUENA OPCION</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Licenciada ACT</td>
+                        <td>
+                            <div class="premium-estimate">$2,350 - $2,850</div>
+                            <div class="premium-note">Estimado - solicitar cotizacion</div>
+                        </td>
+                        <td class="contact-info">
+                            Tel: <a href="tel:131010">13 10 10</a><br>
+                            Web: <a href="https://www.gio.com.au/business-insurance/workers-compensation/act.html" target="_blank">gio.com.au</a><br>
+                            Cotiza online o por telefono
+                        </td>
+                        <td>
+                            <ul class="features-list">
+                                <li>Transferencia de poliza facil</li>
+                                <li>Buenas tarifas para trades</li>
+                                <li>Soporte dedicado ACT</li>
+                                <li>Descuentos multi-poliza</li>
+                            </ul>
+                        </td>
+                        <td><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div></td>
+                    </tr>
+
+                    <!-- CGU -->
+                    <tr>
+                        <td>
+                            <div class="insurer-name">
+                                <div class="insurer-logo" style="background:#ff6600;">CGU</div>
+                                <div>
+                                    CGU Insurance (IAG)
+                                    <br><span class="badge badge-good">BUENA OPCION</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Licenciada ACT</td>
+                        <td>
+                            <div class="premium-estimate">$2,450 - $2,950</div>
+                            <div class="premium-note">Estimado - solicitar cotizacion</div>
+                        </td>
+                        <td class="contact-info">
+                            Tel: <a href="tel:1300365219">1300 365 219</a><br>
+                            Email: <a href="mailto:ACTUnderwritingWC@cgu.com.au">ACTUnderwritingWC@cgu.com.au</a><br>
+                            Oficina: 24 Brisbane Ave, Barton ACT 2600<br>
+                            Web: <a href="https://www.cgu.com.au/business/workers-compensation/act" target="_blank">cgu.com.au</a>
+                        </td>
+                        <td>
+                            <ul class="features-list">
+                                <li>Oficina local en Barton, ACT</li>
+                                <li>Fuerte red de brokers</li>
+                                <li>Portal online de gestion</li>
+                                <li>Soporte multi-estado</li>
+                            </ul>
+                        </td>
+                        <td><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px; font-size:12px; color:#999;">
+                * Las cotizaciones estimadas son orientativas y dependen del salario declarado, historial de claims,
+                clasificacion de industria (ANZSIC) y experiencia del negocio. Las primas reales pueden variar.
+                Solicita cotizacion formal a cada aseguradora para precios exactos.
+            </p>
+        </div>
+
+        <div class="table-section">
+            <h2>Como se Calcula la Prima en ACT</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Descripcion</th>
+                        <th>Impacto en tu Caso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Salarios Brutos Anuales</strong></td>
+                        <td>Total de wages pagados a todos los empleados durante el periodo de la poliza</td>
+                        <td>Base principal del calculo. A menor salario total, menor prima.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tasa de Industria</strong></td>
+                        <td>Cada industria tiene una tasa basada en su nivel de riesgo (codigo ANZSIC). HVAC/ductos es riesgo medio-alto (~2.5-4% de wages).</td>
+                        <td>Instalacion de ductos se clasifica como trabajo de riesgo moderado. Tasa estimada ~2.5-3.5%.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Historial de Claims</strong></td>
+                        <td>Los ultimos 3-5 anos de historial de reclamaciones afectan la prima.</td>
+                        <td>Sin claims = descuento. Claims previos = recargo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Experiencia del Empleador</strong></td>
+                        <td>Modificador basado en la experiencia de claims vs la industria promedio.</td>
+                        <td>Buen historial de seguridad puede reducir la prima un 10-30%.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GST</strong></td>
+                        <td>10% sobre la prima neta.</td>
+                        <td>$248.70 en tu caso actual.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="recommendation">
+            <h2>Mis Recomendaciones</h2>
+            <ol>
+                <li><strong>Solicita cotizacion a las 4 aseguradoras.</strong> El mercado ACT es competitivo. Pide quotes a QBE, GIO, CGU y Allianz al menos 60-90 dias antes de la renovacion (mayo 2026).</li>
+                <li><strong>QBE es la opcion mas recomendada</strong> para pequeños negocios tipo trade/HVAC. Tienen cotizacion online rapida, buen servicio para SME, y frecuentemente ofrecen tarifas competitivas para negocios con buen historial.</li>
+                <li><strong>GIO es la segunda mejor opcion.</strong> Históricamente ofrecen buenas tarifas para negocios de trades (plomeria, electricidad, HVAC) en ACT.</li>
+                <li><strong>Considera usar un broker de seguros.</strong> Un broker puede negociar mejores tarifas en tu nombre y comparar todas las opciones sin costo para ti (el broker cobra comision de la aseguradora).</li>
+                <li><strong>Mantén un buen historial de seguridad.</strong> Cero claims en los últimos años puede darte descuentos de hasta 30% en la prima.</li>
+                <li><strong>Reporta salarios con precision.</strong> Sobreestimar los wages incrementa la prima innecesariamente. Revisa bien los numeros antes de renovar.</li>
+            </ol>
+        </div>
+
+        <div class="tips">
+            <h2>Consejos para Ahorrar en Workers' Comp</h2>
+            <ul>
+                <li><strong>Compara SIEMPRE:</strong> Nunca renueves automaticamente sin pedir al menos 3 cotizaciones.</li>
+                <li><strong>Negocia:</strong> Si recibes una cotizacion mas baja de otra aseguradora, usa eso para negociar con Allianz.</li>
+                <li><strong>Programa de seguridad:</strong> Implementa y documenta un workplace safety plan. Esto reduce riesgo y prima.</li>
+                <li><strong>Return to Work plan:</strong> Tener un plan de retorno al trabajo documentado puede reducir costos.</li>
+                <li><strong>Paga anual:</strong> Algunas aseguradoras ofrecen descuento si pagas la prima anual de una sola vez en lugar de en cuotas.</li>
+                <li><strong>Bundle de seguros:</strong> Contratar workers comp + public liability + tools insurance con la misma aseguradora puede darte descuentos multi-poliza de 5-15%.</li>
+                <li><strong>Revisa la clasificacion:</strong> Asegurate que tu negocio este clasificado correctamente. Una clasificacion incorrecta puede hacerte pagar de mas.</li>
+            </ul>
+        </div>
+
+        <div class="table-section">
+            <h2>Pasos de Accion - Timeline</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Cuando</th>
+                        <th>Accion</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Abril 2026</strong></td>
+                        <td>Prepara documentacion</td>
+                        <td>Calcula total de wages estimados para 2026-27. Reune historial de claims (si hay) de Allianz.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mayo 2026</strong></td>
+                        <td>Solicita cotizaciones</td>
+                        <td>Contacta QBE (13 37 23), GIO (13 10 10), CGU (1300 365 219). Pide cotizacion formal a cada una.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Junio 2026</strong></td>
+                        <td>Compara y negocia</td>
+                        <td>Compara las cotizaciones recibidas. Usa la mas baja para negociar con las demas (incluida Allianz).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Julio 2026</strong></td>
+                        <td>Decide y renueva/cambia</td>
+                        <td>Elige la mejor opcion antes del vencimiento (24/07/2026). Si cambias, la nueva aseguradora gestiona la transferencia.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Documento preparado el 27 de Marzo 2026 | Solo con fines informativos</p>
+            <p>Las cotizaciones estimadas son orientativas. Solicita cotizacion formal para precios exactos.</p>
+            <p>Regulador: <a href="https://www.worksafe.act.gov.au/workers-compensation" target="_blank">WorkSafe ACT</a> |
+               Legislacion: Workers Compensation Act 1951 (ACT)</p>
+        </div>
+
+    </div>
+</body>
+</html>
