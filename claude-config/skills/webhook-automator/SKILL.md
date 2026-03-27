@@ -7,200 +7,190 @@ description: Designs webhook-based automation workflows with trigger-action mapp
 
 ## Overview
 
-This skill designs webhook-based automation workflows that connect tools and services. It creates endpoint configurations, maps triggers to actions across platforms, generates payload schemas and transformation logic, and handles conditional routing and error recovery. The output includes workflow diagrams, configuration files, and implementation guides.
+This skill designs webhook-based automation workflows that connect tools and services. It creates endpoint configurations, maps triggers to actions across platforms (CRM, email, Slack, project management), generates payload schemas and transformation logic, and supports conditional routing with error handling. The output includes workflow diagrams and ready-to-use configuration files.
 
 ## When to Use This Skill
 
-- When a user needs to connect two or more tools via webhooks (e.g., CRM to Slack)
-- When designing event-driven automation pipelines
-- When creating payload transformation logic between incompatible APIs
-- When setting up conditional routing based on event data
-- When documenting automation workflows for a team
-- When troubleshooting or optimizing existing webhook integrations
+- When connecting two or more tools that support webhooks
+- When automating repetitive tasks triggered by events (form submission, purchase, status change)
+- When building notification pipelines across Slack, email, and project management tools
+- When designing data sync workflows between CRM, marketing, and sales platforms
+- When creating event-driven workflows that require conditional logic or branching
+- When documenting existing automation flows or planning new integrations
 
 ## How It Works
 
-1. **Requirement Gathering**: Identify the trigger event, source system, and target actions
-2. **Workflow Design**: Map the complete flow from trigger to final action(s)
-3. **Endpoint Configuration**: Define webhook URLs, methods, headers, and authentication
-4. **Payload Mapping**: Create schemas and transformation logic between systems
-5. **Conditional Logic**: Add branching, filtering, and routing rules
-6. **Error Handling**: Define retry strategies, fallbacks, and alerting
-7. **Documentation**: Output workflow diagrams and configuration files
+1. Identify the trigger event and source system
+2. Define the desired action(s) and destination system(s)
+3. Map the data fields from trigger payload to action payload
+4. Add conditional routing, filters, and transformation logic
+5. Configure error handling and retry strategies
+6. Output the complete workflow as a diagram and configuration
 
 ## Instructions
 
-### Workflow Design Process
+### Step 1: Define the Trigger
 
-For every automation request, define these components:
+Gather the following from the user:
 
-1. **Trigger**: The event that initiates the workflow
-   - Source system (e.g., Stripe, Shopify, GitHub)
-   - Event type (e.g., `payment.completed`, `order.created`, `push`)
-   - Webhook URL and HTTP method
+- **Source system**: The platform generating the event (e.g., Stripe, Shopify, HubSpot, Typeform)
+- **Trigger event**: The specific event (e.g., "payment.completed", "form.submitted", "deal.stage.changed")
+- **Payload structure**: The data sent with the webhook (or ask the user to provide a sample payload)
+- **Frequency**: Expected volume (events per hour/day) for rate limiting considerations
 
-2. **Processing**: Transformation and logic applied to the payload
-   - Data extraction and mapping
-   - Conditional branching
-   - Data enrichment (lookups to other systems)
-
-3. **Action(s)**: The outcome(s) executed in target systems
-   - Target system and API endpoint
-   - Mapped payload
-   - Expected response and success criteria
-
-### Endpoint Configuration Template
-
-```yaml
-webhook:
-  name: "[descriptive-name]"
-  url: "https://your-domain.com/webhooks/[path]"
-  method: POST
-  headers:
-    Content-Type: "application/json"
-    Authorization: "Bearer ${WEBHOOK_SECRET}"
-    X-Webhook-Source: "[source-system]"
-  authentication:
-    type: "hmac-sha256"
-    secret_env: "WEBHOOK_SIGNING_SECRET"
-    header: "X-Signature-256"
-  rate_limit:
-    max_requests: 100
-    window_seconds: 60
-  timeout_ms: 5000
-```
-
-### Payload Schema Design
-
-Always define both the incoming and outgoing payload schemas:
-
-```json
-{
-  "incoming": {
-    "event_type": "string",
-    "timestamp": "ISO 8601",
-    "data": {
-      "id": "string",
-      "amount": "number",
-      "currency": "string",
-      "customer": {
-        "email": "string",
-        "name": "string"
-      }
-    }
-  },
-  "outgoing": {
-    "channel": "#sales-notifications",
-    "text": "New payment of {{data.currency}} {{data.amount}} from {{data.customer.name}}",
-    "metadata": {
-      "source_event_id": "{{data.id}}"
-    }
-  }
-}
-```
-
-### Transformation Logic
-
-When source and target schemas differ, provide explicit mapping:
+Document the trigger as:
 
 ```
-Source Field              -> Target Field              Transform
-----------------------------------------------------------------------
-data.amount_cents         -> payment.amount            divide by 100
-data.customer.full_name   -> contact.first_name        split on space, take [0]
-data.customer.full_name   -> contact.last_name         split on space, take [1:]
-data.created_at (unix)    -> event.timestamp            convert to ISO 8601
-data.status               -> deal.stage                 map: "paid" -> "Won"
+Trigger:
+  Source: Stripe
+  Event: payment_intent.succeeded
+  Payload fields: id, amount, currency, customer_email, metadata
+  Expected volume: ~200 events/day
 ```
 
-### Conditional Routing
+### Step 2: Define the Action(s)
 
-Define routing rules clearly:
+For each action in the workflow:
 
-```yaml
-routing:
-  - condition: "data.amount >= 10000"
-    action: "notify_sales_team"
-    channel: "#high-value-deals"
-  - condition: "data.amount >= 1000 AND data.amount < 10000"
-    action: "notify_sales_channel"
-    channel: "#sales"
-  - condition: "data.customer.country NOT IN ['US', 'CA']"
-    action: "notify_international_team"
-    channel: "#international-sales"
-  - default:
-    action: "log_event"
-    destination: "webhook_events_table"
+- **Destination system**: Where the data should go
+- **Action type**: Create record, update record, send message, trigger workflow
+- **Required fields**: What the destination API needs
+- **Authentication**: API key, OAuth, bearer token
+
+Common action patterns:
+
+| Trigger | Action | Use Case |
+|---------|--------|----------|
+| Form submitted | Create CRM contact | Lead capture |
+| Payment received | Send Slack notification | Sales alerts |
+| Deal stage changed | Update project board | Pipeline sync |
+| Customer created | Add to email sequence | Onboarding automation |
+| Support ticket closed | Send survey email | Feedback collection |
+
+### Step 3: Map and Transform Data
+
+Create a field mapping table:
+
+```
+Field Mapping:
+  Source (Stripe)          -> Destination (HubSpot)
+  ─────────────────────────────────────────────────
+  customer_email           -> email
+  amount / 100             -> deal_amount (transform: cents to dollars)
+  metadata.plan_name       -> plan_type (nested field extraction)
+  created (unix timestamp) -> close_date (transform: to ISO 8601)
+  "Won"                    -> deal_stage (static value)
 ```
 
-### Error Handling Strategy
+Document any transformations:
+- Data type conversions (timestamp formats, currency units)
+- String manipulations (concatenation, case changes)
+- Conditional value mapping (if status = X, set field = Y)
+- Default values for missing fields
 
-Every workflow must include error handling:
+### Step 4: Add Conditional Routing
 
-1. **Retry Policy**: Define retry count, backoff strategy, and intervals
-   ```yaml
-   retry:
-     max_attempts: 3
-     backoff: exponential
-     initial_delay_ms: 1000
-     max_delay_ms: 30000
-   ```
+Define branching logic when the workflow has multiple paths:
 
-2. **Dead Letter Queue**: Where failed events go after retries are exhausted
-3. **Alerting**: Notify the team when failures occur (Slack, email, PagerDuty)
-4. **Idempotency**: Use event IDs to prevent duplicate processing
-5. **Validation**: Check payload structure before processing
+```
+Routing Rules:
+  IF amount >= 10000:
+    -> Send to #high-value-deals Slack channel
+    -> Assign to senior sales rep in CRM
+    -> Create task in project management tool
+  ELSE IF amount >= 1000:
+    -> Send to #deals Slack channel
+    -> Assign to sales team round-robin
+  ELSE:
+    -> Log to spreadsheet only
+    -> Add to automated nurture sequence
+```
 
-### Common Integration Patterns
+### Step 5: Configure Error Handling
 
-Provide platform-specific guidance for these common tools:
+Define what happens when things go wrong:
 
-- **CRM** (HubSpot, Salesforce): Contact creation, deal updates, activity logging
-- **Email** (SendGrid, Mailchimp): Triggered sends, list management, event tracking
-- **Slack**: Channel messages, DMs, interactive messages with buttons
-- **Project Management** (Asana, Jira, Linear): Task creation, status updates
-- **Payment** (Stripe, PayPal): Payment events, subscription changes, refunds
-- **E-commerce** (Shopify, WooCommerce): Order events, inventory updates
+- **Retry strategy**: Number of retries, backoff interval (e.g., 3 retries with exponential backoff: 1s, 4s, 16s)
+- **Timeout**: Maximum wait time for destination response (recommend 30 seconds)
+- **Dead letter queue**: Where to store failed events for manual review
+- **Alerting**: Who gets notified on persistent failures and how
+- **Idempotency**: How to handle duplicate webhook deliveries (use event ID for deduplication)
 
-### Workflow Diagram Format
+```
+Error Handling:
+  Retries: 3 (exponential backoff: 1s, 4s, 16s)
+  Timeout: 30 seconds
+  On failure after retries:
+    -> Log to error tracking (Sentry/Datadog)
+    -> Send alert to #ops-alerts Slack channel
+    -> Store payload in dead letter queue for manual retry
+  Deduplication: Use event.id field, ignore duplicates within 24h window
+```
 
-Present workflows as text-based diagrams:
+### Step 6: Generate Workflow Diagram
+
+Present the workflow visually using ASCII or text-based diagrams:
 
 ```
 [Stripe: payment.succeeded]
         |
         v
-  [Validate Payload]
-        |
-        v
-  [Extract Customer Data]
-        |
-        +---> [amount >= $10k] ---> [Slack: #high-value] + [CRM: Create VIP Deal]
-        |
-        +---> [amount < $10k]  ---> [Slack: #sales] + [CRM: Create Standard Deal]
-        |
-        v
-  [Log to Analytics DB]
+  {Amount >= $100?}
+      /        \
+    YES         NO
+     |           |
+     v           v
+[Slack: #deals] [Log only]
+     |
+     v
+[HubSpot: Create/Update Deal]
+     |
+     v
+[Email: Send receipt]
 ```
 
-### Security Best Practices
+### Step 7: Output Configuration
 
-- Always verify webhook signatures before processing payloads
-- Use HTTPS endpoints exclusively
-- Store secrets in environment variables, never in configuration files
-- Implement IP allowlisting where the source platform supports it
-- Set appropriate rate limits to prevent abuse
-- Log all incoming webhooks for audit purposes
-- Rotate signing secrets on a regular schedule
-- Validate and sanitize all incoming data before use
+Provide the webhook endpoint configuration:
 
-### Best Practices
+```json
+{
+  "webhook": {
+    "endpoint": "/webhooks/stripe/payment-succeeded",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "X-Webhook-Secret": "${STRIPE_WEBHOOK_SECRET}"
+    },
+    "signature_verification": {
+      "header": "Stripe-Signature",
+      "algorithm": "HMAC-SHA256"
+    }
+  },
+  "actions": [
+    {
+      "name": "notify_slack",
+      "type": "http_post",
+      "url": "${SLACK_WEBHOOK_URL}",
+      "condition": "payload.amount >= 10000",
+      "body_template": {
+        "text": "New payment: ${{amount/100}} from {{customer_email}}"
+      }
+    }
+  ]
+}
+```
 
-- Design workflows to be idempotent so replaying events is safe
-- Include a unique event ID in every payload for deduplication
-- Keep transformation logic simple; break complex workflows into stages
-- Monitor webhook latency and set appropriate timeouts
-- Document every workflow with a diagram, payload examples, and owner contact
-- Test workflows with sample payloads before deploying to production
-- Version your webhook endpoints (e.g., `/v1/webhooks/payments`) to support migrations
-- Plan for the source system being unavailable (queue events for later processing)
+## Best Practices
+
+- Always verify webhook signatures to prevent spoofed requests
+- Use HTTPS endpoints exclusively for webhook receivers
+- Respond to webhooks with a 200 status quickly, then process asynchronously
+- Log all incoming webhook payloads for debugging (redact sensitive data)
+- Implement idempotency to handle duplicate deliveries gracefully
+- Set up monitoring for webhook delivery failures and latency
+- Document rate limits for both source and destination APIs
+- Use environment variables for secrets, never hardcode API keys
+- Test workflows with sample payloads before connecting to production events
+- Version your webhook endpoints to allow non-breaking changes
+- Consider webhook ordering -- events may not arrive in chronological order

@@ -1,159 +1,151 @@
 ---
 name: brand-voice
-description: Defines, maintains, and applies consistent brand voice across all content types with multi-persona support
+description: Defines and maintains consistent brand voice across all content with support for multiple personas
 ---
 
-# Brand Voice
+# Brand Voice Guide
 
 ## Overview
 
-This skill helps define, document, and enforce a consistent brand voice across all content. It can analyze existing content to extract voice characteristics, create comprehensive brand voice guidelines, adapt content to match a target voice, and support multiple brand personas tailored to different audience segments.
+This skill helps define, document, and apply a consistent brand voice across all content types. It can create brand voice guidelines from scratch, analyze existing content for voice consistency, adapt content to match a defined brand personality, and manage multiple brand personas for different audiences.
 
 ## When to Use This Skill
 
-- When a user needs to establish brand voice guidelines from scratch
-- When analyzing existing content for voice consistency
-- When rewriting or adapting content to match a specific brand personality
-- When creating voice variations for different audience segments
-- When reviewing content drafts for brand alignment
-- When onboarding new content creators who need to understand the brand voice
+- When establishing a new brand voice or refining an existing one
+- When auditing content for voice consistency across channels
+- When rewriting content to match a specific brand personality
+- When onboarding new team members who need to understand the brand voice
+- When creating content for different audience segments that require adapted personas
+- When reviewing drafts to ensure they align with brand guidelines
 
 ## How It Works
 
-1. **Voice Discovery**: Analyze sample content or user descriptions to identify voice attributes
-2. **Guideline Creation**: Document the voice across multiple dimensions with concrete examples
-3. **Content Analysis**: Score existing content against the defined voice profile
-4. **Voice Adaptation**: Rewrite or adjust content to align with the brand voice
-5. **Persona Management**: Maintain distinct voice profiles for different audiences or sub-brands
+1. Define or extract the brand's core voice attributes
+2. Document specific guidelines for tone, vocabulary, sentence structure, and style
+3. Analyze content samples against the defined voice profile
+4. Rewrite or adjust content to match the target voice
+5. Maintain consistency while adapting for different contexts and audiences
 
 ## Instructions
 
-### Voice Dimensions
+### Step 1: Define Core Voice Attributes
 
-Define brand voice across these five core dimensions, each on a spectrum:
+Identify 3-5 primary voice attributes. Each attribute should sit on a spectrum:
 
-1. **Tone**: Formal <---> Casual
-2. **Emotion**: Reserved <---> Enthusiastic
-3. **Complexity**: Simple <---> Technical
-4. **Authority**: Peer-level <---> Expert
-5. **Humor**: Serious <---> Playful
+| Attribute | Scale |
+|-----------|-------|
+| Formality | Casual <-----> Formal |
+| Humor | Serious <-----> Playful |
+| Authority | Peer-like <-----> Expert |
+| Warmth | Direct <-----> Empathetic |
+| Complexity | Simple <-----> Technical |
 
-Rate each dimension on a 1-10 scale and provide descriptive anchors.
+For each attribute, assign a position (1-10) and provide a rationale.
 
-### Creating Voice Guidelines from Examples
+### Step 2: Build the Voice Profile
 
-When the user provides sample content:
+Document the following elements:
 
-1. Analyze at least 3-5 content samples for patterns
-2. Identify recurring vocabulary, sentence structures, and rhetorical devices
-3. Note what the voice avoids (jargon, slang, passive voice, etc.)
-4. Extract the implied relationship with the reader
-5. Document findings in a structured voice profile
+**Tone**: The emotional quality of the writing. Describe how the brand should sound in different contexts -- marketing copy, support responses, social media, formal communications.
 
-Output format for a voice profile:
+**Vocabulary**:
+- Words and phrases the brand uses (approved list)
+- Words and phrases the brand avoids (banned list)
+- Industry jargon policy (when to use, when to simplify)
+- Branded terms and their correct usage
 
-```
-## Brand Voice Profile: [Brand Name]
+**Sentence Structure**:
+- Average sentence length target (short/punchy vs. flowing/detailed)
+- Use of fragments, questions, exclamations
+- Active vs. passive voice preference
+- Paragraph length guidelines
 
-### Voice Summary
-[2-3 sentence elevator pitch of the brand voice]
+**Style Conventions**:
+- Contraction usage (we're vs. we are)
+- Oxford comma stance
+- Capitalization rules for headings and features
+- Emoji and punctuation policies
+- First person (we/our) vs. second person (you/your) vs. third person
 
-### Dimension Scores
-- Tone: [score]/10 — [description]
-- Emotion: [score]/10 — [description]
-- Complexity: [score]/10 — [description]
-- Authority: [score]/10 — [description]
-- Humor: [score]/10 — [description]
+### Step 3: Create the "This, Not That" Guide
 
-### Vocabulary Guidelines
-- Preferred words: [list]
-- Avoid these words: [list]
-- Industry terms to use: [list]
-- Industry terms to avoid: [list]
-
-### Sentence Structure
-- Average sentence length: [short/medium/long]
-- Preferred structures: [examples]
-- Paragraph length: [guideline]
-
-### Do's and Don'ts
-| Do                              | Don't                           |
-|---------------------------------|---------------------------------|
-| [specific positive example]     | [specific negative example]     |
-```
-
-### Analyzing Content for Consistency
-
-When reviewing content against a voice profile:
-
-1. Score the content on each of the five dimensions
-2. Compare scores to the target profile
-3. Highlight specific passages that deviate from the voice
-4. Calculate an overall consistency score (percentage alignment)
-5. Provide specific, actionable revision suggestions
-
-Format the analysis as:
+Provide concrete examples of on-brand vs. off-brand content:
 
 ```
-### Voice Consistency Report
+THIS (On-brand):
+"Let's get your campaign running in under 5 minutes."
 
-**Overall Score**: [X]% aligned with [Brand Name] voice
-
-| Dimension   | Target | Actual | Gap | Status |
-|-------------|--------|--------|-----|--------|
-| Tone        | 7      | 5      | -2  | Needs adjustment |
-| Emotion     | 6      | 7      | +1  | Acceptable |
-
-**Flagged Passages**:
-1. "[quoted text]" — Issue: [description] — Suggestion: [revision]
+NOT THAT (Off-brand):
+"Our platform facilitates the expeditious deployment of marketing campaigns."
 ```
 
-### Adapting Content to Brand Voice
+Include at least 5 pairs covering different content types:
+- Headlines and taglines
+- Product descriptions
+- Error messages and notifications
+- Email subject lines
+- Social media posts
 
-When rewriting content to match a voice profile:
+### Step 4: Analyze Existing Content
+
+When reviewing content for voice consistency, evaluate each piece against:
+
+1. **Attribute alignment**: Does the tone match the defined spectrum positions?
+2. **Vocabulary compliance**: Are banned words present? Are branded terms used correctly?
+3. **Structural consistency**: Do sentence patterns match guidelines?
+4. **Audience fit**: Is the voice appropriate for the target audience of this piece?
+
+Provide a voice consistency score (1-10) with specific callouts for misalignment.
+
+### Step 5: Adapt Content to Brand Voice
+
+When rewriting content:
 
 1. Preserve the original meaning and key information
-2. Adjust vocabulary to match preferred word lists
-3. Restructure sentences to match target length and complexity
-4. Modify tone markers (greetings, sign-offs, transitions)
-5. Present before/after comparisons for transparency
+2. Adjust vocabulary to match the approved word list
+3. Restructure sentences to match length and style guidelines
+4. Shift tone to align with the voice profile
+5. Present before/after versions with annotations explaining each change
 
-Always show the transformation:
+Example output format:
 
 ```
-**Before**: "We are pleased to inform you that our new product has been released."
-**After**: "Big news — our latest product just dropped, and we think you'll love it."
-**Changes**: Reduced formality (7 to 4), increased enthusiasm (3 to 7), shortened sentence, added direct address
+BEFORE: "We are pleased to inform you that your account has been successfully upgraded."
+AFTER:  "Great news -- your account is upgraded and ready to go!"
+
+Changes made:
+- Replaced formal phrasing ("pleased to inform") with casual enthusiasm ("Great news")
+- Removed passive voice ("has been successfully upgraded" -> "is upgraded")
+- Added energy with dash and exclamation point
+- Shortened from 14 words to 11 words
 ```
 
-### Multi-Persona Support
+### Step 6: Manage Multiple Personas
 
-When managing multiple personas:
+When the brand needs different voices for different audiences:
 
-- Create a base voice profile that all personas share (brand DNA)
-- Define persona-specific adjustments as deltas from the base
-- Name each persona clearly (e.g., "Enterprise Persona," "Creator Persona")
-- Specify which channels or audiences each persona serves
-- Ensure personas are distinct but recognizably part of the same brand family
+- Define a **core voice** that remains constant (brand values, key attributes)
+- Create **persona overlays** that adjust specific attributes per audience
+- Document which channels or contexts use which persona
+- Ensure all personas share enough DNA to be recognizably the same brand
 
-### Content Types and Adjustments
+Example persona structure:
 
-Recognize that voice naturally shifts across content types. Provide guidance for:
+| Element | B2B Persona | B2C Persona | Internal Persona |
+|---------|-------------|-------------|------------------|
+| Formality | 7/10 | 3/10 | 4/10 |
+| Jargon | Industry terms OK | Plain language | Company shorthand OK |
+| Humor | Subtle, witty | Fun, expressive | Casual, meme-friendly |
+| CTA style | "Schedule a demo" | "Try it free" | "Check it out" |
 
-- **Website copy**: Core voice, most polished
-- **Social media**: More casual, shorter, higher energy
-- **Email marketing**: Warm, direct, action-oriented
-- **Technical docs**: More precise, less personality, clarity-first
-- **Customer support**: Empathetic, solution-focused, patient
-- **Ad copy**: Punchy, benefit-driven, high-impact
+## Best Practices
 
-### Best Practices
-
-- Voice is not the same as tone; voice is consistent, tone adapts to context
-- Always ground guidelines in concrete examples rather than abstract descriptions
-- Update voice guidelines quarterly or when brand positioning shifts
-- Test voice guidelines with multiple content creators to ensure they are actionable
+- Revisit and update the voice guide quarterly as the brand evolves
+- Test voice guidelines with real content before finalizing them
+- Include edge cases: how should the voice shift during a crisis, apology, or celebration?
 - When in doubt, prioritize clarity over personality
-- Avoid over-prescribing; leave room for natural variation within guardrails
-- Consider cultural sensitivity when the brand operates across regions
-- Document exceptions explicitly (e.g., "Legal disclaimers use formal tone regardless of persona")
+- The voice should feel natural, not forced -- if a guideline produces awkward writing, revise the guideline
+- Collect feedback from the audience to validate that the voice resonates
+- Keep the core voice document under 2 pages for practical usability
+- Always provide context-specific examples rather than abstract descriptions
+- Voice consistency matters more in high-visibility content (homepage, ads) than internal docs
