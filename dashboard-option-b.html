@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Dashboard — Paul Agusto</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f8fafc;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--indigo:#6366f1;--emerald:#10b981;--amber:#f59e0b;--rose:#f43f5e;--cyan:#06b6d4;--purple:#a855f7;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06)}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{background:var(--card);border-bottom:1px solid var(--border);padding:16px 32px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+header h1{font-size:20px;font-weight:700;color:var(--indigo)}
+header span{font-size:14px;color:var(--muted)}
+.container{max-width:1280px;margin:0 auto;padding:24px}
+.search-bar{margin-bottom:24px}
+.search-bar input{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);font-size:14px;outline:none;transition:border .2s}
+.search-bar input:focus{border-color:var(--indigo);box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.summary-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.summary-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:transform .2s}
+.summary-card:hover{transform:translateY(-2px)}
+.summary-card .number{font-size:36px;font-weight:800;line-height:1}
+.summary-card .label{font-size:14px;font-weight:600;margin-top:4px}
+.summary-card .sub{font-size:12px;color:var(--muted);margin-top:4px}
+.summary-card:nth-child(1) .number{color:var(--indigo)}
+.summary-card:nth-child(2) .number{color:var(--emerald)}
+.summary-card:nth-child(3) .number{color:var(--amber)}
+.summary-card:nth-child(4) .number{color:var(--cyan)}
+.bar{height:6px;border-radius:3px;background:#e2e8f0;margin-top:12px;overflow:hidden;display:flex}
+.bar span{height:100%;display:block}
+.columns{display:grid;grid-template-columns:3fr 2fr;gap:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+.card-header{padding:16px 20px;font-weight:700;font-size:15px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none}
+.card-header:hover{background:#f8fafc}
+.card-header .arrow{transition:transform .3s;font-size:12px;color:var(--muted)}
+.card-header .arrow.collapsed{transform:rotate(-90deg)}
+.card-body{padding:16px 20px}
+.card-body.hidden{display:none}
+.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.health-item{display:flex;align-items:center;gap:8px;font-size:13px}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:600}
+.badge-green{background:#d1fae5;color:#065f46}
+.badge-blue{background:#dbeafe;color:#1e40af}
+.badge-amber{background:#fef3c7;color:#92400e}
+.badge-indigo{background:#e0e7ff;color:#3730a3}
+.badge-rose{background:#ffe4e6;color:#9f1239}
+.badge-purple{background:#f3e8ff;color:#6b21a8}
+.badge-cyan{background:#cffafe;color:#155e75}
+.badge-gray{background:#f1f5f9;color:#475569}
+.agent-bar{height:24px;border-radius:6px;background:#e2e8f0;overflow:hidden;display:flex;margin-bottom:16px}
+.agent-bar span{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.agent-group{margin-bottom:12px}
+.agent-group-title{font-size:13px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.agent-list{display:flex;flex-wrap:wrap;gap:6px}
+.agent-tag{padding:3px 10px;border-radius:6px;font-size:12px;font-weight:500;border:1px solid var(--border);background:#fafbfc}
+.skill-group{margin-bottom:14px;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.skill-group-header{padding:10px 14px;font-size:13px;font-weight:600;background:#fafbfc;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.skill-group-header:hover{background:#f1f5f9}
+.skill-group-body{padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px}
+.skill-group-body.hidden{display:none}
+.skill-pill{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:500;cursor:default;transition:transform .15s}
+.skill-pill:hover{transform:scale(1.05)}
+.mcp-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f1f5f9}
+.mcp-item:last-child{border:none}
+.mcp-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.mcp-name{font-weight:600;font-size:13px}
+.mcp-desc{font-size:12px;color:var(--muted)}
+.mem-item{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid #f8fafc;font-size:13px}
+.mem-item:last-child{border:none}
+.mem-file{font-weight:600;color:var(--indigo);min-width:200px;font-family:'SF Mono',Consolas,monospace;font-size:11px}
+.mem-desc{color:var(--muted);font-size:12px}
+.hook-item{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:13px}
+.hook-dot{width:8px;height:8px;border-radius:50%;background:var(--emerald);flex-shrink:0}
+.hook-name{font-weight:500;font-family:'SF Mono',Consolas,monospace;font-size:12px}
+.hook-desc{color:var(--muted);font-size:12px;margin-left:auto}
+.donut-container{display:flex;align-items:center;gap:24px;margin-bottom:16px}
+.donut{width:120px;height:120px;border-radius:50%;position:relative;flex-shrink:0}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:22px;font-weight:800;color:var(--text)}
+.donut-legend{display:flex;flex-direction:column;gap:4px}
+.donut-legend-item{display:flex;align-items:center;gap:6px;font-size:12px}
+.donut-legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+footer{text-align:center;padding:24px;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:24px}
+.highlight{background:#fef08a;border-radius:2px}
+@media(max-width:768px){.summary-row{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}header{flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Claude Code Dashboard</h1>
+  <span>Paul Agusto — Frontline Construction QLD</span>
+</header>
+
+<div class="container">
+
+<div class="search-bar">
+  <input type="text" id="searchBox" placeholder="Search agents, skills, MCPs, memory..." oninput="filterAll(this.value)">
+</div>
+
+<div class="summary-row">
+  <div class="summary-card">
+    <div class="number">28</div>
+    <div class="label">Agents</div>
+    <div class="sub">6 Audit · 18 GSD · 3 Creative · 1 System</div>
+    <div class="bar"><span style="width:21%;background:var(--amber)"></span><span style="width:64%;background:var(--indigo)"></span><span style="width:11%;background:var(--rose)"></span><span style="width:4%;background:var(--muted)"></span></div>
+  </div>
+  <div class="summary-card">
+    <div class="number">87</div>
+    <div class="label">Skills</div>
+    <div class="sub">18 Ads · 7 Google · 8 Research · 54 Other</div>
+    <div class="bar"><span style="width:21%;background:var(--rose)"></span><span style="width:8%;background:var(--cyan)"></span><span style="width:9%;background:var(--emerald)"></span><span style="width:62%;background:var(--muted)"></span></div>
+  </div>
+  <div class="summary-card">
+    <div class="number">57</div>
+    <div class="label">GSD Commands</div>
+    <div class="sub">Framework v1.29.0</div>
+    <div class="bar"><span style="width:100%;background:var(--amber)"></span></div>
+  </div>
+  <div class="summary-card">
+    <div class="number">7</div>
+    <div class="label">MCPs Connected</div>
+    <div class="sub">All Active</div>
+    <div class="bar"><span style="width:100%;background:var(--cyan)"></span></div>
+  </div>
+</div>
+
+<div class="columns">
+
+<!-- LEFT COLUMN -->
+<div>
+
+<!-- System Health -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">System Health <span class="arrow">▼</span></div>
+  <div class="card-body">
+    <div class="health-grid">
+      <div class="health-item">Sync Status <span class="badge badge-green">Up to date</span></div>
+      <div class="health-item">GSD Framework <span class="badge badge-blue">v1.29.0</span></div>
+      <div class="health-item">Last Sync <span class="badge badge-gray">Mar 27, 2026</span></div>
+      <div class="health-item">Plugin <span class="badge badge-indigo">superpowers v5.0.6</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Agents -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">Agents by Category <span style="font-weight:400;color:var(--muted);font-size:13px">28 total</span> <span class="arrow">▼</span></div>
+  <div class="card-body">
+    <div class="agent-bar">
+      <span style="width:21%;background:var(--amber)" title="Audit">Audit</span>
+      <span style="width:64%;background:var(--indigo)" title="GSD">GSD</span>
+      <span style="width:11%;background:var(--rose)" title="Creative">Creative</span>
+      <span style="width:4%;background:var(--muted)" title="System"></span>
+    </div>
+    <div class="agent-group">
+      <div class="agent-group-title"><span class="badge badge-amber">Audit</span> 6 agents</div>
+      <div class="agent-list" data-searchable>
+        <span class="agent-tag">audit-budget</span><span class="agent-tag">audit-compliance</span><span class="agent-tag">audit-creative</span><span class="agent-tag">audit-google</span><span class="agent-tag">audit-meta</span><span class="agent-tag">audit-tracking</span>
+      </div>
+    </div>
+    <div class="agent-group">
+      <div class="agent-group-title"><span class="badge badge-indigo">GSD</span> 18 agents</div>
+      <div class="agent-list" data-searchable>
+        <span class="agent-tag">gsd-advisor-researcher</span><span class="agent-tag">gsd-assumptions-analyzer</span><span class="agent-tag">gsd-codebase-mapper</span><span class="agent-tag">gsd-debugger</span><span class="agent-tag">gsd-executor</span><span class="agent-tag">gsd-integration-checker</span><span class="agent-tag">gsd-nyquist-auditor</span><span class="agent-tag">gsd-phase-researcher</span><span class="agent-tag">gsd-plan-checker</span><span class="agent-tag">gsd-planner</span><span class="agent-tag">gsd-project-researcher</span><span class="agent-tag">gsd-research-synthesizer</span><span class="agent-tag">gsd-roadmapper</span><span class="agent-tag">gsd-ui-auditor</span><span class="agent-tag">gsd-ui-checker</span><span class="agent-tag">gsd-ui-researcher</span><span class="agent-tag">gsd-user-profiler</span><span class="agent-tag">gsd-verifier</span>
+      </div>
+    </div>
+    <div class="agent-group">
+      <div class="agent-group-title"><span class="badge badge-rose">Creative</span> 3 agents</div>
+      <div class="agent-list" data-searchable>
+        <span class="agent-tag">copy-writer</span><span class="agent-tag">creative-strategist</span><span class="agent-tag">visual-designer</span>
+      </div>
+    </div>
+    <div class="agent-group">
+      <div class="agent-group-title"><span class="badge badge-gray">System</span> 1 agent</div>
+      <div class="agent-list" data-searchable>
+        <span class="agent-tag">format-adapter</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skills -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">Skills Overview <span style="font-weight:400;color:var(--muted);font-size:13px">87 total</span> <span class="arrow">▼</span></div>
+  <div class="card-body">
+    <div class="donut-container">
+      <div class="donut" style="background:conic-gradient(var(--rose) 0deg 75deg,var(--cyan) 75deg 104deg,var(--emerald) 104deg 137deg,var(--amber) 137deg 166deg,var(--purple) 166deg 183deg,#ec4899 183deg 216deg,#f1f5f9 216deg 228deg,#fb923c 228deg 278deg,#818cf8 278deg 299deg,#94a3b8 299deg 360deg)">
+        <div class="donut-center">87</div>
+      </div>
+      <div class="donut-legend">
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:var(--rose)"></div>Advertising (18)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:var(--cyan)"></div>Google Suite (7)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:var(--emerald)"></div>Research (8)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:var(--amber)"></div>Development (7)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:var(--purple)"></div>Database (4)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#ec4899"></div>Media & Design (8)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#f1f5f9;border:1px solid #cbd5e1"></div>AI Agents (3)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#fb923c"></div>Automation (12)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#818cf8"></div>Writing (5)</div>
+        <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#94a3b8"></div>Other (15)</div>
+      </div>
+    </div>
+
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Advertising <span class="badge badge-rose">18</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-apple</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-audit</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-budget</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-competitor</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-create</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-creative</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-dna</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-generate</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-google</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-landing</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-linkedin</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-meta</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-microsoft</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-photoshoot</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-plan</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-tiktok</span><span class="skill-pill" style="background:#ffe4e6;color:#9f1239">ads-youtube</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Google Suite <span class="badge badge-cyan">7</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#cffafe;color:#155e75">google-calendar</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-chat</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-docs</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-drive</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-sheets</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-slides</span><span class="skill-pill" style="background:#cffafe;color:#155e75">google-tts</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Content & Research <span class="badge badge-green">8</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#d1fae5;color:#065f46">article-extractor</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">content-research-writer</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">deep-research</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">lead-research-assistant</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">notebooklm</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">reddit-fetch</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">ship-learn-next</span><span class="skill-pill" style="background:#d1fae5;color:#065f46">youtube-transcript</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Development <span class="badge badge-amber">7</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#fef3c7;color:#92400e">azure-devops</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">git-pushing</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">kaizen</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">mcp-builder</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">move-code-quality</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">skill-creator</span><span class="skill-pill" style="background:#fef3c7;color:#92400e">test-fixing</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Database <span class="badge badge-purple">4</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#f3e8ff;color:#6b21a8">mssql</span><span class="skill-pill" style="background:#f3e8ff;color:#6b21a8">mysql</span><span class="skill-pill" style="background:#f3e8ff;color:#6b21a8">postgres</span><span class="skill-pill" style="background:#f3e8ff;color:#6b21a8">aws-skills</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Media & Design <span class="badge" style="background:#fce7f3;color:#9d174d">8</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#fce7f3;color:#9d174d">canvas-design</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">d3js-visualization</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">image-enhancer</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">imagen</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">slack-gif-creator</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">theme-factory</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">video-downloader</span><span class="skill-pill" style="background:#fce7f3;color:#9d174d">epub-converter</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">AI Agents <span class="badge badge-gray">3</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#f1f5f9;color:#475569">jules</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">manus</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">subagent-driven-development</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Automation & Integration <span class="badge" style="background:#ffedd5;color:#9a3412">12</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#ffedd5;color:#9a3412">atlassian</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">changelog-generator</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">connect</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">csv-data-summarizer</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">file-organizer</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">gmail</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">humanizer</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">humanizalo</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">invoice-organizer</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">playwright</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">webapp-testing</span><span class="skill-pill" style="background:#ffedd5;color:#9a3412">review-implementing</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Writing & Comms <span class="badge badge-indigo">5</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#e0e7ff;color:#3730a3">brand-guidelines</span><span class="skill-pill" style="background:#e0e7ff;color:#3730a3">internal-comms</span><span class="skill-pill" style="background:#e0e7ff;color:#3730a3">prompt-engineering</span><span class="skill-pill" style="background:#e0e7ff;color:#3730a3">twitter-algorithm-optimizer</span><span class="skill-pill" style="background:#e0e7ff;color:#3730a3">competitive-ads-extractor</span>
+      </div>
+    </div>
+    <div class="skill-group" data-searchable>
+      <div class="skill-group-header" onclick="toggleSkill(this)">Other <span class="badge badge-gray">15</span></div>
+      <div class="skill-group-body">
+        <span class="skill-pill" style="background:#f1f5f9;color:#475569">artifacts-builder</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">domain-name-brainstormer</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">developer-growth-analysis</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">elevenlabs</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">family-history-research</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">ffuf-web-fuzzing</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">ios-simulator</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">langsmith-fetch</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">meeting-insights-analyzer</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">outline</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">pypict</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">raffle-winner-picker</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">session-start-hook</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">tailored-resume-generator</span><span class="skill-pill" style="background:#f1f5f9;color:#475569">terminal-title</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<!-- MCPs -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">MCPs Connected <span style="font-weight:400;color:var(--muted);font-size:13px">7 active</span> <span class="arrow">▼</span></div>
+  <div class="card-body" data-searchable>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#fce7f3">&#127912;</div><div><div class="mcp-name">Canva</div><div class="mcp-desc">Design & Creative</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#dbeafe">&#128241;</div><div><div class="mcp-name">Meta Ads</div><div class="mcp-desc">Facebook & Instagram Advertising</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#f1f5f9">&#128221;</div><div><div class="mcp-name">Notion</div><div class="mcp-desc">Wiki & Database</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#ffe4e6">&#128231;</div><div><div class="mcp-name">Gmail</div><div class="mcp-desc">Email</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#d1fae5">&#128197;</div><div><div class="mcp-name">Google Calendar</div><div class="mcp-desc">Scheduling</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#fef3c7">&#128200;</div><div><div class="mcp-name">Google Ads</div><div class="mcp-desc">Search & Display Advertising</div></div></div>
+    <div class="mcp-item"><div class="mcp-icon" style="background:#e0e7ff">&#128025;</div><div><div class="mcp-name">GitHub</div><div class="mcp-desc">Code & Repositories</div></div></div>
+  </div>
+</div>
+
+<!-- Memory -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">Memory Bank <span style="font-weight:400;color:var(--muted);font-size:13px">10 files</span> <span class="arrow">▼</span></div>
+  <div class="card-body" data-searchable>
+    <div class="mem-item"><span class="mem-file">user_paul_recruiter</span><span class="mem-desc">Construction recruiter, Frontline/Express Pros QLD</span></div>
+    <div class="mem-item"><span class="mem-file">user_language</span><span class="mem-desc">Spanish speaker, business development focus</span></div>
+    <div class="mem-item"><span class="mem-file">feedback_candidate_privacy</span><span class="mem-desc">Hide email/phone/references in profiles</span></div>
+    <div class="mem-item"><span class="mem-file">feedback_outreach_style</span><span class="mem-desc">Chris Voss FBI negotiation techniques</span></div>
+    <div class="mem-item"><span class="mem-file">project_sourcing_agents</span><span class="mem-desc">SEEK + LinkedIn + X-ray scraper architecture</span></div>
+    <div class="mem-item"><span class="mem-file">project_recruitment_mar27</span><span class="mem-desc">20 candidates, dashboard, 3 emails sent</span></div>
+    <div class="mem-item"><span class="mem-file">project_longevity_system</span><span class="mem-desc">12-agent health optimization platform</span></div>
+    <div class="mem-item"><span class="mem-file">project_prospect_prompt</span><span class="mem-desc">6-step prospect analysis pipeline</span></div>
+    <div class="mem-item"><span class="mem-file">project_prospect_report</span><span class="mem-desc">Prospect intelligence report builder</span></div>
+    <div class="mem-item"><span class="mem-file">MEMORY.md</span><span class="mem-desc">Memory index file</span></div>
+  </div>
+</div>
+
+<!-- Hooks -->
+<div class="card" data-section>
+  <div class="card-header" onclick="toggle(this)">System Hooks <span style="font-weight:400;color:var(--muted);font-size:13px">6 active</span> <span class="arrow">▼</span></div>
+  <div class="card-body" data-searchable>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">gsd-check-update.js</span><span class="hook-desc">Update checker</span></div>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">gsd-context-monitor.js</span><span class="hook-desc">Context usage</span></div>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">gsd-prompt-guard.js</span><span class="hook-desc">Prompt protection</span></div>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">gsd-statusline.js</span><span class="hook-desc">Status display</span></div>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">gsd-workflow-guard.js</span><span class="hook-desc">Workflow guard</span></div>
+    <div class="hook-item"><span class="hook-dot"></span><span class="hook-name">proteger.sh</span><span class="hook-desc">Security script</span></div>
+  </div>
+</div>
+
+</div>
+</div><!-- columns -->
+
+</div><!-- container -->
+
+<footer>Synced from pagusto/pagusto &middot; Last update: 2026-03-27T06:38:46Z</footer>
+
+<script>
+function toggle(el){const body=el.nextElementSibling;const arrow=el.querySelector('.arrow');body.classList.toggle('hidden');arrow.classList.toggle('collapsed')}
+function toggleSkill(el){el.nextElementSibling.classList.toggle('hidden')}
+function filterAll(q){
+  q=q.toLowerCase().trim();
+  document.querySelectorAll('.agent-tag,.skill-pill,.mcp-item,.mem-item,.hook-item').forEach(el=>{
+    if(!q){el.style.opacity='1';el.style.transform='';return}
+    const text=el.textContent.toLowerCase();
+    if(text.includes(q)){el.style.opacity='1';el.style.transform=''}
+    else{el.style.opacity='.15';el.style.transform='scale(.95)'}
+  });
+}
+</script>
+</body>
+</html>
