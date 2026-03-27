@@ -50,17 +50,17 @@ class SkillEnvironment:
         if self.requirements_file.exists():
             print("📦 Installing dependencies...")
             try:
-                # Upgrade pip first
+                # Upgrade pip first (use python -m pip to avoid Windows self-upgrade issues)
                 subprocess.run(
-                    [str(self.venv_pip), "install", "--upgrade", "pip"],
-                    check=True,
+                    [str(self.venv_python), "-m", "pip", "install", "--upgrade", "pip"],
                     capture_output=True,
                     text=True
+                    # Not using check=True - pip upgrade failure is non-fatal
                 )
 
                 # Install requirements
                 result = subprocess.run(
-                    [str(self.venv_pip), "install", "-r", str(self.requirements_file)],
+                    [str(self.venv_python), "-m", "pip", "install", "-r", str(self.requirements_file)],
                     check=True,
                     capture_output=True,
                     text=True
