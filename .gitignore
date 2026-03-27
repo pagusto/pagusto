@@ -1,0 +1,21 @@
+# Credenciales y datos sensibles
+*.env
+.env*
+*_token*
+*api_key*
+*secret*
+*.pem
+*.key
+
+# Cachés y binarios
+node_modules/
+.git/
+*.log
+__pycache__/
+*.pyc
+
+# Cachés de plugins de Claude
+claude-config/plugins/cache/
+claude-config/skills/skills/
+claude-config/skills/n8n-skills/
+claude-config/skills/skill-seekers/
