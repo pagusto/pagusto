@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Command Center</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0e17;--bg2:#0f1520;--bg3:#141c2b;--border:#1a2640;
+  --green:#00ff88;--cyan:#00b4d8;--orange:#ff6b35;--red:#ff3860;
+  --text:#c8d6e5;--text-dim:#5a6a80;--text-bright:#e8f0fe;
+  --glow-green:0 0 8px rgba(0,255,136,.3);
+  --glow-cyan:0 0 8px rgba(0,180,216,.3);
+  --glow-orange:0 0 8px rgba(255,107,53,.3);
+}
+html{font-size:14px;scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;
+  min-height:100vh;
+  background-image:
+    linear-gradient(rgba(0,180,216,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,180,216,.03) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+a{color:var(--cyan);text-decoration:none}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* TOP BAR */
+.topbar{
+  background:linear-gradient(180deg,#0d1220,var(--bg2));
+  border-bottom:1px solid var(--border);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.5);
+}
+.topbar-title{
+  font-family:'Courier New',monospace;font-size:1rem;font-weight:700;
+  color:var(--green);letter-spacing:2px;text-transform:uppercase;
+  text-shadow:var(--glow-green);
+}
+.topbar-title span{color:var(--text-dim);font-weight:400;letter-spacing:1px;font-size:.85rem}
+.clock{
+  font-family:'Courier New',monospace;font-size:1.1rem;color:var(--cyan);
+  text-shadow:var(--glow-cyan);letter-spacing:1px;
+}
+
+/* SEARCH */
+.search-wrap{
+  padding:12px 24px;position:sticky;top:52px;z-index:99;
+  background:var(--bg);border-bottom:1px solid var(--border);
+}
+.search-input{
+  width:100%;padding:10px 16px 10px 40px;background:var(--bg2);
+  border:1px solid var(--border);border-radius:6px;color:var(--text-bright);
+  font-family:'Courier New',monospace;font-size:.9rem;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search-input:focus{border-color:var(--cyan);box-shadow:var(--glow-cyan)}
+.search-wrap::before{
+  content:"\u26B2";position:absolute;left:40px;top:50%;transform:translateY(-50%);
+  color:var(--text-dim);font-size:1rem;pointer-events:none;
+}
+
+/* STATUS STRIP */
+.status-strip{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:8px;padding:12px 24px;
+}
+.status-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:6px;
+  padding:10px 14px;display:flex;align-items:center;gap:8px;
+  font-family:'Courier New',monospace;font-size:.8rem;color:var(--text);
+}
+.status-dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}
+.status-dot.green{background:var(--green);box-shadow:var(--glow-green);animation:pulse 2s infinite}
+.status-dot.cyan{background:var(--cyan);box-shadow:var(--glow-cyan)}
+.status-dot.orange{background:var(--orange);box-shadow:var(--glow-orange)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* MAIN */
+.main{max-width:1400px;margin:0 auto;padding:0 24px 40px}
+
+/* SECTIONS */
+.section{margin-top:24px}
+.section-header{
+  display:flex;align-items:center;gap:10px;cursor:pointer;
+  padding:12px 16px;background:var(--bg2);border:1px solid var(--border);
+  border-radius:8px 8px 0 0;user-select:none;transition:background .2s;
+}
+.section-header:hover{background:var(--bg3)}
+.section-header.collapsed{border-radius:8px}
+.section-header h2{
+  font-family:system-ui;font-size:1rem;font-weight:700;color:var(--text-bright);
+  letter-spacing:1.5px;text-transform:uppercase;flex:1;
+}
+.section-header .count{
+  font-family:'Courier New',monospace;font-size:.75rem;
+  background:var(--cyan);color:var(--bg);padding:2px 8px;border-radius:10px;
+  font-weight:700;
+}
+.section-chevron{
+  color:var(--text-dim);transition:transform .3s;font-size:.8rem;
+}
+.section-header.collapsed .section-chevron{transform:rotate(-90deg)}
+.section-body{
+  border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;
+  background:rgba(15,21,32,.5);overflow:hidden;
+  transition:max-height .4s ease,opacity .3s ease;
+}
+.section-body.hidden{max-height:0!important;opacity:0;border:none}
+.section-body-inner{padding:16px}
+
+/* AGENT/SKILL GRID */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+  padding:10px 12px;display:flex;align-items:center;gap:8px;
+  transition:border-color .2s,transform .15s;cursor:default;
+}
+.card:hover{border-color:var(--cyan);transform:translateY(-1px)}
+.card-name{
+  font-family:'Courier New',monospace;font-size:.8rem;color:var(--text-bright);
+  flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.badge{
+  font-size:.6rem;padding:2px 7px;border-radius:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;flex-shrink:0;
+}
+.badge-audit{background:rgba(0,180,216,.15);color:var(--cyan);border:1px solid rgba(0,180,216,.3)}
+.badge-gsd{background:rgba(0,255,136,.1);color:var(--green);border:1px solid rgba(0,255,136,.25)}
+.badge-creative{background:rgba(255,107,53,.12);color:var(--orange);border:1px solid rgba(255,107,53,.25)}
+.badge-sync{background:rgba(200,214,229,.1);color:var(--text);border:1px solid rgba(200,214,229,.2)}
+
+/* SKILL SUB-GROUPS */
+.skill-group{margin-bottom:12px}
+.skill-group-header{
+  display:flex;align-items:center;gap:8px;cursor:pointer;
+  padding:8px 12px;background:var(--bg2);border:1px solid var(--border);
+  border-radius:6px;margin-bottom:6px;user-select:none;
+  transition:background .2s;
+}
+.skill-group-header:hover{background:var(--bg3)}
+.skill-group-header h3{
+  font-size:.8rem;font-weight:600;color:var(--cyan);flex:1;
+  text-transform:uppercase;letter-spacing:1px;
+}
+.skill-group-header .count{
+  font-size:.7rem;background:rgba(0,180,216,.15);color:var(--cyan);
+  padding:1px 6px;border-radius:8px;
+}
+.skill-group-chevron{color:var(--text-dim);transition:transform .3s;font-size:.7rem}
+.skill-group-header.sg-collapsed .skill-group-chevron{transform:rotate(-90deg)}
+.skill-group-body{overflow:hidden;transition:max-height .3s ease,opacity .2s;padding-left:4px}
+.skill-group-body.sg-hidden{max-height:0!important;opacity:0}
+
+/* GSD FRAMEWORK */
+.gsd-info{
+  display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px;
+}
+.gsd-stat{
+  background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+  padding:12px 20px;text-align:center;
+}
+.gsd-stat-val{
+  font-family:'Courier New',monospace;font-size:1.4rem;font-weight:700;color:var(--green);
+  text-shadow:var(--glow-green);
+}
+.gsd-stat-label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.compact-grid{
+  display:flex;flex-wrap:wrap;gap:4px;
+}
+.compact-tag{
+  font-family:'Courier New',monospace;font-size:.7rem;
+  background:var(--bg2);border:1px solid var(--border);border-radius:4px;
+  padding:3px 8px;color:var(--text);transition:border-color .2s;
+}
+.compact-tag:hover{border-color:var(--green);color:var(--green)}
+
+/* MCP CARDS */
+.mcp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.mcp-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+  padding:16px;text-align:center;transition:border-color .2s,transform .15s;
+}
+.mcp-card:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.mcp-icon{font-size:1.8rem;margin-bottom:6px}
+.mcp-name{font-weight:700;font-size:.85rem;color:var(--text-bright);margin-bottom:2px}
+.mcp-desc{font-size:.7rem;color:var(--text-dim)}
+
+/* MEMORY LIST */
+.mem-list{display:flex;flex-direction:column;gap:6px}
+.mem-item{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+  transition:border-color .2s;
+}
+.mem-item:hover{border-color:var(--green)}
+.mem-icon{color:var(--green);font-size:1rem;flex-shrink:0}
+.mem-file{
+  font-family:'Courier New',monospace;font-size:.8rem;color:var(--cyan);
+  min-width:240px;flex-shrink:0;
+}
+.mem-desc{font-size:.78rem;color:var(--text-dim);flex:1}
+
+/* HOOKS */
+.hook-list{display:flex;flex-direction:column;gap:6px}
+.hook-item{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+}
+.hook-item:hover{border-color:var(--orange)}
+.hook-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:var(--glow-green);animation:pulse 2s infinite;flex-shrink:0}
+.hook-name{font-family:'Courier New',monospace;font-size:.8rem;color:var(--text-bright);min-width:200px}
+.hook-desc{font-size:.78rem;color:var(--text-dim)}
+
+/* FOOTER */
+.footer{
+  text-align:center;padding:20px;margin-top:30px;
+  border-top:1px solid var(--border);
+  font-family:'Courier New',monospace;font-size:.75rem;color:var(--text-dim);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .topbar{padding:10px 14px}
+  .topbar-title{font-size:.75rem}
+  .topbar-title span{display:block;font-size:.65rem}
+  .main{padding:0 12px 30px}
+  .search-wrap{padding:10px 12px}
+  .status-strip{padding:10px 12px;grid-template-columns:repeat(2,1fr)}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .mcp-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .mem-file{min-width:auto;font-size:.7rem}
+  .mem-item,.hook-item{flex-wrap:wrap}
+  .section-body-inner{padding:10px}
+}
+@media(max-width:480px){
+  .status-strip{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+}
+
+/* Search highlight */
+.highlight{background:rgba(0,255,136,.15);border-color:var(--green)!important}
+.dim{opacity:.15;pointer-events:none}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-title">
+    CLAUDE COMMAND CENTER <span>Paul Agusto | Frontline Construction QLD</span>
+  </div>
+  <div class="clock" id="clock">00:00:00</div>
+</header>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input class="search-input" id="searchBox" type="text" placeholder="Search agents, skills, MCPs, memory...">
+</div>
+
+<!-- STATUS STRIP -->
+<div class="status-strip">
+  <div class="status-card"><div class="status-dot green"></div>SYSTEM ONLINE</div>
+  <div class="status-card"><div class="status-dot cyan"></div>SYNC: UP TO DATE</div>
+  <div class="status-card"><div class="status-dot green"></div>GSD v1.29.0</div>
+  <div class="status-card"><div class="status-dot cyan"></div>LAST SYNC: 2026-03-27</div>
+</div>
+
+<div class="main">
+
+<!-- AGENTS -->
+<div class="section" id="sec-agents">
+  <div class="section-header" onclick="toggleSection('sec-agents')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>Agents</h2>
+    <span class="count">28</span>
+  </div>
+  <div class="section-body" id="sec-agents-body">
+    <div class="section-body-inner">
+      <div class="card-grid" id="agent-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section" id="sec-skills">
+  <div class="section-header" onclick="toggleSection('sec-skills')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>Skills</h2>
+    <span class="count">87</span>
+  </div>
+  <div class="section-body" id="sec-skills-body">
+    <div class="section-body-inner" id="skills-inner"></div>
+  </div>
+</div>
+
+<!-- GSD FRAMEWORK -->
+<div class="section" id="sec-gsd">
+  <div class="section-header" onclick="toggleSection('sec-gsd')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>GSD Framework</h2>
+    <span class="count">v1.29.0</span>
+  </div>
+  <div class="section-body" id="sec-gsd-body">
+    <div class="section-body-inner">
+      <div class="gsd-info">
+        <div class="gsd-stat"><div class="gsd-stat-val">v1.29.0</div><div class="gsd-stat-label">Version</div></div>
+        <div class="gsd-stat"><div class="gsd-stat-val">57</div><div class="gsd-stat-label">Commands</div></div>
+        <div class="gsd-stat"><div class="gsd-stat-val">55</div><div class="gsd-stat-label">Workflows</div></div>
+      </div>
+      <h3 style="font-size:.8rem;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Commands</h3>
+      <div class="compact-grid" id="gsd-commands"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MCPs -->
+<div class="section" id="sec-mcps">
+  <div class="section-header" onclick="toggleSection('sec-mcps')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>MCPs Connected</h2>
+    <span class="count">7</span>
+  </div>
+  <div class="section-body" id="sec-mcps-body">
+    <div class="section-body-inner">
+      <div class="mcp-grid" id="mcp-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMORY BANK -->
+<div class="section" id="sec-memory">
+  <div class="section-header" onclick="toggleSection('sec-memory')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>Memory Bank</h2>
+    <span class="count">10</span>
+  </div>
+  <div class="section-body" id="sec-memory-body">
+    <div class="section-body-inner">
+      <div class="mem-list" id="mem-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOOKS -->
+<div class="section" id="sec-hooks">
+  <div class="section-header" onclick="toggleSection('sec-hooks')">
+    <span class="section-chevron">&#9660;</span>
+    <h2>Hooks</h2>
+    <span class="count">6</span>
+  </div>
+  <div class="section-body" id="sec-hooks-body">
+    <div class="section-body-inner">
+      <div class="hook-list" id="hook-list"></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .main -->
+
+<footer class="footer">
+  Config Sync Agent v1.0 &nbsp;|&nbsp; GitHub: pagusto/pagusto &nbsp;|&nbsp; Last sync: 2026-03-27T06:38:46Z
+</footer>
+
+<script>
+// DATA
+const agents = [
+  {name:'audit-budget',cat:'Audit'},{name:'audit-compliance',cat:'Audit'},{name:'audit-creative',cat:'Audit'},
+  {name:'audit-google',cat:'Audit'},{name:'audit-meta',cat:'Audit'},{name:'audit-tracking',cat:'Audit'},
+  {name:'gsd-advisor-researcher',cat:'GSD'},{name:'gsd-assumptions-analyzer',cat:'GSD'},
+  {name:'gsd-codebase-mapper',cat:'GSD'},{name:'gsd-debugger',cat:'GSD'},{name:'gsd-executor',cat:'GSD'},
+  {name:'gsd-integration-checker',cat:'GSD'},{name:'gsd-nyquist-auditor',cat:'GSD'},
+  {name:'gsd-phase-researcher',cat:'GSD'},{name:'gsd-plan-checker',cat:'GSD'},{name:'gsd-planner',cat:'GSD'},
+  {name:'gsd-project-researcher',cat:'GSD'},{name:'gsd-research-synthesizer',cat:'GSD'},
+  {name:'gsd-roadmapper',cat:'GSD'},{name:'gsd-ui-auditor',cat:'GSD'},{name:'gsd-ui-checker',cat:'GSD'},
+  {name:'gsd-ui-researcher',cat:'GSD'},{name:'gsd-user-profiler',cat:'GSD'},{name:'gsd-verifier',cat:'GSD'},
+  {name:'copy-writer',cat:'Creative'},{name:'creative-strategist',cat:'Creative'},
+  {name:'visual-designer',cat:'Creative'},{name:'config-sync-agent',cat:'Sync'}
+];
+
+const skillGroups = {
+  'Advertising':{count:18,items:['ads','ads-apple','ads-audit','ads-budget','ads-competitor','ads-create','ads-creative','ads-dna','ads-generate','ads-google','ads-landing','ads-linkedin','ads-meta','ads-microsoft','ads-photoshoot','ads-plan','ads-tiktok','ads-youtube']},
+  'Google Suite':{count:7,items:['google-calendar','google-chat','google-docs','google-drive','google-sheets','google-slides','google-tts']},
+  'Content & Research':{count:8,items:['article-extractor','content-research-writer','deep-research','lead-research-assistant','notebooklm','reddit-fetch','ship-learn-next','youtube-transcript']},
+  'Development':{count:7,items:['azure-devops','git-pushing','kaizen','mcp-builder','move-code-quality','skill-creator','test-fixing']},
+  'Database':{count:4,items:['mssql','mysql','postgres','aws-skills']},
+  'Media & Design':{count:10,items:['canvas-design','d3js-visualization','image-enhancer','imagen','slack-gif-creator','theme-factory','video-downloader','elevenlabs','google-tts','epub-converter']},
+  'AI Delegation':{count:3,items:['jules','manus','subagent-driven-development']},
+  'Automation':{count:10,items:['atlassian','changelog-generator','connect','csv-data-summarizer','file-organizer','gmail','humanizer','humanizalo','invoice-organizer','playwright']},
+  'Writing & Comms':{count:5,items:['brand-guidelines','internal-comms','prompt-engineering','twitter-algorithm-optimizer','competitive-ads-extractor']},
+  'Other':{count:15,items:['artifacts-builder','domain-name-brainstormer','developer-growth-analysis','family-history-research','ffuf-web-fuzzing','ios-simulator','langsmith-fetch','meeting-insights-analyzer','outline','pypict','raffle-winner-picker','review-implementing','session-start-hook','tailored-resume-generator','terminal-title','webapp-testing']}
+};
+
+const gsdCommands = [
+  'init','plan','execute','verify','status','phase','workflow','research','audit','check',
+  'roadmap','sync','config','reset','rollback','deploy','test','build','clean','lint',
+  'format','debug','profile','analyze','benchmark','report','export','import','migrate','update',
+  'upgrade','install','uninstall','enable','disable','list','show','describe','inspect','monitor',
+  'watch','log','trace','diff','merge','branch','tag','release','publish','notify',
+  'schedule','queue','retry','abort','resume','pause','help'
+];
+
+const mcps = [
+  {icon:'\uD83C\uDFA8',name:'Canva',desc:'Design'},
+  {icon:'\uD83D\uDCE2',name:'Meta Ads',desc:'Advertising'},
+  {icon:'\uD83D\uDCD3',name:'Notion',desc:'Wiki / Database'},
+  {icon:'\u2709\uFE0F',name:'Gmail',desc:'Email'},
+  {icon:'\uD83D\uDCC5',name:'Google Calendar',desc:'Scheduling'},
+  {icon:'\uD83D\uDCB0',name:'Google Ads',desc:'Advertising'},
+  {icon:'\uD83D\uDCBB',name:'GitHub',desc:'Code'}
+];
+
+const memFiles = [
+  {file:'user_paul_recruiter.md',desc:'Paul Agusto: construction recruiter, Frontline/Express Pros QLD'},
+  {file:'user_language.md',desc:'Spanish speaker, business development focus'},
+  {file:'feedback_candidate_privacy.md',desc:'Hide email/phone/references in profiles'},
+  {file:'feedback_outreach_style.md',desc:'Chris Voss FBI techniques, Aussie tone'},
+  {file:'project_sourcing_agents.md',desc:'SEEK + LinkedIn + X-ray scraper architecture'},
+  {file:'project_recruitment_session_mar27.md',desc:'Mar 27: 20 candidates, dashboard, 3 emails'},
+  {file:'project_longevity_system.md',desc:'12-agent health optimization platform'},
+  {file:'project_prospect_prompt.md',desc:'6-step prospect analysis pipeline'},
+  {file:'project_prospect_report.md',desc:'Prospect intelligence report builder'},
+  {file:'MEMORY.md',desc:'Memory index file'}
+];
+
+const hooks = [
+  {file:'gsd-check-update.js',desc:'Update checker'},
+  {file:'gsd-context-monitor.js',desc:'Context monitor'},
+  {file:'gsd-prompt-guard.js',desc:'Prompt guard'},
+  {file:'gsd-statusline.js',desc:'Status line'},
+  {file:'gsd-workflow-guard.js',desc:'Workflow guard'},
+  {file:'proteger.sh',desc:'Protection script'}
+];
+
+// RENDER
+function renderAgents(){
+  const g=document.getElementById('agent-grid');
+  g.innerHTML=agents.map(a=>{
+    const cls=a.cat.toLowerCase();
+    return `<div class="card searchable" data-search="${a.name} ${a.cat}">
+      <div class="status-dot green" style="width:6px;height:6px"></div>
+      <span class="card-name">${a.name}</span>
+      <span class="badge badge-${cls}">${a.cat}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderSkills(){
+  const wrap=document.getElementById('skills-inner');
+  let html='';
+  let gIdx=0;
+  for(const[group,data] of Object.entries(skillGroups)){
+    const id='sg-'+gIdx++;
+    html+=`<div class="skill-group searchable-group" data-group="${group.toLowerCase()}">
+      <div class="skill-group-header" onclick="toggleSkillGroup('${id}')">
+        <span class="skill-group-chevron" id="${id}-chev">&#9660;</span>
+        <h3>${group}</h3>
+        <span class="count">${data.count}</span>
+      </div>
+      <div class="skill-group-body" id="${id}-body">
+        <div class="card-grid">
+          ${data.items.map(s=>`<div class="card searchable" data-search="${s} ${group}"><span class="card-name">${s}</span></div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }
+  wrap.innerHTML=html;
+}
+
+function renderGSD(){
+  document.getElementById('gsd-commands').innerHTML=gsdCommands.map(c=>
+    `<span class="compact-tag searchable" data-search="gsd ${c}">${c}</span>`
+  ).join('');
+}
+
+function renderMCPs(){
+  document.getElementById('mcp-grid').innerHTML=mcps.map(m=>
+    `<div class="mcp-card searchable" data-search="${m.name} ${m.desc}">
+      <div class="mcp-icon">${m.icon}</div>
+      <div class="mcp-name">${m.name}</div>
+      <div class="mcp-desc">${m.desc}</div>
+    </div>`
+  ).join('');
+}
+
+function renderMemory(){
+  document.getElementById('mem-list').innerHTML=memFiles.map(m=>
+    `<div class="mem-item searchable" data-search="${m.file} ${m.desc}">
+      <span class="mem-icon">\uD83D\uDCC4</span>
+      <span class="mem-file">${m.file}</span>
+      <span class="mem-desc">${m.desc}</span>
+    </div>`
+  ).join('');
+}
+
+function renderHooks(){
+  document.getElementById('hook-list').innerHTML=hooks.map(h=>
+    `<div class="hook-item searchable" data-search="${h.file} ${h.desc}">
+      <div class="hook-dot"></div>
+      <span class="hook-name">${h.file}</span>
+      <span class="hook-desc">${h.desc}</span>
+    </div>`
+  ).join('');
+}
+
+// INTERACTIONS
+function toggleSection(id){
+  const hdr=document.querySelector('#'+id+' .section-header');
+  const body=document.getElementById(id+'-body');
+  if(body.classList.contains('hidden')){
+    body.classList.remove('hidden');
+    body.style.maxHeight=body.scrollHeight+'px';
+    hdr.classList.remove('collapsed');
+  } else {
+    body.style.maxHeight=body.scrollHeight+'px';
+    requestAnimationFrame(()=>{body.classList.add('hidden');body.style.maxHeight='0'});
+    hdr.classList.add('collapsed');
+  }
+}
+
+function toggleSkillGroup(id){
+  const body=document.getElementById(id+'-body');
+  const chev=document.getElementById(id+'-chev');
+  const hdr=chev.parentElement;
+  if(body.classList.contains('sg-hidden')){
+    body.classList.remove('sg-hidden');
+    body.style.maxHeight=body.scrollHeight+'px';
+    hdr.classList.remove('sg-collapsed');
+  } else {
+    body.style.maxHeight=body.scrollHeight+'px';
+    requestAnimationFrame(()=>{body.classList.add('sg-hidden');body.style.maxHeight='0'});
+    hdr.classList.add('sg-collapsed');
+  }
+}
+
+// SEARCH
+document.getElementById('searchBox').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  const items=document.querySelectorAll('.searchable');
+  if(!q){
+    items.forEach(el=>{el.classList.remove('highlight','dim')});
+    document.querySelectorAll('.searchable-group').forEach(g=>g.style.display='');
+    return;
+  }
+  items.forEach(el=>{
+    const data=(el.getAttribute('data-search')||'').toLowerCase();
+    if(data.includes(q)){
+      el.classList.add('highlight');el.classList.remove('dim');
+    } else {
+      el.classList.remove('highlight');el.classList.add('dim');
+    }
+  });
+  // Show/hide skill groups based on whether they have visible items
+  document.querySelectorAll('.searchable-group').forEach(g=>{
+    const visible=g.querySelectorAll('.searchable:not(.dim)');
+    g.style.display=visible.length?'':'none';
+  });
+});
+
+// CLOCK
+function updateClock(){
+  const now=new Date();
+  const h=String(now.getHours()).padStart(2,'0');
+  const m=String(now.getMinutes()).padStart(2,'0');
+  const s=String(now.getSeconds()).padStart(2,'0');
+  document.getElementById('clock').textContent=h+':'+m+':'+s+' UTC+10';
+}
+setInterval(updateClock,1000);
+updateClock();
+
+// INIT
+renderAgents();renderSkills();renderGSD();renderMCPs();renderMemory();renderHooks();
+
+// Set initial max-heights for animation
+document.querySelectorAll('.section-body').forEach(b=>{
+  b.style.maxHeight=b.scrollHeight+'px';
+});
+document.querySelectorAll('.skill-group-body').forEach(b=>{
+  b.style.maxHeight=b.scrollHeight+'px';
+});
+// Re-calc on resize
+window.addEventListener('resize',()=>{
+  document.querySelectorAll('.section-body:not(.hidden)').forEach(b=>b.style.maxHeight=b.scrollHeight+'px');
+  document.querySelectorAll('.skill-group-body:not(.sg-hidden)').forEach(b=>b.style.maxHeight=b.scrollHeight+'px');
+});
+</script>
+</body>
+</html>

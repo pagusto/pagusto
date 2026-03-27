@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLAUDE ECOSYSTEM | Neon Matrix Dashboard</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f1a;--purple:#a855f7;--cyan:#06b6d4;--rose:#f43f5e;--green:#22c55e;--amber:#f59e0b;
+  --blue:#3b82f6;--orange:#f97316;--indigo:#6366f1;--white:#e2e8f0;
+  --glass:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.08);
+  --font-mono:'Courier New',monospace;--font-sys:system-ui,-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:#e2e8f0;font-family:var(--font-sys);
+  min-height:100vh;overflow-x:hidden;line-height:1.6;
+}
+/* Animated gradient background */
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%,rgba(168,85,247,0.08),transparent),
+    radial-gradient(ellipse 60% 80% at 80% 70%,rgba(6,182,212,0.06),transparent),
+    radial-gradient(ellipse 70% 50% at 50% 50%,rgba(244,63,94,0.04),transparent);
+  animation:meshShift 12s ease-in-out infinite alternate;
+}
+@keyframes meshShift{
+  0%{filter:hue-rotate(0deg)}
+  50%{filter:hue-rotate(15deg)}
+  100%{filter:hue-rotate(-10deg)}
+}
+.container{max-width:1400px;margin:0 auto;padding:20px}
+
+/* Glass Card */
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:16px;
+  transition:all .3s ease;
+}
+.glass:hover{border-color:rgba(255,255,255,0.15)}
+
+/* HERO */
+.hero{
+  text-align:center;padding:50px 30px 40px;margin-bottom:30px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:-2px;border-radius:18px;padding:2px;
+  background:linear-gradient(135deg,var(--purple),var(--cyan),var(--rose),var(--purple));
+  background-size:400% 400%;animation:borderGlow 6s linear infinite;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;z-index:0;
+}
+@keyframes borderGlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-title{
+  font-size:clamp(2rem,6vw,4rem);font-weight:900;letter-spacing:4px;
+  background:linear-gradient(135deg,var(--purple),var(--cyan),var(--rose));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;position:relative;z-index:1;
+}
+.hero-sub{
+  font-family:var(--font-mono);color:rgba(255,255,255,0.5);margin-top:10px;
+  font-size:clamp(0.75rem,2vw,1rem);position:relative;z-index:1;
+}
+.status-badge{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  padding:8px 20px;border-radius:100px;font-family:var(--font-mono);
+  font-size:0.8rem;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);
+  color:var(--green);position:relative;z-index:1;
+}
+.pulse-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--green);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.6)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+
+/* Stats Bar */
+.stats-bar{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:16px;margin-bottom:40px;
+}
+.stat-card{
+  padding:24px 16px;text-align:center;border-radius:16px;
+  position:relative;overflow:hidden;cursor:default;
+}
+.stat-card::after{
+  content:'';position:absolute;inset:0;border-radius:16px;opacity:0;
+  transition:opacity .3s;
+}
+.stat-card:hover::after{opacity:1}
+.stat-card[data-glow="purple"]::after{box-shadow:inset 0 0 30px rgba(168,85,247,0.15),0 0 40px rgba(168,85,247,0.1)}
+.stat-card[data-glow="cyan"]::after{box-shadow:inset 0 0 30px rgba(6,182,212,0.15),0 0 40px rgba(6,182,212,0.1)}
+.stat-card[data-glow="green"]::after{box-shadow:inset 0 0 30px rgba(34,197,94,0.15),0 0 40px rgba(34,197,94,0.1)}
+.stat-card[data-glow="rose"]::after{box-shadow:inset 0 0 30px rgba(244,63,94,0.15),0 0 40px rgba(244,63,94,0.1)}
+.stat-card[data-glow="amber"]::after{box-shadow:inset 0 0 30px rgba(245,158,11,0.15),0 0 40px rgba(245,158,11,0.1)}
+.stat-num{font-size:3rem;font-weight:900;font-family:var(--font-mono);line-height:1}
+.stat-label{font-size:0.75rem;letter-spacing:3px;margin-top:6px;opacity:0.6;text-transform:uppercase}
+
+/* Section */
+.section{margin-bottom:40px}
+.section-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;border-bottom:1px solid var(--glass-border);cursor:pointer;
+  user-select:none;
+}
+.section-header:hover{background:rgba(255,255,255,0.02)}
+.section-title{
+  font-family:var(--font-mono);font-size:0.9rem;color:rgba(255,255,255,0.4);
+  letter-spacing:1px;
+}
+.section-toggle{
+  width:24px;height:24px;display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.3);transition:transform .3s;font-size:1.2rem;
+}
+.section-toggle.collapsed{transform:rotate(-90deg)}
+.section-body{padding:24px;overflow:hidden;transition:max-height .4s ease,opacity .3s;max-height:5000px;opacity:1}
+.section-body.collapsed{max-height:0;opacity:0;padding:0 24px}
+
+/* Agent Grid */
+.agent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.agent-card{
+  display:flex;align-items:center;gap:12px;padding:12px 16px;
+  background:rgba(255,255,255,0.03);border-radius:10px;
+  border-left:3px solid transparent;transition:all .3s;
+  font-family:var(--font-mono);font-size:0.82rem;
+}
+.agent-card:hover{background:rgba(255,255,255,0.07);transform:translateX(4px)}
+.agent-card .badge{
+  font-size:0.6rem;padding:2px 8px;border-radius:100px;letter-spacing:1px;
+  text-transform:uppercase;white-space:nowrap;
+}
+
+/* Skills */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filter-btn{
+  padding:6px 16px;border-radius:100px;border:1px solid var(--glass-border);
+  background:transparent;color:rgba(255,255,255,0.5);cursor:pointer;
+  font-family:var(--font-mono);font-size:0.75rem;transition:all .3s;
+  letter-spacing:1px;
+}
+.filter-btn:hover,.filter-btn.active{color:#fff;border-color:currentColor}
+.skill-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{
+  padding:6px 14px;border-radius:100px;font-family:var(--font-mono);
+  font-size:0.75rem;border:1px solid;transition:all .3s;cursor:default;
+  opacity:0.8;
+}
+.skill-tag:hover{opacity:1;transform:scale(1.05)}
+
+/* MCP */
+.mcp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
+.mcp-card{
+  padding:20px 16px;text-align:center;border-radius:12px;
+  background:rgba(255,255,255,0.03);position:relative;overflow:hidden;
+  transition:all .3s;
+}
+.mcp-card:hover{background:rgba(255,255,255,0.07)}
+.mcp-card .mcp-icon{
+  font-size:1.8rem;margin-bottom:8px;display:block;
+  filter:drop-shadow(0 0 8px currentColor);
+}
+.mcp-card .mcp-name{font-family:var(--font-mono);font-size:0.8rem;opacity:0.8}
+.mcp-line{
+  position:absolute;bottom:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  overflow:hidden;
+}
+.mcp-line::after{
+  content:'';position:absolute;width:20px;height:100%;
+  background:var(--cyan);border-radius:50%;
+  box-shadow:0 0 10px var(--cyan);
+  animation:moveDot 3s linear infinite;
+}
+@keyframes moveDot{0%{left:-20px}100%{left:100%}}
+
+/* Memory */
+.memory-list{font-family:var(--font-mono);font-size:0.8rem}
+.memory-item{
+  display:flex;gap:12px;padding:10px 16px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  transition:background .2s;align-items:center;
+}
+.memory-item:hover{background:rgba(255,255,255,0.03)}
+.memory-item:last-child{border-bottom:none}
+.mem-prompt{color:var(--green);min-width:14px}
+.mem-file{color:var(--cyan);min-width:250px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mem-type{
+  padding:2px 8px;border-radius:4px;font-size:0.65rem;letter-spacing:1px;
+  min-width:70px;text-align:center;
+}
+.mem-desc{color:rgba(255,255,255,0.4);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* GSD */
+.gsd-stats{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px}
+.gsd-stat{font-family:var(--font-mono);font-size:0.85rem;color:rgba(255,255,255,0.5)}
+.gsd-stat span{color:var(--cyan);font-weight:bold}
+.gsd-commands{
+  background:rgba(0,0,0,0.3);border-radius:10px;padding:16px 20px;
+  max-height:300px;overflow-y:auto;font-family:var(--font-mono);font-size:0.75rem;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px 20px;
+  color:rgba(255,255,255,0.5);
+}
+.gsd-commands::-webkit-scrollbar{width:6px}
+.gsd-commands::-webkit-scrollbar-track{background:transparent}
+.gsd-commands::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
+
+/* Hooks */
+.hook-item{
+  display:flex;align-items:center;gap:14px;padding:12px 16px;
+  border-bottom:1px solid rgba(255,255,255,0.03);font-family:var(--font-mono);font-size:0.82rem;
+}
+.hook-item:last-child{border-bottom:none}
+.hook-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;
+  animation:pulse 2s ease-in-out infinite;
+}
+.hook-name{color:var(--cyan);min-width:220px}
+.hook-desc{color:rgba(255,255,255,0.4)}
+
+/* Footer */
+.footer{
+  text-align:center;padding:20px;font-family:var(--font-mono);font-size:0.75rem;
+  color:rgba(255,255,255,0.3);
+  border-top:1px solid transparent;
+  border-image:linear-gradient(90deg,transparent,var(--purple),var(--cyan),var(--rose),transparent) 1;
+  margin-top:20px;
+}
+
+/* Colors */
+.c-purple{color:var(--purple)}.c-cyan{color:var(--cyan)}.c-rose{color:var(--rose)}
+.c-green{color:var(--green)}.c-amber{color:var(--amber)}.c-blue{color:var(--blue)}
+.c-orange{color:var(--orange)}.c-indigo{color:var(--indigo)}.c-white{color:var(--white)}
+
+.bg-purple{background:rgba(168,85,247,0.15);color:var(--purple);border-color:rgba(168,85,247,0.3)}
+.bg-cyan{background:rgba(6,182,212,0.15);color:var(--cyan);border-color:rgba(6,182,212,0.3)}
+.bg-rose{background:rgba(244,63,94,0.15);color:var(--rose);border-color:rgba(244,63,94,0.3)}
+.bg-green{background:rgba(34,197,94,0.15);color:var(--green);border-color:rgba(34,197,94,0.3)}
+.bg-amber{background:rgba(245,158,11,0.15);color:var(--amber);border-color:rgba(245,158,11,0.3)}
+.bg-blue{background:rgba(59,130,246,0.15);color:var(--blue);border-color:rgba(59,130,246,0.3)}
+.bg-orange{background:rgba(249,115,22,0.15);color:var(--orange);border-color:rgba(249,115,22,0.3)}
+.bg-indigo{background:rgba(99,102,241,0.15);color:var(--indigo);border-color:rgba(99,102,241,0.3)}
+.bg-white{background:rgba(226,232,240,0.1);color:var(--white);border-color:rgba(226,232,240,0.2)}
+.bg-gray{background:rgba(148,163,184,0.1);color:#94a3b8;border-color:rgba(148,163,184,0.2)}
+
+.bl-purple{border-left-color:var(--purple)}.bl-cyan{border-left-color:var(--cyan)}
+.bl-rose{border-left-color:var(--rose)}.bl-green{border-left-color:var(--green)}
+
+@media(max-width:768px){
+  .container{padding:12px}
+  .hero{padding:30px 16px 28px}
+  .hero-title{letter-spacing:2px}
+  .stats-bar{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+  .stat-num{font-size:2.2rem}
+  .agent-grid{grid-template-columns:1fr}
+  .mcp-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .mem-file{min-width:160px}
+  .hook-name{min-width:auto}
+  .section-body{padding:16px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero glass">
+    <h1 class="hero-title">CLAUDE ECOSYSTEM</h1>
+    <p class="hero-sub">Paul Agusto | Frontline Construction QLD</p>
+    <div class="status-badge"><span class="pulse-dot"></span> SYSTEM ACTIVE</div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="glass stat-card" data-glow="purple">
+      <div class="stat-num c-purple">28</div>
+      <div class="stat-label">AGENTS</div>
+    </div>
+    <div class="glass stat-card" data-glow="cyan">
+      <div class="stat-num c-cyan">87</div>
+      <div class="stat-label">SKILLS</div>
+    </div>
+    <div class="glass stat-card" data-glow="green">
+      <div class="stat-num c-green">57</div>
+      <div class="stat-label">GSD CMDS</div>
+    </div>
+    <div class="glass stat-card" data-glow="rose">
+      <div class="stat-num c-rose">7</div>
+      <div class="stat-label">MCPs</div>
+    </div>
+    <div class="glass stat-card" data-glow="amber">
+      <div class="stat-num c-amber">10</div>
+      <div class="stat-label">MEMORIES</div>
+    </div>
+  </div>
+
+  <!-- AGENT MATRIX -->
+  <div class="section glass" id="sec-agents">
+    <div class="section-header" onclick="toggleSection('sec-agents')">
+      <span class="section-title">// AGENT_REGISTRY</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div class="agent-grid" id="agent-grid"></div>
+    </div>
+  </div>
+
+  <!-- SKILL ARSENAL -->
+  <div class="section glass" id="sec-skills">
+    <div class="section-header" onclick="toggleSection('sec-skills')">
+      <span class="section-title">// LOADED_MODULES</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div class="filter-bar" id="filter-bar"></div>
+      <div class="skill-cloud" id="skill-cloud"></div>
+    </div>
+  </div>
+
+  <!-- MCP CONNECTIONS -->
+  <div class="section glass" id="sec-mcp">
+    <div class="section-header" onclick="toggleSection('sec-mcp')">
+      <span class="section-title">// ACTIVE_CONNECTIONS</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div class="mcp-grid" id="mcp-grid"></div>
+    </div>
+  </div>
+
+  <!-- NEURAL MEMORY -->
+  <div class="section glass" id="sec-memory">
+    <div class="section-header" onclick="toggleSection('sec-memory')">
+      <span class="section-title">// MEMORY_BANK</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div class="memory-list" id="memory-list"></div>
+    </div>
+  </div>
+
+  <!-- GSD FRAMEWORK -->
+  <div class="section glass" id="sec-gsd">
+    <div class="section-header" onclick="toggleSection('sec-gsd')">
+      <span class="section-title">// GET_SHIT_DONE v1.29.0</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div class="gsd-stats">
+        <div class="gsd-stat"><span>57</span> commands</div>
+        <div class="gsd-stat"><span>55</span> workflows</div>
+        <div class="gsd-stat"><span>33</span> templates</div>
+        <div class="gsd-stat"><span>15</span> references</div>
+      </div>
+      <div class="gsd-commands" id="gsd-commands"></div>
+    </div>
+  </div>
+
+  <!-- SYSTEM HOOKS -->
+  <div class="section glass" id="sec-hooks">
+    <div class="section-header" onclick="toggleSection('sec-hooks')">
+      <span class="section-title">// HOOK_REGISTRY</span>
+      <span class="section-toggle">&#9662;</span>
+    </div>
+    <div class="section-body">
+      <div id="hook-list"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    CLAUDE ECOSYSTEM v1.0 | Synced: 2026-03-27T06:38:46Z | pagusto/pagusto
+  </div>
+
+</div>
+
+<script>
+// DATA
+const agents = [
+  {name:'audit-budget',cat:'Audit',color:'purple'},
+  {name:'audit-compliance',cat:'Audit',color:'purple'},
+  {name:'audit-creative',cat:'Audit',color:'purple'},
+  {name:'audit-google',cat:'Audit',color:'purple'},
+  {name:'audit-meta',cat:'Audit',color:'purple'},
+  {name:'audit-tracking',cat:'Audit',color:'purple'},
+  {name:'gsd-advisor-researcher',cat:'GSD',color:'cyan'},
+  {name:'gsd-assumptions-analyzer',cat:'GSD',color:'cyan'},
+  {name:'gsd-codebase-mapper',cat:'GSD',color:'cyan'},
+  {name:'gsd-debugger',cat:'GSD',color:'cyan'},
+  {name:'gsd-executor',cat:'GSD',color:'cyan'},
+  {name:'gsd-integration-checker',cat:'GSD',color:'cyan'},
+  {name:'gsd-nyquist-auditor',cat:'GSD',color:'cyan'},
+  {name:'gsd-phase-researcher',cat:'GSD',color:'cyan'},
+  {name:'gsd-plan-checker',cat:'GSD',color:'cyan'},
+  {name:'gsd-planner',cat:'GSD',color:'cyan'},
+  {name:'gsd-project-researcher',cat:'GSD',color:'cyan'},
+  {name:'gsd-research-synthesizer',cat:'GSD',color:'cyan'},
+  {name:'gsd-roadmapper',cat:'GSD',color:'cyan'},
+  {name:'gsd-ui-auditor',cat:'GSD',color:'cyan'},
+  {name:'gsd-ui-checker',cat:'GSD',color:'cyan'},
+  {name:'gsd-ui-researcher',cat:'GSD',color:'cyan'},
+  {name:'gsd-user-profiler',cat:'GSD',color:'cyan'},
+  {name:'gsd-verifier',cat:'GSD',color:'cyan'},
+  {name:'copy-writer',cat:'Creative',color:'rose'},
+  {name:'creative-strategist',cat:'Creative',color:'rose'},
+  {name:'visual-designer',cat:'Creative',color:'rose'},
+  {name:'format-adapter',cat:'System',color:'green'},
+];
+
+const skills = [
+  // Advertising (rose)
+  ...['ads','ads-apple','ads-audit','ads-budget','ads-competitor','ads-create','ads-creative','ads-dna','ads-generate','ads-google','ads-landing','ads-linkedin','ads-meta','ads-microsoft','ads-photoshoot','ads-plan','ads-tiktok','ads-youtube'].map(s=>({name:s,cat:'Advertising',color:'rose'})),
+  // Google (blue)
+  ...['google-calendar','google-chat','google-docs','google-drive','google-sheets','google-slides','google-tts'].map(s=>({name:s,cat:'Google',color:'blue'})),
+  // Research (green)
+  ...['article-extractor','content-research-writer','deep-research','lead-research-assistant','notebooklm','reddit-fetch','ship-learn-next','youtube-transcript'].map(s=>({name:s,cat:'Research',color:'green'})),
+  // Dev (amber)
+  ...['azure-devops','git-pushing','kaizen','mcp-builder','move-code-quality','skill-creator','test-fixing'].map(s=>({name:s,cat:'Dev',color:'amber'})),
+  // Database (purple)
+  ...['mssql','mysql','postgres','aws-skills'].map(s=>({name:s,cat:'Database',color:'purple'})),
+  // Media (cyan)
+  ...['canvas-design','d3js-visualization','image-enhancer','imagen','slack-gif-creator','theme-factory','video-downloader','epub-converter'].map(s=>({name:s,cat:'Media',color:'cyan'})),
+  // AI (white)
+  ...['jules','manus','subagent-driven-development'].map(s=>({name:s,cat:'AI',color:'white'})),
+  // Automation (orange)
+  ...['atlassian','changelog-generator','connect','csv-data-summarizer','file-organizer','gmail','humanizer','humanizalo','invoice-organizer','playwright','webapp-testing','review-implementing'].map(s=>({name:s,cat:'Automation',color:'orange'})),
+  // Writing (indigo)
+  ...['brand-guidelines','internal-comms','prompt-engineering','twitter-algorithm-optimizer','competitive-ads-extractor'].map(s=>({name:s,cat:'Writing',color:'indigo'})),
+  // Other (gray)
+  ...['elevenlabs','artifacts-builder','domain-name-brainstormer','developer-growth-analysis','family-history-research','ffuf-web-fuzzing','ios-simulator','langsmith-fetch','meeting-insights-analyzer','outline','pypict','raffle-winner-picker','session-start-hook','tailored-resume-generator','terminal-title'].map(s=>({name:s,cat:'Other',color:'gray'})),
+];
+
+const mcps = [
+  {name:'Canva',icon:'\u{1F3A8}'},
+  {name:'Meta Ads',icon:'\u{1F4CA}'},
+  {name:'Notion',icon:'\u{1F4DD}'},
+  {name:'Gmail',icon:'\u{2709}'},
+  {name:'Google Calendar',icon:'\u{1F4C5}'},
+  {name:'Google Ads',icon:'\u{1F4B0}'},
+  {name:'GitHub',icon:'\u{1F4BB}'},
+];
+
+const memories = [
+  {file:'user_paul_recruiter.md',type:'USER',typeColor:'cyan',desc:'Paul Agusto: construction recruiter QLD'},
+  {file:'user_language.md',type:'USER',typeColor:'cyan',desc:'Spanish speaker, business development'},
+  {file:'feedback_candidate_privacy',type:'RULES',typeColor:'amber',desc:'Hide email/phone/references in profiles'},
+  {file:'feedback_outreach_style',type:'RULES',typeColor:'amber',desc:'Chris Voss FBI negotiation techniques'},
+  {file:'project_sourcing_agents',type:'PROJECT',typeColor:'purple',desc:'SEEK + LinkedIn + X-ray architecture'},
+  {file:'project_recruitment_mar27',type:'PROJECT',typeColor:'purple',desc:'20 candidates, dashboard, 3 emails sent'},
+  {file:'project_longevity_system',type:'PROJECT',typeColor:'purple',desc:'12-agent health optimization platform'},
+  {file:'project_prospect_prompt',type:'PROJECT',typeColor:'purple',desc:'6-step prospect analysis pipeline'},
+  {file:'project_prospect_report',type:'PROJECT',typeColor:'purple',desc:'Prospect intelligence report builder'},
+  {file:'MEMORY.md',type:'INDEX',typeColor:'green',desc:'Memory index file'},
+];
+
+const gsdCommands = [
+  'add','agent','audit','backup','catalog','check','clean','clone','config',
+  'context','create','debug','deploy','diff','doctor','edit','env','exec',
+  'export','fix','flow','format','generate','help','history','hook','import',
+  'init','inspect','install','launch','lint','list','log','map','migrate',
+  'monitor','new','open','optimize','plan','profile','publish','query',
+  'rebuild','refresh','remove','report','research','reset','review','run',
+  'scan','search','setup','snapshot','status','sync','test',
+];
+
+const hooks = [
+  {name:'gsd-check-update.js',desc:'Update checker'},
+  {name:'gsd-context-monitor.js',desc:'Context monitor'},
+  {name:'gsd-prompt-guard.js',desc:'Prompt guard'},
+  {name:'gsd-statusline.js',desc:'Status line'},
+  {name:'gsd-workflow-guard.js',desc:'Workflow guard'},
+  {name:'proteger.sh',desc:'Security protection'},
+];
+
+// RENDER AGENTS
+const agentGrid = document.getElementById('agent-grid');
+agents.forEach(a => {
+  const d = document.createElement('div');
+  d.className = `agent-card bl-${a.color}`;
+  d.innerHTML = `<span style="flex:1">${a.name}</span><span class="badge bg-${a.color}">${a.cat}</span>`;
+  agentGrid.appendChild(d);
+});
+
+// RENDER SKILLS
+const categories = [...new Set(skills.map(s=>s.cat))];
+const filterBar = document.getElementById('filter-bar');
+const skillCloud = document.getElementById('skill-cloud');
+let activeFilters = new Set();
+
+function renderFilterBar() {
+  filterBar.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn' + (activeFilters.size === 0 ? ' active' : '');
+  allBtn.textContent = 'ALL';
+  allBtn.style.color = activeFilters.size === 0 ? '#fff' : '';
+  allBtn.onclick = () => { activeFilters.clear(); renderFilterBar(); renderSkills(); };
+  filterBar.appendChild(allBtn);
+
+  categories.forEach(cat => {
+    const btn = document.createElement('button');
+    const colorVar = skills.find(s=>s.cat===cat).color;
+    btn.className = 'filter-btn' + (activeFilters.has(cat) ? ' active' : '');
+    btn.textContent = cat.toUpperCase();
+    if (activeFilters.has(cat)) {
+      const cv = getComputedStyle(document.documentElement).getPropertyValue('--'+colorVar).trim() || '#fff';
+      btn.style.color = cv;
+      btn.style.borderColor = cv;
+    }
+    btn.onclick = () => {
+      if (activeFilters.has(cat)) activeFilters.delete(cat); else activeFilters.add(cat);
+      renderFilterBar(); renderSkills();
+    };
+    filterBar.appendChild(btn);
+  });
+}
+
+function renderSkills() {
+  skillCloud.innerHTML = '';
+  const filtered = activeFilters.size === 0 ? skills : skills.filter(s => activeFilters.has(s.cat));
+  filtered.forEach(s => {
+    const t = document.createElement('span');
+    t.className = `skill-tag bg-${s.color}`;
+    t.textContent = s.name;
+    t.title = s.cat;
+    skillCloud.appendChild(t);
+  });
+}
+renderFilterBar();
+renderSkills();
+
+// RENDER MCPs
+const mcpGrid = document.getElementById('mcp-grid');
+mcps.forEach(m => {
+  const d = document.createElement('div');
+  d.className = 'mcp-card';
+  d.innerHTML = `<span class="mcp-icon c-cyan">${m.icon}</span><span class="mcp-name">${m.name}</span><div class="mcp-line"></div>`;
+  mcpGrid.appendChild(d);
+});
+
+// RENDER MEMORY
+const memList = document.getElementById('memory-list');
+memories.forEach(m => {
+  const d = document.createElement('div');
+  d.className = 'memory-item';
+  d.innerHTML = `<span class="mem-prompt">&gt;</span><span class="mem-file">${m.file}</span><span class="mem-type bg-${m.typeColor}">[${m.type}]</span><span class="mem-desc">${m.desc}</span>`;
+  memList.appendChild(d);
+});
+
+// RENDER GSD
+const gsdEl = document.getElementById('gsd-commands');
+gsdCommands.forEach(c => {
+  const s = document.createElement('span');
+  s.textContent = '$ gsd ' + c;
+  gsdEl.appendChild(s);
+});
+
+// RENDER HOOKS
+const hookList = document.getElementById('hook-list');
+hooks.forEach(h => {
+  const d = document.createElement('div');
+  d.className = 'hook-item';
+  d.innerHTML = `<span class="hook-dot"></span><span class="hook-name">${h.name}</span><span class="hook-desc">${h.desc}</span>`;
+  hookList.appendChild(d);
+});
+
+// COLLAPSIBLE SECTIONS
+function toggleSection(id) {
+  const sec = document.getElementById(id);
+  const body = sec.querySelector('.section-body');
+  const toggle = sec.querySelector('.section-toggle');
+  body.classList.toggle('collapsed');
+  toggle.classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
