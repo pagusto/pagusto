@@ -8,7 +8,8 @@
 ### Activos Digitales
 | Activo | Estado | Accion Requerida |
 |--------|--------|-----------------|
-| Web (prosperclean.com.au) | Activa en Shopify, pagos fallando $56/dia desde Mar 10 | URGENTE: Resolver pago Shopify |
+| Web (prosperclean.com.au) | Activa en GoDaddy Website Builder | Actualizar contenido a Canberra |
+| Shopify Store | Suscripcion activa innecesaria, pagos fallando $56 cada 2 dias | CANCELAR |
 | Instagram (@prosper.clean) | Comprometida - password cambiado Mar 24 | Crear cuenta nueva o recuperar |
 | Facebook Page (Prosper Clean) | Ex tiene acceso via Business Manager | Crear pagina nueva |
 | Google Ads (ID: 697-093-3047) | Inactiva, invitacion pendiente | Reactivar bajo tu control |
@@ -20,10 +21,10 @@
 | Email (prosperclean.au@gmail.com) | Activa, recovery: pagusto@gmail.com | Cambiar passwords, revocar accesos |
 
 ### Problemas Inmediatos
-1. **Shopify: pagos fallando** - $56 AUD desde el 10 de marzo (17 dias)
+1. **Shopify: suscripcion innecesaria** - $56 AUD fallando cada 2 dias, CANCELAR (web real esta en GoDaddy)
 2. **Instagram comprometida** - password cambiado el 24 marzo desde Canberra
 3. **Ex tiene acceso** a Facebook Business, posiblemente Instagram
-4. **Web dice Brisbane** - necesita actualizarse a Canberra
+4. **Web dice Brisbane** - necesita actualizarse a Canberra en GoDaddy
 5. **Local Insights** - deuda pendiente $247.50
 6. **CleanMeta Marketing** - experiencia negativa previa, leccion aprendida
 7. **Sin Google Business Profile** - perdiendo trafico local organico
@@ -148,7 +149,7 @@
 ## 4. PLAN DE ACCION POR FASES
 
 ### FASE 0: EMERGENCIAS (Semana 1)
-- [ ] Resolver pago Shopify ($56 AUD)
+- [ ] CANCELAR suscripcion Shopify (no se usa, web esta en GoDaddy)
 - [ ] Cambiar passwords de prosperclean.au@gmail.com
 - [ ] Revocar accesos de la ex en Facebook Business Manager
 - [ ] Revocar accesos en Instagram (si es posible recuperar)
@@ -283,21 +284,20 @@
 
 ---
 
-## 7. OPTIMIZACION WEB (Shopify)
+## 7. OPTIMIZACION WEB (GoDaddy Website Builder)
 
 ### Problemas Actuales
 1. Web dice "Brisbane" - actualizar a Canberra
-2. Servicios como "productos" - necesita paginas de servicio reales
-3. Solo homepage indexada - falta estructura SEO
-4. Sin Google Business Profile vinculado
-5. Jobber no integrado visiblemente
-6. Sin blog/contenido
-7. Pagos Shopify fallando
+2. Solo homepage indexada - falta estructura SEO
+3. Sin Google Business Profile vinculado
+4. Jobber no integrado visiblemente
+5. Sin blog/contenido
+6. SEO meta tags debiles
 
 ### Mejoras Propuestas
 1. **Homepage**: Hero con "Professional Cleaning Services in Canberra"
 2. **Paginas de servicio**: Una por cada servicio (bond, deep, regular, etc.)
-3. **Pagina de areas**: Listar todos los suburbs de Canberra
+3. **Pagina de areas**: Listar suburbs de Canberra (Belconnen, Gungahlin, Woden, Tuggeranong, etc.)
 4. **Blog**: 2-4 articulos/mes sobre limpieza en Canberra
 5. **Booking widget**: Integrar Jobber para cotizaciones online
 6. **Reviews section**: Mostrar Google reviews en la web
@@ -305,6 +305,17 @@
 8. **Schema markup**: LocalBusiness, Service, AggregateRating
 9. **Speed**: Optimizar imagenes y cargar rapido
 10. **Mobile**: Verificar experiencia movil perfecta
+
+### Directorios para Registrar ProsperClean
+- Google Business Profile (PRIORITARIO)
+- Airtasker (284 listings en Canberra)
+- Oneflare
+- Hipages
+- Bark
+- Localsearch
+- Yellow Pages
+- True Local
+- Yelp Australia
 
 ---
 
