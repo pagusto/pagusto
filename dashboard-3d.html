@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Ecosystem — 3D</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e17;color:#e8f0fe;font-family:system-ui,-apple-system,sans-serif;overflow:hidden}
+#canvas{width:100vw;height:100vh;display:block}
+#hud{position:fixed;top:16px;left:16px;z-index:10;pointer-events:none}
+#hud h1{font-size:18px;letter-spacing:3px;color:#00ff88;text-shadow:0 0 10px rgba(0,255,136,.4);text-transform:uppercase;font-family:'Courier New',monospace}
+#hud p{font-size:12px;color:#5a6a80;margin-top:4px}
+#stats{position:fixed;top:16px;right:16px;z-index:10;display:flex;gap:12px;pointer-events:none}
+.stat{background:rgba(15,21,32,.85);border:1px solid #1a2640;border-radius:8px;padding:10px 16px;text-align:center;backdrop-filter:blur(8px)}
+.stat-val{font-size:22px;font-weight:700;font-family:'Courier New',monospace}
+.stat-label{font-size:10px;color:#5a6a80;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+#tooltip{position:fixed;z-index:20;background:rgba(10,14,23,.95);border:1px solid #00b4d8;border-radius:8px;padding:10px 14px;pointer-events:none;display:none;backdrop-filter:blur(8px);max-width:260px}
+#tooltip .tt-name{font-weight:700;font-size:14px;color:#00ff88;font-family:'Courier New',monospace}
+#tooltip .tt-cat{font-size:11px;color:#00b4d8;margin-top:2px}
+#tooltip .tt-conn{font-size:11px;color:#5a6a80;margin-top:6px}
+#legend{position:fixed;bottom:16px;left:16px;z-index:10;display:flex;gap:16px;pointer-events:none}
+.leg{display:flex;align-items:center;gap:6px;font-size:11px;color:#5a6a80}
+.leg-dot{width:10px;height:10px;border-radius:50%}
+#controls{position:fixed;bottom:16px;right:16px;z-index:10;font-size:11px;color:#5a6a80;text-align:right;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div id="hud">
+  <h1>Claude Ecosystem</h1>
+  <p>Paul Agusto — Frontline Construction QLD</p>
+</div>
+
+<div id="stats">
+  <div class="stat"><div class="stat-val" style="color:#00ff88">28</div><div class="stat-label">Agents</div></div>
+  <div class="stat"><div class="stat-val" style="color:#00b4d8">87</div><div class="stat-label">Skills</div></div>
+  <div class="stat"><div class="stat-val" style="color:#ff6b35">57</div><div class="stat-label">GSD Cmds</div></div>
+  <div class="stat"><div class="stat-val" style="color:#a78bfa">7</div><div class="stat-label">MCPs</div></div>
+</div>
+
+<div id="tooltip">
+  <div class="tt-name"></div>
+  <div class="tt-cat"></div>
+  <div class="tt-conn"></div>
+</div>
+
+<div id="legend">
+  <div class="leg"><div class="leg-dot" style="background:#00b4d8"></div>Audit</div>
+  <div class="leg"><div class="leg-dot" style="background:#00ff88"></div>GSD</div>
+  <div class="leg"><div class="leg-dot" style="background:#ff6b35"></div>Creative</div>
+  <div class="leg"><div class="leg-dot" style="background:#a78bfa"></div>MCP</div>
+  <div class="leg"><div class="leg-dot" style="background:#f59e0b"></div>Skills</div>
+  <div class="leg"><div class="leg-dot" style="background:#ef4444"></div>Memory</div>
+</div>
+
+<div id="controls">Drag to rotate | Scroll to zoom</div>
+
+<script>
+// === DATA ===
+const nodes = [
+  // Audit agents
+  {id:'audit-budget',cat:'Audit',r:6},{id:'audit-compliance',cat:'Audit',r:6},{id:'audit-creative',cat:'Audit',r:6},
+  {id:'audit-google',cat:'Audit',r:6},{id:'audit-meta',cat:'Audit',r:6},{id:'audit-tracking',cat:'Audit',r:6},
+  // GSD agents
+  {id:'gsd-executor',cat:'GSD',r:8},{id:'gsd-planner',cat:'GSD',r:8},{id:'gsd-debugger',cat:'GSD',r:7},
+  {id:'gsd-verifier',cat:'GSD',r:7},{id:'gsd-roadmapper',cat:'GSD',r:7},{id:'gsd-phase-researcher',cat:'GSD',r:6},
+  {id:'gsd-plan-checker',cat:'GSD',r:6},{id:'gsd-codebase-mapper',cat:'GSD',r:6},{id:'gsd-integration-checker',cat:'GSD',r:6},
+  {id:'gsd-ui-researcher',cat:'GSD',r:6},{id:'gsd-ui-checker',cat:'GSD',r:5},{id:'gsd-ui-auditor',cat:'GSD',r:5},
+  {id:'gsd-research-synth',cat:'GSD',r:5},{id:'gsd-project-researcher',cat:'GSD',r:5},
+  {id:'gsd-advisor',cat:'GSD',r:5},{id:'gsd-assumptions',cat:'GSD',r:5},
+  {id:'gsd-nyquist',cat:'GSD',r:5},{id:'gsd-user-profiler',cat:'GSD',r:5},
+  // Creative
+  {id:'copy-writer',cat:'Creative',r:7},{id:'creative-strategist',cat:'Creative',r:7},{id:'visual-designer',cat:'Creative',r:7},
+  {id:'format-adapter',cat:'Creative',r:5},
+  // MCPs
+  {id:'Gmail',cat:'MCP',r:9},{id:'Notion',cat:'MCP',r:9},{id:'Google Calendar',cat:'MCP',r:8},
+  {id:'Meta Ads',cat:'MCP',r:8},{id:'Google Ads',cat:'MCP',r:8},{id:'Canva',cat:'MCP',r:7},{id:'GitHub',cat:'MCP',r:9},
+  // Skill clusters
+  {id:'Ads Skills (18)',cat:'Skills',r:10},{id:'Google Suite (7)',cat:'Skills',r:8},{id:'Research (8)',cat:'Skills',r:7},
+  {id:'Dev Tools (7)',cat:'Skills',r:7},{id:'AI Agents (3)',cat:'Skills',r:6},{id:'Automation (12)',cat:'Skills',r:8},
+  {id:'Media (8)',cat:'Skills',r:7},{id:'Database (4)',cat:'Skills',r:6},
+  // Memory
+  {id:'Paul Profile',cat:'Memory',r:8},{id:'Outreach Style',cat:'Memory',r:6},{id:'Privacy Rules',cat:'Memory',r:6},
+  {id:'Sourcing Arch',cat:'Memory',r:7},{id:'Session Mar27',cat:'Memory',r:6},{id:'Longevity System',cat:'Memory',r:6},
+];
+
+// Connections (interactions between components)
+const edges = [
+  // GSD internal flow
+  ['gsd-planner','gsd-executor'],['gsd-planner','gsd-plan-checker'],['gsd-executor','gsd-verifier'],
+  ['gsd-planner','gsd-phase-researcher'],['gsd-roadmapper','gsd-planner'],['gsd-debugger','gsd-executor'],
+  ['gsd-codebase-mapper','gsd-planner'],['gsd-integration-checker','gsd-verifier'],
+  ['gsd-ui-researcher','gsd-ui-checker'],['gsd-ui-checker','gsd-ui-auditor'],
+  ['gsd-research-synth','gsd-project-researcher'],['gsd-advisor','gsd-assumptions'],
+  ['gsd-nyquist','gsd-verifier'],['gsd-user-profiler','Paul Profile'],
+  // Audit connections
+  ['audit-google','Google Ads'],['audit-meta','Meta Ads'],['audit-creative','creative-strategist'],
+  ['audit-budget','audit-compliance'],['audit-tracking','audit-meta'],['audit-tracking','audit-google'],
+  // Creative flow
+  ['creative-strategist','copy-writer'],['copy-writer','visual-designer'],['visual-designer','format-adapter'],
+  ['creative-strategist','Ads Skills (18)'],['visual-designer','Canva'],
+  // MCP to Skills
+  ['Gmail','Paul Profile'],['Notion','Sourcing Arch'],['GitHub','gsd-executor'],
+  ['Google Ads','Ads Skills (18)'],['Meta Ads','Ads Skills (18)'],
+  ['Google Calendar','Google Suite (7)'],['Gmail','Automation (12)'],
+  // Skills to Memory
+  ['Research (8)','Session Mar27'],['Ads Skills (18)','audit-meta'],
+  ['Dev Tools (7)','gsd-codebase-mapper'],['AI Agents (3)','gsd-executor'],
+  ['Database (4)','Automation (12)'],['Media (8)','visual-designer'],
+  // Memory connections
+  ['Outreach Style','copy-writer'],['Privacy Rules','Paul Profile'],['Sourcing Arch','Automation (12)'],
+];
+
+// === COLORS ===
+const catColors = {
+  'Audit':  [0, 180, 216],
+  'GSD':    [0, 255, 136],
+  'Creative':[255, 107, 53],
+  'MCP':    [167, 139, 250],
+  'Skills': [245, 158, 11],
+  'Memory': [239, 68, 68],
+};
+
+// === 3D ENGINE (minimal, no dependencies) ===
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+let W, H, cx, cy;
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+  cx = W / 2; cy = H / 2;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// Camera
+let camRotX = -0.3, camRotY = 0, camDist = 500;
+let dragging = false, lastMX = 0, lastMY = 0;
+let mouseX = 0, mouseY = 0;
+
+canvas.addEventListener('mousedown', e => { dragging = true; lastMX = e.clientX; lastMY = e.clientY; });
+canvas.addEventListener('mousemove', e => {
+  mouseX = e.clientX; mouseY = e.clientY;
+  if (dragging) {
+    camRotY += (e.clientX - lastMX) * 0.005;
+    camRotX += (e.clientY - lastMY) * 0.005;
+    camRotX = Math.max(-1.2, Math.min(1.2, camRotX));
+    lastMX = e.clientX; lastMY = e.clientY;
+  }
+});
+canvas.addEventListener('mouseup', () => dragging = false);
+canvas.addEventListener('mouseleave', () => dragging = false);
+canvas.addEventListener('wheel', e => {
+  camDist += e.deltaY * 0.5;
+  camDist = Math.max(200, Math.min(1000, camDist));
+});
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  dragging = true;
+  lastMX = e.touches[0].clientX; lastMY = e.touches[0].clientY;
+});
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  mouseX = e.touches[0].clientX; mouseY = e.touches[0].clientY;
+  if (dragging) {
+    camRotY += (e.touches[0].clientX - lastMX) * 0.005;
+    camRotX += (e.touches[0].clientY - lastMY) * 0.005;
+    camRotX = Math.max(-1.2, Math.min(1.2, camRotX));
+    lastMX = e.touches[0].clientX; lastMY = e.touches[0].clientY;
+  }
+}, {passive: false});
+canvas.addEventListener('touchend', () => dragging = false);
+
+// Position nodes in 3D clusters
+function positionNodes() {
+  const catAngles = {Audit: 0, GSD: 1, Creative: 2, MCP: 3, Skills: 4, Memory: 5};
+  const catCount = {};
+  nodes.forEach(n => { catCount[n.cat] = (catCount[n.cat] || 0); });
+
+  nodes.forEach(n => {
+    const baseAngle = (catAngles[n.cat] / 6) * Math.PI * 2;
+    const idx = catCount[n.cat]++;
+    const clusterR = 80 + idx * 18;
+    const spread = 0.4 + idx * 0.15;
+    n.x = Math.cos(baseAngle + spread) * clusterR + (Math.random() - 0.5) * 40;
+    n.y = (Math.random() - 0.5) * 120;
+    n.z = Math.sin(baseAngle + spread) * clusterR + (Math.random() - 0.5) * 40;
+    n.phase = Math.random() * Math.PI * 2; // for animation
+  });
+}
+positionNodes();
+
+// Build edge index
+const nodeMap = {};
+nodes.forEach(n => nodeMap[n.id] = n);
+const edgeObjs = edges.map(([a, b]) => ({a: nodeMap[a], b: nodeMap[b]})).filter(e => e.a && e.b);
+
+// Connections per node (for tooltip)
+const connCount = {};
+edges.forEach(([a, b]) => {
+  connCount[a] = (connCount[a] || 0) + 1;
+  connCount[b] = (connCount[b] || 0) + 1;
+});
+
+// Project 3D -> 2D
+function project(x, y, z, t) {
+  // Animate: gentle float
+  const ax = x, ay = y + Math.sin(t + (x * 0.01)) * 3, az = z;
+
+  // Rotate Y
+  const cosY = Math.cos(camRotY), sinY = Math.sin(camRotY);
+  const rx = ax * cosY - az * sinY;
+  const rz = ax * sinY + az * cosY;
+
+  // Rotate X
+  const cosX = Math.cos(camRotX), sinX = Math.sin(camRotX);
+  const ry = ay * cosX - rz * sinX;
+  const rz2 = ay * sinX + rz * cosX;
+
+  const d = camDist + rz2;
+  const scale = 400 / Math.max(d, 1);
+  return {
+    sx: cx + rx * scale,
+    sy: cy + ry * scale,
+    scale: scale,
+    depth: d
+  };
+}
+
+// Pulse animation data
+let pulses = [];
+function spawnPulse() {
+  if (edgeObjs.length === 0) return;
+  const e = edgeObjs[Math.floor(Math.random() * edgeObjs.length)];
+  const c = catColors[e.a.cat] || [255,255,255];
+  pulses.push({edge: e, t: 0, color: c});
+}
+
+// === RENDER LOOP ===
+let time = 0;
+let hoveredNode = null;
+
+function render() {
+  time += 0.008;
+  ctx.clearRect(0, 0, W, H);
+
+  // Auto-rotate when not dragging
+  if (!dragging) camRotY += 0.002;
+
+  // Spawn pulses
+  if (Math.random() < 0.06) spawnPulse();
+
+  // Project all nodes
+  const projected = nodes.map(n => {
+    const p = project(n.x, n.y, n.z, time + n.phase);
+    return {...n, ...p};
+  });
+
+  // Sort by depth (far first)
+  projected.sort((a, b) => b.depth - a.depth);
+
+  // Draw edges
+  edgeObjs.forEach(e => {
+    const pa = project(e.a.x, e.a.y, e.a.z, time + e.a.phase);
+    const pb = project(e.b.x, e.b.y, e.b.z, time + e.b.phase);
+    const alpha = Math.max(0.05, 0.15 - (pa.depth + pb.depth) * 0.0002);
+    ctx.beginPath();
+    ctx.moveTo(pa.sx, pa.sy);
+    ctx.lineTo(pb.sx, pb.sy);
+    ctx.strokeStyle = `rgba(90,106,128,${alpha})`;
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  });
+
+  // Draw and update pulses
+  pulses = pulses.filter(p => {
+    p.t += 0.015;
+    if (p.t > 1) return false;
+    const a = p.edge.a, b = p.edge.b;
+    const pa = project(a.x, a.y, a.z, time + a.phase);
+    const pb = project(b.x, b.y, b.z, time + b.phase);
+    const px = pa.sx + (pb.sx - pa.sx) * p.t;
+    const py = pa.sy + (pb.sy - pa.sy) * p.t;
+    const [cr,cg,cb] = p.color;
+    const alpha = Math.sin(p.t * Math.PI) * 0.8;
+    ctx.beginPath();
+    ctx.arc(px, py, 3, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${cr},${cg},${cb},${alpha})`;
+    ctx.fill();
+    return true;
+  });
+
+  // Draw nodes
+  hoveredNode = null;
+  let minDist = 30;
+
+  projected.forEach(n => {
+    const [cr, cg, cb] = catColors[n.cat] || [200, 200, 200];
+    const size = n.r * n.scale * 0.15;
+    const alpha = Math.max(0.3, 1 - n.depth * 0.001);
+
+    // Glow
+    const grad = ctx.createRadialGradient(n.sx, n.sy, 0, n.sx, n.sy, size * 3);
+    grad.addColorStop(0, `rgba(${cr},${cg},${cb},${alpha * 0.15})`);
+    grad.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+    ctx.beginPath();
+    ctx.arc(n.sx, n.sy, size * 3, 0, Math.PI * 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Node
+    ctx.beginPath();
+    ctx.arc(n.sx, n.sy, size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${cr},${cg},${cb},${alpha})`;
+    ctx.fill();
+    ctx.strokeStyle = `rgba(${cr},${cg},${cb},${alpha * 0.6})`;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Check hover
+    const dx = mouseX - n.sx, dy = mouseY - n.sy;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < minDist) {
+      minDist = dist;
+      hoveredNode = n;
+    }
+  });
+
+  // Draw labels for larger/closer nodes
+  ctx.font = '10px "Courier New", monospace';
+  ctx.textAlign = 'center';
+  projected.forEach(n => {
+    const size = n.r * n.scale * 0.15;
+    if (size > 4) {
+      const [cr, cg, cb] = catColors[n.cat] || [200, 200, 200];
+      const alpha = Math.max(0.2, 0.7 - n.depth * 0.001);
+      ctx.fillStyle = `rgba(${cr},${cg},${cb},${alpha})`;
+      ctx.fillText(n.id.length > 18 ? n.id.substring(0, 16) + '..' : n.id, n.sx, n.sy - size - 6);
+    }
+  });
+
+  // Tooltip
+  if (hoveredNode && !dragging) {
+    const n = hoveredNode;
+    tooltip.style.display = 'block';
+    tooltip.style.left = (mouseX + 16) + 'px';
+    tooltip.style.top = (mouseY - 10) + 'px';
+    const [cr,cg,cb] = catColors[n.cat];
+    tooltip.querySelector('.tt-name').textContent = n.id;
+    tooltip.querySelector('.tt-name').style.color = `rgb(${cr},${cg},${cb})`;
+    tooltip.querySelector('.tt-cat').textContent = n.cat;
+    tooltip.querySelector('.tt-conn').textContent = (connCount[n.id] || 0) + ' connections';
+
+    // Highlight connected edges
+    edgeObjs.forEach(e => {
+      if (e.a.id === n.id || e.b.id === n.id) {
+        const pa = project(e.a.x, e.a.y, e.a.z, time + e.a.phase);
+        const pb = project(e.b.x, e.b.y, e.b.z, time + e.b.phase);
+        ctx.beginPath();
+        ctx.moveTo(pa.sx, pa.sy);
+        ctx.lineTo(pb.sx, pb.sy);
+        ctx.strokeStyle = `rgba(${cr},${cg},${cb},0.6)`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    });
+  } else {
+    tooltip.style.display = 'none';
+  }
+
+  requestAnimationFrame(render);
+}
+
+render();
+</script>
+</body>
+</html>
