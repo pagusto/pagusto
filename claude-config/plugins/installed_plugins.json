@@ -10,6 +10,15 @@
         "lastUpdated": "2026-03-26T23:08:53.417Z",
         "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
       }
+    ],
+    "claude-mem@claude-mem": [
+      {
+        "scope": "user",
+        "installPath": "claude-config/plugins/cache/claude-mem/claude-mem/10.6.2",
+        "version": "10.6.2",
+        "installedAt": "2026-03-27T00:00:00.000Z",
+        "lastUpdated": "2026-03-27T00:00:00.000Z"
+      }
     ]
   }
 }
