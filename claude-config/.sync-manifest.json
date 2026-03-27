@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "lastSync": "2026-03-27T06:38:46Z",
+  "counts": {
+    "agents": 28,
+    "skills": 87,
+    "commands": 57,
+    "hooks": 6,
+    "memory": 10
+  },
+  "source": "vm",
+  "user": "root"
+}
