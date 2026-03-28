@@ -1,0 +1,7 @@
+# Telegram Bot - Daily Wealth & Success Summaries
+# Install: pip install -r requirements.txt
+
+python-telegram-bot[job-scheduler]>=20.0
+jinja2>=3.0
+matplotlib>=3.5
+numpy>=1.20

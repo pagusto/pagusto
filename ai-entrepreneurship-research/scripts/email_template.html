@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ emoji }} {{ dia_nombre }}: {{ tema }} | Semana {{ semana }}</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0f0f1a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #e0e0e0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+
+    <!-- Contenedor principal -->
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0f0f1a;">
+        <tr>
+            <td align="center" style="padding: 20px 10px;">
+
+                <!-- Contenedor interior -->
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%; background-color: #1a1a2e; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a4a;">
+
+                    <!-- ============================================ -->
+                    <!-- HEADER -->
+                    <!-- ============================================ -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%); padding: 30px 30px 20px 30px; text-align: center; border-bottom: 2px solid #ffd700;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <p style="margin: 0 0 8px 0; font-size: 14px; color: #888; letter-spacing: 2px; text-transform: uppercase;">Tu Dosis Diaria de Exito</p>
+                                        <h1 style="margin: 0 0 8px 0; font-size: 28px; color: #ffd700; font-weight: 700; line-height: 1.2;">
+                                            {{ emoji }} {{ dia_nombre | upper }}
+                                        </h1>
+                                        <h2 style="margin: 0 0 12px 0; font-size: 20px; color: #ffffff; font-weight: 400;">
+                                            {{ tema }}
+                                        </h2>
+                                        <p style="margin: 0; font-size: 13px; color: #888;">
+                                            {{ fecha }} &bull; Semana {{ semana }}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- ============================================ -->
+                    <!-- AFIRMACION DEL DIA -->
+                    <!-- ============================================ -->
+                    {% if afirmacion %}
+                    <tr>
+                        <td style="padding: 25px 30px 15px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: linear-gradient(135deg, #2a1f3d 0%, #1e2a4a 100%); border-radius: 10px; border-left: 4px solid #ffd700;">
+                                <tr>
+                                    <td style="padding: 20px 24px;">
+                                        <p style="margin: 0 0 8px 0; font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">&#x2728; Afirmacion del Dia</p>
+                                        <p style="margin: 0; font-size: 18px; color: #ffffff; font-style: italic; line-height: 1.5;">
+                                            "{{ afirmacion }}"
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- ============================================ -->
+                    <!-- CONTENIDO PRINCIPAL POR DIA -->
+                    <!-- ============================================ -->
+
+                    <!-- LUNES: Tecnica de Reprogramacion -->
+                    {% if dia_key == "monday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f3af; Tecnica de Reprogramacion</h3>
+                            <h4 style="margin: 0 0 10px 0; font-size: 20px; color: #ffffff;">{{ tecnica_nombre }}</h4>
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ tecnica_descripcion }}</p>
+
+                            {% if pasos %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 8px; margin-bottom: 16px;">
+                                <tr>
+                                    <td style="padding: 16px 20px;">
+                                        <p style="margin: 0 0 10px 0; font-size: 13px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Pasos:</p>
+                                        {% for paso in pasos %}
+                                        <p style="margin: 0 0 8px 0; font-size: 14px; color: #e0e0e0; line-height: 1.5; padding-left: 8px;">
+                                            <span style="color: #ffd700; font-weight: 700;">{{ loop.index }}.</span> {{ paso }}
+                                        </p>
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #888;">&#x23f0; Duracion recomendada: <span style="color: #ffd700;">{{ duracion }}</span></p>
+
+                            {% if ciencia %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #1e2a3a; border-radius: 8px; margin-top: 12px;">
+                                <tr>
+                                    <td style="padding: 14px 18px;">
+                                        <p style="margin: 0 0 6px 0; font-size: 12px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f4a1; Ciencia detras</p>
+                                        <p style="margin: 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ ciencia }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- MARTES: Resumen de Libro -->
+                    {% elif dia_key == "tuesday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f4d5; Libro de la Semana</h3>
+                            <h4 style="margin: 0 0 6px 0; font-size: 20px; color: #ffffff;">{{ libro_titulo }}</h4>
+                            <p style="margin: 0 0 4px 0; font-size: 14px; color: #aaa;">&#x270d;&#xfe0f; {{ libro_autor }}</p>
+                            <p style="margin: 0 0 16px 0; font-size: 13px; color: #ffd700;">{{ libro_categoria }}</p>
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ libro_resumen }}</p>
+
+                            {% if ideas_clave %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f511; Ideas clave:</p>
+                            {% for idea in ideas_clave %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&bull; {{ idea }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if acciones %}
+                            <p style="margin: 16px 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x26a1; Acciones inmediatas:</p>
+                            {% for accion in acciones %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&#x26a1; {{ accion }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if aplicacion_negocio %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #1e2a3a; border-radius: 8px; margin-top: 16px;">
+                                <tr>
+                                    <td style="padding: 14px 18px;">
+                                        <p style="margin: 0 0 6px 0; font-size: 12px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f4ca; Aplicacion al emprendimiento</p>
+                                        <p style="margin: 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ aplicacion_negocio }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- MIERCOLES: Biografia Inspiradora -->
+                    {% elif dia_key == "wednesday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f451; Biografia Inspiradora</h3>
+                            <h4 style="margin: 0 0 6px 0; font-size: 20px; color: #ffffff;">{{ persona_nombre }}</h4>
+                            <p style="margin: 0 0 4px 0; font-size: 14px; color: #aaa;">{{ persona_titulo }}</p>
+                            {% if patrimonio %}
+                            <p style="margin: 0 0 16px 0; font-size: 13px; color: #ffd700;">&#x1f4b0; Patrimonio: {{ patrimonio }}</p>
+                            {% endif %}
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ historia }}</p>
+
+                            {% if lecciones %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f511; Lecciones clave:</p>
+                            {% for leccion in lecciones %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&bull; {{ leccion }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if habitos %}
+                            <p style="margin: 16px 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f4aa; Habitos de exito:</p>
+                            {% for habito in habitos %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&#x2705; {{ habito }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if ejercicio %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #1e2a3a; border-radius: 8px; margin-top: 16px;">
+                                <tr>
+                                    <td style="padding: 14px 18px;">
+                                        <p style="margin: 0 0 6px 0; font-size: 12px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f3af; Tu ejercicio de hoy</p>
+                                        <p style="margin: 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ ejercicio }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- JUEVES: Maestria en Ventas -->
+                    {% elif dia_key == "thursday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f4b0; Maestria en Ventas</h3>
+                            <h4 style="margin: 0 0 6px 0; font-size: 20px; color: #ffffff;">{{ ventas_tecnica }}</h4>
+                            <p style="margin: 0 0 16px 0; font-size: 14px; color: #aaa;">Fuente: {{ ventas_fuente }}</p>
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ ventas_descripcion }}</p>
+
+                            {% if script_lines %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 8px; margin-bottom: 16px;">
+                                <tr>
+                                    <td style="padding: 16px 20px;">
+                                        <p style="margin: 0 0 10px 0; font-size: 13px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">&#x1f5e3;&#xfe0f; Script de ejemplo:</p>
+                                        {% for linea in script_lines %}
+                                        <p style="margin: 0 0 8px 0; font-size: 14px; color: #e0e0e0; line-height: 1.5; padding-left: 8px; border-left: 2px solid #ffd700;">
+                                            &nbsp;{{ linea }}
+                                        </p>
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+
+                            {% if psicologia %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f4a1; Principio psicologico:</p>
+                            <p style="margin: 0 0 16px 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ psicologia }}</p>
+                            {% endif %}
+
+                            {% if errores_comunes %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ff6b6b; font-weight: 600;">&#x26a0;&#xfe0f; Errores comunes:</p>
+                            {% for error in errores_comunes %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&#x274c; {{ error }}</p>
+                            {% endfor %}
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- VIERNES: Ingeniero IA -->
+                    {% elif dia_key == "friday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f527; Claude Code Tip</h3>
+                            <h4 style="margin: 0 0 10px 0; font-size: 20px; color: #ffffff;">{{ tip_titulo }}</h4>
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ tip_descripcion }}</p>
+
+                            {% if codigo_ejemplo %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0d1117; border-radius: 8px; margin-bottom: 16px; border: 1px solid #30363d;">
+                                <tr>
+                                    <td style="padding: 16px 20px;">
+                                        <pre style="margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 13px; color: #c9d1d9; white-space: pre-wrap; word-wrap: break-word; line-height: 1.5;">{{ codigo_ejemplo }}</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+
+                            <h3 style="margin: 20px 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f4a1; Idea de Negocio IA</h3>
+                            <h4 style="margin: 0 0 10px 0; font-size: 18px; color: #ffffff;">{{ idea_negocio_titulo }}</h4>
+                            <p style="margin: 0 0 12px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ idea_negocio_descripcion }}</p>
+
+                            {% if monetizacion %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0;"><span style="color: #ffd700; font-weight: 600;">&#x1f4b0; Monetizacion:</span> {{ monetizacion }}</p>
+                            {% endif %}
+                            {% if potencial_mercado %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0;"><span style="color: #ffd700; font-weight: 600;">&#x1f4ca; Potencial:</span> {{ potencial_mercado }}</p>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- SABADO: Influencia y Carisma -->
+                    {% elif dia_key == "saturday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f3ad; Influencia y Carisma</h3>
+                            <h4 style="margin: 0 0 6px 0; font-size: 20px; color: #ffffff;">{{ habilidad_nombre }}</h4>
+                            <p style="margin: 0 0 16px 0; font-size: 14px; color: #aaa;">Basado en: {{ habilidad_fuente }}</p>
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ concepto }}</p>
+
+                            {% if dinamica_ejercicio %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 8px; margin-bottom: 16px;">
+                                <tr>
+                                    <td style="padding: 16px 20px;">
+                                        <p style="margin: 0 0 8px 0; font-size: 13px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">&#x1f9ea; Ejercicio de dinamica social:</p>
+                                        <p style="margin: 0; font-size: 14px; color: #e0e0e0; line-height: 1.5;">{{ dinamica_ejercicio }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+
+                            {% if frases_practicar %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f5e3;&#xfe0f; Frases para practicar:</p>
+                            {% for frase in frases_practicar %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5; font-style: italic;">"{{ frase }}"</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if indicadores_progreso %}
+                            <p style="margin: 16px 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f4ca; Indicadores de progreso:</p>
+                            {% for indicador in indicadores_progreso %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&#x2705; {{ indicador }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if advertencia %}
+                            <p style="margin: 16px 0 0 0; font-size: 13px; color: #ff6b6b;">&#x26a0;&#xfe0f; {{ advertencia }}</p>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- DOMINGO: Reflexion Espiritual -->
+                    {% elif dia_key == "sunday" %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px;">&#x1f54a;&#xfe0f; Reflexion Espiritual</h3>
+                            <h4 style="margin: 0 0 16px 0; font-size: 20px; color: #ffffff;">{{ tema_espiritual }}</h4>
+
+                            {% if reflexion %}
+                            <p style="margin: 0 0 16px 0; font-size: 15px; color: #cccccc; line-height: 1.6;">{{ reflexion }}</p>
+                            {% endif %}
+
+                            {% if visualizacion %}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 8px; margin-bottom: 16px;">
+                                <tr>
+                                    <td style="padding: 16px 20px;">
+                                        <p style="margin: 0 0 8px 0; font-size: 13px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">&#x1f52e; Visualizacion guiada semanal:</p>
+                                        <p style="margin: 0; font-size: 14px; color: #e0e0e0; line-height: 1.6;">{{ visualizacion }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endif %}
+
+                            {% if preguntas_journal %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f4dd; Preguntas para journaling:</p>
+                            {% for pregunta in preguntas_journal %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5;">&#x2753; {{ pregunta }}</p>
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if revision_semanal %}
+                            <p style="margin: 16px 0 6px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f4cb; Revision semanal:</p>
+                            <p style="margin: 0 0 16px 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ revision_semanal }}</p>
+                            {% endif %}
+
+                            {% if intencion_proxima_semana %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f3af; Intencion para la proxima semana:</p>
+                            <p style="margin: 0 0 16px 0; font-size: 14px; color: #cccccc; line-height: 1.5;">{{ intencion_proxima_semana }}</p>
+                            {% endif %}
+
+                            {% if afirmaciones_cierre %}
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #ffd700; font-weight: 600;">&#x1f64f; Afirmaciones de cierre:</p>
+                            {% for afirmacion_cierre in afirmaciones_cierre %}
+                            <p style="margin: 0 0 6px 0; font-size: 14px; color: #e0e0e0; padding-left: 12px; line-height: 1.5; font-style: italic;">&#x2728; {{ afirmacion_cierre }}</p>
+                            {% endfor %}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- ============================================ -->
+                    <!-- SEPARADOR -->
+                    <!-- ============================================ -->
+                    <tr>
+                        <td style="padding: 10px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="border-top: 1px solid #2a2a4a; height: 1px; font-size: 0; line-height: 0;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- ============================================ -->
+                    <!-- CITA INSPIRADORA -->
+                    <!-- ============================================ -->
+                    {% if cita %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: linear-gradient(135deg, #2a1f3d 0%, #1a2a3e 100%); border-radius: 10px;">
+                                <tr>
+                                    <td style="padding: 20px 24px; text-align: center;">
+                                        <p style="margin: 0 0 8px 0; font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">&#x1f4ac; Cita Inspiradora</p>
+                                        <p style="margin: 0; font-size: 16px; color: #ffffff; font-style: italic; line-height: 1.6;">
+                                            "{{ cita }}"
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- ============================================ -->
+                    <!-- LIBRO RECOMENDADO (solo martes) -->
+                    <!-- ============================================ -->
+                    {% if libro_recomendado %}
+                    <tr>
+                        <td style="padding: 10px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 8px; border: 1px solid #2a2a4a;">
+                                <tr>
+                                    <td style="padding: 14px 18px;">
+                                        <p style="margin: 0 0 4px 0; font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">&#x1f4da; Libro Recomendado</p>
+                                        <p style="margin: 0; font-size: 15px; color: #ffffff; font-weight: 500;">{{ libro_recomendado }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- ============================================ -->
+                    <!-- ACCION DEL DIA -->
+                    <!-- ============================================ -->
+                    {% if accion_del_dia %}
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: linear-gradient(135deg, #3d2e0a 0%, #2a3a1a 100%); border-radius: 10px; border: 1px solid #ffd700;">
+                                <tr>
+                                    <td style="padding: 18px 22px; text-align: center;">
+                                        <p style="margin: 0 0 8px 0; font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">&#x1f525; Accion del Dia</p>
+                                        <p style="margin: 0; font-size: 16px; color: #ffffff; line-height: 1.5; font-weight: 500;">
+                                            {{ accion_del_dia }}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- ============================================ -->
+                    <!-- SEPARADOR -->
+                    <!-- ============================================ -->
+                    <tr>
+                        <td style="padding: 10px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="border-top: 1px solid #2a2a4a; height: 1px; font-size: 0; line-height: 0;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- ============================================ -->
+                    <!-- RUTINA CHECKLIST -->
+                    <!-- ============================================ -->
+                    <tr>
+                        <td style="padding: 15px 30px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #16213e; border-radius: 10px;">
+                                <tr>
+                                    <td style="padding: 20px 22px;">
+                                        <p style="margin: 0 0 14px 0; font-size: 14px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; text-align: center;">
+                                            &#x1f525; Tu Rutina Diaria de Riqueza &#x1f525;
+                                        </p>
+                                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                            {% for hora, tarea in rutina_items %}
+                                            <tr>
+                                                <td width="60" style="padding: 4px 0; font-size: 13px; color: #ffd700; font-weight: 600; vertical-align: top;">{{ hora }}</td>
+                                                <td style="padding: 4px 0 4px 8px; font-size: 13px; color: #cccccc; line-height: 1.4;">&#x2610; {{ tarea }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- ============================================ -->
+                    <!-- FOOTER -->
+                    <!-- ============================================ -->
+                    <tr>
+                        <td style="padding: 20px 30px 30px 30px; text-align: center; border-top: 1px solid #2a2a4a;">
+                            <p style="margin: 0 0 6px 0; font-size: 12px; color: #666;">
+                                Riqueza y Exito Diario &bull; Semana {{ semana }} de {{ anio }}
+                            </p>
+                            <p style="margin: 0 0 6px 0; font-size: 11px; color: #555;">
+                                "El exito no se persigue, se atrae con la persona en que te conviertes."
+                            </p>
+                            <p style="margin: 0; font-size: 11px; color: #444;">
+                                Este correo fue generado automaticamente. Responde para compartir tu progreso.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- Fin contenedor interior -->
+
+            </td>
+        </tr>
+    </table>
+    <!-- Fin contenedor principal -->
+
+</body>
+</html>
