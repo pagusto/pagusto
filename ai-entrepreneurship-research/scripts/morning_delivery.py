@@ -157,15 +157,13 @@ def get_template_vars(content: dict, domain_config: dict) -> dict:
     """Build template variables from content data."""
     domain = content.get("domain", "general")
     domain_info = domain_config.get(domain, {})
-    domain_display = domain_info.get("display_name", domain.replace("_", " ").title())
-    domain_emoji = domain_info.get("emoji", "")
+
+    # Prefer content-level display fields, fall back to domain_config
+    domain_display = content.get("domain_display") or domain_info.get("display_name", domain.replace("_", " ").title())
+    domain_emoji = content.get("domain_emoji") or domain_info.get("emoji", "")
+    cultural_flag = content.get("cultural_flag") or domain_info.get("cultural_flags", {}).get("universal", "")
 
     business_apps = content.get("business_applications", {})
-
-    # Determine cultural flag
-    cultural_source = content.get("cultural_source", "")
-    cultural_flags = domain_info.get("cultural_flags", {})
-    cultural_flag = cultural_flags.get("universal", "")
 
     return {
         "day_number": content.get("day_number", 0),
@@ -176,7 +174,7 @@ def get_template_vars(content: dict, domain_config: dict) -> dict:
         "domain_display": domain_display,
         "domain_emoji": domain_emoji,
         "complexity": content.get("complexity", "beginner"),
-        "cultural_source": cultural_source,
+        "cultural_source": content.get("cultural_source", ""),
         "cultural_flag": cultural_flag,
         "content_body": content.get("content_body", ""),
         "exercise": content.get("exercise", ""),

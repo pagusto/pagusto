@@ -156,22 +156,6 @@ def load_content(target_date: date, day_number: int) -> Optional[dict]:
 def get_template_vars(content: dict, domain_config: dict) -> dict:
     """Build template variables from content data."""
     domain = content.get("domain", "general")
-    domain_info = domain_config.get(domain, {})
-
-    # Extract evening-specific fields from content body or direct fields
-    content_body = content.get("content_body", "")
-
-    # Try to extract structured evening fields
-    reflection_question = content.get("reflection", "")
-    night_technique = content.get("exercise", "")
-    affirmation = content.get("quote", "")
-
-    # If we have a content_body but no structured fields, use the body
-    if not reflection_question and content_body:
-        reflection_question = content_body
-
-    # Build tomorrow preview from next day's calendar entry (best effort)
-    tomorrow_preview = content.get("tomorrow_preview", "Stay tuned for tomorrow's lesson.")
 
     return {
         "day_number": content.get("day_number", 0),
@@ -179,13 +163,16 @@ def get_template_vars(content: dict, domain_config: dict) -> dict:
         "week_number": content.get("week", 1),
         "title": content.get("title", ""),
         "domain": domain,
+        "domain_display": content.get("domain_display", domain.replace("_", " ").title()),
+        "domain_emoji": content.get("domain_emoji", ""),
         "complexity": content.get("complexity", "beginner"),
-        "reflection_question": reflection_question,
-        "night_technique": night_technique,
-        "tomorrow_preview": tomorrow_preview,
-        "affirmation": affirmation,
-        "content_body": content_body,
+        "reflection_question": content.get("reflection_question", ""),
+        "night_technique": content.get("night_technique", ""),
+        "tomorrow_preview": content.get("tomorrow_preview", "Stay tuned for tomorrow's lesson."),
+        "affirmation": content.get("affirmation", ""),
+        "content_body": content.get("content_body", ""),
         "cultural_source": content.get("cultural_source", ""),
+        "cultural_flag": content.get("cultural_flag", ""),
         "quote": content.get("quote", ""),
         "quote_author": content.get("quote_author", ""),
     }
