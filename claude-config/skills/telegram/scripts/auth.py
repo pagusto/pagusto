@@ -9,8 +9,26 @@ import sys
 import time
 from typing import Optional
 
+import os
+
 import httpx
-import keyring
+
+KEYRING_AVAILABLE = False
+keyring = None
+# Keyring can cause Rust-level panics in cloud environments (pyo3_runtime.PanicException)
+# which cannot be caught by Python try/except. Test in a subprocess first.
+import subprocess as _sp
+try:
+    _result = _sp.run(
+        [sys.executable, "-c", "import keyring; keyring.get_password('__test__','__test__')"],
+        capture_output=True, timeout=5
+    )
+    if _result.returncode == 0:
+        import keyring as _kr
+        keyring = _kr
+        KEYRING_AVAILABLE = True
+except Exception:
+    pass
 
 # Telegram Bot API
 BOT_API_BASE = "https://api.telegram.org/bot"
@@ -18,6 +36,9 @@ BOT_API_BASE = "https://api.telegram.org/bot"
 # Keyring configuration
 KEYCHAIN_SERVICE = "telegram-skill-bot"
 KEYCHAIN_ACCOUNT = "main-account"
+
+# File-based fallback for environments without keyring
+TOKEN_FILE = os.path.expanduser("~/.claude/skills/telegram/token.json")
 
 
 def validate_token(token: str) -> Optional[dict]:
@@ -32,56 +53,103 @@ def validate_token(token: str) -> Optional[dict]:
         return None
 
 
-def get_bot_token() -> Optional[str]:
-    """Retrieve bot token from secure storage."""
+def _read_token_file() -> Optional[dict]:
+    """Read token data from file-based storage."""
     try:
-        data_str = keyring.get_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
-        if not data_str:
-            return None
-        data = json.loads(data_str)
-        return data.get("bot_token")
-    except (json.JSONDecodeError, keyring.errors.KeyringError) as e:
-        print(f"Error reading token: {e}", file=sys.stderr)
-        return None
+        if os.path.exists(TOKEN_FILE):
+            with open(TOKEN_FILE) as f:
+                return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        pass
+    return None
+
+
+def _write_token_file(data: dict) -> bool:
+    """Write token data to file-based storage."""
+    try:
+        os.makedirs(os.path.dirname(TOKEN_FILE), exist_ok=True)
+        with open(TOKEN_FILE, "w") as f:
+            json.dump(data, f)
+        os.chmod(TOKEN_FILE, 0o600)
+        return True
+    except OSError as e:
+        print(f"Error writing token file: {e}", file=sys.stderr)
+        return False
+
+
+def get_bot_token() -> Optional[str]:
+    """Retrieve bot token. Checks: env var -> file -> keyring."""
+    # 1. Environment variable (highest priority)
+    env_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    if env_token:
+        return env_token
+
+    # 2. File-based storage
+    data = _read_token_file()
+    if data and data.get("bot_token"):
+        return data["bot_token"]
+
+    # 3. Keyring (if available)
+    if KEYRING_AVAILABLE:
+        try:
+            data_str = keyring.get_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
+            if data_str:
+                kd = json.loads(data_str)
+                return kd.get("bot_token")
+        except Exception:
+            pass
+
+    return None
 
 
 def save_bot_token(token: str, bot_info: dict) -> bool:
-    """Save bot token to secure storage."""
+    """Save bot token to file storage (and keyring if available)."""
     data = {
         "bot_token": token,
         "bot_info": bot_info,
         "updatedAt": int(time.time() * 1000),
     }
-    try:
-        keyring.set_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT, json.dumps(data))
-        return True
-    except keyring.errors.KeyringError as e:
-        print(f"Error saving token: {e}", file=sys.stderr)
-        return False
+    saved = _write_token_file(data)
+    if KEYRING_AVAILABLE:
+        try:
+            keyring.set_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT, json.dumps(data))
+        except Exception:
+            pass
+    return saved
 
 
 def clear_bot_token() -> bool:
-    """Clear bot token from secure storage."""
+    """Clear bot token from all storage."""
+    cleared = False
     try:
-        keyring.delete_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
-        return True
-    except keyring.errors.PasswordDeleteError:
-        return False
-    except keyring.errors.KeyringError as e:
-        print(f"Error clearing token: {e}", file=sys.stderr)
-        return False
+        if os.path.exists(TOKEN_FILE):
+            os.remove(TOKEN_FILE)
+            cleared = True
+    except OSError:
+        pass
+    if KEYRING_AVAILABLE:
+        try:
+            keyring.delete_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
+            cleared = True
+        except Exception:
+            pass
+    return cleared
 
 
 def get_bot_info() -> Optional[dict]:
     """Retrieve stored bot info (username, id, etc.)."""
-    try:
-        data_str = keyring.get_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
-        if not data_str:
-            return None
-        data = json.loads(data_str)
-        return data.get("bot_info")
-    except (json.JSONDecodeError, keyring.errors.KeyringError):
-        return None
+    data = _read_token_file()
+    if data and data.get("bot_info"):
+        return data["bot_info"]
+    if KEYRING_AVAILABLE:
+        try:
+            data_str = keyring.get_password(KEYCHAIN_SERVICE, KEYCHAIN_ACCOUNT)
+            if data_str:
+                kd = json.loads(data_str)
+                return kd.get("bot_info")
+        except Exception:
+            pass
+    return None
 
 
 def get_valid_bot_token(interactive: bool = True) -> Optional[str]:
