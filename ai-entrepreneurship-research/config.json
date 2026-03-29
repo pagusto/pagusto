@@ -1,0 +1,57 @@
+{
+  "notion": {
+    "parent_page": "332c6af3-fc9e-81c5-8412-c43632cee15f",
+    "parent_url": "https://www.notion.so/332c6af3fc9e81c58412c43632cee15f",
+    "databases": {
+      "daily_content": {
+        "id": "efbd0857-ca49-4ed9-8b5d-df99f76b3648",
+        "data_source": "75250088-94bd-4d98-8f01-b8cc3c8d7aa2"
+      },
+      "knowledge_sources": {
+        "id": "90d9fb24-7d13-4f2e-9279-cf455da09424",
+        "data_source": "6c5d3723-1d72-4034-bd65-d6a75095165f"
+      },
+      "personal_progress": {
+        "id": "2c80f0ff-7b2f-4f5c-af89-75639a20612d",
+        "data_source": "e884f38b-4213-45b3-822b-5ff9e0020f02"
+      },
+      "wealth_routines": {
+        "id": "373ad0d2-f94c-4017-90b9-a2260fbe0e67",
+        "data_source": "713b621b-413e-4fa3-ad5f-8d1b52e19f00"
+      },
+      "mental_techniques": {
+        "id": "a1a2f0f5-b5a9-4f52-b449-5ddcda19acaa",
+        "data_source": "42d7bee6-d7e3-4701-9e88-415bb1edb2e2"
+      },
+      "goals_milestones": {
+        "id": "e2da5d1d-f7e4-4816-99e2-d861e835feab",
+        "data_source": "8b43419f-96d9-4418-85f5-1a2075cb948d"
+      },
+      "agent_evolution": {
+        "id": "2e834420-c7cc-4d39-b0ca-5fda9fc5270c",
+        "data_source": "39eef2df-3032-480c-9ada-780f2deda48b"
+      },
+      "audio_recommendations": {
+        "id": "2259b176-3907-4f7e-9378-7d8f5c8984ac",
+        "data_source": "277e966d-662b-4969-8a97-2f9c51425961"
+      }
+    }
+  },
+  "telegram": {
+    "bot_name": "@pagusto_bot",
+    "skill_path": "/home/user/pagusto/claude-config/skills/telegram/scripts/telegram.py"
+  },
+  "gmail": {
+    "skill_path": "/home/user/pagusto/claude-config/skills/gmail/scripts/gmail.py"
+  },
+  "deep_research": {
+    "skill_path": "/home/user/pagusto/claude-config/skills/deep-research/scripts/research.py"
+  },
+  "timezone": "Australia/Canberra",
+  "language": "en",
+  "start_date": "2026-03-30",
+  "schedule": {
+    "morning": {"time": "9:00 AM AEDT", "cron_utc": "0 22 * * *"},
+    "evening": {"time": "8:00 PM AEDT", "cron_utc": "0 9 * * *"}
+  }
+}
