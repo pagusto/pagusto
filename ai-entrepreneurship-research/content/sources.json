@@ -1,0 +1,1420 @@
+{
+  "metadata": {
+    "total_books": 52,
+    "total_biographies": 52,
+    "total_podcasts": 15,
+    "total_techniques": 20
+  },
+  "books": [
+    {
+      "id": "book_001",
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "categories": [
+        "wealth",
+        "mindset"
+      ],
+      "best_quote": "Whatever the mind can conceive and believe, it can achieve.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_002",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "categories": [
+        "wealth",
+        "mindset"
+      ],
+      "best_quote": "The poor and middle class work for money. The rich have money work for them.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_003",
+      "title": "$100M Offers",
+      "author": "Alex Hormozi",
+      "categories": [
+        "sales",
+        "wealth"
+      ],
+      "best_quote": "Make people an offer so good they would feel stupid saying no.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_004",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "categories": [
+        "habits"
+      ],
+      "best_quote": "You do not rise to the level of your goals. You fall to the level of your systems.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_005",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "categories": [
+        "wealth",
+        "mindset"
+      ],
+      "best_quote": "Doing well with money has little to do with how smart you are and a lot to do with how you behave.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_006",
+      "title": "The 4-Hour Workweek",
+      "author": "Tim Ferriss",
+      "categories": [
+        "wealth",
+        "habits"
+      ],
+      "best_quote": "Focus on being productive instead of busy.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_007",
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "categories": [
+        "wealth",
+        "leadership"
+      ],
+      "best_quote": "The only way to win is to learn faster than anyone else.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_008",
+      "title": "Zero to One",
+      "author": "Peter Thiel",
+      "categories": [
+        "wealth",
+        "leadership"
+      ],
+      "best_quote": "Every moment in business happens only once. The next Bill Gates will not build an operating system.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_009",
+      "title": "Influence",
+      "author": "Robert Cialdini",
+      "categories": [
+        "persuasion",
+        "sales"
+      ],
+      "best_quote": "People will do anything for those who encourage their dreams.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_010",
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "categories": [
+        "persuasion",
+        "leadership"
+      ],
+      "best_quote": "You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_011",
+      "title": "Secrets of the Millionaire Mind",
+      "author": "T. Harv Eker",
+      "categories": [
+        "wealth",
+        "mindset"
+      ],
+      "best_quote": "Rich people believe I create my life. Poor people believe life happens to me.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_012",
+      "title": "The Silva Method",
+      "author": "Jose Silva",
+      "categories": [
+        "mindset",
+        "spirituality"
+      ],
+      "best_quote": "You are not your brain. You are the programmer of your brain.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_013",
+      "title": "Psycho-Cybernetics",
+      "author": "Maxwell Maltz",
+      "categories": [
+        "mindset"
+      ],
+      "best_quote": "Your self-image is a premise, a base, or a foundation upon which your entire personality is built.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_014",
+      "title": "The Power of Your Subconscious Mind",
+      "author": "Joseph Murphy",
+      "categories": [
+        "mindset",
+        "spirituality"
+      ],
+      "best_quote": "The law of your mind is the law of belief.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_015",
+      "title": "The Richest Man in Babylon",
+      "author": "George Clason",
+      "categories": [
+        "wealth"
+      ],
+      "best_quote": "A part of all I earn is mine to keep.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_016",
+      "title": "The Millionaire Fastlane",
+      "author": "MJ DeMarco",
+      "categories": [
+        "wealth"
+      ],
+      "best_quote": "The Sidewalk is a financial plan that doesn't have a plan.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_017",
+      "title": "Shoe Dog",
+      "author": "Phil Knight",
+      "categories": [
+        "wealth",
+        "leadership"
+      ],
+      "best_quote": "Let everyone else call your idea crazy... just keep going.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_018",
+      "title": "The Hard Thing About Hard Things",
+      "author": "Ben Horowitz",
+      "categories": [
+        "leadership",
+        "wealth"
+      ],
+      "best_quote": "Hard things are hard because there are no easy answers.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_019",
+      "title": "Never Split the Difference",
+      "author": "Chris Voss",
+      "categories": [
+        "sales",
+        "persuasion"
+      ],
+      "best_quote": "He who has learned to disagree without being disagreeable has discovered the most valuable secret of negotiation.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_020",
+      "title": "The Almanack of Naval Ravikant",
+      "author": "Eric Jorgenson",
+      "categories": [
+        "wealth",
+        "mindset",
+        "spirituality"
+      ],
+      "best_quote": "Seek wealth, not money or status. Wealth is having assets that earn while you sleep.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_021",
+      "title": "The E-Myth Revisited",
+      "author": "Michael Gerber",
+      "categories": [
+        "wealth",
+        "leadership"
+      ],
+      "best_quote": "Work on your business, not in your business.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_022",
+      "title": "Good to Great",
+      "author": "Jim Collins",
+      "categories": [
+        "leadership"
+      ],
+      "best_quote": "Good is the enemy of great.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_023",
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen Covey",
+      "categories": [
+        "habits",
+        "leadership"
+      ],
+      "best_quote": "Begin with the end in mind.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_024",
+      "title": "Think Again",
+      "author": "Adam Grant",
+      "categories": [
+        "mindset"
+      ],
+      "best_quote": "The curse of knowledge is that it closes our minds to what we don't know.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_025",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "categories": [
+        "habits",
+        "engineering"
+      ],
+      "best_quote": "To produce at your peak level you need to work for extended periods with full concentration on a single task.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_026",
+      "title": "Essentialism",
+      "author": "Greg McKeown",
+      "categories": [
+        "habits"
+      ],
+      "best_quote": "If you don't prioritize your life, someone else will.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_027",
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "categories": [
+        "leadership",
+        "persuasion"
+      ],
+      "best_quote": "Supreme excellence consists of breaking the enemy's resistance without fighting.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_028",
+      "title": "Meditations",
+      "author": "Marcus Aurelius",
+      "categories": [
+        "spirituality",
+        "mindset"
+      ],
+      "best_quote": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_029",
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "categories": [
+        "persuasion",
+        "leadership"
+      ],
+      "best_quote": "When you show yourself to the world and display your talents, you naturally stir all kinds of resentment.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_030",
+      "title": "Mastery",
+      "author": "Robert Greene",
+      "categories": [
+        "mindset",
+        "engineering"
+      ],
+      "best_quote": "The time that leads to mastery is dependent on the intensity of our focus.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_031",
+      "title": "The Compound Effect",
+      "author": "Darren Hardy",
+      "categories": [
+        "habits",
+        "wealth"
+      ],
+      "best_quote": "Small, smart choices + consistency + time = radical difference.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_032",
+      "title": "The 10X Rule",
+      "author": "Grant Cardone",
+      "categories": [
+        "sales",
+        "wealth"
+      ],
+      "best_quote": "Success is not something that happens to you; it's something that happens because of you.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_033",
+      "title": "Sell or Be Sold",
+      "author": "Grant Cardone",
+      "categories": [
+        "sales"
+      ],
+      "best_quote": "Selling impacts every person on this planet.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_034",
+      "title": "Way of the Wolf",
+      "author": "Jordan Belfort",
+      "categories": [
+        "sales",
+        "persuasion"
+      ],
+      "best_quote": "The only thing standing between you and your goal is the story you keep telling yourself.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_035",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "categories": [
+        "mindset"
+      ],
+      "best_quote": "Nothing in life is as important as you think it is while you are thinking about it.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_036",
+      "title": "Start With Why",
+      "author": "Simon Sinek",
+      "categories": [
+        "leadership"
+      ],
+      "best_quote": "People don't buy what you do, they buy why you do it.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_037",
+      "title": "Outliers",
+      "author": "Malcolm Gladwell",
+      "categories": [
+        "mindset"
+      ],
+      "best_quote": "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_038",
+      "title": "Antifragile",
+      "author": "Nassim Taleb",
+      "categories": [
+        "mindset",
+        "wealth"
+      ],
+      "best_quote": "Wind extinguishes a candle and energizes fire. Be the fire.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_039",
+      "title": "Ego is the Enemy",
+      "author": "Ryan Holiday",
+      "categories": [
+        "mindset",
+        "spirituality"
+      ],
+      "best_quote": "The ego tells us what we want to hear, when we want to hear it.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_040",
+      "title": "The Obstacle is the Way",
+      "author": "Ryan Holiday",
+      "categories": [
+        "mindset",
+        "spirituality"
+      ],
+      "best_quote": "The impediment to action advances action. What stands in the way becomes the way.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_041",
+      "title": "Can't Hurt Me",
+      "author": "David Goggins",
+      "categories": [
+        "mindset",
+        "habits"
+      ],
+      "best_quote": "We don't rise to the level of our expectations, we fall to the level of our training.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_042",
+      "title": "Extreme Ownership",
+      "author": "Jocko Willink",
+      "categories": [
+        "leadership"
+      ],
+      "best_quote": "There are no bad teams, only bad leaders.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_043",
+      "title": "Principles",
+      "author": "Ray Dalio",
+      "categories": [
+        "wealth",
+        "leadership"
+      ],
+      "best_quote": "Pain + Reflection = Progress.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_044",
+      "title": "The Intelligent Investor",
+      "author": "Benjamin Graham",
+      "categories": [
+        "wealth"
+      ],
+      "best_quote": "The investor's chief problem, and even his worst enemy, is likely to be himself.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_045",
+      "title": "Awaken the Giant Within",
+      "author": "Tony Robbins",
+      "categories": [
+        "mindset",
+        "habits"
+      ],
+      "best_quote": "It is in your moments of decision that your destiny is shaped.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_046",
+      "title": "Unlimited Power",
+      "author": "Tony Robbins",
+      "categories": [
+        "mindset",
+        "persuasion"
+      ],
+      "best_quote": "The path to success is to take massive, determined action.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_047",
+      "title": "Man's Search for Meaning",
+      "author": "Viktor Frankl",
+      "categories": [
+        "spirituality",
+        "mindset"
+      ],
+      "best_quote": "He who has a why to live can bear almost any how.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_048",
+      "title": "As a Man Thinketh",
+      "author": "James Allen",
+      "categories": [
+        "mindset"
+      ],
+      "best_quote": "As a man thinketh in his heart, so is he.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_049",
+      "title": "The Science of Getting Rich",
+      "author": "Wallace Wattles",
+      "categories": [
+        "wealth",
+        "mindset"
+      ],
+      "best_quote": "There is a thinking stuff from which all things are made.",
+      "complexity": "basic"
+    },
+    {
+      "id": "book_050",
+      "title": "$100M Leads",
+      "author": "Alex Hormozi",
+      "categories": [
+        "sales",
+        "wealth"
+      ],
+      "best_quote": "More leads equals more money. It's that simple.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_051",
+      "title": "Built to Last",
+      "author": "Jim Collins",
+      "categories": [
+        "leadership"
+      ],
+      "best_quote": "Clock building, not time telling.",
+      "complexity": "intermediate"
+    },
+    {
+      "id": "book_052",
+      "title": "The Tipping Point",
+      "author": "Malcolm Gladwell",
+      "categories": [
+        "persuasion"
+      ],
+      "best_quote": "The tipping point is that magic moment when an idea, trend, or social behavior crosses a threshold.",
+      "complexity": "basic"
+    }
+  ],
+  "biographies": [
+    {
+      "id": "bio_001",
+      "name": "Elon Musk",
+      "culture": "western",
+      "type": [
+        "financial",
+        "engineering"
+      ],
+      "key_lesson": "First principles thinking",
+      "best_quote": "When something is important enough, you do it even if the odds are not in your favor."
+    },
+    {
+      "id": "bio_002",
+      "name": "Steve Jobs",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Intersection of technology and liberal arts",
+      "best_quote": "Stay hungry, stay foolish."
+    },
+    {
+      "id": "bio_003",
+      "name": "Oprah Winfrey",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Authenticity as superpower",
+      "best_quote": "Turn your wounds into wisdom."
+    },
+    {
+      "id": "bio_004",
+      "name": "Warren Buffett",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Patience and compound interest",
+      "best_quote": "Be fearful when others are greedy, and greedy when others are fearful."
+    },
+    {
+      "id": "bio_005",
+      "name": "Tony Robbins",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "The power of state management",
+      "best_quote": "Where focus goes, energy flows."
+    },
+    {
+      "id": "bio_006",
+      "name": "Deepak Chopra",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Mind-body connection",
+      "best_quote": "Every cell in your body is eavesdropping on your thoughts."
+    },
+    {
+      "id": "bio_007",
+      "name": "Bob Proctor",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Paradigm shifting",
+      "best_quote": "If you see it in your mind, you will hold it in your hand."
+    },
+    {
+      "id": "bio_008",
+      "name": "Napoleon Hill",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "The Mastermind Principle",
+      "best_quote": "Desire is the starting point of all achievement."
+    },
+    {
+      "id": "bio_009",
+      "name": "Andrew Carnegie",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Leverage and philanthropy",
+      "best_quote": "No man becomes rich unless he enriches others."
+    },
+    {
+      "id": "bio_010",
+      "name": "Nikola Tesla",
+      "culture": "western",
+      "type": [
+        "engineering"
+      ],
+      "key_lesson": "Visionary thinking beyond current paradigms",
+      "best_quote": "The present is theirs; the future, for which I really worked, is mine."
+    },
+    {
+      "id": "bio_011",
+      "name": "Leonardo da Vinci",
+      "culture": "western",
+      "type": [
+        "engineering",
+        "spiritual"
+      ],
+      "key_lesson": "Insatiable curiosity",
+      "best_quote": "Learning never exhausts the mind."
+    },
+    {
+      "id": "bio_012",
+      "name": "Marcus Aurelius",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Stoic self-mastery",
+      "best_quote": "The happiness of your life depends upon the quality of your thoughts."
+    },
+    {
+      "id": "bio_013",
+      "name": "Seneca",
+      "culture": "western",
+      "type": [
+        "spiritual",
+        "financial"
+      ],
+      "key_lesson": "Time as ultimate wealth",
+      "best_quote": "It is not that we have a short time to live, but that we waste a great deal of it."
+    },
+    {
+      "id": "bio_014",
+      "name": "Lao Tzu",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Effortless action (Wu Wei)",
+      "best_quote": "A journey of a thousand miles begins with a single step."
+    },
+    {
+      "id": "bio_015",
+      "name": "Rumi",
+      "culture": "middle_eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "The inner journey",
+      "best_quote": "What you seek is seeking you."
+    },
+    {
+      "id": "bio_016",
+      "name": "Sadhguru",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Engineering inner wellbeing",
+      "best_quote": "The only thing that stands between you and your wellbeing is a simple fact: you have allowed your thoughts and emotions to take instruction from the outside."
+    },
+    {
+      "id": "bio_017",
+      "name": "Jay Shetty",
+      "culture": "eastern",
+      "type": [
+        "spiritual",
+        "financial"
+      ],
+      "key_lesson": "Modern monk wisdom",
+      "best_quote": "When you find your why, you find your way."
+    },
+    {
+      "id": "bio_018",
+      "name": "Gary Vee",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Patience + hustle",
+      "best_quote": "Skills are cheap. Passion is priceless."
+    },
+    {
+      "id": "bio_019",
+      "name": "Alex Hormozi",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Value creation and irresistible offers",
+      "best_quote": "The goal is not to get people to buy. The goal is to make an offer so good they feel stupid saying no."
+    },
+    {
+      "id": "bio_020",
+      "name": "Jose Silva",
+      "culture": "latin",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "The untapped power of the mind at Alpha",
+      "best_quote": "You are the creator of your own reality."
+    },
+    {
+      "id": "bio_021",
+      "name": "Neville Goddard",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Imagination creates reality",
+      "best_quote": "Assume the feeling of your wish fulfilled."
+    },
+    {
+      "id": "bio_022",
+      "name": "Joe Dispenza",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Rewiring the brain through meditation",
+      "best_quote": "Your personality creates your personal reality."
+    },
+    {
+      "id": "bio_023",
+      "name": "Wim Hof",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Mind over body",
+      "best_quote": "The cold is merciless but righteous."
+    },
+    {
+      "id": "bio_024",
+      "name": "Naval Ravikant",
+      "culture": "eastern",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Specific knowledge and leverage",
+      "best_quote": "Earn with your mind, not your time."
+    },
+    {
+      "id": "bio_025",
+      "name": "Miyamoto Musashi",
+      "culture": "japanese",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "The Way of strategy",
+      "best_quote": "There is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter."
+    },
+    {
+      "id": "bio_026",
+      "name": "Sun Tzu",
+      "culture": "eastern",
+      "type": [
+        "leadership"
+      ],
+      "key_lesson": "Strategic thinking",
+      "best_quote": "Know yourself and you will win all battles."
+    },
+    {
+      "id": "bio_027",
+      "name": "Richard Branson",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Screw it, let's do it",
+      "best_quote": "If somebody offers you an amazing opportunity but you are not sure you can do it, say yes and learn how to do it later."
+    },
+    {
+      "id": "bio_028",
+      "name": "Jeff Bezos",
+      "culture": "western",
+      "type": [
+        "financial",
+        "engineering"
+      ],
+      "key_lesson": "Customer obsession and long-term thinking",
+      "best_quote": "Your brand is what people say about you when you're not in the room."
+    },
+    {
+      "id": "bio_029",
+      "name": "Sara Blakely",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Redefining failure as learning",
+      "best_quote": "It's important to be willing to make mistakes. The worst thing that can happen is you become memorable."
+    },
+    {
+      "id": "bio_030",
+      "name": "Mahatma Gandhi",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Be the change",
+      "best_quote": "Be the change that you wish to see in the world."
+    },
+    {
+      "id": "bio_031",
+      "name": "Nelson Mandela",
+      "culture": "african",
+      "type": [
+        "spiritual",
+        "leadership"
+      ],
+      "key_lesson": "Forgiveness and long vision",
+      "best_quote": "It always seems impossible until it's done."
+    },
+    {
+      "id": "bio_032",
+      "name": "Dalai Lama",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Compassion as strength",
+      "best_quote": "If you think you are too small to make a difference, try sleeping with a mosquito."
+    },
+    {
+      "id": "bio_033",
+      "name": "Confucius",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Self-cultivation and virtue",
+      "best_quote": "It does not matter how slowly you go as long as you do not stop."
+    },
+    {
+      "id": "bio_034",
+      "name": "Socrates",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Know thyself",
+      "best_quote": "The unexamined life is not worth living."
+    },
+    {
+      "id": "bio_035",
+      "name": "Benjamin Franklin",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Systematic self-improvement",
+      "best_quote": "An investment in knowledge pays the best interest."
+    },
+    {
+      "id": "bio_036",
+      "name": "Thomas Edison",
+      "culture": "western",
+      "type": [
+        "engineering",
+        "financial"
+      ],
+      "key_lesson": "Persistence",
+      "best_quote": "I have not failed. I've just found 10,000 ways that won't work."
+    },
+    {
+      "id": "bio_037",
+      "name": "Henry Ford",
+      "culture": "western",
+      "type": [
+        "financial",
+        "engineering"
+      ],
+      "key_lesson": "Democratizing access",
+      "best_quote": "Whether you think you can, or you think you can't, you're right."
+    },
+    {
+      "id": "bio_038",
+      "name": "Walt Disney",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Imagination and persistence",
+      "best_quote": "All our dreams can come true, if we have the courage to pursue them."
+    },
+    {
+      "id": "bio_039",
+      "name": "Sam Walton",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Customer-first thinking at scale",
+      "best_quote": "There is only one boss. The customer."
+    },
+    {
+      "id": "bio_040",
+      "name": "Ray Dalio",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Radical transparency",
+      "best_quote": "Pain + Reflection = Progress."
+    },
+    {
+      "id": "bio_041",
+      "name": "Charlie Munger",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Mental models and inversion",
+      "best_quote": "Invert, always invert."
+    },
+    {
+      "id": "bio_042",
+      "name": "Peter Thiel",
+      "culture": "western",
+      "type": [
+        "financial",
+        "engineering"
+      ],
+      "key_lesson": "Definite optimism",
+      "best_quote": "Competition is for losers."
+    },
+    {
+      "id": "bio_043",
+      "name": "Jack Ma",
+      "culture": "eastern",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Resilience through rejection",
+      "best_quote": "If you don't give up, you still have a chance."
+    },
+    {
+      "id": "bio_044",
+      "name": "Masayoshi Son",
+      "culture": "japanese",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "300-year vision",
+      "best_quote": "I want to work on things that will still be important 300 years from now."
+    },
+    {
+      "id": "bio_045",
+      "name": "Konosuke Matsushita",
+      "culture": "japanese",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Management by walking around",
+      "best_quote": "The mission of a manufacturer should be to overcome poverty."
+    },
+    {
+      "id": "bio_046",
+      "name": "Dhirubhai Ambani",
+      "culture": "eastern",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Think big, start small",
+      "best_quote": "If you don't build your dream, someone else will hire you to help them build theirs."
+    },
+    {
+      "id": "bio_047",
+      "name": "Ratan Tata",
+      "culture": "eastern",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Integrity in business",
+      "best_quote": "I don't believe in taking right decisions. I take decisions and then make them right."
+    },
+    {
+      "id": "bio_048",
+      "name": "Kobe Bryant",
+      "culture": "western",
+      "type": [
+        "financial",
+        "spiritual"
+      ],
+      "key_lesson": "Mamba Mentality - obsessive excellence",
+      "best_quote": "Everything negative is all an opportunity for me to rise."
+    },
+    {
+      "id": "bio_049",
+      "name": "Mother Teresa",
+      "culture": "eastern",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Service as purpose",
+      "best_quote": "If you judge people, you have no time to love them."
+    },
+    {
+      "id": "bio_050",
+      "name": "Aristotle",
+      "culture": "western",
+      "type": [
+        "spiritual"
+      ],
+      "key_lesson": "Excellence as habit",
+      "best_quote": "We are what we repeatedly do. Excellence is not an act but a habit."
+    },
+    {
+      "id": "bio_051",
+      "name": "Coco Chanel",
+      "culture": "western",
+      "type": [
+        "financial"
+      ],
+      "key_lesson": "Reinvention and personal brand",
+      "best_quote": "The most courageous act is still to think for yourself. Aloud."
+    },
+    {
+      "id": "bio_052",
+      "name": "Reid Hoffman",
+      "culture": "western",
+      "type": [
+        "financial",
+        "engineering"
+      ],
+      "key_lesson": "Network intelligence",
+      "best_quote": "If you are not embarrassed by the first version of your product, you've launched too late."
+    }
+  ],
+  "podcasts": [
+    {
+      "id": "pod_001",
+      "title": "The Tim Ferriss Show",
+      "host": "Tim Ferriss",
+      "platform": "Spotify",
+      "categories": [
+        "entrepreneurship",
+        "mindset"
+      ]
+    },
+    {
+      "id": "pod_002",
+      "title": "How I Built This",
+      "host": "Guy Raz",
+      "platform": "Spotify",
+      "categories": [
+        "entrepreneurship"
+      ]
+    },
+    {
+      "id": "pod_003",
+      "title": "The GaryVee Audio Experience",
+      "host": "Gary Vaynerchuk",
+      "platform": "Spotify",
+      "categories": [
+        "entrepreneurship",
+        "sales"
+      ]
+    },
+    {
+      "id": "pod_004",
+      "title": "The Tony Robbins Podcast",
+      "host": "Tony Robbins",
+      "platform": "Spotify",
+      "categories": [
+        "mindset",
+        "wealth"
+      ]
+    },
+    {
+      "id": "pod_005",
+      "title": "My First Million",
+      "host": "Sam Parr & Shaan Puri",
+      "platform": "Spotify",
+      "categories": [
+        "entrepreneurship",
+        "wealth"
+      ]
+    },
+    {
+      "id": "pod_006",
+      "title": "The Knowledge Project",
+      "host": "Shane Parrish",
+      "platform": "Spotify",
+      "categories": [
+        "mindset"
+      ]
+    },
+    {
+      "id": "pod_007",
+      "title": "Huberman Lab",
+      "host": "Andrew Huberman",
+      "platform": "YouTube",
+      "categories": [
+        "mindset",
+        "habits"
+      ]
+    },
+    {
+      "id": "pod_008",
+      "title": "The Diary of a CEO",
+      "host": "Steven Bartlett",
+      "platform": "YouTube",
+      "categories": [
+        "entrepreneurship",
+        "mindset"
+      ]
+    },
+    {
+      "id": "pod_009",
+      "title": "Naval Podcast",
+      "host": "Naval Ravikant",
+      "platform": "Spotify",
+      "categories": [
+        "wealth",
+        "spirituality"
+      ]
+    },
+    {
+      "id": "pod_010",
+      "title": "The School of Greatness",
+      "host": "Lewis Howes",
+      "platform": "Spotify",
+      "categories": [
+        "mindset",
+        "entrepreneurship"
+      ]
+    },
+    {
+      "id": "pod_011",
+      "title": "Lex Fridman Podcast",
+      "host": "Lex Fridman",
+      "platform": "YouTube",
+      "categories": [
+        "AI",
+        "engineering"
+      ]
+    },
+    {
+      "id": "pod_012",
+      "title": "All-In Podcast",
+      "host": "Chamath, Sacks, Friedberg, Calacanis",
+      "platform": "YouTube",
+      "categories": [
+        "wealth",
+        "AI"
+      ]
+    },
+    {
+      "id": "pod_013",
+      "title": "The Jordan Harbinger Show",
+      "host": "Jordan Harbinger",
+      "platform": "Spotify",
+      "categories": [
+        "persuasion",
+        "mindset"
+      ]
+    },
+    {
+      "id": "pod_014",
+      "title": "Impact Theory",
+      "host": "Tom Bilyeu",
+      "platform": "YouTube",
+      "categories": [
+        "mindset",
+        "entrepreneurship"
+      ]
+    },
+    {
+      "id": "pod_015",
+      "title": "The Ed Mylett Show",
+      "host": "Ed Mylett",
+      "platform": "Spotify",
+      "categories": [
+        "mindset",
+        "wealth"
+      ]
+    }
+  ],
+  "techniques": [
+    {
+      "id": "tech_001",
+      "name": "Silva Alpha State",
+      "origin": "Jose Silva",
+      "category": "meditation",
+      "complexity": "basic",
+      "duration": "15 min"
+    },
+    {
+      "id": "tech_002",
+      "name": "Three Fingers Technique",
+      "origin": "Jose Silva",
+      "category": "visualization",
+      "complexity": "basic",
+      "duration": "5 min"
+    },
+    {
+      "id": "tech_003",
+      "name": "Mirror of the Mind",
+      "origin": "Jose Silva",
+      "category": "visualization",
+      "complexity": "intermediate",
+      "duration": "20 min"
+    },
+    {
+      "id": "tech_004",
+      "name": "Glass of Water Technique",
+      "origin": "Jose Silva",
+      "category": "manifestation",
+      "complexity": "basic",
+      "duration": "5 min"
+    },
+    {
+      "id": "tech_005",
+      "name": "Mental Laboratory",
+      "origin": "Jose Silva",
+      "category": "visualization",
+      "complexity": "advanced",
+      "duration": "30 min"
+    },
+    {
+      "id": "tech_006",
+      "name": "Neville SATS",
+      "origin": "Neville Goddard",
+      "category": "manifestation",
+      "complexity": "intermediate",
+      "duration": "15 min"
+    },
+    {
+      "id": "tech_007",
+      "name": "Revision Technique",
+      "origin": "Neville Goddard",
+      "category": "manifestation",
+      "complexity": "intermediate",
+      "duration": "10 min"
+    },
+    {
+      "id": "tech_008",
+      "name": "Living in the End",
+      "origin": "Neville Goddard",
+      "category": "manifestation",
+      "complexity": "advanced",
+      "duration": "ongoing"
+    },
+    {
+      "id": "tech_009",
+      "name": "Becoming Supernatural Meditation",
+      "origin": "Joe Dispenza",
+      "category": "meditation",
+      "complexity": "intermediate",
+      "duration": "45 min"
+    },
+    {
+      "id": "tech_010",
+      "name": "Blessing of the Energy Centers",
+      "origin": "Joe Dispenza",
+      "category": "meditation",
+      "complexity": "intermediate",
+      "duration": "30 min"
+    },
+    {
+      "id": "tech_011",
+      "name": "Wim Hof Breathing",
+      "origin": "Wim Hof",
+      "category": "breathwork",
+      "complexity": "basic",
+      "duration": "15 min"
+    },
+    {
+      "id": "tech_012",
+      "name": "Box Breathing",
+      "origin": "Navy SEALs",
+      "category": "breathwork",
+      "complexity": "basic",
+      "duration": "5 min"
+    },
+    {
+      "id": "tech_013",
+      "name": "Vipassana Body Scan",
+      "origin": "Buddhist",
+      "category": "meditation",
+      "complexity": "intermediate",
+      "duration": "20 min"
+    },
+    {
+      "id": "tech_014",
+      "name": "Loving-Kindness Meditation",
+      "origin": "Buddhist",
+      "category": "meditation",
+      "complexity": "basic",
+      "duration": "10 min"
+    },
+    {
+      "id": "tech_015",
+      "name": "Stoic Negative Visualization",
+      "origin": "Stoic",
+      "category": "visualization",
+      "complexity": "basic",
+      "duration": "10 min"
+    },
+    {
+      "id": "tech_016",
+      "name": "NLP Anchoring",
+      "origin": "Richard Bandler",
+      "category": "visualization",
+      "complexity": "intermediate",
+      "duration": "15 min"
+    },
+    {
+      "id": "tech_017",
+      "name": "Incantations",
+      "origin": "Tony Robbins",
+      "category": "affirmation",
+      "complexity": "basic",
+      "duration": "10 min"
+    },
+    {
+      "id": "tech_018",
+      "name": "Scripting",
+      "origin": "Law of Attraction",
+      "category": "manifestation",
+      "complexity": "basic",
+      "duration": "15 min"
+    },
+    {
+      "id": "tech_019",
+      "name": "Gratitude Journaling",
+      "origin": "Various",
+      "category": "journaling",
+      "complexity": "basic",
+      "duration": "10 min"
+    },
+    {
+      "id": "tech_020",
+      "name": "Silva Centering Exercise",
+      "origin": "Jose Silva",
+      "category": "meditation",
+      "complexity": "basic",
+      "duration": "15 min"
+    }
+  ]
+}
