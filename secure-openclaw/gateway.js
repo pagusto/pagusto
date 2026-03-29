@@ -9,7 +9,13 @@ import SignalAdapter from './adapters/signal.js'
 import SessionManager from './sessions/manager.js'
 import AgentRunner from './agent/runner.js'
 import CommandHandler from './commands/handler.js'
-import { Composio } from '@composio/core'
+let Composio = null
+try {
+  const mod = await import('@composio/core')
+  Composio = mod.Composio
+} catch (e) {
+  // Composio is optional
+}
 
 /**
  * Secure OpenClaw Gateway - Routes messages between messaging platforms and Claude agent
@@ -27,7 +33,7 @@ class Gateway {
     this.commandHandler = new CommandHandler(this)
     this.adapters = new Map()
     this.pendingApprovals = new Map() // chatId -> { resolve, timeout }
-    this.composio = new Composio()
+    this.composio = Composio && process.env.COMPOSIO_API_KEY ? new Composio() : null
     this.composioSession = null
     this.mcpServers = {}
     this.setupQueueMonitoring()
@@ -36,6 +42,10 @@ class Gateway {
   }
 
   async initMcpServers() {
+    if (!this.composio) {
+      console.log('[Composio] Skipped (no API key or package not available)')
+      return
+    }
     const userId = config.agentId || 'secure-openclaw-user'
     console.log('[Composio] Initializing session for:', userId)
     try {
@@ -49,7 +59,6 @@ class Gateway {
     } catch (err) {
       console.error('[Composio] Failed to initialize:', err.message)
     }
-
   }
 
   setupQueueMonitoring() {
