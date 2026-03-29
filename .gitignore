@@ -7,6 +7,9 @@
 *.pem
 *.key
 
+# Bot scripts with credentials
+start-bot.bat
+
 # Cachés y binarios
 node_modules/
 .git/
