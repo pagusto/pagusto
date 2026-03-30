@@ -1,0 +1,28 @@
+name: Wealth System - Morning Delivery (9AM AEDT)
+
+on:
+  schedule:
+    # 9AM AEDT = 10PM UTC (UTC+11)
+    - cron: '0 22 * * *'
+  workflow_dispatch: # Manual trigger button
+
+jobs:
+  morning-delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install jinja2 httpx
+
+      - name: Send morning content
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT }}
+        working-directory: ai-entrepreneurship-research
+        run: python3 scripts/morning_delivery.py --telegram-only

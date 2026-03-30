@@ -256,39 +256,71 @@ def _fallback_email_format(content: dict) -> str:
 # ---------------------------------------------------------------------------
 
 
+def _get_bot_token() -> str:
+    """Get bot token from env var or token file."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    if token:
+        return token
+    token_file = Path(os.path.expanduser("~/.claude/skills/telegram/token.json"))
+    if token_file.exists():
+        with open(token_file) as f:
+            data = json.load(f)
+        return data.get("bot_token", "")
+    return ""
+
+
+def _send_telegram_direct(message: str, chat_id: str, token: str) -> bool:
+    """Send via Telegram Bot API directly (for GitHub Actions / CI)."""
+    try:
+        import httpx
+        resp = httpx.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            json={"chat_id": chat_id, "text": message, "parse_mode": "Markdown"},
+            timeout=15,
+        )
+        if resp.status_code == 200 and resp.json().get("ok"):
+            return True
+        logger.warning("Telegram API response: %s", resp.text[:200])
+    except Exception as exc:
+        logger.warning("Direct Telegram send failed: %s", exc)
+    return False
+
+
 def send_telegram(message: str, chat_id: str) -> bool:
-    """Send message via Telegram skill with retry logic."""
-    if not TELEGRAM_SKILL.exists():
-        logger.error("Telegram skill script not found: %s", TELEGRAM_SKILL)
+    """Send message via Telegram with retry logic. Uses skill script or direct API."""
+    token = _get_bot_token()
+    use_direct = not TELEGRAM_SKILL.exists() or not TELEGRAM_SKILL.parent.exists()
+
+    if not token and use_direct:
+        logger.error("No bot token found and skill script unavailable")
         return False
 
     for attempt in range(1, MAX_RETRIES + 1):
         logger.info("Telegram send attempt %d/%d", attempt, MAX_RETRIES)
-        cmd = [
-            sys.executable,
-            str(TELEGRAM_SKILL),
-            "send-message",
-            chat_id,
-            message,
-            "--parse-mode", "Markdown",
-        ]
 
-        try:
-            result = subprocess.run(
-                cmd, capture_output=True, text=True, timeout=30,
-            )
-            if result.returncode == 0:
-                response = json.loads(result.stdout) if result.stdout.strip() else {}
-                if "error" not in response:
-                    logger.info("Telegram message sent successfully")
+        if use_direct or token:
+            if _send_telegram_direct(message, chat_id, token):
+                logger.info("Telegram message sent successfully (direct API)")
+                return True
+        else:
+            cmd = [
+                sys.executable,
+                str(TELEGRAM_SKILL),
+                "send-message",
+                chat_id,
+                message,
+                "--parse-mode", "Markdown",
+            ]
+            try:
+                result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+                if result.returncode == 0:
+                    logger.info("Telegram message sent successfully (skill)")
                     return True
-                logger.warning("Telegram API error: %s", response.get("error"))
-            else:
                 logger.warning("Telegram send failed (exit %d): %s", result.returncode, result.stderr)
-        except subprocess.TimeoutExpired:
-            logger.warning("Telegram send timed out (attempt %d)", attempt)
-        except Exception as exc:
-            logger.warning("Telegram send error (attempt %d): %s", attempt, exc)
+            except subprocess.TimeoutExpired:
+                logger.warning("Telegram send timed out (attempt %d)", attempt)
+            except Exception as exc:
+                logger.warning("Telegram send error (attempt %d): %s", attempt, exc)
 
         if attempt < MAX_RETRIES:
             logger.info("Retrying in %d seconds...", RETRY_DELAY_SECONDS)
