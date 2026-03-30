@@ -37,15 +37,16 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-BASE_DIR = Path("/home/user/pagusto/ai-entrepreneurship-research")
+BASE_DIR = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = BASE_DIR / "scripts"
 CONTENT_DIR = BASE_DIR / "content"
 GENERATED_DIR = CONTENT_DIR / "generated"
 TEMPLATES_DIR = BASE_DIR / "templates"
 DOMAIN_CONFIG_PATH = TEMPLATES_DIR / "domain_config.json"
 
-TELEGRAM_SKILL = Path("/home/user/pagusto/claude-config/skills/telegram/scripts/telegram.py")
-GMAIL_SKILL = Path("/home/user/pagusto/claude-config/skills/gmail/scripts/gmail.py")
+REPO_ROOT = BASE_DIR.parent
+TELEGRAM_SKILL = REPO_ROOT / "claude-config" / "skills" / "telegram" / "scripts" / "telegram.py"
+GMAIL_SKILL = REPO_ROOT / "claude-config" / "skills" / "gmail" / "scripts" / "gmail.py"
 CONTENT_GENERATOR = SCRIPTS_DIR / "content_generator.py"
 
 START_DATE = date(2026, 3, 30)
