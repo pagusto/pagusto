@@ -27,7 +27,7 @@ from typing import Optional
 # Configuration
 # ---------------------------------------------------------------------------
 
-BASE_DIR = Path("/home/user/pagusto/ai-entrepreneurship-research")
+BASE_DIR = Path(__file__).resolve().parent.parent
 CONTENT_DIR = BASE_DIR / "content"
 GENERATED_DIR = CONTENT_DIR / "generated"
 CALENDAR_PATH = CONTENT_DIR / "calendar_365.json"
