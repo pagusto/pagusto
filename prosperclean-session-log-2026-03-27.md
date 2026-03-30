@@ -17,8 +17,11 @@
 - [x] **Visa ...1484** - Confirmado NO es tarjeta de Paul, es de Susie Vu (saldo pendiente 1,566,137 dong es deuda de ella)
 - [x] **Google Ads** (697-093-3047) - ACTIVO, acceso confirmado via API, auto-tagging on, conversion tracking configurado
 
-### PENDIENTE - Acciones Manuales para Manana (28 Mar)
-- [ ] **Crear Instagram @prosperclean.au** (2 min) - instagram.com → Sign up → email: prosperclean.au@gmail.com → activar 2FA → Business/Cleaning Service
+### COMPLETADO - Session 30 Mar
+- [x] **Instagram @prosperclean.au** - Cuenta creada, pendiente: activar 2FA y cambiar a Business account
+- [x] **Instagram @prosper.clean** - Eliminada (backup completado)
+
+### PENDIENTE - Acciones Inmediatas
 - [ ] **Crear Google Business Profile** (5 min) - business.google.com → ProsperClean → 34B Templeton Street, Cook, ACT 2614 → categoria: House cleaning service
 - [ ] **Corregir timezone Google Ads** (1 min) - ads.google.com → Settings → Time Zone → Australia/Sydney
 
