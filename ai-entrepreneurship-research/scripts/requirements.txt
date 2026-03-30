@@ -1,0 +1,18 @@
+# AI Entrepreneurship Wealth System - Python Dependencies
+# Install: pip install -r requirements.txt
+
+# HTTP client for API calls
+httpx>=0.24
+
+# Environment variable management
+python-dotenv>=1.0
+
+# Template rendering (Telegram/email formatting)
+jinja2>=3.1
+
+# Telegram bot library (legacy bot script)
+python-telegram-bot[job-scheduler]>=20.0
+
+# Visualization (reports)
+matplotlib>=3.5
+numpy>=1.20

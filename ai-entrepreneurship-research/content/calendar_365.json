@@ -1,0 +1,6580 @@
+{
+  "metadata": {
+    "total_days": 365,
+    "start_date": "2026-03-30",
+    "timezone": "Australia/Canberra",
+    "language": "en"
+  },
+  "days": [
+    {
+      "day_number": 1,
+      "date": "2026-03-30",
+      "day_of_week": "Monday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Alpha State Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Alpha State Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 2,
+      "date": "2026-03-31",
+      "day_of_week": "Tuesday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Think and Grow Rich",
+        "source_name": "Think and Grow Rich"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Think and Grow Rich",
+        "source_name": "Think and Grow Rich"
+      }
+    },
+    {
+      "day_number": 3,
+      "date": "2026-04-01",
+      "day_of_week": "Wednesday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Elon Musk",
+        "source_name": "Elon Musk"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Elon Musk",
+        "source_name": "Elon Musk"
+      }
+    },
+    {
+      "day_number": 4,
+      "date": "2026-04-02",
+      "day_of_week": "Thursday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "SPIN Selling",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: SPIN Selling",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 5,
+      "date": "2026-04-03",
+      "day_of_week": "Friday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Claude Code Basics - Your AI Copilot",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Claude Code Basics - Your AI Copilot",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 6,
+      "date": "2026-04-04",
+      "day_of_week": "Saturday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Charisma Myth Fundamentals",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Charisma Myth Fundamentals",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 7,
+      "date": "2026-04-05",
+      "day_of_week": "Sunday",
+      "week_number": 1,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Stoic Morning Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Stoic Morning Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 8,
+      "date": "2026-04-06",
+      "day_of_week": "Monday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Three Fingers Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Three Fingers Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 9,
+      "date": "2026-04-07",
+      "day_of_week": "Tuesday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Rich Dad Poor Dad",
+        "source_name": "Rich Dad Poor Dad"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Rich Dad Poor Dad",
+        "source_name": "Rich Dad Poor Dad"
+      }
+    },
+    {
+      "day_number": 10,
+      "date": "2026-04-08",
+      "day_of_week": "Wednesday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Steve Jobs",
+        "source_name": "Steve Jobs"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Steve Jobs",
+        "source_name": "Steve Jobs"
+      }
+    },
+    {
+      "day_number": 11,
+      "date": "2026-04-09",
+      "day_of_week": "Thursday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Straight Line Persuasion",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Straight Line Persuasion",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 12,
+      "date": "2026-04-10",
+      "day_of_week": "Friday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building Your First AI Automation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building Your First AI Automation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 13,
+      "date": "2026-04-11",
+      "day_of_week": "Saturday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Power Body Language",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Power Body Language",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 14,
+      "date": "2026-04-12",
+      "day_of_week": "Sunday",
+      "week_number": 2,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Buddhist Loving-Kindness",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Buddhist Loving-Kindness",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 15,
+      "date": "2026-04-13",
+      "day_of_week": "Monday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Mirror of the Mind",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Mirror of the Mind",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 16,
+      "date": "2026-04-14",
+      "day_of_week": "Tuesday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "$100M Offers",
+        "source_name": "$100M Offers"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: $100M Offers",
+        "source_name": "$100M Offers"
+      }
+    },
+    {
+      "day_number": 17,
+      "date": "2026-04-15",
+      "day_of_week": "Wednesday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Oprah Winfrey",
+        "source_name": "Oprah Winfrey"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Oprah Winfrey",
+        "source_name": "Oprah Winfrey"
+      }
+    },
+    {
+      "day_number": 18,
+      "date": "2026-04-16",
+      "day_of_week": "Thursday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Reciprocity",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Reciprocity",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 19,
+      "date": "2026-04-17",
+      "day_of_week": "Friday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "API Integration with Claude",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: API Integration with Claude",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 20,
+      "date": "2026-04-18",
+      "day_of_week": "Saturday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Voice Tonality Mastery",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Voice Tonality Mastery",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 21,
+      "date": "2026-04-19",
+      "day_of_week": "Sunday",
+      "week_number": 3,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Taoist Wu Wei Practice",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Taoist Wu Wei Practice",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 22,
+      "date": "2026-04-20",
+      "day_of_week": "Monday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Glass of Water Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Glass of Water Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 23,
+      "date": "2026-04-21",
+      "day_of_week": "Tuesday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Atomic Habits",
+        "source_name": "Atomic Habits"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Atomic Habits",
+        "source_name": "Atomic Habits"
+      }
+    },
+    {
+      "day_number": 24,
+      "date": "2026-04-22",
+      "day_of_week": "Wednesday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Warren Buffett",
+        "source_name": "Warren Buffett"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Warren Buffett",
+        "source_name": "Warren Buffett"
+      }
+    },
+    {
+      "day_number": 25,
+      "date": "2026-04-23",
+      "day_of_week": "Thursday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Commitment",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Commitment",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 26,
+      "date": "2026-04-24",
+      "day_of_week": "Friday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Prompt Engineering for Business",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Prompt Engineering for Business",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 27,
+      "date": "2026-04-25",
+      "day_of_week": "Saturday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "First Impressions Science",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: First Impressions Science",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 28,
+      "date": "2026-04-26",
+      "day_of_week": "Sunday",
+      "week_number": 4,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Vedantic Self-Inquiry",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Vedantic Self-Inquiry",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 29,
+      "date": "2026-04-27",
+      "day_of_week": "Monday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Mental Laboratory",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Mental Laboratory",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 30,
+      "date": "2026-04-28",
+      "day_of_week": "Tuesday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Psychology of Money",
+        "source_name": "The Psychology of Money"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Psychology of Money",
+        "source_name": "The Psychology of Money"
+      }
+    },
+    {
+      "day_number": 31,
+      "date": "2026-04-29",
+      "day_of_week": "Wednesday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Tony Robbins",
+        "source_name": "Tony Robbins"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Tony Robbins",
+        "source_name": "Tony Robbins"
+      }
+    },
+    {
+      "day_number": 32,
+      "date": "2026-04-30",
+      "day_of_week": "Thursday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Social Proof",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Social Proof",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 33,
+      "date": "2026-05-01",
+      "day_of_week": "Friday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI-Powered Email Outreach",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI-Powered Email Outreach",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 34,
+      "date": "2026-05-02",
+      "day_of_week": "Saturday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Art of Small Talk",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Art of Small Talk",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 35,
+      "date": "2026-05-03",
+      "day_of_week": "Sunday",
+      "week_number": 5,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Ubuntu Philosophy",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Ubuntu Philosophy",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 36,
+      "date": "2026-05-04",
+      "day_of_week": "Monday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Dream Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Dream Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 37,
+      "date": "2026-05-05",
+      "day_of_week": "Tuesday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The 4-Hour Workweek",
+        "source_name": "The 4-Hour Workweek"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The 4-Hour Workweek",
+        "source_name": "The 4-Hour Workweek"
+      }
+    },
+    {
+      "day_number": 38,
+      "date": "2026-05-06",
+      "day_of_week": "Wednesday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Deepak Chopra",
+        "source_name": "Deepak Chopra"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Deepak Chopra",
+        "source_name": "Deepak Chopra"
+      }
+    },
+    {
+      "day_number": 39,
+      "date": "2026-05-07",
+      "day_of_week": "Thursday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Authority",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Authority",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 40,
+      "date": "2026-05-08",
+      "day_of_week": "Friday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Automating Client Follow-ups",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Automating Client Follow-ups",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 41,
+      "date": "2026-05-09",
+      "day_of_week": "Saturday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Storytelling for Influence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Storytelling for Influence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 42,
+      "date": "2026-05-10",
+      "day_of_week": "Sunday",
+      "week_number": 6,
+      "complexity": "basic",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Ikigai Discovery",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Ikigai Discovery",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 43,
+      "date": "2026-05-11",
+      "day_of_week": "Monday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Mental Screen",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Mental Screen",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 44,
+      "date": "2026-05-12",
+      "day_of_week": "Tuesday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Lean Startup",
+        "source_name": "The Lean Startup"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Lean Startup",
+        "source_name": "The Lean Startup"
+      }
+    },
+    {
+      "day_number": 45,
+      "date": "2026-05-13",
+      "day_of_week": "Wednesday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Bob Proctor",
+        "source_name": "Bob Proctor"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Bob Proctor",
+        "source_name": "Bob Proctor"
+      }
+    },
+    {
+      "day_number": 46,
+      "date": "2026-05-14",
+      "day_of_week": "Thursday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Liking",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Liking",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 47,
+      "date": "2026-05-15",
+      "day_of_week": "Friday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building AI Chatbots for Business",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building AI Chatbots for Business",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 48,
+      "date": "2026-05-16",
+      "day_of_week": "Saturday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Dark Psychology Awareness",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Dark Psychology Awareness",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 49,
+      "date": "2026-05-17",
+      "day_of_week": "Sunday",
+      "week_number": 7,
+      "complexity": "basic",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Bushido Code of Honor",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Bushido Code of Honor",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 50,
+      "date": "2026-05-18",
+      "day_of_week": "Monday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Habit Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Habit Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 51,
+      "date": "2026-05-19",
+      "day_of_week": "Tuesday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Zero to One",
+        "source_name": "Zero to One"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Zero to One",
+        "source_name": "Zero to One"
+      }
+    },
+    {
+      "day_number": 52,
+      "date": "2026-05-20",
+      "day_of_week": "Wednesday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Napoleon Hill",
+        "source_name": "Napoleon Hill"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Napoleon Hill",
+        "source_name": "Napoleon Hill"
+      }
+    },
+    {
+      "day_number": 53,
+      "date": "2026-05-21",
+      "day_of_week": "Thursday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cialdini Scarcity",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cialdini Scarcity",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 54,
+      "date": "2026-05-22",
+      "day_of_week": "Friday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Competitive Analysis",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Competitive Analysis",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 55,
+      "date": "2026-05-23",
+      "day_of_week": "Saturday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Reading Micro-Expressions",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Reading Micro-Expressions",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 56,
+      "date": "2026-05-24",
+      "day_of_week": "Sunday",
+      "week_number": 8,
+      "complexity": "basic",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Ayurvedic Morning Routine",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Ayurvedic Morning Routine",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 57,
+      "date": "2026-05-25",
+      "day_of_week": "Monday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Speed Learning",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Speed Learning",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 58,
+      "date": "2026-05-26",
+      "day_of_week": "Tuesday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Influence",
+        "source_name": "Influence"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Influence",
+        "source_name": "Influence"
+      }
+    },
+    {
+      "day_number": 59,
+      "date": "2026-05-27",
+      "day_of_week": "Wednesday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Andrew Carnegie",
+        "source_name": "Andrew Carnegie"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Andrew Carnegie",
+        "source_name": "Andrew Carnegie"
+      }
+    },
+    {
+      "day_number": 60,
+      "date": "2026-05-28",
+      "day_of_week": "Thursday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Mirroring (Chris Voss)",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Mirroring (Chris Voss)",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 61,
+      "date": "2026-05-29",
+      "day_of_week": "Friday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Using AI for Market Research",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Using AI for Market Research",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 62,
+      "date": "2026-05-30",
+      "day_of_week": "Saturday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Building Your Personal Brand",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Building Your Personal Brand",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 63,
+      "date": "2026-05-31",
+      "day_of_week": "Sunday",
+      "week_number": 9,
+      "complexity": "basic",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Kabbalistic Tree of Life",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Kabbalistic Tree of Life",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 64,
+      "date": "2026-06-01",
+      "day_of_week": "Monday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Creative Sleep",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Creative Sleep",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 65,
+      "date": "2026-06-02",
+      "day_of_week": "Tuesday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "How to Win Friends",
+        "source_name": "How to Win Friends"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: How to Win Friends",
+        "source_name": "How to Win Friends"
+      }
+    },
+    {
+      "day_number": 66,
+      "date": "2026-06-03",
+      "day_of_week": "Wednesday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Nikola Tesla",
+        "source_name": "Nikola Tesla"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Nikola Tesla",
+        "source_name": "Nikola Tesla"
+      }
+    },
+    {
+      "day_number": 67,
+      "date": "2026-06-04",
+      "day_of_week": "Thursday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Labeling Emotions",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Labeling Emotions",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 68,
+      "date": "2026-06-05",
+      "day_of_week": "Friday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI Content Generation Pipeline",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI Content Generation Pipeline",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 69,
+      "date": "2026-06-06",
+      "day_of_week": "Saturday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Networking Like a Pro",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Networking Like a Pro",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 70,
+      "date": "2026-06-07",
+      "day_of_week": "Sunday",
+      "week_number": 10,
+      "complexity": "basic",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Sufi Whirling Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Sufi Whirling Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 71,
+      "date": "2026-06-08",
+      "day_of_week": "Monday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Long Relaxation Exercise",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Long Relaxation Exercise",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 72,
+      "date": "2026-06-09",
+      "day_of_week": "Tuesday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Secrets of the Millionaire Mind",
+        "source_name": "Secrets of the Millionaire Mind"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Secrets of the Millionaire Mind",
+        "source_name": "Secrets of the Millionaire Mind"
+      }
+    },
+    {
+      "day_number": 73,
+      "date": "2026-06-10",
+      "day_of_week": "Wednesday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Leonardo da Vinci",
+        "source_name": "Leonardo da Vinci"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Leonardo da Vinci",
+        "source_name": "Leonardo da Vinci"
+      }
+    },
+    {
+      "day_number": 74,
+      "date": "2026-06-11",
+      "day_of_week": "Thursday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Calibrated Questions",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Calibrated Questions",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 75,
+      "date": "2026-06-12",
+      "day_of_week": "Friday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building an AI Agency - First Steps",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building an AI Agency - First Steps",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 76,
+      "date": "2026-06-13",
+      "day_of_week": "Saturday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Public Speaking Foundations",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Public Speaking Foundations",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 77,
+      "date": "2026-06-14",
+      "day_of_week": "Sunday",
+      "week_number": 11,
+      "complexity": "basic",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Christian Contemplative Prayer",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Christian Contemplative Prayer",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 78,
+      "date": "2026-06-15",
+      "day_of_week": "Monday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Healing Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Healing Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 79,
+      "date": "2026-06-16",
+      "day_of_week": "Tuesday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Silva Method",
+        "source_name": "The Silva Method"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Silva Method",
+        "source_name": "The Silva Method"
+      }
+    },
+    {
+      "day_number": 80,
+      "date": "2026-06-17",
+      "day_of_week": "Wednesday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Marcus Aurelius",
+        "source_name": "Marcus Aurelius"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Marcus Aurelius",
+        "source_name": "Marcus Aurelius"
+      }
+    },
+    {
+      "day_number": 81,
+      "date": "2026-06-18",
+      "day_of_week": "Thursday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Accusation Audit",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Accusation Audit",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 82,
+      "date": "2026-06-19",
+      "day_of_week": "Friday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Pricing AI Services",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Pricing AI Services",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 83,
+      "date": "2026-06-20",
+      "day_of_week": "Saturday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Commanding a Room",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Commanding a Room",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 84,
+      "date": "2026-06-21",
+      "day_of_week": "Sunday",
+      "week_number": 12,
+      "complexity": "basic",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Indigenous Gratitude Ceremony",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Indigenous Gratitude Ceremony",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 85,
+      "date": "2026-06-22",
+      "day_of_week": "Monday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Mental Rehearsal",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Mental Rehearsal",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 86,
+      "date": "2026-06-23",
+      "day_of_week": "Tuesday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Psycho-Cybernetics",
+        "source_name": "Psycho-Cybernetics"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Psycho-Cybernetics",
+        "source_name": "Psycho-Cybernetics"
+      }
+    },
+    {
+      "day_number": 87,
+      "date": "2026-06-24",
+      "day_of_week": "Wednesday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Seneca",
+        "source_name": "Seneca"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Seneca",
+        "source_name": "Seneca"
+      }
+    },
+    {
+      "day_number": 88,
+      "date": "2026-06-25",
+      "day_of_week": "Thursday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Tactical Empathy",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Tactical Empathy",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 89,
+      "date": "2026-06-26",
+      "day_of_week": "Friday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Finding AI Consulting Clients",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Finding AI Consulting Clients",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 90,
+      "date": "2026-06-27",
+      "day_of_week": "Saturday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Power of Vulnerability",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Power of Vulnerability",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 91,
+      "date": "2026-06-28",
+      "day_of_week": "Sunday",
+      "week_number": 13,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Zen Sitting Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Zen Sitting Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 92,
+      "date": "2026-06-29",
+      "day_of_week": "Monday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Countdown Deepening",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Countdown Deepening",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 93,
+      "date": "2026-06-30",
+      "day_of_week": "Tuesday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Power of Your Subconscious Mind",
+        "source_name": "The Power of Your Subconscious Mind"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Power of Your Subconscious Mind",
+        "source_name": "The Power of Your Subconscious Mind"
+      }
+    },
+    {
+      "day_number": 94,
+      "date": "2026-07-01",
+      "day_of_week": "Wednesday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Lao Tzu",
+        "source_name": "Lao Tzu"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Lao Tzu",
+        "source_name": "Lao Tzu"
+      }
+    },
+    {
+      "day_number": 95,
+      "date": "2026-07-02",
+      "day_of_week": "Thursday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "No-Oriented Questions",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: No-Oriented Questions",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 96,
+      "date": "2026-07-03",
+      "day_of_week": "Friday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Cleaning Business Scheduling",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Cleaning Business Scheduling",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 97,
+      "date": "2026-07-04",
+      "day_of_week": "Saturday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Emotional Contagion",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Emotional Contagion",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 98,
+      "date": "2026-07-05",
+      "day_of_week": "Sunday",
+      "week_number": 14,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Yoga Nidra for Wealth",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Yoga Nidra for Wealth",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 99,
+      "date": "2026-07-06",
+      "day_of_week": "Monday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Programming for Success",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Programming for Success",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 100,
+      "date": "2026-07-07",
+      "day_of_week": "Tuesday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Richest Man in Babylon",
+        "source_name": "The Richest Man in Babylon"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Richest Man in Babylon",
+        "source_name": "The Richest Man in Babylon"
+      }
+    },
+    {
+      "day_number": 101,
+      "date": "2026-07-08",
+      "day_of_week": "Wednesday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Rumi",
+        "source_name": "Rumi"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Rumi",
+        "source_name": "Rumi"
+      }
+    },
+    {
+      "day_number": 102,
+      "date": "2026-07-09",
+      "day_of_week": "Thursday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Black Swan Discovery",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Black Swan Discovery",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 103,
+      "date": "2026-07-10",
+      "day_of_week": "Friday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Recruitment Screening",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Recruitment Screening",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 104,
+      "date": "2026-07-11",
+      "day_of_week": "Saturday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Social Intelligence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Social Intelligence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 105,
+      "date": "2026-07-12",
+      "day_of_week": "Sunday",
+      "week_number": 15,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Vipassana Body Scan",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Vipassana Body Scan",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 106,
+      "date": "2026-07-13",
+      "day_of_week": "Monday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva Centering Exercise",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva Centering Exercise",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 107,
+      "date": "2026-07-14",
+      "day_of_week": "Tuesday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Millionaire Fastlane",
+        "source_name": "The Millionaire Fastlane"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Millionaire Fastlane",
+        "source_name": "The Millionaire Fastlane"
+      }
+    },
+    {
+      "day_number": 108,
+      "date": "2026-07-15",
+      "day_of_week": "Wednesday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Sadhguru",
+        "source_name": "Sadhguru"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Sadhguru",
+        "source_name": "Sadhguru"
+      }
+    },
+    {
+      "day_number": 109,
+      "date": "2026-07-16",
+      "day_of_week": "Thursday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Anchoring in Negotiation",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Anchoring in Negotiation",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 110,
+      "date": "2026-07-17",
+      "day_of_week": "Friday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building SaaS with AI",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building SaaS with AI",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 111,
+      "date": "2026-07-18",
+      "day_of_week": "Saturday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Status Dynamics",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Status Dynamics",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 112,
+      "date": "2026-07-19",
+      "day_of_week": "Sunday",
+      "week_number": 16,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Metta for Business Relations",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Metta for Business Relations",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 113,
+      "date": "2026-07-20",
+      "day_of_week": "Monday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Subjective Communication",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Subjective Communication",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 114,
+      "date": "2026-07-21",
+      "day_of_week": "Tuesday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Shoe Dog",
+        "source_name": "Shoe Dog"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Shoe Dog",
+        "source_name": "Shoe Dog"
+      }
+    },
+    {
+      "day_number": 115,
+      "date": "2026-07-22",
+      "day_of_week": "Wednesday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Jay Shetty",
+        "source_name": "Jay Shetty"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Jay Shetty",
+        "source_name": "Jay Shetty"
+      }
+    },
+    {
+      "day_number": 116,
+      "date": "2026-07-23",
+      "day_of_week": "Thursday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Challenger Sale",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Challenger Sale",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 117,
+      "date": "2026-07-24",
+      "day_of_week": "Friday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Passive Income with AI Products",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Passive Income with AI Products",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 118,
+      "date": "2026-07-25",
+      "day_of_week": "Saturday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Halo Effect",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Halo Effect",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 119,
+      "date": "2026-07-26",
+      "day_of_week": "Sunday",
+      "week_number": 17,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Tao of Money",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Tao of Money",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 120,
+      "date": "2026-07-27",
+      "day_of_week": "Monday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Case Working",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Case Working",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 121,
+      "date": "2026-07-28",
+      "day_of_week": "Tuesday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Hard Thing About Hard Things",
+        "source_name": "The Hard Thing About Hard Things"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Hard Thing About Hard Things",
+        "source_name": "The Hard Thing About Hard Things"
+      }
+    },
+    {
+      "day_number": 122,
+      "date": "2026-07-29",
+      "day_of_week": "Wednesday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Gary Vee",
+        "source_name": "Gary Vee"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Gary Vee",
+        "source_name": "Gary Vee"
+      }
+    },
+    {
+      "day_number": 123,
+      "date": "2026-07-30",
+      "day_of_week": "Thursday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Sandler Selling System",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Sandler Selling System",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 124,
+      "date": "2026-07-31",
+      "day_of_week": "Friday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI-Powered Course Creation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI-Powered Course Creation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 125,
+      "date": "2026-08-01",
+      "day_of_week": "Saturday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Conversation Threading",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Conversation Threading",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 126,
+      "date": "2026-08-02",
+      "day_of_week": "Sunday",
+      "week_number": 18,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Bhagavad Gita on Action",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Bhagavad Gita on Action",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 127,
+      "date": "2026-08-03",
+      "day_of_week": "Monday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva Life System Overview",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva Life System Overview",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 128,
+      "date": "2026-08-04",
+      "day_of_week": "Tuesday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Never Split the Difference",
+        "source_name": "Never Split the Difference"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Never Split the Difference",
+        "source_name": "Never Split the Difference"
+      }
+    },
+    {
+      "day_number": 129,
+      "date": "2026-08-05",
+      "day_of_week": "Wednesday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Alex Hormozi",
+        "source_name": "Alex Hormozi"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Alex Hormozi",
+        "source_name": "Alex Hormozi"
+      }
+    },
+    {
+      "day_number": 130,
+      "date": "2026-08-06",
+      "day_of_week": "Thursday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "MEDDIC Framework",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: MEDDIC Framework",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 131,
+      "date": "2026-08-07",
+      "day_of_week": "Friday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Automating Bookkeeping with AI",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Automating Bookkeeping with AI",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 132,
+      "date": "2026-08-08",
+      "day_of_week": "Saturday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Deep Rapport Building",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Deep Rapport Building",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 133,
+      "date": "2026-08-09",
+      "day_of_week": "Sunday",
+      "week_number": 19,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Proverbs on Wealth",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Proverbs on Wealth",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 134,
+      "date": "2026-08-10",
+      "day_of_week": "Monday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Awake Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Awake Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 135,
+      "date": "2026-08-11",
+      "day_of_week": "Tuesday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Almanack of Naval Ravikant",
+        "source_name": "The Almanack of Naval Ravikant"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Almanack of Naval Ravikant",
+        "source_name": "The Almanack of Naval Ravikant"
+      }
+    },
+    {
+      "day_number": 136,
+      "date": "2026-08-12",
+      "day_of_week": "Wednesday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Jose Silva",
+        "source_name": "Jose Silva"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Jose Silva",
+        "source_name": "Jose Silva"
+      }
+    },
+    {
+      "day_number": 137,
+      "date": "2026-08-13",
+      "day_of_week": "Thursday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Value Selling",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Value Selling",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 138,
+      "date": "2026-08-14",
+      "day_of_week": "Friday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Social Media Management",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Social Media Management",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 139,
+      "date": "2026-08-15",
+      "day_of_week": "Saturday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Art of Compliments",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Art of Compliments",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 140,
+      "date": "2026-08-16",
+      "day_of_week": "Sunday",
+      "week_number": 20,
+      "complexity": "intermediate",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Buddhist Middle Way",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Buddhist Middle Way",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 141,
+      "date": "2026-08-17",
+      "day_of_week": "Monday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Memory Pegs",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Memory Pegs",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 142,
+      "date": "2026-08-18",
+      "day_of_week": "Tuesday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The E-Myth Revisited",
+        "source_name": "The E-Myth Revisited"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The E-Myth Revisited",
+        "source_name": "The E-Myth Revisited"
+      }
+    },
+    {
+      "day_number": 143,
+      "date": "2026-08-19",
+      "day_of_week": "Wednesday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Neville Goddard",
+        "source_name": "Neville Goddard"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Neville Goddard",
+        "source_name": "Neville Goddard"
+      }
+    },
+    {
+      "day_number": 144,
+      "date": "2026-08-20",
+      "day_of_week": "Thursday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Solution Selling",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Solution Selling",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 145,
+      "date": "2026-08-21",
+      "day_of_week": "Friday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Claude Code Agent Architecture",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Claude Code Agent Architecture",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 146,
+      "date": "2026-08-22",
+      "day_of_week": "Saturday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Nonverbal Communication",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Nonverbal Communication",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 147,
+      "date": "2026-08-23",
+      "day_of_week": "Sunday",
+      "week_number": 21,
+      "complexity": "intermediate",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Taoist Simplicity",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Taoist Simplicity",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 148,
+      "date": "2026-08-24",
+      "day_of_week": "Monday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Speed Reading Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Speed Reading Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 149,
+      "date": "2026-08-25",
+      "day_of_week": "Tuesday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Good to Great",
+        "source_name": "Good to Great"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Good to Great",
+        "source_name": "Good to Great"
+      }
+    },
+    {
+      "day_number": 150,
+      "date": "2026-08-26",
+      "day_of_week": "Wednesday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Joe Dispenza",
+        "source_name": "Joe Dispenza"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Joe Dispenza",
+        "source_name": "Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 151,
+      "date": "2026-08-27",
+      "day_of_week": "Thursday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Consultative Selling",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Consultative Selling",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 152,
+      "date": "2026-08-28",
+      "day_of_week": "Friday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Multi-Agent Systems for Business",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Multi-Agent Systems for Business",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 153,
+      "date": "2026-08-29",
+      "day_of_week": "Saturday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Active Listening Mastery",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Active Listening Mastery",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 154,
+      "date": "2026-08-30",
+      "day_of_week": "Sunday",
+      "week_number": 22,
+      "complexity": "intermediate",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Hindu Abundance Mantras",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Hindu Abundance Mantras",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 155,
+      "date": "2026-08-31",
+      "day_of_week": "Monday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Better and Better Affirmation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Better and Better Affirmation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 156,
+      "date": "2026-09-01",
+      "day_of_week": "Tuesday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The 7 Habits",
+        "source_name": "The 7 Habits"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The 7 Habits",
+        "source_name": "The 7 Habits"
+      }
+    },
+    {
+      "day_number": 157,
+      "date": "2026-09-02",
+      "day_of_week": "Wednesday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Wim Hof",
+        "source_name": "Wim Hof"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Wim Hof",
+        "source_name": "Wim Hof"
+      }
+    },
+    {
+      "day_number": 158,
+      "date": "2026-09-03",
+      "day_of_week": "Thursday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "AIDA Formula",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: AIDA Formula",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 159,
+      "date": "2026-09-04",
+      "day_of_week": "Friday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Lead Generation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Lead Generation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 160,
+      "date": "2026-09-05",
+      "day_of_week": "Saturday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Influence Without Authority",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Influence Without Authority",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 161,
+      "date": "2026-09-06",
+      "day_of_week": "Sunday",
+      "week_number": 23,
+      "complexity": "intermediate",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Shinto Nature Connection",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Shinto Nature Connection",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 162,
+      "date": "2026-09-07",
+      "day_of_week": "Monday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Problem Solving at Alpha",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Problem Solving at Alpha",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 163,
+      "date": "2026-09-08",
+      "day_of_week": "Tuesday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Think Again",
+        "source_name": "Think Again"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Think Again",
+        "source_name": "Think Again"
+      }
+    },
+    {
+      "day_number": 164,
+      "date": "2026-09-09",
+      "day_of_week": "Wednesday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Naval Ravikant",
+        "source_name": "Naval Ravikant"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Naval Ravikant",
+        "source_name": "Naval Ravikant"
+      }
+    },
+    {
+      "day_number": 165,
+      "date": "2026-09-10",
+      "day_of_week": "Thursday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "FAB Technique",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: FAB Technique",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 166,
+      "date": "2026-09-11",
+      "day_of_week": "Friday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building AI Workflows",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building AI Workflows",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 167,
+      "date": "2026-09-12",
+      "day_of_week": "Saturday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Ben Franklin Effect",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Ben Franklin Effect",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 168,
+      "date": "2026-09-13",
+      "day_of_week": "Sunday",
+      "week_number": 24,
+      "complexity": "intermediate",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Native American Vision Quest",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Native American Vision Quest",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 169,
+      "date": "2026-09-14",
+      "day_of_week": "Monday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "The Mental Mentor",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: The Mental Mentor",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 170,
+      "date": "2026-09-15",
+      "day_of_week": "Tuesday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Deep Work",
+        "source_name": "Deep Work"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Deep Work",
+        "source_name": "Deep Work"
+      }
+    },
+    {
+      "day_number": 171,
+      "date": "2026-09-16",
+      "day_of_week": "Wednesday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Miyamoto Musashi",
+        "source_name": "Miyamoto Musashi"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Miyamoto Musashi",
+        "source_name": "Miyamoto Musashi"
+      }
+    },
+    {
+      "day_number": 172,
+      "date": "2026-09-17",
+      "day_of_week": "Thursday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Objection Handling",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Objection Handling",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 173,
+      "date": "2026-09-18",
+      "day_of_week": "Friday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Customer Service",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Customer Service",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 174,
+      "date": "2026-09-19",
+      "day_of_week": "Saturday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Social Proof Engineering",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Social Proof Engineering",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 175,
+      "date": "2026-09-20",
+      "day_of_week": "Sunday",
+      "week_number": 25,
+      "complexity": "intermediate",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Celtic Wisdom Traditions",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Celtic Wisdom Traditions",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 176,
+      "date": "2026-09-21",
+      "day_of_week": "Monday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Goal Programming",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Goal Programming",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 177,
+      "date": "2026-09-22",
+      "day_of_week": "Tuesday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Essentialism",
+        "source_name": "Essentialism"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Essentialism",
+        "source_name": "Essentialism"
+      }
+    },
+    {
+      "day_number": 178,
+      "date": "2026-09-23",
+      "day_of_week": "Wednesday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Sun Tzu",
+        "source_name": "Sun Tzu"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Sun Tzu",
+        "source_name": "Sun Tzu"
+      }
+    },
+    {
+      "day_number": 179,
+      "date": "2026-09-24",
+      "day_of_week": "Thursday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Assumptive Close",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Assumptive Close",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 180,
+      "date": "2026-09-25",
+      "day_of_week": "Friday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Scaling Operations with AI",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Scaling Operations with AI",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 181,
+      "date": "2026-09-26",
+      "day_of_week": "Saturday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Building a Tribe",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Building a Tribe",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 182,
+      "date": "2026-09-27",
+      "day_of_week": "Sunday",
+      "week_number": 26,
+      "complexity": "intermediate",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "African Ancestor Wisdom",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: African Ancestor Wisdom",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 183,
+      "date": "2026-09-28",
+      "day_of_week": "Monday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Daydreaming Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Daydreaming Control",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 184,
+      "date": "2026-09-29",
+      "day_of_week": "Tuesday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Art of War",
+        "source_name": "The Art of War"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Art of War",
+        "source_name": "The Art of War"
+      }
+    },
+    {
+      "day_number": 185,
+      "date": "2026-09-30",
+      "day_of_week": "Wednesday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Richard Branson",
+        "source_name": "Richard Branson"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Richard Branson",
+        "source_name": "Richard Branson"
+      }
+    },
+    {
+      "day_number": 186,
+      "date": "2026-10-01",
+      "day_of_week": "Thursday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Alternative Close",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Alternative Close",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 187,
+      "date": "2026-10-02",
+      "day_of_week": "Friday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI-Powered Data Analysis",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI-Powered Data Analysis",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 188,
+      "date": "2026-10-03",
+      "day_of_week": "Saturday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Confidence from Within",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Confidence from Within",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 189,
+      "date": "2026-10-04",
+      "day_of_week": "Sunday",
+      "week_number": 27,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Confucian Self-Cultivation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Confucian Self-Cultivation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 190,
+      "date": "2026-10-05",
+      "day_of_week": "Monday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Ultra Height Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Ultra Height Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 191,
+      "date": "2026-10-06",
+      "day_of_week": "Tuesday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Meditations",
+        "source_name": "Meditations"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Meditations",
+        "source_name": "Meditations"
+      }
+    },
+    {
+      "day_number": 192,
+      "date": "2026-10-07",
+      "day_of_week": "Wednesday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Jeff Bezos",
+        "source_name": "Jeff Bezos"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Jeff Bezos",
+        "source_name": "Jeff Bezos"
+      }
+    },
+    {
+      "day_number": 193,
+      "date": "2026-10-08",
+      "day_of_week": "Thursday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Urgency Close",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Urgency Close",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 194,
+      "date": "2026-10-09",
+      "day_of_week": "Friday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building AI Tools for Clients",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building AI Tools for Clients",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 195,
+      "date": "2026-10-10",
+      "day_of_week": "Saturday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Power of Silence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Power of Silence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 196,
+      "date": "2026-10-11",
+      "day_of_week": "Sunday",
+      "week_number": 28,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Zoroastrian Good Thoughts",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Zoroastrian Good Thoughts",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 197,
+      "date": "2026-10-12",
+      "day_of_week": "Monday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva Intuition Training",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva Intuition Training",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 198,
+      "date": "2026-10-13",
+      "day_of_week": "Tuesday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The 48 Laws of Power",
+        "source_name": "The 48 Laws of Power"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The 48 Laws of Power",
+        "source_name": "The 48 Laws of Power"
+      }
+    },
+    {
+      "day_number": 199,
+      "date": "2026-10-14",
+      "day_of_week": "Wednesday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Sara Blakely",
+        "source_name": "Sara Blakely"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Sara Blakely",
+        "source_name": "Sara Blakely"
+      }
+    },
+    {
+      "day_number": 200,
+      "date": "2026-10-15",
+      "day_of_week": "Thursday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Takeaway Close",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Takeaway Close",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 201,
+      "date": "2026-10-16",
+      "day_of_week": "Friday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Proposal Generation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Proposal Generation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 202,
+      "date": "2026-10-17",
+      "day_of_week": "Saturday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Magnetic Personality Traits",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Magnetic Personality Traits",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 203,
+      "date": "2026-10-18",
+      "day_of_week": "Sunday",
+      "week_number": 29,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Jain Non-Attachment",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Jain Non-Attachment",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 204,
+      "date": "2026-10-19",
+      "day_of_week": "Monday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Age Regression Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Age Regression Technique",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 205,
+      "date": "2026-10-20",
+      "day_of_week": "Tuesday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Mastery",
+        "source_name": "Mastery"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Mastery",
+        "source_name": "Mastery"
+      }
+    },
+    {
+      "day_number": 206,
+      "date": "2026-10-21",
+      "day_of_week": "Wednesday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Coco Chanel",
+        "source_name": "Coco Chanel"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Coco Chanel",
+        "source_name": "Coco Chanel"
+      }
+    },
+    {
+      "day_number": 207,
+      "date": "2026-10-22",
+      "day_of_week": "Thursday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Tonality Mastery (Belfort)",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Tonality Mastery (Belfort)",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 208,
+      "date": "2026-10-23",
+      "day_of_week": "Friday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Deploying AI Solutions",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Deploying AI Solutions",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 209,
+      "date": "2026-10-24",
+      "day_of_week": "Saturday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Conflict Resolution",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Conflict Resolution",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 210,
+      "date": "2026-10-25",
+      "day_of_week": "Sunday",
+      "week_number": 30,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Sikh Service Philosophy",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Sikh Service Philosophy",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 211,
+      "date": "2026-10-26",
+      "day_of_week": "Monday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Holistic Faith Healing",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Holistic Faith Healing",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 212,
+      "date": "2026-10-27",
+      "day_of_week": "Tuesday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Compound Effect",
+        "source_name": "The Compound Effect"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Compound Effect",
+        "source_name": "The Compound Effect"
+      }
+    },
+    {
+      "day_number": 213,
+      "date": "2026-10-28",
+      "day_of_week": "Wednesday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Mahatma Gandhi",
+        "source_name": "Mahatma Gandhi"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Mahatma Gandhi",
+        "source_name": "Mahatma Gandhi"
+      }
+    },
+    {
+      "day_number": 214,
+      "date": "2026-10-29",
+      "day_of_week": "Thursday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Body Language in Sales",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Body Language in Sales",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 215,
+      "date": "2026-10-30",
+      "day_of_week": "Friday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Inventory Management",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Inventory Management",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 216,
+      "date": "2026-10-31",
+      "day_of_week": "Saturday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Difficult Conversations",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Difficult Conversations",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 217,
+      "date": "2026-11-01",
+      "day_of_week": "Sunday",
+      "week_number": 31,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Baha i Unity Practice",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Baha i Unity Practice",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 218,
+      "date": "2026-11-02",
+      "day_of_week": "Monday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva UltraMind ESP",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva UltraMind ESP",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 219,
+      "date": "2026-11-03",
+      "day_of_week": "Tuesday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "10X Rule",
+        "source_name": "10X Rule"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: 10X Rule",
+        "source_name": "10X Rule"
+      }
+    },
+    {
+      "day_number": 220,
+      "date": "2026-11-04",
+      "day_of_week": "Wednesday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Nelson Mandela",
+        "source_name": "Nelson Mandela"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Nelson Mandela",
+        "source_name": "Nelson Mandela"
+      }
+    },
+    {
+      "day_number": 221,
+      "date": "2026-11-05",
+      "day_of_week": "Thursday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Storytelling for Sales",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Storytelling for Sales",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 222,
+      "date": "2026-11-06",
+      "day_of_week": "Friday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Route Optimization",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Route Optimization",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 223,
+      "date": "2026-11-07",
+      "day_of_week": "Saturday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Cross-Cultural Communication",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Cross-Cultural Communication",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 224,
+      "date": "2026-11-08",
+      "day_of_week": "Sunday",
+      "week_number": 32,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Shamanic Journeying",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Shamanic Journeying",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 225,
+      "date": "2026-11-09",
+      "day_of_week": "Monday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Projection into Metals",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Projection into Metals",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 226,
+      "date": "2026-11-10",
+      "day_of_week": "Tuesday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Sell or Be Sold",
+        "source_name": "Sell or Be Sold"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Sell or Be Sold",
+        "source_name": "Sell or Be Sold"
+      }
+    },
+    {
+      "day_number": 227,
+      "date": "2026-11-11",
+      "day_of_week": "Wednesday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Mother Teresa",
+        "source_name": "Mother Teresa"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Mother Teresa",
+        "source_name": "Mother Teresa"
+      }
+    },
+    {
+      "day_number": 228,
+      "date": "2026-11-12",
+      "day_of_week": "Thursday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Pain-Agitation-Solution",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Pain-Agitation-Solution",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 229,
+      "date": "2026-11-13",
+      "day_of_week": "Friday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Employee Training",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Employee Training",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 230,
+      "date": "2026-11-14",
+      "day_of_week": "Saturday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Digital Charisma",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Digital Charisma",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 231,
+      "date": "2026-11-15",
+      "day_of_week": "Sunday",
+      "week_number": 33,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Hermetic Principles",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Hermetic Principles",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 232,
+      "date": "2026-11-16",
+      "day_of_week": "Monday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Projection into Living Plants",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Projection into Living Plants",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 233,
+      "date": "2026-11-17",
+      "day_of_week": "Tuesday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Way of the Wolf",
+        "source_name": "Way of the Wolf"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Way of the Wolf",
+        "source_name": "Way of the Wolf"
+      }
+    },
+    {
+      "day_number": 234,
+      "date": "2026-11-18",
+      "day_of_week": "Wednesday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Dalai Lama",
+        "source_name": "Dalai Lama"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Dalai Lama",
+        "source_name": "Dalai Lama"
+      }
+    },
+    {
+      "day_number": 235,
+      "date": "2026-11-19",
+      "day_of_week": "Thursday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The 10X Prospecting Rule",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The 10X Prospecting Rule",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 236,
+      "date": "2026-11-20",
+      "day_of_week": "Friday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Quality Control",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Quality Control",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 237,
+      "date": "2026-11-21",
+      "day_of_week": "Saturday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Persuasive Writing",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Persuasive Writing",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 238,
+      "date": "2026-11-22",
+      "day_of_week": "Sunday",
+      "week_number": 34,
+      "complexity": "advanced",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Platonic Idealism",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Platonic Idealism",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 239,
+      "date": "2026-11-23",
+      "day_of_week": "Monday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Projection into Animals",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Projection into Animals",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 240,
+      "date": "2026-11-24",
+      "day_of_week": "Tuesday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Thinking Fast and Slow",
+        "source_name": "Thinking Fast and Slow"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Thinking Fast and Slow",
+        "source_name": "Thinking Fast and Slow"
+      }
+    },
+    {
+      "day_number": 241,
+      "date": "2026-11-25",
+      "day_of_week": "Wednesday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Confucius",
+        "source_name": "Confucius"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Confucius",
+        "source_name": "Confucius"
+      }
+    },
+    {
+      "day_number": 242,
+      "date": "2026-11-26",
+      "day_of_week": "Thursday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Referral Systems",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Referral Systems",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 243,
+      "date": "2026-11-27",
+      "day_of_week": "Friday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building Custom GPTs for Business",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building Custom GPTs for Business",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 244,
+      "date": "2026-11-28",
+      "day_of_week": "Saturday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Email Influence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Email Influence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 245,
+      "date": "2026-11-29",
+      "day_of_week": "Sunday",
+      "week_number": 35,
+      "complexity": "advanced",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Epicurean Happiness",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Epicurean Happiness",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 246,
+      "date": "2026-11-30",
+      "day_of_week": "Monday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Projection into Humans",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Projection into Humans",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 247,
+      "date": "2026-12-01",
+      "day_of_week": "Tuesday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Start With Why",
+        "source_name": "Start With Why"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Start With Why",
+        "source_name": "Start With Why"
+      }
+    },
+    {
+      "day_number": 248,
+      "date": "2026-12-02",
+      "day_of_week": "Wednesday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Socrates",
+        "source_name": "Socrates"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Socrates",
+        "source_name": "Socrates"
+      }
+    },
+    {
+      "day_number": 249,
+      "date": "2026-12-03",
+      "day_of_week": "Thursday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Cold Calling Mastery",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Cold Calling Mastery",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 250,
+      "date": "2026-12-04",
+      "day_of_week": "Friday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Financial Planning",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Financial Planning",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 251,
+      "date": "2026-12-05",
+      "day_of_week": "Saturday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Phone Presence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Phone Presence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 252,
+      "date": "2026-12-06",
+      "day_of_week": "Sunday",
+      "week_number": 36,
+      "complexity": "advanced",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Cynical Freedom",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Cynical Freedom",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 253,
+      "date": "2026-12-07",
+      "day_of_week": "Monday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Lab Technique with Counselors",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Lab Technique with Counselors",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 254,
+      "date": "2026-12-08",
+      "day_of_week": "Tuesday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Built to Last",
+        "source_name": "Built to Last"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Built to Last",
+        "source_name": "Built to Last"
+      }
+    },
+    {
+      "day_number": 255,
+      "date": "2026-12-09",
+      "day_of_week": "Wednesday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Aristotle",
+        "source_name": "Aristotle"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Aristotle",
+        "source_name": "Aristotle"
+      }
+    },
+    {
+      "day_number": 256,
+      "date": "2026-12-10",
+      "day_of_week": "Thursday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Social Selling (LinkedIn)",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Social Selling (LinkedIn)",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 257,
+      "date": "2026-12-11",
+      "day_of_week": "Friday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Contract Analysis",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Contract Analysis",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 258,
+      "date": "2026-12-12",
+      "day_of_week": "Saturday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Video Communication Skills",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Video Communication Skills",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 259,
+      "date": "2026-12-13",
+      "day_of_week": "Sunday",
+      "week_number": 37,
+      "complexity": "advanced",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Existential Meaning-Making",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Existential Meaning-Making",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 260,
+      "date": "2026-12-14",
+      "day_of_week": "Monday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Remote Viewing Practice",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Remote Viewing Practice",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 261,
+      "date": "2026-12-15",
+      "day_of_week": "Tuesday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Outliers",
+        "source_name": "Outliers"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Outliers",
+        "source_name": "Outliers"
+      }
+    },
+    {
+      "day_number": 262,
+      "date": "2026-12-16",
+      "day_of_week": "Wednesday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Benjamin Franklin",
+        "source_name": "Benjamin Franklin"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Benjamin Franklin",
+        "source_name": "Benjamin Franklin"
+      }
+    },
+    {
+      "day_number": 263,
+      "date": "2026-12-17",
+      "day_of_week": "Thursday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Emotional Intelligence in Sales",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Emotional Intelligence in Sales",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 264,
+      "date": "2026-12-18",
+      "day_of_week": "Friday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Sales Forecasting",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Sales Forecasting",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 265,
+      "date": "2026-12-19",
+      "day_of_week": "Saturday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Managing Up",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Managing Up",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 266,
+      "date": "2026-12-20",
+      "day_of_week": "Sunday",
+      "week_number": 38,
+      "complexity": "advanced",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Transcendentalist Nature Walk",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Transcendentalist Nature Walk",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 267,
+      "date": "2026-12-21",
+      "day_of_week": "Monday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Theta Level Meditation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Theta Level Meditation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 268,
+      "date": "2026-12-22",
+      "day_of_week": "Tuesday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Tipping Point",
+        "source_name": "The Tipping Point"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Tipping Point",
+        "source_name": "The Tipping Point"
+      }
+    },
+    {
+      "day_number": 269,
+      "date": "2026-12-23",
+      "day_of_week": "Wednesday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Thomas Edison",
+        "source_name": "Thomas Edison"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Thomas Edison",
+        "source_name": "Thomas Edison"
+      }
+    },
+    {
+      "day_number": 270,
+      "date": "2026-12-24",
+      "day_of_week": "Thursday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Building Instant Rapport",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Building Instant Rapport",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 271,
+      "date": "2026-12-25",
+      "day_of_week": "Friday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Marketing Automation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Marketing Automation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 272,
+      "date": "2026-12-26",
+      "day_of_week": "Saturday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Building Alliances",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Building Alliances",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 273,
+      "date": "2026-12-27",
+      "day_of_week": "Sunday",
+      "week_number": 39,
+      "complexity": "advanced",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Mystical Union Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Mystical Union Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 274,
+      "date": "2026-12-28",
+      "day_of_week": "Monday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Delta Level Exploration",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Delta Level Exploration",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 275,
+      "date": "2026-12-29",
+      "day_of_week": "Tuesday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Antifragile",
+        "source_name": "Antifragile"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Antifragile",
+        "source_name": "Antifragile"
+      }
+    },
+    {
+      "day_number": 276,
+      "date": "2026-12-30",
+      "day_of_week": "Wednesday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Henry Ford",
+        "source_name": "Henry Ford"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Henry Ford",
+        "source_name": "Henry Ford"
+      }
+    },
+    {
+      "day_number": 277,
+      "date": "2026-12-31",
+      "day_of_week": "Thursday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Pre-Frame",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Pre-Frame",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 278,
+      "date": "2027-01-01",
+      "day_of_week": "Friday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Project Management",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Project Management",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 279,
+      "date": "2027-01-02",
+      "day_of_week": "Saturday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Inner Game of Confidence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Inner Game of Confidence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 280,
+      "date": "2027-01-03",
+      "day_of_week": "Sunday",
+      "week_number": 40,
+      "complexity": "advanced",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Abundance Consciousness",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Abundance Consciousness",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 281,
+      "date": "2027-01-04",
+      "day_of_week": "Monday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Past Life Regression",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Past Life Regression",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 282,
+      "date": "2027-01-05",
+      "day_of_week": "Tuesday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Ego is the Enemy",
+        "source_name": "Ego is the Enemy"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Ego is the Enemy",
+        "source_name": "Ego is the Enemy"
+      }
+    },
+    {
+      "day_number": 283,
+      "date": "2027-01-06",
+      "day_of_week": "Wednesday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Walt Disney",
+        "source_name": "Walt Disney"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Walt Disney",
+        "source_name": "Walt Disney"
+      }
+    },
+    {
+      "day_number": 284,
+      "date": "2027-01-07",
+      "day_of_week": "Thursday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Frame Control",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Frame Control",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 285,
+      "date": "2027-01-08",
+      "day_of_week": "Friday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building AI Dashboards",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building AI Dashboards",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 286,
+      "date": "2027-01-09",
+      "day_of_week": "Saturday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Authenticity as Strategy",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Authenticity as Strategy",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 287,
+      "date": "2027-01-10",
+      "day_of_week": "Sunday",
+      "week_number": 41,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Gratitude Journaling Deep",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Gratitude Journaling Deep",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 288,
+      "date": "2027-01-11",
+      "day_of_week": "Monday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Future Self Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Future Self Visualization",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 289,
+      "date": "2027-01-12",
+      "day_of_week": "Tuesday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Obstacle is the Way",
+        "source_name": "The Obstacle is the Way"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Obstacle is the Way",
+        "source_name": "The Obstacle is the Way"
+      }
+    },
+    {
+      "day_number": 290,
+      "date": "2027-01-13",
+      "day_of_week": "Wednesday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Sam Walton",
+        "source_name": "Sam Walton"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Sam Walton",
+        "source_name": "Sam Walton"
+      }
+    },
+    {
+      "day_number": 291,
+      "date": "2027-01-14",
+      "day_of_week": "Thursday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Pattern Interrupts",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Pattern Interrupts",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 292,
+      "date": "2027-01-15",
+      "day_of_week": "Friday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Customer Segmentation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Customer Segmentation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 293,
+      "date": "2027-01-16",
+      "day_of_week": "Saturday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Servant Leadership",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Servant Leadership",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 294,
+      "date": "2027-01-17",
+      "day_of_week": "Sunday",
+      "week_number": 42,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Forgiveness Ritual",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Forgiveness Ritual",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 295,
+      "date": "2027-01-18",
+      "day_of_week": "Monday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Quantum Jumping",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Quantum Jumping",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 296,
+      "date": "2027-01-19",
+      "day_of_week": "Tuesday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Can t Hurt Me",
+        "source_name": "Can t Hurt Me"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Can t Hurt Me",
+        "source_name": "Can t Hurt Me"
+      }
+    },
+    {
+      "day_number": 297,
+      "date": "2027-01-20",
+      "day_of_week": "Wednesday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Ray Dalio",
+        "source_name": "Ray Dalio"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Ray Dalio",
+        "source_name": "Ray Dalio"
+      }
+    },
+    {
+      "day_number": 298,
+      "date": "2027-01-21",
+      "day_of_week": "Thursday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Embedded Commands",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Embedded Commands",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 299,
+      "date": "2027-01-22",
+      "day_of_week": "Friday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Pricing Optimization",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Pricing Optimization",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 300,
+      "date": "2027-01-23",
+      "day_of_week": "Saturday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Visionary Communication",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Visionary Communication",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 301,
+      "date": "2027-01-24",
+      "day_of_week": "Sunday",
+      "week_number": 43,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Sacred Geometry Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Sacred Geometry Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 302,
+      "date": "2027-01-25",
+      "day_of_week": "Monday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Reality Transurfing Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Reality Transurfing Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 303,
+      "date": "2027-01-26",
+      "day_of_week": "Tuesday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Extreme Ownership",
+        "source_name": "Extreme Ownership"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Extreme Ownership",
+        "source_name": "Extreme Ownership"
+      }
+    },
+    {
+      "day_number": 304,
+      "date": "2027-01-27",
+      "day_of_week": "Wednesday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Charlie Munger",
+        "source_name": "Charlie Munger"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Charlie Munger",
+        "source_name": "Charlie Munger"
+      }
+    },
+    {
+      "day_number": 305,
+      "date": "2027-01-28",
+      "day_of_week": "Thursday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Pacing and Leading",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Pacing and Leading",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 306,
+      "date": "2027-01-29",
+      "day_of_week": "Friday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Supply Chain",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Supply Chain",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 307,
+      "date": "2027-01-30",
+      "day_of_week": "Saturday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Crisis Communication",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Crisis Communication",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 308,
+      "date": "2027-01-31",
+      "day_of_week": "Sunday",
+      "week_number": 44,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Sound Healing Basics",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Sound Healing Basics",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 309,
+      "date": "2027-02-01",
+      "day_of_week": "Monday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Living at Alpha",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Living at Alpha",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 310,
+      "date": "2027-02-02",
+      "day_of_week": "Tuesday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Principles",
+        "source_name": "Principles"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Principles",
+        "source_name": "Principles"
+      }
+    },
+    {
+      "day_number": 311,
+      "date": "2027-02-03",
+      "day_of_week": "Wednesday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Peter Thiel",
+        "source_name": "Peter Thiel"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Peter Thiel",
+        "source_name": "Peter Thiel"
+      }
+    },
+    {
+      "day_number": 312,
+      "date": "2027-02-04",
+      "day_of_week": "Thursday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Persuasion Architecture",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Persuasion Architecture",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 313,
+      "date": "2027-02-05",
+      "day_of_week": "Friday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for HR Automation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for HR Automation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 314,
+      "date": "2027-02-06",
+      "day_of_week": "Saturday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Humor as a Tool",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Humor as a Tool",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 315,
+      "date": "2027-02-07",
+      "day_of_week": "Sunday",
+      "week_number": 45,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Chakra Balancing",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Chakra Balancing",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 316,
+      "date": "2027-02-08",
+      "day_of_week": "Monday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Dynamic Meditation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Dynamic Meditation",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 317,
+      "date": "2027-02-09",
+      "day_of_week": "Tuesday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Intelligent Investor",
+        "source_name": "The Intelligent Investor"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Intelligent Investor",
+        "source_name": "The Intelligent Investor"
+      }
+    },
+    {
+      "day_number": 318,
+      "date": "2027-02-10",
+      "day_of_week": "Wednesday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Reid Hoffman",
+        "source_name": "Reid Hoffman"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Reid Hoffman",
+        "source_name": "Reid Hoffman"
+      }
+    },
+    {
+      "day_number": 319,
+      "date": "2027-02-11",
+      "day_of_week": "Thursday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Influence Mapping",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Influence Mapping",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 320,
+      "date": "2027-02-12",
+      "day_of_week": "Friday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Legal Document Review",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Legal Document Review",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 321,
+      "date": "2027-02-13",
+      "day_of_week": "Saturday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Intellectual Humility",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Intellectual Humility",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 322,
+      "date": "2027-02-14",
+      "day_of_week": "Sunday",
+      "week_number": 46,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Pranayama for Energy",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Pranayama for Energy",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 323,
+      "date": "2027-02-15",
+      "day_of_week": "Monday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva for Business",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva for Business",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 324,
+      "date": "2027-02-16",
+      "day_of_week": "Tuesday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Awaken the Giant Within",
+        "source_name": "Awaken the Giant Within"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Awaken the Giant Within",
+        "source_name": "Awaken the Giant Within"
+      }
+    },
+    {
+      "day_number": 325,
+      "date": "2027-02-17",
+      "day_of_week": "Wednesday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Jack Ma",
+        "source_name": "Jack Ma"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Jack Ma",
+        "source_name": "Jack Ma"
+      }
+    },
+    {
+      "day_number": 326,
+      "date": "2027-02-18",
+      "day_of_week": "Thursday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Power of Questions",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Power of Questions",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 327,
+      "date": "2027-02-19",
+      "day_of_week": "Friday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Real Estate Analysis",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Real Estate Analysis",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 328,
+      "date": "2027-02-20",
+      "day_of_week": "Saturday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Art of Saying No",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Art of Saying No",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 329,
+      "date": "2027-02-21",
+      "day_of_week": "Sunday",
+      "week_number": 47,
+      "complexity": "master",
+      "cultural_source": "japanese",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Walking Meditation",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Walking Meditation",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 330,
+      "date": "2027-02-22",
+      "day_of_week": "Monday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva for Relationships",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva for Relationships",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 331,
+      "date": "2027-02-23",
+      "day_of_week": "Tuesday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Unlimited Power",
+        "source_name": "Unlimited Power"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Unlimited Power",
+        "source_name": "Unlimited Power"
+      }
+    },
+    {
+      "day_number": 332,
+      "date": "2027-02-24",
+      "day_of_week": "Wednesday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Masayoshi Son",
+        "source_name": "Masayoshi Son"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Masayoshi Son",
+        "source_name": "Masayoshi Son"
+      }
+    },
+    {
+      "day_number": 333,
+      "date": "2027-02-25",
+      "day_of_week": "Thursday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Active Listening Mastery",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Active Listening Mastery",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 334,
+      "date": "2027-02-26",
+      "day_of_week": "Friday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Insurance Automation",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Insurance Automation",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 335,
+      "date": "2027-02-27",
+      "day_of_week": "Saturday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Boundary Setting",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Boundary Setting",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 336,
+      "date": "2027-02-28",
+      "day_of_week": "Sunday",
+      "week_number": 48,
+      "complexity": "master",
+      "cultural_source": "middle_eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Mindful Eating Practice",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Mindful Eating Practice",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 337,
+      "date": "2027-03-01",
+      "day_of_week": "Monday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva for Wealth",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva for Wealth",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 338,
+      "date": "2027-03-02",
+      "day_of_week": "Tuesday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "Man s Search for Meaning",
+        "source_name": "Man s Search for Meaning"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: Man s Search for Meaning",
+        "source_name": "Man s Search for Meaning"
+      }
+    },
+    {
+      "day_number": 339,
+      "date": "2027-03-03",
+      "day_of_week": "Wednesday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Konosuke Matsushita",
+        "source_name": "Konosuke Matsushita"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Konosuke Matsushita",
+        "source_name": "Konosuke Matsushita"
+      }
+    },
+    {
+      "day_number": 340,
+      "date": "2027-03-04",
+      "day_of_week": "Thursday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Creating Urgency Ethically",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Creating Urgency Ethically",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 341,
+      "date": "2027-03-05",
+      "day_of_week": "Friday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for Healthcare Admin",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for Healthcare Admin",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 342,
+      "date": "2027-03-06",
+      "day_of_week": "Saturday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Generosity as Influence",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Generosity as Influence",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 343,
+      "date": "2027-03-07",
+      "day_of_week": "Sunday",
+      "week_number": 49,
+      "complexity": "master",
+      "cultural_source": "universal",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Digital Sabbath",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Digital Sabbath",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 344,
+      "date": "2027-03-08",
+      "day_of_week": "Monday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva for Health",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva for Health",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 345,
+      "date": "2027-03-09",
+      "day_of_week": "Tuesday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "As a Man Thinketh",
+        "source_name": "As a Man Thinketh"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: As a Man Thinketh",
+        "source_name": "As a Man Thinketh"
+      }
+    },
+    {
+      "day_number": 346,
+      "date": "2027-03-10",
+      "day_of_week": "Wednesday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Dhirubhai Ambani",
+        "source_name": "Dhirubhai Ambani"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Dhirubhai Ambani",
+        "source_name": "Dhirubhai Ambani"
+      }
+    },
+    {
+      "day_number": 347,
+      "date": "2027-03-11",
+      "day_of_week": "Thursday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "The Follow-Up System",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: The Follow-Up System",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 348,
+      "date": "2027-03-12",
+      "day_of_week": "Friday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "AI for E-commerce",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: AI for E-commerce",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 349,
+      "date": "2027-03-13",
+      "day_of_week": "Saturday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Legacy Building",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Legacy Building",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 350,
+      "date": "2027-03-14",
+      "day_of_week": "Sunday",
+      "week_number": 50,
+      "complexity": "master",
+      "cultural_source": "western",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "The Great Silence",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: The Great Silence",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 351,
+      "date": "2027-03-15",
+      "day_of_week": "Monday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Silva Complete Integration",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Silva Complete Integration",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 352,
+      "date": "2027-03-16",
+      "day_of_week": "Tuesday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "The Science of Getting Rich",
+        "source_name": "The Science of Getting Rich"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: The Science of Getting Rich",
+        "source_name": "The Science of Getting Rich"
+      }
+    },
+    {
+      "day_number": 353,
+      "date": "2027-03-17",
+      "day_of_week": "Wednesday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Ratan Tata",
+        "source_name": "Ratan Tata"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Ratan Tata",
+        "source_name": "Ratan Tata"
+      }
+    },
+    {
+      "day_number": 354,
+      "date": "2027-03-18",
+      "day_of_week": "Thursday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Closing the Reluctant Buyer",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Closing the Reluctant Buyer",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 355,
+      "date": "2027-03-19",
+      "day_of_week": "Friday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "The Future of AI Entrepreneurship",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: The Future of AI Entrepreneurship",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 356,
+      "date": "2027-03-20",
+      "day_of_week": "Saturday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "The Socratic Method",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: The Socratic Method",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 357,
+      "date": "2027-03-21",
+      "day_of_week": "Sunday",
+      "week_number": 51,
+      "complexity": "master",
+      "cultural_source": "eastern",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Integral Life Practice",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Integral Life Practice",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 358,
+      "date": "2027-03-22",
+      "day_of_week": "Monday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Advanced Manifestation Protocol",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Advanced Manifestation Protocol",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    },
+    {
+      "day_number": 359,
+      "date": "2027-03-23",
+      "day_of_week": "Tuesday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "book_summary",
+        "topic_hint": "$100M Leads",
+        "source_name": "$100M Leads"
+      },
+      "evening": {
+        "domain": "practical_exercise",
+        "topic_hint": "Reflection & Practice: $100M Leads",
+        "source_name": "$100M Leads"
+      }
+    },
+    {
+      "day_number": 360,
+      "date": "2027-03-24",
+      "day_of_week": "Wednesday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "biography",
+        "topic_hint": "Kobe Bryant",
+        "source_name": "Kobe Bryant"
+      },
+      "evening": {
+        "domain": "business_application",
+        "topic_hint": "Reflection & Practice: Kobe Bryant",
+        "source_name": "Kobe Bryant"
+      }
+    },
+    {
+      "day_number": 361,
+      "date": "2027-03-25",
+      "day_of_week": "Thursday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "sales_persuasion",
+        "topic_hint": "Sales Mindset Programming",
+        "source_name": "Sales Masters"
+      },
+      "evening": {
+        "domain": "sales_exercise",
+        "topic_hint": "Reflection & Practice: Sales Mindset Programming",
+        "source_name": "Sales Masters"
+      }
+    },
+    {
+      "day_number": 362,
+      "date": "2027-03-26",
+      "day_of_week": "Friday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "ai_engineering",
+        "topic_hint": "Building Your AI Empire",
+        "source_name": "AI Entrepreneurship"
+      },
+      "evening": {
+        "domain": "business_action_plan",
+        "topic_hint": "Reflection & Practice: Building Your AI Empire",
+        "source_name": "AI Entrepreneurship"
+      }
+    },
+    {
+      "day_number": 363,
+      "date": "2027-03-27",
+      "day_of_week": "Saturday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "influence_charisma",
+        "topic_hint": "Master Persuader Blueprint",
+        "source_name": "Influence & Charisma"
+      },
+      "evening": {
+        "domain": "podcast_audiobook_rec",
+        "topic_hint": "Reflection & Practice: Master Persuader Blueprint",
+        "source_name": "Influence & Charisma"
+      }
+    },
+    {
+      "day_number": 364,
+      "date": "2027-03-28",
+      "day_of_week": "Sunday",
+      "week_number": 52,
+      "complexity": "master",
+      "cultural_source": "latin",
+      "morning": {
+        "domain": "spirituality_visualization",
+        "topic_hint": "Annual Vision Quest",
+        "source_name": "World Wisdom"
+      },
+      "evening": {
+        "domain": "weekly_planning",
+        "topic_hint": "Reflection & Practice: Annual Vision Quest",
+        "source_name": "World Wisdom"
+      }
+    },
+    {
+      "day_number": 365,
+      "date": "2027-03-29",
+      "day_of_week": "Monday",
+      "week_number": 53,
+      "complexity": "master",
+      "cultural_source": "african",
+      "morning": {
+        "domain": "mental_reprogramming",
+        "topic_hint": "Alpha State Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      },
+      "evening": {
+        "domain": "reflection_night_technique",
+        "topic_hint": "Reflection & Practice: Alpha State Basics",
+        "source_name": "Jose Silva / Joe Dispenza"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "mental_reprogramming": {
+    "display_name": "Mental Reprogramming",
+    "emoji": "🧠",
+    "cultural_flags": {
+      "western": "🏛️",
+      "eastern": "☯️",
+      "latin": "🌎",
+      "african": "🌍",
+      "japanese": "🗾",
+      "middle_eastern": "🕌",
+      "universal": "🌐"
+    }
+  },
+  "book_summary": {
+    "display_name": "Book of the Day",
+    "emoji": "📚"
+  },
+  "biography": {
+    "display_name": "Inspiring Biography",
+    "emoji": "👤"
+  },
+  "sales_persuasion": {
+    "display_name": "Sales & Persuasion",
+    "emoji": "🎯"
+  },
+  "ai_engineering": {
+    "display_name": "AI Engineer",
+    "emoji": "🤖"
+  },
+  "influence_charisma": {
+    "display_name": "Influence & Charisma",
+    "emoji": "✨"
+  },
+  "spirituality_visualization": {
+    "display_name": "Spirituality & Vision",
+    "emoji": "🕉️"
+  },
+  "reflection_night_technique": {
+    "display_name": "Night Reflection",
+    "emoji": "🌙"
+  },
+  "practical_exercise": {
+    "display_name": "Practice",
+    "emoji": "💪"
+  },
+  "business_application": {
+    "display_name": "Business Applied",
+    "emoji": "💼"
+  },
+  "sales_exercise": {
+    "display_name": "Sales Practice",
+    "emoji": "📞"
+  },
+  "business_action_plan": {
+    "display_name": "Action Plan",
+    "emoji": "📋"
+  },
+  "podcast_audiobook_rec": {
+    "display_name": "Listen & Learn",
+    "emoji": "🎧"
+  },
+  "weekly_planning": {
+    "display_name": "Weekly Plan",
+    "emoji": "📅"
+  }
+}

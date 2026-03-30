@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Day {{ day_number }} - Wealth Transformation</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Georgia', 'Times New Roman', serif; color: #ffffff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+
+  <!-- Wrapper Table -->
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0a0a0a;">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+
+        <!-- Main Container -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #111111; border: 1px solid #1a1a1a;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding: 40px 30px 20px 30px; text-align: center; border-bottom: 2px solid #d4af37;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td style="text-align: center;">
+                    <p style="margin: 0 0 8px 0; font-size: 11px; letter-spacing: 6px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Wealth Transformation
+                    </p>
+                    <h1 style="margin: 0 0 8px 0; font-size: 32px; font-weight: 300; color: #ffffff; letter-spacing: 1px;">
+                      Day {{ day_number }}
+                    </h1>
+                    <p style="margin: 0; font-size: 13px; color: #888888; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      {{ date_formatted }} &mdash; Week {{ week_number }}/52
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Progress Bar -->
+          <tr>
+            <td style="padding: 20px 30px 10px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td style="font-size: 11px; color: #888888; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-bottom: 6px;">
+                    PROGRESS: Day {{ day_number }} of 365
+                  </td>
+                  <td style="font-size: 11px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-bottom: 6px; text-align: right;">
+                    {{ "%.1f" | format(day_number / 365 * 100) if day_number is defined else '0.0' }}%
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #1a1a1a; border-radius: 4px;">
+                      <tr>
+                        <td style="height: 6px; width: {{ (day_number / 365 * 100) | round | int if day_number is defined else 0 }}%; background-color: #d4af37; border-radius: 4px; font-size: 1px; line-height: 1px;">
+                          &nbsp;
+                        </td>
+                        <td style="height: 6px; font-size: 1px; line-height: 1px;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Domain Badge -->
+          <tr>
+            <td style="padding: 15px 30px 5px 30px; text-align: center;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px;">
+                <tr>
+                  <td style="padding: 8px 20px; font-size: 13px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: 1px;">
+                    {{ domain_display }} &bull; Level: {{ complexity | title if complexity is defined else 'Beginner' }}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Morning Section -->
+          <tr>
+            <td style="padding: 30px 30px 10px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td style="padding-bottom: 15px;">
+                    <p style="margin: 0 0 4px 0; font-size: 11px; letter-spacing: 4px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Morning Lesson
+                    </p>
+                    <h2 style="margin: 0; font-size: 24px; font-weight: 400; color: #ffffff; line-height: 1.3;">
+                      {{ title }}
+                    </h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px 0; border-top: 1px solid #1a1a1a;">
+                    <div style="font-size: 15px; line-height: 1.7; color: #cccccc;">
+                      {{ content_body }}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Exercise Section -->
+          <tr>
+            <td style="padding: 10px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0d1a0d; border-left: 3px solid #d4af37; border-radius: 0 6px 6px 0;">
+                <tr>
+                  <td style="padding: 20px 25px;">
+                    <p style="margin: 0 0 8px 0; font-size: 11px; letter-spacing: 3px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Today's Exercise
+                    </p>
+                    <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #ffffff;">
+                      {{ exercise }}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Business Applications -->
+          <tr>
+            <td style="padding: 25px 30px 10px 30px;">
+              <p style="margin: 0 0 15px 0; font-size: 11px; letter-spacing: 4px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                Apply to Your Businesses
+              </p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <!-- Cleaning -->
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #0f0f0f; border-bottom: 1px solid #1a1a1a;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td width="40" style="font-size: 20px; vertical-align: top; padding-top: 2px;">
+                          &#x1F9F9;
+                        </td>
+                        <td>
+                          <p style="margin: 0 0 2px 0; font-size: 11px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                            Cleaning Business
+                          </p>
+                          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                            {{ business_cleaning }}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Recruiting -->
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #0f0f0f; border-bottom: 1px solid #1a1a1a;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td width="40" style="font-size: 20px; vertical-align: top; padding-top: 2px;">
+                          &#x1F3AF;
+                        </td>
+                        <td>
+                          <p style="margin: 0 0 2px 0; font-size: 11px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                            Recruiting
+                          </p>
+                          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                            {{ business_recruiting }}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Agency -->
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #0f0f0f; border-bottom: 1px solid #1a1a1a;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td width="40" style="font-size: 20px; vertical-align: top; padding-top: 2px;">
+                          &#x1F680;
+                        </td>
+                        <td>
+                          <p style="margin: 0 0 2px 0; font-size: 11px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                            AI Agency
+                          </p>
+                          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                            {{ business_agency }}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Passive Income -->
+                <tr>
+                  <td style="padding: 12px 15px; background-color: #0f0f0f;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td width="40" style="font-size: 20px; vertical-align: top; padding-top: 2px;">
+                          &#x1F4B0;
+                        </td>
+                        <td>
+                          <p style="margin: 0 0 2px 0; font-size: 11px; color: #d4af37; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                            Passive Income
+                          </p>
+                          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                            {{ business_passive }}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Quote Section -->
+          <tr>
+            <td style="padding: 30px 30px 20px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;">
+                <tr>
+                  <td style="padding: 25px 20px; text-align: center;">
+                    <p style="margin: 0 0 8px 0; font-size: 28px; color: #d4af37; line-height: 1;">
+                      &#x201C;
+                    </p>
+                    <p style="margin: 0 0 10px 0; font-size: 16px; font-style: italic; line-height: 1.6; color: #ffffff;">
+                      {{ quote }}
+                    </p>
+                    <p style="margin: 0; font-size: 13px; color: #888888; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      &mdash; {{ quote_author }}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Audiobook / Podcast Recommendation -->
+          {% if audiobook_title is defined and audiobook_title %}
+          <tr>
+            <td style="padding: 10px 30px 20px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0f0f1a; border-radius: 6px; border: 1px solid #1a1a2a;">
+                <tr>
+                  <td style="padding: 20px 25px;">
+                    <p style="margin: 0 0 10px 0; font-size: 11px; letter-spacing: 3px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      &#x1F3A7; Recommended Listening
+                    </p>
+                    <p style="margin: 0 0 4px 0; font-size: 16px; color: #ffffff; font-weight: bold;">
+                      {{ audiobook_title }}
+                    </p>
+                    {% if audiobook_author is defined and audiobook_author %}
+                    <p style="margin: 0 0 8px 0; font-size: 13px; color: #888888;">
+                      by {{ audiobook_author }}
+                    </p>
+                    {% endif %}
+                    {% if audiobook_note is defined and audiobook_note %}
+                    <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                      {{ audiobook_note }}
+                    </p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endif %}
+
+          <!-- Evening Section -->
+          <tr>
+            <td style="padding: 20px 30px 10px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0a0a14; border-radius: 6px; border: 1px solid #1a1a2a;">
+                <tr>
+                  <td style="padding: 25px;">
+                    <p style="margin: 0 0 15px 0; font-size: 11px; letter-spacing: 4px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      &#x1F319; Evening Reflection
+                    </p>
+                    <!-- Reflection Question -->
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Reflect On
+                    </p>
+                    <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.6; color: #ffffff; font-style: italic;">
+                      {{ reflection_question }}
+                    </p>
+                    <!-- Night Technique -->
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Night Technique
+                    </p>
+                    <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.6; color: #cccccc;">
+                      {{ night_technique }}
+                    </p>
+                    <!-- Tomorrow Preview -->
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Tomorrow's Preview
+                    </p>
+                    <p style="margin: 0 0 15px 0; font-size: 15px; line-height: 1.6; color: #cccccc;">
+                      {{ tomorrow_preview }}
+                    </p>
+                    <!-- Affirmation -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #1a1a2a;">
+                      <tr>
+                        <td style="padding-top: 15px; text-align: center;">
+                          <p style="margin: 0; font-size: 14px; font-style: italic; color: #d4af37;">
+                            {{ affirmation }}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Weekly Summary (Sundays Only) -->
+          {% if is_sunday is defined and is_sunday %}
+          <tr>
+            <td style="padding: 25px 30px 10px 30px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #1a1400; border: 1px solid #d4af37; border-radius: 6px;">
+                <tr>
+                  <td style="padding: 25px;">
+                    <p style="margin: 0 0 15px 0; font-size: 11px; letter-spacing: 4px; color: #d4af37; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      &#x1F4C5; Weekly Summary &mdash; Week {{ week_number }}
+                    </p>
+                    {% if weekly_domains is defined and weekly_domains %}
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Domains Covered
+                    </p>
+                    <p style="margin: 0 0 15px 0; font-size: 14px; line-height: 1.6; color: #cccccc;">
+                      {{ weekly_domains }}
+                    </p>
+                    {% endif %}
+                    {% if weekly_key_lessons is defined and weekly_key_lessons %}
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Key Lessons
+                    </p>
+                    <p style="margin: 0 0 15px 0; font-size: 14px; line-height: 1.6; color: #cccccc;">
+                      {{ weekly_key_lessons }}
+                    </p>
+                    {% endif %}
+                    {% if weekly_actions_taken is defined and weekly_actions_taken %}
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Actions Taken
+                    </p>
+                    <p style="margin: 0 0 15px 0; font-size: 14px; line-height: 1.6; color: #cccccc;">
+                      {{ weekly_actions_taken }}
+                    </p>
+                    {% endif %}
+                    {% if weekly_next_focus is defined and weekly_next_focus %}
+                    <p style="margin: 0 0 5px 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                      Next Week's Focus
+                    </p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #ffffff;">
+                      {{ weekly_next_focus }}
+                    </p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endif %}
+
+          <!-- Cultural Source -->
+          <tr>
+            <td style="padding: 20px 30px 10px 30px; text-align: center;">
+              {% if cultural_source is defined and cultural_source %}
+              <p style="margin: 0; font-size: 12px; color: #666666; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                Cultural Source: {{ cultural_source }}
+              </p>
+              {% endif %}
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 25px 30px 35px 30px; border-top: 1px solid #1a1a1a; text-align: center;">
+              <p style="margin: 0 0 8px 0; font-size: 11px; letter-spacing: 3px; color: #333333; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                Powered by AI Agents | Self-Improving System
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                365-Day Wealth Transformation Program
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End Main Container -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- End Wrapper -->
+
+</body>
+</html>
