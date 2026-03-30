@@ -15,7 +15,7 @@ Multi-agent AI entrepreneurship system at `ai-entrepreneurship-research/` direct
 - Canvas Design + Imagen for visual content
 - Self-improving evolution agent
 
-**Why:** Paul wants automated daily delivery of the world's best wisdom on wealth, entrepreneurship, mental reprogramming (Silva Method), sales mastery, and holistic success -- applied to his cleaning business, recruitment work, future AI agency, and passive income goals.
+**Why:** Paul wants automated daily delivery of the world's best wisdom on wealth, entrepreneurship, mental reprogramming (Silva Method), sales mastery, and holistic success -- applied to ProsperClean (his cleaning business in Canberra), vibe coding, future AI agency, and passive income goals. Paul is an Industrial Engineer and vibe coder, NOT a recruiter.
 
 **Content Domains (7 weekly themes):**
 - Monday: Mental Reprogramming (Silva/Dispenza/Neville)

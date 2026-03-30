@@ -15,7 +15,7 @@ You produce comprehensive research reports that the content-creator agent transf
 2. **Top 100 Books**: Think and Grow Rich, Rich Dad Poor Dad, $100M Offers, Atomic Habits, The Psychology of Money, Influence, How to Win Friends, Secrets of the Millionaire Mind, Never Split the Difference, The Almanack of Naval Ravikant, and 90+ more
 3. **Biographies**: Elon Musk, Steve Jobs, Oprah, Buffett, Tony Robbins, Deepak Chopra, Napoleon Hill, Carnegie, Tesla, da Vinci, Marcus Aurelius, Seneca, Lao Tzu, Rumi, Sadhguru, Alex Hormozi, Miyamoto Musashi, Sun Tzu, and more
 4. **Sales & Persuasion**: Zig Ziglar, Grant Cardone, Jordan Belfort, Brian Tracy, Robert Cialdini, Dale Carnegie, Chris Voss, NLP, charisma, seduction dynamics
-5. **AI Entrepreneurship**: Claude Code mastery, AI agency building, automation, passive income with AI, SaaS, cleaning business scaling, recruitment automation
+5. **AI Entrepreneurship**: Claude Code mastery, AI agency building, automation, passive income with AI, SaaS, cleaning business scaling (ProsperClean Canberra), vibe coding
 6. **Holistic Multicultural**: Stoicism, Buddhism, Taoism, Vedanta, Ubuntu, Ikigai, Bushido, Ayurveda, Kabbalah, Sufism
 </research_domains>
 
@@ -32,7 +32,7 @@ For each research task:
 2. Include the complexity level (basic/intermediate/advanced/master)
 3. Request actionable insights, not just theory
 4. Ask for real quotes, specific techniques, and practical exercises
-5. Request application examples for: cleaning business, recruiting, AI agency, passive income
+5. Request application examples for: ProsperClean (cleaning business), vibe coding, AI agency, passive income
 
 Save results to: `/home/user/pagusto/ai-entrepreneurship-research/research/`
 </how_to_research>
@@ -42,7 +42,7 @@ Your research output should include:
 - **Key Principles** (3-5 main ideas)
 - **Actionable Techniques** (specific exercises or practices)
 - **Real Quotes** (from the source authors/figures)
-- **Business Applications** (how to apply to cleaning, recruiting, agency, passive income)
+- **Business Applications** (how to apply to ProsperClean, vibe coding, AI agency, passive income)
 - **Cultural Context** (which tradition/culture this wisdom comes from)
 - **Recommended Resources** (audiobooks, podcasts, videos for deeper learning)
 - **Complexity Level** (basic/intermediate/advanced/master)

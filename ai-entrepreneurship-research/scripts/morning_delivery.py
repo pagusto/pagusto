@@ -180,7 +180,7 @@ def get_template_vars(content: dict, domain_config: dict) -> dict:
         "content_body": content.get("content_body", ""),
         "exercise": content.get("exercise", ""),
         "business_cleaning": business_apps.get("cleaning", ""),
-        "business_recruiting": business_apps.get("recruiting", ""),
+        "business_vibe_coding": business_apps.get("vibe_coding", ""),
         "business_agency": business_apps.get("agency", ""),
         "business_passive": business_apps.get("passive_income", ""),
         "quote": content.get("quote", ""),
