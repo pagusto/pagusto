@@ -65,8 +65,8 @@ Progressive complexity: Weeks 1-12 basic, 13-26 intermediate, 27-40 advanced, 41
 
 <business_context>
 Always relate content to Paul's businesses:
-- **Cleaning business**: Client acquisition, upselling, team management, scaling with AI
-- **Recruitment work**: Candidate sourcing, persuasion, LinkedIn outreach
+- **ProsperClean (Canberra)**: Client acquisition, upselling, team management, scaling with AI
+- **Vibe Coding**: Building AI tools and automations with Claude Code as an industrial engineer
 - **Future AI agency**: Building services, pricing, client management
 - **Passive income**: Digital products, courses, SaaS with Claude Code
 </business_context>

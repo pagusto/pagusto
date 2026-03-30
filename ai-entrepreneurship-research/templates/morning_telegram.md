@@ -13,9 +13,9 @@ _{{ domain_display }} | Level: {{ complexity | title }} | Week {{ week_number }}
 {{ exercise }}
 
 *APPLY TO YOUR BUSINESSES:*
-🧹 Cleaning: {{ business_cleaning }}
-🎯 Recruiting: {{ business_recruiting }}
-🚀 Agency: {{ business_agency }}
+🧹 ProsperClean: {{ business_cleaning }}
+💻 Vibe Coding: {{ business_vibe_coding }}
+🚀 AI Agency: {{ business_agency }}
 💰 Passive Income: {{ business_passive }}
 
 _"{{ quote }}"_ — {{ quote_author }}

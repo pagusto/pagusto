@@ -29,9 +29,9 @@ _[Domain] | Level: [Basic/Intermediate/Advanced/Master] | Week [W]/52_
 [One concrete action to practice today. Specific, measurable, time-bound.]
 
 *APPLY TO YOUR BUSINESSES:*
-- Cleaning: [specific application]
-- Recruiting: [specific application]
-- Agency: [specific application]
+- ProsperClean: [specific application]
+- Vibe Coding: [specific application]
+- AI Agency: [specific application]
 - Passive Income: [specific application]
 
 _"[Powerful quote]"_ — [Author]
