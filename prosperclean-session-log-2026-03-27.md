@@ -25,8 +25,8 @@
 - [x] **Visa ...1484 confirmada** - NO es de Paul, es de Susie Vu (su deuda)
 
 ### PENDIENTE - Acciones Manuales
-- [ ] **Crear Google Business Profile** (5 min) - business.google.com → ProsperClean → 34B Templeton Street, Cook, ACT 2614 → categoria: House cleaning service
-- [ ] **Corregir timezone Google Ads** (1 min) - ads.google.com → Settings → Time Zone → Australia/Sydney
+- [x] **Google Business Profile CREADO** - ProsperClean, 34B Templeton St, Cook ACT 2614, verificacion en proceso (~5 dias), completar: horarios, website, servicios, fotos
+- [x] **Google Ads timezone** - No se puede cambiar en cuenta existente (solo al crear). Diferencia Perth/Canberra es 3hrs, no afecta rendimiento
 - [ ] **Upgrade Paul Agusto access** en Instagram accounts → Manage → Full control (actualmente Partial)
 
 ### PENDIENTE - Fase 1: Creacion de Presencia Digital
