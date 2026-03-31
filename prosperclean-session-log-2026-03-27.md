@@ -17,19 +17,21 @@
 - [x] **Visa ...1484** - Confirmado NO es tarjeta de Paul, es de Susie Vu (saldo pendiente 1,566,137 dong es deuda de ella)
 - [x] **Google Ads** (697-093-3047) - ACTIVO, acceso confirmado via API, auto-tagging on, conversion tracking configurado
 
-### COMPLETADO - Session 30 Mar
-- [x] **Instagram @prosperclean.au** - Cuenta creada, pendiente: activar 2FA y cambiar a Business account
+### COMPLETADO - Session 31 Mar
+- [x] **Instagram @prosperclean.au** - Cuenta creada, Business account activado
 - [x] **Instagram @prosper.clean** - Eliminada (backup completado)
+- [x] **Instagram @prosperclean.au conectada a Business Portfolio** "Prosper Clean" - Full control + Paul Agusto partial access
+- [x] **Google Ads** (697-093-3047) - Acceso confirmado via API, ENABLED, AUD, auto-tagging on
+- [x] **Visa ...1484 confirmada** - NO es de Paul, es de Susie Vu (su deuda)
 
-### PENDIENTE - Acciones Inmediatas
+### PENDIENTE - Acciones Manuales
 - [ ] **Crear Google Business Profile** (5 min) - business.google.com → ProsperClean → 34B Templeton Street, Cook, ACT 2614 → categoria: House cleaning service
 - [ ] **Corregir timezone Google Ads** (1 min) - ads.google.com → Settings → Time Zone → Australia/Sydney
+- [ ] **Upgrade Paul Agusto access** en Instagram accounts → Manage → Full control (actualmente Partial)
 
 ### PENDIENTE - Fase 1: Creacion de Presencia Digital
-- [ ] **Conectar Instagram al Business Portfolio** "prosper.clean" en Meta
 - [ ] **Crear nueva Facebook Page** para ProsperClean Canberra
 - [ ] **Crear nuevo Ad Account** en Business Portfolio (reemplaza el de Susie Vu)
-- [ ] **Crear Google Business Profile** - Canberra (ALTA PRIORIDAD para SEO local)
 - [ ] **Crear TikTok Business** para ProsperClean
 - [ ] **Reconstruir web en GoDaddy** Website Builder (Shopify cancelado, site puede caerse)
 
