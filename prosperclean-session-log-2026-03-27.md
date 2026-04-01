@@ -69,6 +69,32 @@
 - **Medas Kirkliauskas** - hacker removido de Comercial Patricia
 - **Arka Tijuana** - hacker removido de Comercial Patricia
 
+## REGLA CRITICA DE DEPLOY
+**NUNCA agotar todos los deploys de Netlify.** Siempre dejar al menos 1 deploy sin usar.
+El 1 de abril 2026 se cayó prosperclean.com.au por exceso de deploys. NO puede volver a pasar.
+- Cuenta Netlify: pablo.agusto.ai@gmail.com
+- Limite free plan: ~300 builds/mes
+- Antes de cada deploy, verificar builds restantes con `netlify api listSiteDeploys`
+
+### COMPLETADO - Session 1 Abril
+- [x] **GSAP AI Skills instalados** - 8 skills (core, frameworks, performance, plugins, scrolltrigger, timeline, utils, react)
+- [x] **Gateway page (index.html)** - Split Commercial vs Residential con WhatsApp chatbot flotante
+- [x] **Lovable prompt** - prosperclean-landing/lovable-prompt.md listo para lovable.dev (gratis, 5 creditos/dia)
+- [x] **Netlify CLI instalado** - v24.9.0
+- [x] **Investigacion completada** - High pressure cleaning AU, commercial cleaning pricing, Jim's Cleaning competitive intel
+- [x] **Facebook Page content** - prosperclean-facebook-page-content.md con servicios, descripcion, primer post
+- [x] **ProsperClean landing pages (commercial + residential)** - Construidas en otra terminal, deployadas a Netlify
+- [ ] **SITIO CAIDO** - prosperclean.com.au caido por exceso de deploys en Netlify - esperar reset de builds
+
+### Datos Comercial Patricia / Bellas Boutique
+- **Tipo:** Boutique de ropa, accesorios, perfumes, zapatos/carteras
+- **Estilo:** Mix variado (casual + elegante)
+- **Ubicacion:** Santiago, Chile (tienda fisica)
+- **WhatsApp:** +56996865611
+- **Facebook:** https://www.facebook.com/patriciadowntown
+- **Instagram:** https://www.instagram.com/bellas_boutique_cl/
+- **Meta Ad Account:** Comercial Patricia (ID: 2217163028546) - hackeada 2022, restriccion levantada, refund pendiente
+
 ## Archivos de Referencia
 - `/home/user/pagusto/prosperclean-strategy-2026.md` - Plan estrategico completo
 - `/home/user/pagusto/canberra-cleaning-market-competitive-analysis.md` - Analisis competitivo Canberra
