@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial & Industrial Cleaning Canberra | ProsperClean</title>
+  <meta name="description" content="Canberra's #1 commercial and industrial cleaning company. Police-checked, $10M insured, 500+ businesses served. Get a free quote today." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2563eb',
+            'brand-dark': '#1d4ed8',
+            cta: '#16a34a',
+            'cta-dark': '#15803d',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 40%, #2563eb 70%, #3b82f6 100%);
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .service-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(37,99,235,0.15);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 400px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+    .faq-chevron.open {
+      transform: rotate(180deg);
+    }
+
+    .testimonial-card {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .area-pill {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(22,163,74,0); }
+    }
+    .whatsapp-float {
+      animation: pulse-green 2s infinite;
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(30, 58, 138, 0.95);
+    }
+
+    .checkbox-service:checked + label {
+      background-color: #dbeafe;
+      border-color: #2563eb;
+      color: #1d4ed8;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50 border-b border-blue-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2L4 8v10c0 8.5 6 16.4 14 18 8-1.6 14-9.5 14-18V8L18 2z" fill="#2563eb" stroke="#60a5fa" stroke-width="1.5"/>
+              <path d="M12 18l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="font-bold text-xl text-white tracking-tight group-hover:text-blue-200 transition-colors">ProsperClean</span>
+          </a>
+          <span class="hidden sm:inline-flex items-center bg-blue-700/50 text-blue-200 text-xs font-medium px-2.5 py-0.5 rounded-full border border-blue-600/50 ml-2">Commercial</span>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="hidden md:flex items-center gap-6 text-sm text-blue-100">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#about" class="hover:text-white transition-colors">Why Us</a>
+          <a href="#testimonials" class="hover:text-white transition-colors">Reviews</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+          <a href="index.html" class="hover:text-white transition-colors">Residential</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex items-center gap-3">
+          <a href="tel:0448282775" class="hidden sm:flex items-center gap-2 text-white font-semibold text-sm hover:text-blue-200 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            0448 282 775
+          </a>
+          <a href="https://wa.me/61448282775?text=Hi%20ProsperClean%2C%20I%27d%20like%20a%20commercial%20cleaning%20quote" target="_blank" rel="noopener"
+            class="bg-cta hover:bg-cta-dark text-white text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2 shadow-lg">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero-gradient pt-16 min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <!-- Trust badges -->
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              <svg class="w-3.5 h-3.5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Police Checked
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              $10M Insured
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              <svg class="w-3.5 h-3.5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              5.0★ Google
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              ABN Registered
+            </span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+            Canberra's <span class="text-yellow-300">#1</span> Commercial &amp; Industrial Cleaning
+          </h1>
+          <p class="text-xl text-blue-100 mb-4 leading-relaxed">
+            Trusted by 500+ Canberra businesses. We handle high-pressure cleaning, office maintenance, restaurants, hotels, strata, and everything in between — so you can focus on what matters.
+          </p>
+          <p class="text-blue-200 mb-8 text-base">
+            Same-day quotes. Flexible scheduling. Government contract experience. No lock-in contracts.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form"
+              class="bg-cta hover:bg-cta-dark text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-xl flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              Get Free Quote
+            </a>
+            <a href="tel:0448282775"
+              class="border-2 border-white/40 hover:border-white text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              Call Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero right card -->
+        <div class="hidden lg:block">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-cta rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-bold text-lg">Free Commercial Quote</p>
+                <p class="text-blue-200 text-sm">Response within 2 hours</p>
+              </div>
+            </div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center gap-3 text-blue-100 text-sm"><svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>No lock-in contracts</li>
+              <li class="flex items-center gap-3 text-blue-100 text-sm"><svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Police-checked, uniformed staff</li>
+              <li class="flex items-center gap-3 text-blue-100 text-sm"><svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>$10M public liability insurance</li>
+              <li class="flex items-center gap-3 text-blue-100 text-sm"><svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Weekend &amp; after-hours available</li>
+              <li class="flex items-center gap-3 text-blue-100 text-sm"><svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Eco-friendly products available</li>
+            </ul>
+            <a href="#quote-form" class="block w-full bg-cta hover:bg-cta-dark text-white font-bold text-center py-3 rounded-xl transition-all duration-200">
+              Request Quote Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 10 0 20L0 60Z" fill="#f9fafb"/></svg>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section id="about" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="stats-card bg-white rounded-2xl shadow-md p-6 text-center border border-gray-100">
+          <div class="text-4xl font-black text-brand mb-1">
+            <span class="counter" data-target="500">0</span><span class="text-brand">+</span>
+          </div>
+          <p class="text-gray-600 font-semibold text-sm">Businesses Served</p>
+        </div>
+        <div class="stats-card bg-white rounded-2xl shadow-md p-6 text-center border border-gray-100">
+          <div class="text-4xl font-black text-brand mb-1">
+            <span class="counter" data-target="5" data-decimals="1">0</span><span class="text-yellow-500">★</span>
+          </div>
+          <p class="text-gray-600 font-semibold text-sm">Google Rating</p>
+        </div>
+        <div class="stats-card bg-white rounded-2xl shadow-md p-6 text-center border border-gray-100">
+          <div class="text-4xl font-black text-brand mb-1">
+            $<span class="counter" data-target="10">0</span>M
+          </div>
+          <p class="text-gray-600 font-semibold text-sm">Public Liability</p>
+        </div>
+        <div class="stats-card bg-white rounded-2xl shadow-md p-6 text-center border border-gray-100">
+          <div class="text-4xl font-black text-brand mb-1">
+            <span class="counter" data-target="15">0</span><span>+</span>
+          </div>
+          <p class="text-gray-600 font-semibold text-sm">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="inline-block bg-blue-100 text-brand text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Our Services</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Commercial Cleaning Services</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">From high-pressure washing to full-building maintenance contracts — we cover every commercial and industrial cleaning need in Canberra.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8 17.926 17.926 0 00-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Industrial</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">High Pressure Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">$3.50/m²</p>
+          <p class="text-gray-500 text-sm">Industrial-grade pressure washing for concrete, walls, and hard surfaces. Removes grime, grease, and staining.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Exterior</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Driveway Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">From $190</p>
+          <p class="text-gray-500 text-sm">Restore driveways to like-new condition. We remove oil stains, moss, and discolouration quickly and efficiently.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Parking</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Car Park Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">From $500</p>
+          <p class="text-gray-500 text-sm">Full car park sweep, pressure wash, and line marking prep. Ideal for commercial centres and strata complexes.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Industrial</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Loading Dock</h3>
+          <p class="text-cta font-bold text-base mb-2">From $350</p>
+          <p class="text-gray-500 text-sm">Heavy-duty degreasing and pressure washing of loading docks, ramps, and waste areas. Compliant with WHS standards.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Office</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Office Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">From $45/hr</p>
+          <p class="text-gray-500 text-sm">Daily, weekly, or fortnightly office cleaning. Desks, floors, kitchens, bathrooms — fully customised to your schedule.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Exterior</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Window Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">$5/pane</p>
+          <p class="text-gray-500 text-sm">Interior and exterior window cleaning for commercial buildings. Streak-free results using purified water systems.</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Maintenance</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Building Maintenance</h3>
+          <p class="text-cta font-bold text-base mb-2">From $400/mo</p>
+          <p class="text-gray-500 text-sm">Ongoing building maintenance contracts covering common areas, external facades, and scheduled deep cleans.</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Hospitality</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Coffee Shop Clean</h3>
+          <p class="text-cta font-bold text-base mb-2">From $350</p>
+          <p class="text-gray-500 text-sm">Grease trap surrounds, equipment cleaning, floors, and display areas. Health-code compliant and food-safe products.</p>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Hospitality</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Restaurant Deep Clean</h3>
+          <p class="text-cta font-bold text-base mb-2">From $500</p>
+          <p class="text-gray-500 text-sm">Full kitchen degreasing, exhaust hood cleaning, cool room sanitising, and front-of-house restoration. Health inspection ready.</p>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Hospitality</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Hotel Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">Custom Quote</p>
+          <p class="text-gray-500 text-sm">Room turnovers, common areas, laundry handling, and lobby maintenance. Trained to hotel standards with discretion.</p>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Construction</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Post-Construction</h3>
+          <p class="text-cta font-bold text-base mb-2">From $400</p>
+          <p class="text-gray-500 text-sm">Builder's clean, dust removal, grout haze, window sticker removal. Handover-ready finish for new and renovated properties.</p>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="service-card bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Strata</span>
+          <h3 class="font-bold text-gray-900 text-lg mt-1 mb-1">Strata Cleaning</h3>
+          <p class="text-cta font-bold text-base mb-2">From $600/mo</p>
+          <p class="text-gray-500 text-sm">Regular common area cleaning for residential and commercial strata. Lifts, lobbies, stairwells, and car parks covered.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#quote-form" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg text-lg">
+          Get a Custom Quote for Your Business
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="inline-block bg-blue-100 text-brand text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Reviews</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Trusted by Canberra Businesses</h2>
+        <p class="text-gray-500 text-lg">Real feedback from our commercial clients.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8" id="testimonials-grid">
+
+        <div class="testimonial-card bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 italic mb-6">"ProsperClean has been maintaining our Braddon restaurant for over 2 years. Their kitchen deep cleans are thorough and we've never had an issue with our health inspections. Highly professional team."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold text-sm">MK</div>
+            <div>
+              <p class="font-bold text-gray-900 text-sm">Marco K.</p>
+              <p class="text-gray-500 text-xs">Owner — Ember Kitchen, Braddon ACT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 italic mb-6">"We manage a 120-unit strata complex in Gungahlin and ProsperClean handles all our common areas. Reliable, punctual, always professional. The car park and lobby look impeccable. Our residents are very happy."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold text-sm">SL</div>
+            <div>
+              <p class="font-bold text-gray-900 text-sm">Sandra L.</p>
+              <p class="text-gray-500 text-xs">Strata Manager — Pinnacle Properties, Gungahlin ACT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 italic mb-6">"After our construction project in Fyshwick we needed a professional post-construction clean before handover. ProsperClean delivered an exceptional job — every corner spotless. Quoted fairly and completed on time."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold text-sm">DT</div>
+            <div>
+              <p class="font-bold text-gray-900 text-sm">David T.</p>
+              <p class="text-gray-500 text-xs">Project Manager — Apex Build Group, Fyshwick ACT</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUOTE FORM ===================== -->
+  <section id="quote-form" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-green-100 text-cta text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Free Quote</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Request a Commercial Quote</h2>
+        <p class="text-gray-500 text-lg">Tell us about your business and we'll get back to you within 2 hours with a tailored quote.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100">
+        <form id="commercial-form" action="#" method="POST">
+
+          <!-- Services checkboxes -->
+          <div class="mb-8">
+            <label class="block text-gray-800 font-bold text-base mb-4">Services Needed <span class="text-gray-400 font-normal text-sm">(select all that apply)</span></label>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="High Pressure Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">High Pressure Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Driveway Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Driveway Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Car Park Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Car Park Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Loading Dock" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Loading Dock</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Office Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Office Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Window Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Window Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Building Maintenance" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Building Maintenance</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Coffee Shop Clean" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Coffee Shop Clean</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Restaurant Deep Clean" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Restaurant Deep Clean</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Hotel Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Hotel Cleaning</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Post-Construction" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Post-Construction</span>
+              </label>
+              <label class="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3 cursor-pointer hover:border-brand hover:bg-blue-50 transition-all duration-150 group">
+                <input type="checkbox" name="services[]" value="Strata Cleaning" class="w-4 h-4 text-brand rounded" />
+                <span class="text-sm font-medium text-gray-700 group-hover:text-brand">Strata Cleaning</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Contact fields -->
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="name">Full Name <span class="text-red-400">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white transition-all" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="company">Company / Business Name</label>
+              <input type="text" id="company" name="company" placeholder="Acme Pty Ltd"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white transition-all" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="phone">Phone Number <span class="text-red-400">*</span></label>
+              <input type="tel" id="phone" name="phone" required placeholder="04XX XXX XXX"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white transition-all" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="email">Email Address <span class="text-red-400">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="jane@company.com.au"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white transition-all" />
+            </div>
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="message">Tell us about your cleaning needs</label>
+            <textarea id="message" name="message" rows="4" placeholder="E.g. Weekly office cleaning for 50-person office in Civic, also need a one-off car park pressure wash..."
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white transition-all resize-none"></textarea>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button type="button" id="whatsapp-submit"
+              class="flex-1 bg-cta hover:bg-cta-dark text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-3 shadow-lg text-base">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Send via WhatsApp
+            </button>
+            <button type="submit"
+              class="flex-1 bg-brand hover:bg-brand-dark text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-3 shadow-lg text-base">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              Submit Quote Request
+            </button>
+          </div>
+
+          <p class="text-center text-gray-400 text-xs mt-4">We respond within 2 business hours. No spam, ever.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-blue-100 text-brand text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Common Questions</h2>
+        <p class="text-gray-500 text-lg">Everything you need to know about our commercial cleaning services.</p>
+      </div>
+
+      <div class="space-y-4" id="faq-list">
+
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <span class="font-bold text-gray-800 text-base pr-4">Are your staff police checked and insured?</span>
+            <svg class="faq-chevron w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-6">Yes, every member of the ProsperClean team undergoes a National Police Check before commencing work. We hold $10M public liability insurance and all staff are covered by Workers' Compensation insurance. We can provide certificates of currency on request for contract agreements.</div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <span class="font-bold text-gray-800 text-base pr-4">Do you offer after-hours and weekend commercial cleaning?</span>
+            <svg class="faq-chevron w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-6">Absolutely. We understand that many businesses cannot be cleaned during trading hours. We offer flexible scheduling including early morning, evenings, weekends, and public holidays to minimise disruption to your operations. Just let us know your preferred time window and we'll accommodate it.</div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <span class="font-bold text-gray-800 text-base pr-4">How is commercial cleaning priced?</span>
+            <svg class="faq-chevron w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-6">Pricing depends on the type of service, frequency, and size of the space. We offer fixed-price quotes after a brief assessment — either in person or over the phone. There are no hidden fees or lock-in contracts. Monthly retainer clients receive priority scheduling and preferential rates. Use the quote form above to get started.</div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <span class="font-bold text-gray-800 text-base pr-4">What areas of Canberra do you service?</span>
+            <svg class="faq-chevron w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-6">We service all suburbs across the ACT including the City, Braddon, Fyshwick, Woden, Belconnen, Tuggeranong, Gungahlin, Majura, Queanbeyan (NSW), and surrounding areas. For large contracts outside the ACT metro area, please contact us to confirm availability and any travel surcharge.</div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+            <span class="font-bold text-gray-800 text-base pr-4">Do you use eco-friendly or food-safe cleaning products?</span>
+            <svg class="faq-chevron w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-6">Yes. We stock both conventional and eco-certified cleaning products and are happy to use your preferred products on request. For hospitality clients (restaurants, cafes, hotels), we exclusively use food-safe, TGA-listed sanitisers and degreasers compliant with Australian Food Standards. We can provide full MSDS documentation upon request.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE AREAS ===================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block bg-blue-100 text-brand text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Coverage</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-3">We Serve All of Canberra & Surrounds</h2>
+        <p class="text-gray-500">Commercial cleaning across the ACT and greater Queanbeyan region.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3" id="area-pills">
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">City / CBD</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Braddon</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Fyshwick</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Woden</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Belconnen</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Tuggeranong</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Gungahlin</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Queanbeyan</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Majura</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Mitchell</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Hume</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Phillip</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Deakin</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Barton</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Civic</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Dickson</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Greenway</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Kingston</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Manuka</span>
+        <span class="area-pill bg-blue-50 text-brand border border-blue-200 text-sm font-semibold px-4 py-2 rounded-full">Yarralumla</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="hero-gradient py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Ready to Elevate Your Business's Cleanliness?</h2>
+      <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Join 500+ Canberra businesses who trust ProsperClean. Police-checked staff, $10M insurance, and a satisfaction guarantee on every job.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#quote-form" class="bg-cta hover:bg-cta-dark text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-xl">
+          Get Free Quote
+        </a>
+        <a href="tel:0448282775" class="border-2 border-white/40 hover:border-white text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          0448 282 775
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-gray-400 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2L4 8v10c0 8.5 6 16.4 14 18 8-1.6 14-9.5 14-18V8L18 2z" fill="#2563eb" stroke="#60a5fa" stroke-width="1.5"/>
+              <path d="M12 18l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="font-bold text-xl text-white">ProsperClean</span>
+          </div>
+          <p class="text-sm mb-4 leading-relaxed max-w-xs">Canberra's trusted commercial and residential cleaning company. Police-checked, fully insured, and committed to exceptional results.</p>
+          <div class="flex gap-3">
+            <a href="https://wa.me/61448282775" target="_blank" rel="noopener" class="w-9 h-9 bg-cta rounded-lg flex items-center justify-center text-white hover:bg-cta-dark transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-white transition-colors">High Pressure Cleaning</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Office Cleaning</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Restaurant Deep Clean</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Strata Cleaning</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Post-Construction</a></li>
+            <li><a href="index.html" class="hover:text-white transition-colors">Residential Cleaning</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-brand mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              <a href="tel:0448282775" class="hover:text-white transition-colors">0448 282 775</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:prosperclean.au@gmail.com" class="hover:text-white transition-colors">prosperclean.au@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>34B Templeton St<br />Cook ACT 2614</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs">&copy; 2024 ProsperClean. All rights reserved. ABN registered. Police checked. $10M insured.</p>
+        <div class="flex gap-4 text-xs">
+          <a href="index.html" class="hover:text-white transition-colors">Residential</a>
+          <a href="#quote-form" class="hover:text-white transition-colors">Get Quote</a>
+          <a href="tel:0448282775" class="hover:text-white transition-colors">0448 282 775</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOAT ===================== -->
+  <a href="https://wa.me/61448282775?text=Hi%20ProsperClean%2C%20I%27d%20like%20a%20commercial%20cleaning%20quote"
+    target="_blank" rel="noopener"
+    class="whatsapp-float fixed bottom-6 right-6 z-50 w-14 h-14 bg-cta hover:bg-cta-dark rounded-full flex items-center justify-center shadow-2xl transition-all duration-200 hover:scale-110"
+    aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ---- Counter Animation ----
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      const decimals = parseInt(counter.getAttribute('data-decimals') || '0');
+
+      ScrollTrigger.create({
+        trigger: counter,
+        start: 'top 85%',
+        once: true,
+        onEnter: () => {
+          gsap.to({ val: 0 }, {
+            val: target,
+            duration: 2,
+            ease: 'power2.out',
+            onUpdate: function () {
+              counter.textContent = parseFloat(this.targets()[0].val).toFixed(decimals);
+            },
+          });
+        },
+      });
+    });
+
+    // ---- Service Cards Fade In ----
+    gsap.utils.toArray('.service-card').forEach((card, i) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: (i % 4) * 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // ---- Testimonials Stagger ----
+    gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
+      gsap.fromTo(card,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          delay: i * 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '#testimonials-grid',
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // ---- Area Pills Stagger ----
+    gsap.utils.toArray('.area-pill').forEach((pill, i) => {
+      gsap.fromTo(pill,
+        { opacity: 0, scale: 0.75 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          delay: i * 0.04,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: '#area-pills',
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // ---- Stats cards entrance ----
+    gsap.utils.toArray('.stats-card').forEach((card, i) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: i * 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // ---- FAQ Accordion ----
+    document.querySelectorAll('.faq-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const chevron = toggle.querySelector('.faq-chevron');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer.open').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-chevron.open').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.faq-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+        if (!isOpen) {
+          answer.classList.add('open');
+          chevron.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ---- WhatsApp form submit ----
+    document.getElementById('whatsapp-submit').addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim() || 'N/A';
+      const company = document.getElementById('company').value.trim() || 'N/A';
+      const phone = document.getElementById('phone').value.trim() || 'N/A';
+      const email = document.getElementById('email').value.trim() || 'N/A';
+      const message = document.getElementById('message').value.trim() || '';
+
+      const selected = Array.from(document.querySelectorAll('input[name="services[]"]:checked'))
+        .map(cb => cb.value);
+      const servicesText = selected.length > 0 ? selected.join(', ') : 'Not specified';
+
+      const text = encodeURIComponent(
+        `Hi ProsperClean, I'd like a commercial cleaning quote!\n\n` +
+        `Name: ${name}\n` +
+        `Company: ${company}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Services: ${servicesText}\n` +
+        (message ? `Details: ${message}` : '')
+      );
+
+      window.open(`https://wa.me/61448282775?text=${text}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>
