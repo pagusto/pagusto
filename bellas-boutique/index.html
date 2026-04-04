@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellas Boutique | Moda Femenina en Santiago, Chile</title>
+    <meta name="description" content="Bellas Boutique - Tu tienda de moda femenina en Santiago. Ropa, accesorios, perfumes, carteras y zapatos con estilo casual y elegante.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        },
+                        gold: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#d4a574',
+                            500: '#c49a6c',
+                            600: '#b8860b',
+                            700: '#a67c00',
+                            800: '#8b6914',
+                            900: '#713f12',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .gradient-gold { background: linear-gradient(135deg, #d4a574, #c49a6c, #b8860b); }
+        .gradient-rose { background: linear-gradient(135deg, #fda4af, #fb7185, #e11d48); }
+        .text-gradient {
+            background: linear-gradient(135deg, #d4a574, #b8860b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            z-index: 1;
+        }
+        .whatsapp-pulse {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+        .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(136,19,55,0.4) 50%, rgba(0,0,0,0.6) 100%);
+        }
+        .gallery-item { overflow: hidden; }
+        .gallery-item img { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #d4a574, #b8860b);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="font-serif text-2xl font-bold text-white tracking-wide">
+                    Bellas <span class="text-gold-400">Boutique</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#categorias" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Categorias</a>
+                    <a href="#galeria" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Galeria</a>
+                    <a href="#nosotros" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Nosotros</a>
+                    <a href="#ubicacion" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Ubicacion</a>
+                    <a href="https://wa.me/56996865611" target="_blank" class="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg">
+                        Contactar
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 nav-blur border-t border-white/10">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#categorias" class="block text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Categorias</a>
+                <a href="#galeria" class="block text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Galeria</a>
+                <a href="#nosotros" class="block text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Nosotros</a>
+                <a href="#ubicacion" class="block text-white/90 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Ubicacion</a>
+                <a href="https://wa.me/56996865611" target="_blank" class="inline-block bg-gold-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <div id="hero-badge" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8">
+                <span class="w-2 h-2 bg-gold-400 rounded-full"></span>
+                <span class="text-white/90 text-sm font-medium tracking-wider uppercase">Santiago, Chile</span>
+            </div>
+            <h1 id="hero-title" class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+                Bellas<br><span class="text-gradient">Boutique</span>
+            </h1>
+            <p id="hero-subtitle" class="text-white/80 text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Moda femenina con estilo. Ropa, accesorios, perfumes, carteras y zapatos para cada momento de tu vida.
+            </p>
+            <div id="hero-cta" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#categorias" class="gradient-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-gold-500/30 transition-all transform hover:scale-105">
+                    Explorar Coleccion
+                </a>
+                <a href="https://wa.me/56996865611?text=Hola!%20Me%20interesa%20conocer%20sus%20productos" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all">
+                    Escribenos por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Banner -->
+    <section class="bg-black py-6">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="flex items-center justify-center gap-3 py-2">
+                <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-white/80 text-sm font-medium">Envios a todo Chile</span>
+            </div>
+            <div class="flex items-center justify-center gap-3 py-2">
+                <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="text-white/80 text-sm font-medium">Atencion personalizada</span>
+            </div>
+            <div class="flex items-center justify-center gap-3 py-2">
+                <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                <span class="text-white/80 text-sm font-medium">Calidad garantizada</span>
+            </div>
+            <div class="flex items-center justify-center gap-3 py-2">
+                <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                <span class="text-white/80 text-sm font-medium">Todos los medios de pago</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorias" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm font-semibold tracking-widest uppercase">Nuestras Categorias</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Encuentra tu Estilo</h2>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Ropa -->
+                <div class="category-card relative rounded-2xl overflow-hidden h-96 card-hover cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80" alt="Ropa Femenina" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8">
+                        <span class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Coleccion</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Ropa</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">Desde looks casuales hasta conjuntos elegantes para cada ocasion.</p>
+                    </div>
+                </div>
+                <!-- Accesorios -->
+                <div class="category-card relative rounded-2xl overflow-hidden h-96 card-hover cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80" alt="Accesorios" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8">
+                        <span class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Complementos</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Accesorios</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">Collares, aretes, pulseras y mas para completar tu outfit.</p>
+                    </div>
+                </div>
+                <!-- Perfumes -->
+                <div class="category-card relative rounded-2xl overflow-hidden h-96 card-hover cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80" alt="Perfumes" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8">
+                        <span class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Fragancias</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Perfumes</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">Las mejores fragancias para dejar tu huella en cada lugar.</p>
+                    </div>
+                </div>
+                <!-- Carteras -->
+                <div class="category-card relative rounded-2xl overflow-hidden h-96 card-hover cursor-pointer group sm:col-span-1 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80" alt="Carteras" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8">
+                        <span class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Bolsos</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Carteras</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">Carteras y bolsos que combinan funcionalidad con elegancia.</p>
+                    </div>
+                </div>
+                <!-- Zapatos -->
+                <div class="category-card relative rounded-2xl overflow-hidden h-96 card-hover cursor-pointer group sm:col-span-2 lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80" alt="Zapatos" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8">
+                        <span class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Calzado</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Zapatos</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">Tacones, botas, sandalias y zapatillas para cada estilo y ocasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm font-semibold tracking-widest uppercase">Inspiracion</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Nuestra Galeria</h2>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80" alt="Galeria 1" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=80" alt="Galeria 2" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&q=80" alt="Galeria 3" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=500&q=80" alt="Galeria 4" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80 col-span-2">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80" alt="Galeria 5" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Galeria 6" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden h-64 md:h-80">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=500&q=80" alt="Galeria 7" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/bellas_boutique_cl/" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Ver mas en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-gold-500 text-sm font-semibold tracking-widest uppercase">Sobre Nosotros</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">Tu Boutique de Confianza</h2>
+                    <div class="divider mb-8"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        En <strong class="text-gray-900">Bellas Boutique</strong> creemos que cada mujer merece sentirse unica y hermosa. Desde Santiago, Chile, seleccionamos cuidadosamente cada pieza de nuestra coleccion para ofrecerte lo mejor en moda femenina.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Nuestro estilo combina lo casual con lo elegante, creando looks versatiles que se adaptan a tu dia a dia y a tus momentos especiales. Desde ropa y zapatos hasta accesorios, perfumes y carteras, tenemos todo lo que necesitas.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gold-600">500+</div>
+                            <div class="text-gray-500 text-sm mt-1">Productos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gold-600">1K+</div>
+                            <div class="text-gray-500 text-sm mt-1">Clientas felices</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gold-600">5</div>
+                            <div class="text-gray-500 text-sm mt-1">Categorias</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&q=80" alt="Bellas Boutique Interior" class="w-full h-[500px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-rose-300"></div>
+                                <div class="w-8 h-8 rounded-full bg-gold-400"></div>
+                                <div class="w-8 h-8 rounded-full bg-rose-500"></div>
+                            </div>
+                            <div class="flex text-yellow-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm italic">"Los mejores productos y atencion increible!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-sm font-semibold tracking-widest uppercase">Visitanos</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Nuestra Ubicacion</h2>
+                <div class="divider mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Estamos en Santiago, Chile. Visitanos o contactanos por WhatsApp para una atencion personalizada.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+                <div class="bg-gray-50 rounded-2xl p-8 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gold-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Direccion</h4>
+                            <p class="text-gray-600">Santiago, Chile</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.359 0-4.548-.788-6.297-2.116l-.44-.345-3.081 1.033 1.033-3.081-.345-.44A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">WhatsApp</h4>
+                            <a href="https://wa.me/56996865611" target="_blank" class="text-green-600 hover:text-green-700 font-medium">+56 9 9686 5611</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Instagram</h4>
+                            <a href="https://www.instagram.com/bellas_boutique_cl/" target="_blank" class="text-pink-600 hover:text-pink-700 font-medium">@bellas_boutique_cl</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Facebook</h4>
+                            <a href="https://www.facebook.com/patriciadowntown" target="_blank" class="text-blue-600 hover:text-blue-700 font-medium">Bellas Boutique</a>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/56996865611?text=Hola!%20Quiero%20saber%20mas%20sobre%20sus%20productos" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-lg mt-4">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                            Chatea con nosotras
+                        </span>
+                    </a>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg h-[450px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212867.83332865!2d-70.7699!3d-33.4489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5410425af2f%3A0x8475d53c400f0931!2sSantiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-rose-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Tu proximo look te espera
+            </h2>
+            <p class="text-white/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Escribenos por WhatsApp y recibe atencion personalizada. Te ayudamos a encontrar exactamente lo que buscas.
+            </p>
+            <a href="https://wa.me/56996865611?text=Hola!%20Me%20gustaria%20ver%20sus%20productos" target="_blank" class="inline-flex items-center gap-3 gradient-gold text-white px-10 py-5 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-gold-500/30 transition-all transform hover:scale-105">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                Contactar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4">Bellas <span class="text-gold-400">Boutique</span></h3>
+                    <p class="text-gray-400 leading-relaxed">Moda femenina con estilo casual y elegante. Ropa, accesorios, perfumes, carteras y zapatos en Santiago, Chile.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categorias</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#categorias" class="text-gray-400 hover:text-gold-400 transition-colors">Ropa</a></li>
+                        <li><a href="#categorias" class="text-gray-400 hover:text-gold-400 transition-colors">Accesorios</a></li>
+                        <li><a href="#categorias" class="text-gray-400 hover:text-gold-400 transition-colors">Perfumes</a></li>
+                        <li><a href="#categorias" class="text-gray-400 hover:text-gold-400 transition-colors">Carteras</a></li>
+                        <li><a href="#categorias" class="text-gray-400 hover:text-gold-400 transition-colors">Zapatos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Siguenos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/bellas_boutique_cl/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/patriciadowntown" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://wa.me/56996865611" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 Bellas Boutique. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56996865611?text=Hola!%20Me%20interesa%20conocer%20sus%20productos" target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:bg-green-600 transition-colors hover:scale-110 transform">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.359 0-4.548-.788-6.297-2.116l-.44-.345-3.081 1.033 1.033-3.081-.345-.44A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero animations
+        const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+            .from("#hero-badge", { opacity: 0, y: 30, duration: 0.8 })
+            .from("#hero-title", { opacity: 0, y: 50, duration: 1 }, "-=0.4")
+            .from("#hero-subtitle", { opacity: 0, y: 30, duration: 0.8 }, "-=0.5")
+            .from("#hero-cta", { opacity: 0, y: 30, duration: 0.8 }, "-=0.4");
+
+        // Navbar scroll effect
+        ScrollTrigger.create({
+            start: "top -80",
+            onEnter: () => {
+                document.getElementById("navbar").classList.add("bg-black/90", "nav-blur", "shadow-lg");
+            },
+            onLeaveBack: () => {
+                document.getElementById("navbar").classList.remove("bg-black/90", "nav-blur", "shadow-lg");
+            }
+        });
+
+        // Category cards
+        gsap.utils.toArray(".category-card").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: "top 85%" },
+                opacity: 0,
+                y: 60,
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: "power3.out"
+            });
+        });
+
+        // Gallery items
+        gsap.utils.toArray(".gallery-item").forEach((item, i) => {
+            gsap.from(item, {
+                scrollTrigger: { trigger: item, start: "top 85%" },
+                opacity: 0,
+                scale: 0.9,
+                duration: 0.6,
+                delay: i * 0.08,
+                ease: "power2.out"
+            });
+        });
+
+        // Section headings
+        gsap.utils.toArray("section > div > .text-center").forEach((heading) => {
+            gsap.from(heading, {
+                scrollTrigger: { trigger: heading, start: "top 85%" },
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+        });
+
+        // About section
+        gsap.from("#nosotros .grid > div:first-child", {
+            scrollTrigger: { trigger: "#nosotros", start: "top 70%" },
+            opacity: 0,
+            x: -60,
+            duration: 1,
+            ease: "power3.out"
+        });
+        gsap.from("#nosotros .grid > div:last-child", {
+            scrollTrigger: { trigger: "#nosotros", start: "top 70%" },
+            opacity: 0,
+            x: 60,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        // Mobile menu toggle
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("mobile-menu").classList.add("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
