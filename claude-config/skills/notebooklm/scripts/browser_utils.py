@@ -16,6 +16,29 @@ class BrowserFactory:
     """Factory for creating configured browser contexts"""
 
     @staticmethod
+    def _find_chrome_channel() -> Optional[str]:
+        """Detect if real Chrome is available, return channel or None for bundled Chromium"""
+        import os
+        import sys
+
+        if sys.platform == "win32":
+            candidates = [
+                os.path.join(os.environ.get("PROGRAMFILES", ""), "Google", "Chrome", "Application", "chrome.exe"),
+                os.path.join(os.environ.get("PROGRAMFILES(X86)", ""), "Google", "Chrome", "Application", "chrome.exe"),
+                os.path.join(os.environ.get("LOCALAPPDATA", ""), "Google", "Chrome", "Application", "chrome.exe"),
+            ]
+        elif sys.platform == "darwin":
+            candidates = ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]
+        else:
+            candidates = ["/usr/bin/google-chrome", "/usr/bin/google-chrome-stable"]
+
+        for path in candidates:
+            if path and os.path.isfile(path):
+                return "chrome"
+
+        return None  # Fall back to bundled Chromium
+
+    @staticmethod
     def launch_persistent_context(
         playwright: Playwright,
         headless: bool = True,
@@ -25,16 +48,21 @@ class BrowserFactory:
         Launch a persistent browser context with anti-detection features
         and cookie workaround.
         """
-        # Launch persistent context
-        context = playwright.chromium.launch_persistent_context(
+        channel = BrowserFactory._find_chrome_channel()
+
+        launch_kwargs = dict(
             user_data_dir=user_data_dir,
-            channel="chrome",  # Use real Chrome
             headless=headless,
             no_viewport=True,
             ignore_default_args=["--enable-automation"],
             user_agent=USER_AGENT,
-            args=BROWSER_ARGS
+            args=BROWSER_ARGS,
         )
+        if channel:
+            launch_kwargs["channel"] = channel
+
+        # Launch persistent context
+        context = playwright.chromium.launch_persistent_context(**launch_kwargs)
 
         # Cookie Workaround for Playwright bug #36139
         # Session cookies (expires=-1) don't persist in user_data_dir automatically
