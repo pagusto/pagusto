@@ -45,10 +45,11 @@ dosis-concentración-respuesta limpia. Antecedente: **Bhasin et al. 1996** (*NEJ
 Hallazgos que importan aquí:
 
 - **Masa magra y fuerza**: aumento **aproximadamente lineal** con la dosis y con la
-  concentración sérica de testosterona resultante. En el rango alto (300 → 600 mg/sem) la
-  masa magra siguió subiendo; las ganancias de masa magra a 300 y 600 mg/sem fueron del
-  orden de **+5–6 kg y +7–9 kg** respectivamente sobre 20 semanas (cifras aproximadas del
-  estudio). La fuerza en prensa de pierna subió de forma monótona con la dosis. **[A]**
+  concentración sérica de testosterona resultante. Cifras exactas de masa magra a 20
+  semanas: **+3,4 kg (125 mg), +5,2 kg (300 mg) y +7,9 kg (600 mg/sem)**. Las
+  concentraciones séricas *nadir* de testosterona resultantes fueron **542, 1.345 y 2.370
+  ng/dl** a 125/300/600 mg, respectivamente (todas suprafisiológicas de 300 mg en adelante).
+  La fuerza en prensa de pierna subió de forma monótona con la dosis. **[A]**
 - **Hematocrito / hemoglobina**: subieron **de forma dosis-dependiente y monótona** en la
   misma curva. **[A]** Confirmado y detallado por **Coviello et al. 2008** (*JCEM* 93:914),
   que modeló la eritropoyesis frente a dosis graduadas y mostró que **los hombres mayores
@@ -63,8 +64,10 @@ Curvas de dosis-respuesta en hombres mayores y de función muscular: **Bhasin et
 
 Aquí hay que ser honesto con la resolución de los datos. **Los puntos de dosis del ensayo
 son 125, 300 y 600 mg/sem.** El rango del protocolo (350–500) cae **entre dos puntos
-experimentales**; cualquier cosa que se diga *dentro* de ese rango es **interpolación**,
-no medición. **[A] en los extremos, [C] dentro del rango.**
+experimentales** (300 y 600); cualquier cosa que se diga *dentro* de ese rango es
+**interpolación**, no medición. Interpolando: 350–500 mg/sem situaría el nadir de
+testosterona en torno a **~1.500–1.900 ng/dl** y la ganancia de masa magra entre **~+5,5 y
+~+7 kg** a 20 semanas. **[A] en los extremos, [C] dentro del rango.**
 
 Con esa salvedad, lo que la curva dice:
 
@@ -188,23 +191,27 @@ haya recuperado (días), alternar lados, evitar zonas induradas.
 
 Punto conceptual que casi toda la doctrina de foro entiende mal:
 
-- La **testosterona libre** tiene una vida media de **eliminación** cortísima (minutos a
-  ~1 h). El **enantato** es un profármaco depósito: se libera lentamente desde el aceite y
-  se hidroliza a testosterona.
+- La **testosterona libre** tiene una vida media de **eliminación** cortísima (**~10–100
+  minutos**, aclaramiento hepático muy rápido). El **enantato** es un profármaco depósito:
+  se libera lentamente desde el aceite y se hidroliza a testosterona.
 - Por tanto, la caída sérica que observamos tras un enantato IM **no** refleja la
   eliminación de la testosterona, sino **la velocidad de liberación desde el depósito
   oleoso**. Esto es **cinética flip-flop**: cuando la constante de absorción (k_a) es mucho
   menor que la de eliminación (k_e), la pendiente terminal la marca **k_a**. **La absorción
   domina.** **[C]/[A]** (bien establecido para depósitos IM oleosos; PK de TE en trabajos de
   Behre & Nieschlag).
-- La "vida media" citada del **enantato de testosterona (~4,5 días)** es en realidad una
-  **vida media de absorción**, no de eliminación. Un enantato de 250 mg IM da pico a las
-  ~24–72 h y vuelve hacia el basal en ~10–14 días. **[A]/[C].**
+- La "vida media" citada del **enantato de testosterona (~4,5–7 días)** es en realidad una
+  **vida media de absorción**, no de eliminación. Un enantato IM da **pico sérico a las
+  ~48 h** y vuelve hacia el basal en ~10–14 días; la caída sigue cinética de primer orden
+  gobernada por la liberación del depósito. **[A]/[C].** (Para el modelado de abajo uso el
+  extremo bajo, ~4,5 días, como aproximación conservadora.)
 - La "vida media del **enantato de metenolona ~10,5 días**" es una cifra que **se repite en
-  todas partes pero cuya base en PK humana medida es débil o inexistente**. Trátala como
+  todas partes (incluidas obras de referencia) pero que no proviene de ningún ensayo de PK
+  humana publicado dedicado a la metenolona enantato** — no existe tal estudio. Trátala como
   **folklore cuantitativo [D]** con una envoltura de plausibilidad (el enantato es un éster
-  largo, así que una vida media de absorción larga es razonable). El modelado de abajo para
-  metenolona hereda esa incertidumbre.
+  largo, así que una vida media de absorción larga es razonable). Dato adicional: la
+  metenolona tiene afinidad muy baja por la SHBG (~16 % de la de testosterona), lo que altera
+  su fracción libre. El modelado de abajo para metenolona hereda toda esta incertidumbre.
 
 ### 3.2 Modelado de suero a 1×, 2×, 3× y 7×/semana
 
@@ -272,11 +279,11 @@ dosis suprafisiológica en fisiológica.
 | 9 | Esquemas de rotación reducen complicaciones | **[C]/[D]** extrapolado |
 | 10 | Cinética flip-flop: la absorción domina la caída sérica de los ésteres | **[C]/[A]** |
 | 11 | Vida media de absorción TE ~4,5 d | **[A]/[C]** |
-| 12 | Vida media de metenolona enantato ~10,5 d | **[D]** folklore cuantitativo |
+| 12 | Vida media de metenolona enantato ~10,5 d | **[D]** cifra sin ensayo de PK humana |
 | 13 | 2×/sem (T) / 1×/sem (metenolona) agotan la ganancia de estabilidad | **[C]** modelado |
 | 14 | Umbral de hematocrito para actuar >54 % | **[A]/guía** Endocrine Society 2018 |
 | 15 | Flebotomía reduce eventos trombóticos en eritrocitosis por andrógenos | **[C]/[D]** extrapolado de PV |
-| 16 | HDL cae más con andrógenos no aromatizables (metenolona incluida) | **[C]** mecanicista; magnitud metenolona = **[D]** |
+| 16 | HDL cae más con no aromatizables (T enantato −9 % vs estanozolol −33 %) | **[A]** Thompson 1989; magnitud metenolona = **[D]** |
 | 17 | Disfunción sistólica/diastólica y ateroesclerosis coronaria en usuarios crónicos de AAS | **[B]** Baggish 2017; D'Andrea 2007 |
 | 18 | Recuperación del eje HPG tras cese: meses, variable | **[A]/[B]** Liu 2006; Rasmussen 2016 |
 | 19 | El "PCT" estandarizado acelera/mejora la recuperación en usuarios de AAS | **[D]** (componentes con [A]/[B] en *otros* contextos) |
@@ -297,26 +304,32 @@ dosis suprafisiológica en fisiológica.
   eventos venosos y posiblemente arteriales. **Pero la evidencia de que la eritrocitosis
   *inducida por andrógenos* se traduce en eventos trombóticos duros es más débil de lo que
   el consenso asume** — es sobre todo asociación y extrapolación. **[B]/[C].**
-- **Flebotomía:** aquí hay mucho **[D] disfrazado de [A]**. La evidencia fuerte de que
-  bajar el hematocrito reduce eventos viene de **policitemia vera** (**CYTO-PV, Marchioli
-  et al. 2013, *NEJM* 368:22**: objetivo Hct <45 % reduce eventos cardiovasculares) — una
-  **enfermedad clonal distinta**, no eritrocitosis secundaria a andrógenos. Transferir ese
-  umbral y esa conducta al usuario de AAS es **[C]/[D]**. Además, la flebotomía repetida
-  **induce ferropenia y trombocitosis reactiva** y **estimula más eritropoyesis**, pudiendo
-  ser contraproducente. **La palanca mejor fundamentada es reducir la dosis**, no sangrar.
-  **[C].**
+- **Flebotomía:** aquí hay mucho **[D] disfrazado de [A]**. La guía de la Endocrine Society
+  la **menciona** como manejo, pero como recomendación débil basada en evidencia de baja
+  calidad, no en ensayos de desenlace. La evidencia fuerte de que bajar el hematocrito
+  reduce eventos viene de **policitemia vera** (**CYTO-PV, Marchioli et al. 2013, *NEJM*
+  368:22**: objetivo Hct <45 % reduce eventos cardiovasculares) — una **enfermedad clonal
+  distinta**, no eritrocitosis secundaria a andrógenos. Transferir ese umbral y esa conducta
+  al usuario de AAS es **[C]/[D]**. Además, la flebotomía repetida **induce ferropenia y
+  trombocitosis reactiva** y **estimula más eritropoyesis**, pudiendo ser contraproducente.
+  **La palanca mejor fundamentada es reducir la dosis**, no sangrar. **[C].**
 
 ### 5.2 Lípidos / HDL
 
-- **Magnitud con testosterona:** la testosterona suprafisiológica inyectable baja el HDL de
-  forma dosis-dependiente; el orden de magnitud típico es una **caída del ~20–30 %** del
-  HDL basal. **[A]** (Bhasin 2001 y otros).
+- **Magnitud con testosterona:** la testosterona inyectable baja el HDL de forma
+  **dosis-dependiente pero, a igualdad de mg, modestamente**. El estudio comparativo clásico
+  (**Thompson et al. 1989, *JAMA*** 261:1165) midió **testosterona enantato 200 mg/sem →
+  −9 % de HDL-C** frente a **estanozolol oral → −33 % de HDL-C y −71 % de HDL2**. A dosis
+  más altas (300–600 mg) la caída de la testosterona es mayor, pero la lección es que **la
+  aromatización de la testosterona la protege relativamente**. **[A].**
 - **Por qué la metenolona presiona más el HDL:** los andrógenos **aumentan la actividad de
-  la lipasa hepática**, lo que degrada HDL2. La **aromatización a estrógeno contrarresta
-  parcialmente** ese efecto. La metenolona **no aromatiza** → **no hay compensación
-  estrogénica** → **más supresión de HDL por mg** que un andrógeno aromatizable. El
-  mecanismo es sólido (**[C]**), y como clase los andrógenos no aromatizables/17-alquilados
-  (p. ej. estanozolol) pueden bajar HDL **30–70 %** en estudios **[A]/[B]**.
+  la lipasa hepática** (**>60 % sobre basal** con testosterona suprafisiológica, *Am J
+  Physiol Endocrinol Metab* 2003), enzima que degrada HDL2. La **aromatización a estrógeno
+  contrarresta parcialmente** ese efecto. La metenolona **no aromatiza** → **no hay
+  compensación estrogénica** → **más supresión de HDL por mg** que un andrógeno aromatizable.
+  El mecanismo es sólido (**[A]/[C]**): como clase, los no aromatizables (sobre todo los
+  17-alquilados orales como el estanozolol) bajan HDL **mucho más** (−33 % a −71 %) que la
+  testosterona sola (−9 % a ~−25 %).
 - **Cuantificación específica de metenolona:** **no hay datos humanos de la magnitud exacta
   de caída de HDL con metenolona.** Por su perfil (derivado de DHT, no aromatizable, pero
   inyectable no alquilado) es razonable esperar una supresión **intermedia** — mayor que la
@@ -326,10 +339,11 @@ dosis suprafisiológica en fisiológica.
 
 ### 5.3 Cardíaco (función diastólica y masa ventricular en uso prolongado)
 
-- **Baggish et al. 2017** (*Circulation* 135:1991), estudio en usuarios crónicos de AAS de
-  fuerza: **menor función sistólica del VI (FE reducida), disfunción diastólica y mayor
-  carga de ateroesclerosis coronaria (calcio coronario)** frente a no usuarios, con
-  **relación dosis-años** (a más exposición acumulada, peor). Transversal, **[B]**.
+- **Baggish et al. 2017** (*Circulation* 135:1991), 140 levantadores (86 usuarios de AAS
+  ≥2 años vs 54 no usuarios): los usuarios mostraron **menor FE del VI (52±11 % vs
+  63±8 %; p<0,001)**, **peor función diastólica** (velocidad de relajación precoz **9,3±2,4
+  vs 11,1±2,0 cm/s; p<0,001**) y **mayor volumen de placa coronaria**, con **relación
+  dosis-años** (a más exposición acumulada de por vida, peor). Transversal, **[B]**.
 - Estudios ecocardiográficos previos (**D'Andrea et al. 2007** y otros) muestran **deterioro
   de la función diastólica y aumento de masa/hipertrofia concéntrica del VI** en atletas
   usuarios. **[B].**
@@ -343,10 +357,11 @@ dosis suprafisiológica en fisiológica.
   oligospermia.
 - **Tiempo de recuperación:** el mejor dato cuantitativo viene de los ensayos de
   **anticoncepción hormonal masculina** — **Liu et al. 2006** (*Lancet* 367:1412), análisis
-  agrupado: mediana de recuperación de la espermatogénesis a umbral **~3–4 meses**, ~**67 %
-  a los 6 meses, ~90 % a los 12, ~100 % a los 24**. **[A].** *Pero* esos sujetos usaron
-  dosis **moderadas**, **duración corta** y bajo **supervisión** — es un **mejor caso**, no
-  el escenario de dosis alta prolongada.
+  integrado de 30 estudios: **mediana de recuperación de la espermatogénesis a 20 M/ml =
+  3,4 meses**, con probabilidad de recuperación del **67 % a los 6 meses, 90 % a los 12,
+  96 % a los 16 y 100 % a los 24 meses**. **[A].** *Pero* esos sujetos usaron dosis
+  **moderadas**, **duración corta** y bajo **supervisión** — es un **mejor caso**, no el
+  escenario de dosis alta prolongada.
 - **Uso prolongado de dosis altas (ASIH):** series como **Rasmussen et al. 2016** (*PLoS
   ONE* 11:e0161208) y **Coward et al. 2013** (*BJU Int*) documentan **hipogonadismo
   persistente meses o años tras el cese** en una fracción de exusuarios. **[B].** La
@@ -402,18 +417,21 @@ detiene**, no se "ajusta".
 
 ### 6.1 Falsificación y subdosificación (metenolona en particular)
 
-- Los análisis de AAS de mercado negro (decomisos y compras encubiertas analizadas por
-  GC-MS/LC-MS: **Coopman**, **Graham et al. 2009**, **Weber et al.** y trabajos similares)
-  reportan de forma consistente **tasas altas de producto no conforme** — falsificado,
-  subdosificado, sobredosificado o con un compuesto distinto al etiquetado. Rango típico
-  citado en la literatura: **del orden del 30–60 % no conforme**, según muestra y región.
-  **[B].**
+- Los análisis de AAS de mercado negro por GC-MS/LC-MS reportan **tasas altas y consistentes
+  de producto no conforme**. Datos concretos: **Musshoff & Daldrup** ("Black Market in
+  Anabolic Steroids") analizaron 42 productos y **15 (~36 %) no contenían el ingrediente
+  esperado**; **Neves & Caldas 2017** (*Forensic Sci Int*, decomisos de la Policía Federal
+  brasileña por GC-MS) hallaron **~42 % falsificados y 11 % subestándar**, con **65 % de las
+  soluciones oleosas** falsificadas; un análisis del mercado coreano (LC-MS/MS, 2014) halló
+  **~la mitad adulterados**. **[B].**
 - **La metenolona (Primobolan) es de los compuestos más falsificados**, precisamente porque
-  es **caro**: hay fuerte incentivo económico a venderla subdosificada o sustituida por un
-  andrógeno más barato (a menudo testosterona o nada). Esto es coherente y ampliamente
-  reportado, **pero una tasa de falsificación metenolona-específica, rigurosa y actual, no
-  está bien establecida en la literatura revisada por pares** — la afirmación "el Primo casi
-  siempre es falso" es plausible pero **[D]** en su cuantía exacta.
+  es **caro**: en el estudio de Musshoff & Daldrup, las falsificaciones de **parabolan y
+  Primobolan** fueron de las más frecuentes, con **nandrolona o derivados de testosterona
+  más baratos sustituyendo a la metenolona**. Es decir, la sustitución de metenolona por un
+  andrógeno barato está **documentada [B]**, aunque **una tasa de falsificación
+  metenolona-específica y actualizada como cifra única no está establecida** — "el Primo casi
+  siempre es falso" sigue siendo **[D]** en su cuantía exacta, pero la *dirección* (muy
+  falsificado, sustituido por algo más barato) es **[B]**.
 - Consecuencia práctica: **hay una probabilidad no trivial de que el vial de metenolona no
   contenga 100 mg/ml de metenolona**, lo que hace que "600 mg/sem de metenolona" sea, en la
   realidad, una **dosis desconocida de un compuesto no verificado**.
@@ -537,6 +555,10 @@ no la testosterona, es donde vive el riesgo peor caracterizado.
   graded doses of testosterone…* JCEM 2005;90:678–688.
 - Coviello AD, et al. *Effects of graded doses of testosterone on erythropoiesis in healthy
   young and older men.* JCEM 2008;93:914–919.
+- Thompson PD, et al. *Contrasting effects of testosterone and stanozolol on serum
+  lipoprotein levels.* JAMA 1989;261:1165–1168.
+- Herbst KL, et al. *Testosterone administration to men increases hepatic lipase activity
+  and decreases HDL and LDL size.* Am J Physiol Endocrinol Metab 2003;284:E1112–E1118.
 - Bhasin S, et al. *Testosterone Therapy in Men With Hypogonadism: An Endocrine Society
   Clinical Practice Guideline.* JCEM 2018;103:1715–1744.
 - Marchioli R, et al. (CYTO-PV). *Cardiovascular events and intensity of treatment in
@@ -560,12 +582,24 @@ no la testosterona, es donde vive el riesgo peor caracterizado.
   2014.
 - World Health Organization. *WHO best practices for injections and related procedures
   toolkit.* 2010.
-- Graham MR, et al.; Weber C, et al.; Coopman V, et al. — análisis por espectrometría de
-  masas de AAS de mercado negro (falsificación/subdosificación).
+- Musshoff F, Daldrup T. *Black market in anabolic steroids — analysis of illegally
+  distributed products.* (análisis GC-MS de 42 productos; ~36 % sin el principio activo
+  esperado; Primobolan/parabolan entre los más falsificados.)
+- Neves DBJ, Caldas ED. *GC-MS quantitative analysis of black market pharmaceutical products
+  containing anabolic androgenic steroids seized by the Brazilian Federal Police.* Forensic
+  Sci Int 2017;275:272–281.
+- Wikipedia / obras de referencia farmacológica — usadas SOLO para señalar que la vida media
+  "~10,5 d" de la metenolona enantato se repite sin un ensayo de PK humana que la respalde
+  (marcado [D] en el texto).
 
-> **Nota final de verificación.** Las cifras marcadas como aproximadas (ganancias de masa
-> magra por dosis, % de caída de HDL, vidas medias, tasas de falsificación) deben
-> confirmarse contra el texto de la fuente antes de citarlas con precisión; están dadas en
-> orden de magnitud. Los grados de evidencia son el producto principal de este informe: si
-> algo aquí choca con lo que "todo el mundo sabe" en el ambiente, casi siempre es porque lo
-> que todo el mundo sabe es **[D]**.
+> **Nota final de verificación.** Las cifras cuantitativas clave se contrastaron contra las
+> fuentes primarias: masa magra por dosis (Bhasin 2001: +3,4/5,2/7,9 kg), umbral de
+> hematocrito >54 % (Endocrine Society 2018), recuperación espermática (Liu 2006: mediana
+> 3,4 meses; 100 % a 24 meses), función cardíaca (Baggish 2017: FE 52 vs 63 %), HDL
+> (Thompson 1989: T −9 % vs estanozolol −33 %), vida media de TE (~4,5–7 d, flip-flop) y
+> tasas de falsificación (Musshoff & Daldrup ~36 %; Neves & Caldas 2017 ~42 %). Lo que
+> **sigue sin fuente** —y está marcado como tal— es específico de la **metenolona**: su
+> dosis-respuesta, su PK humana y la magnitud exacta de su efecto sobre el HDL no existen en
+> la literatura. Los grados de evidencia son el producto principal de este informe: si algo
+> aquí choca con lo que "todo el mundo sabe" en el ambiente, casi siempre es porque lo que
+> todo el mundo sabe es **[D]**.
