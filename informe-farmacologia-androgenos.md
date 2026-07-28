@@ -283,7 +283,7 @@ dosis suprafisiológica en fisiológica.
 | 13 | 2×/sem (T) / 1×/sem (metenolona) agotan la ganancia de estabilidad | **[C]** modelado |
 | 14 | Umbral de hematocrito para actuar >54 % | **[A]/guía** Endocrine Society 2018 |
 | 15 | Flebotomía reduce eventos trombóticos en eritrocitosis por andrógenos | **[C]/[D]** extrapolado de PV |
-| 16 | HDL cae más con no aromatizables (T enantato −9 % vs estanozolol −33 %) | **[A]** Thompson 1989; magnitud metenolona = **[D]** |
+| 16 | HDL cae más con no aromatizables (T enantato −9 % vs estanozolol −33 %) | **[A]** el dato de Thompson; **[C]** su transferencia a metenolona (vía y 17αα confunden); magnitud metenolona = **[D]**, sin medición humana |
 | 17 | Disfunción sistólica/diastólica y ateroesclerosis coronaria en usuarios crónicos de AAS | **[B]** Baggish 2017; D'Andrea 2007 |
 | 18 | Recuperación del eje HPG tras cese: meses, variable | **[A]/[B]** Liu 2006; Rasmussen 2016 |
 | 19 | El "PCT" estandarizado acelera/mejora la recuperación en usuarios de AAS | **[D]** (componentes con [A]/[B] en *otros* contextos) |
@@ -322,14 +322,24 @@ dosis suprafisiológica en fisiológica.
   −9 % de HDL-C** frente a **estanozolol oral → −33 % de HDL-C y −71 % de HDL2**. A dosis
   más altas (300–600 mg) la caída de la testosterona es mayor, pero la lección es que **la
   aromatización de la testosterona la protege relativamente**. **[A].**
-- **Por qué la metenolona presiona más el HDL:** los andrógenos **aumentan la actividad de
-  la lipasa hepática** (**>60 % sobre basal** con testosterona suprafisiológica, *Am J
-  Physiol Endocrinol Metab* 2003), enzima que degrada HDL2. La **aromatización a estrógeno
-  contrarresta parcialmente** ese efecto. La metenolona **no aromatiza** → **no hay
-  compensación estrogénica** → **más supresión de HDL por mg** que un andrógeno aromatizable.
-  El mecanismo es sólido (**[A]/[C]**): como clase, los no aromatizables (sobre todo los
-  17-alquilados orales como el estanozolol) bajan HDL **mucho más** (−33 % a −71 %) que la
-  testosterona sola (−9 % a ~−25 %).
+- **Por qué la metenolona *podría* presionar más el HDL:** los andrógenos **aumentan la
+  actividad de la lipasa hepática** (**>60 % sobre basal** con testosterona suprafisiológica,
+  *Am J Physiol Endocrinol Metab* 2003), enzima que degrada HDL2. La **aromatización a
+  estrógeno contrarresta parcialmente** ese efecto. La metenolona **no aromatiza** → **no hay
+  compensación estrogénica** → cabe esperar **más supresión de HDL por mg** que con un
+  andrógeno aromatizable. El mecanismo es plausible (**[C]**).
+
+  > ⚠️ **Corrección metodológica (añadida tras revisión).** El contraste de Thompson **no
+  > aísla la aromatización**. El estanozolol es **oral y 17α-alquilado**; el enantato de
+  > testosterona es **inyectable y no alquilado**. Vía y alquilación **co-varían** con la
+  > aromatización, y el primer paso hepático de un 17α-alquilado tiene efecto propio sobre
+  > la lipasa hepática y el HDL. La metenolona enantato es **inyectable y NO 17α-alquilada**
+  > — está del lado "limpio" en ambas variables. Por tanto **la magnitud del estanozolol no
+  > es transferible a la metenolona**; solo lo es la dirección, y con menos fuerza de la que
+  > sugerí. Degradado de **[A]/[C]** a **[C]**.
+  >
+  > Y lo que de verdad manda: **no existe ninguna medición del efecto de la metenolona sobre
+  > HDL/LDL en humanos.** Ni una. **[D] por ausencia total de dato.**
 - **Cuantificación específica de metenolona:** **no hay datos humanos de la magnitud exacta
   de caída de HDL con metenolona.** Por su perfil (derivado de DHT, no aromatizable, pero
   inyectable no alquilado) es razonable esperar una supresión **intermedia** — mayor que la
