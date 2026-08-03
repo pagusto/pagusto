@@ -58,8 +58,8 @@ es el estado de base.
 
 ## 0. ⚠️ PANEL DE LITIO — precede a todo lo demás
 
-**Tomas litio para trastorno bipolar.** Estas reglas mandan sobre cualquier optimización de
-composición corporal. No son notas al pie.
+**Litio 450 mg, 1 comprimido, dosis única nocturna (22:00).** Estas reglas mandan sobre
+cualquier optimización de composición corporal. No son notas al pie.
 
 | Regla | Umbral | Por qué |
 |---|---|---|
@@ -78,7 +78,7 @@ es **riesgo agudo de toxicidad por litio**:
 
 1. Reponer fluidos **y sodio** de inmediato (LMNT o equivalente)
 2. **No** saltarse comidas ni "compensar" bajando sal
-3. Si persiste >12 h → **nivel plasmático de litio**
+3. Si persiste >12 h → **nivel plasmático de litio, extraído 12 h post-dosis** (toma 22:00 → extracción 10:00)
 4. Señales de toxicidad: temblor grueso, ataxia, confusión, vómito persistente, disartria
 
 ### Riesgo de manía — vigilancia cruzada con Daylio
@@ -120,7 +120,7 @@ sesión — nunca 2,5 ml en un solo punto. Rotar glúteo / deltoides / cuádrice
 |---|---|
 | **HGH en ayunas, ≥20–30 min antes de comer** | La insulina posprandial atenúa su efecto lipolítico |
 | **CJC + Ipamorelina ≥2 h después de la última comida** | Carbohidrato y grasa aplanan el pulso de GH |
-| **NAC lejos de la ventana de entreno** | Los antioxidantes en dosis alta atenúan la señalización de adaptación |
+| **NAC de noche, lejos del entreno** | Antioxidantes en dosis alta atenúan la adaptación · y forma GlyNAC con la glicina |
 | **Resveratrol con comida grasa** | Es liposoluble; en agua se absorbe mal |
 | **Zinc y magnesio separados** | Compiten por transportador |
 
@@ -136,13 +136,13 @@ sesión — nunca 2,5 ml en un solo punto. Rotar glúteo / deltoides / cuádrice
 |---|---|---|
 | **06:00** | 💉 HGH | 3 UI, en ayunas |
 | **06:30** | 💉 Primo + Testo | 2 ml + 0,5 ml, dos sitios |
-| **09:30** | 🍽️ **Pote pavo** | + NAC · TMG · NMN |
-| **15:00** | 🍽️ **Pote salmón** | + Resveratrol · D3+K2 (comida grasa) |
+| **09:30** | 🍽️ **Pote pavo** | — |
+| **15:00** | 🍽️ **Pote salmón** | + **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Zinc |
 | **17:30–18:30** | 🏋️ **ENTRENO** | — |
 | **18:45** | 🍌 **Post-entreno** | 3 plátanos + 30 g miel · + creatina · LMNT |
-| **19:30** | 🍽️ **Pote pavo** | + Zinc |
+| **19:30** | 🍽️ **Pote pavo** | — |
 | **≥21:30** | 💉 CJC + Ipamorelina | 100 + 100 mcg, ≥2 h post cena |
-| **22:00** | 💊 Noche | Magnesio glicinato · Glicina 3 g |
+| **22:00** | 💊 Noche | **NAC + Glicina 3 g** (GlyNAC) · Taurina · Magnesio · **Litio 450 mg** |
 
 ## 3. Día tipo — SIN ENTRENO
 
@@ -152,35 +152,33 @@ Igual, quitando entreno y post-entreno. **Sin primo/testo** salvo L/X/V.
 | Hora | Acción |
 |---|---|
 | 06:00 | 💉 HGH 3 UI |
-| 09:30 | 🍽️ Pote + NAC · TMG · NMN |
-| 15:00 | 🍽️ Pote + Resveratrol · D3+K2 |
-| 19:30 | 🍽️ Pote + Zinc |
+| 09:30 | 🍽️ Pote |
+| 15:00 | 🍽️ Pote + TMG · NMN · Resveratrol · liposolubles · Zinc |
+| 19:30 | 🍽️ Pote |
 | ≥21:30 | 💉 CJC + Ipamorelina |
-| 22:00 | 💊 Magnesio · Glicina |
+| 22:00 | 💊 NAC + Glicina · Taurina · Magnesio · Litio 450 mg |
 
 ---
 
 ## 4. Comida — todo en peso COCIDO
 
-### Pote pavo  ×2 (09:30 y 19:30)
+### Pote pavo ×2 (09:30 y 19:30)
 
-| Alimento | Cocido | Prot | Carb | Grasa | kcal |
-|---|---|---|---|---|---|
-| Arroz | 400 g | 10,8 | 112 | 1,2 | 520 |
-| Pavo pechuga | 250 g | 72,5 | 0 | 9 | 375 |
-| Mostaza | al gusto | 0 | 0,5 | 0 | 3 |
-| **Total** | | **83** | **113** | **10** | **898** |
-
-*Solo el de las 09:30 lleva palta.*
+| Alimento | L–V | S–D | Prot | Grasa |
+|---|---|---|---|---|
+| **Arroz** | **450 g** | **300 g** | 12 / 8 | 1,4 / 0,9 |
+| Pavo pechuga | 250 g | 250 g | 72,5 | 9 |
+| Mostaza | libre | libre | 0 | 0 |
+| **kcal** | **961** | **766** | | |
 
 ### Pote salmón ×1 (15:00) — la comida grasa del día
 
-| Alimento | Cocido | Prot | Carb | Grasa | kcal |
-|---|---|---|---|---|---|
-| Arroz | 400 g | 10,8 | 112 | 1,2 | 520 |
-| Salmón | 250 g | 62,5 | 0 | 32,5 | 537 |
-| Palta | 1 (150 g) | 2,7 | 13 | 22 | 240 |
-| **Total** | | **76** | **125** | **56** | **1.297** |
+| Alimento | L–V | S–D | Prot | Grasa |
+|---|---|---|---|---|
+| **Arroz** | **450 g** | **300 g** | 12 / 8 | 1,4 / 0,9 |
+| Salmón | 250 g | 250 g | 62,5 | 32,5 |
+| Palta | 1 (150 g) | 1 (150 g) | 2,7 | 22 |
+| **kcal** | **1.362** | **1.167** | | |
 
 Los liposolubles (D3+K2, omega-3, CoQ10, resveratrol) van **aquí**, no en otra toma.
 
@@ -270,19 +268,49 @@ los pocos condimentos que no hay que contar.
 
 ## 6. Pastillero
 
-Inventario recuperado del pedido iHerb **#885607653**.
+Inventario recuperado del pedido iHerb **#885607653** + contexto maestro.
 
-| Momento | Suplemento | Nota |
+| Momento | Qué | Razón |
 |---|---|---|
-| **09:30** | NAC | Lejos del entreno — atenúa adaptación |
-| 09:30 | TMG (betaína anhidra) | 2,5 g |
-| 09:30 | NMN | — |
-| **15:00** | Resveratrol | Con el pote de salmón, necesita grasa |
-| 15:00 | D3 + K2 | Liposolubles, con grasa |
-| **19:30** | Zinc picolinato | **Bajar de 50 mg** — el UL es 40 mg/día |
-| **22:00** | Magnesio glicinato | Separado del zinc |
-| 22:00 | Glicina 3 g | Mejora calidad de sueño |
-| 22:00 | Ashwagandha | Opcional |
+| **06:00 ayunas** | Café **dosis fija** · LMNT ½–1 sobre | Litio: cafeína y sodio constantes |
+| **09:30** | — | *(NAC movido a la noche)* |
+| **15:00** | **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Quercetina · Espermidina · Citrus Bergamot | **La comida grasa del día** (55 g). Todos son liposolubles o lo necesitan |
+| 15:00 | **Zinc** | ≥4 h del magnesio — compiten por transportador |
+| **18:45** post-entreno | Creatina 5 g · LMNT | Timing irrelevante (actúa por saturación). Cruzar con Daylio |
+| **22:00** | **NAC + Glicina 3 g** · Taurina 2 g · Magnesio Albion 400 mg | **GlyNAC** — ver abajo |
+| **22:00** | **Litio 450 mg** | 1 comprimido, dosis única nocturna |
+
+### Por qué NAC y glicina van juntos de noche
+
+Son **los dos precursores limitantes de la síntesis de glutatión**. Se estudian como
+combinación — **GlyNAC** — con trabajo publicado (Sekhar, Baylor) sobre glutatión, estrés
+oxidativo y función mitocondrial.
+
+Colocarlos de noche satisface tres restricciones a la vez:
+1. **NAC lejos del entreno de las 17:30** — los antioxidantes en dosis alta atenúan la
+   señalización de adaptación
+2. **Glicina mejora calidad de sueño** — relevante con sleep 70 y readiness 55
+3. **Sinergia GlyNAC** para glutatión
+
+### Por qué el resveratrol no va en la mañana
+
+Agrupar **NMN + TMG + resveratrol** tiene lógica (precursor de NAD+, donante de metilos,
+activador de sirtuinas). Pero el **resveratrol es liposoluble y de biodisponibilidad pobre**:
+a las 09:30 el pote lleva ~10 g de grasa, a las 15:00 lleva 55 g. Moviendo los tres a las
+15:00 siguen juntos y el resveratrol encuentra la grasa.
+
+### ⚕️ Medición de litio — ventana de 12 horas
+
+**Los niveles séricos se miden en valle, 12 h después de la dosis.** Con la toma a las 22:00,
+**la extracción va a las 10:00 de la mañana siguiente**. A otra hora el número no es
+interpretable. Aplica también al protocolo de rescate por vómito o diarrea.
+
+### Qué es LMNT
+
+Sobres de electrolitos: **sodio 1.000 mg**, potasio 200 mg, magnesio 60 mg, sin azúcar.
+Está en el protocolo por el sodio — es la vía más simple de mantener constante la regla del
+litio. Cualquier electrolito equivalente o sal dietética sirve, **mientras la cantidad diaria
+no varíe**.
 
 ### Descartar — seis productos sin mecanismo activo
 
