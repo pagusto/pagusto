@@ -276,7 +276,8 @@ Inventario recuperado del pedido iHerb **#885607653** + contexto maestro.
 | **09:30** | — | *(NAC movido a la noche)* |
 | **15:00** | **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Quercetina · Espermidina · Citrus Bergamot | **La comida grasa del día** (55 g). Todos son liposolubles o lo necesitan |
 | 15:00 | **Zinc** | ≥4 h del magnesio — compiten por transportador |
-| **18:45** post-entreno | Creatina 5 g · LMNT | Timing irrelevante (actúa por saturación). Cruzar con Daylio |
+| **15:00** | **TUDCA 500 mg** — *condicional, ver abajo* | Ácido biliar: la secreción biliar es prandial → con comida grasa |
+| **18:45** post-entreno | Creatina 5 g · sodio | Timing irrelevante (actúa por saturación). Cruzar con Daylio |
 | **22:00** | **NAC + Glicina 3 g** · Taurina 2 g · Magnesio Albion 400 mg | **GlyNAC** — ver abajo |
 | **22:00** | **Litio 450 mg** | 1 comprimido, dosis única nocturna |
 
@@ -326,6 +327,34 @@ El café sale del protocolo por petición. Pero si **actualmente lo bebes a diar
 > cantidades altas, considera un nivel de litio (12 h post-dosis) al terminar la bajada.
 >
 > Si ya no bebes café, no aplica nada de esto.
+
+### 🧪 TUDCA — medir antes de tomar
+
+Tu contexto maestro lo condicionaba a la **fase Anavar**, con lógica razonable: el Anavar es
+**17α-alquilado y oral**, el perfil clásico de hepatotoxicidad. Ni primobolán enantato ni
+testosterona enantato lo son.
+
+**Pero esa regla tiene un agujero.** La metenolona enantato sí tiene advertencia hepática en
+etiqueta:
+
+- **PMID 8334198** — muerte por fallo hepático con acetato de metenolona
+- **PMDA Japón, 2012** — disfunción hepática e ictericia añadidas como reacción adversa grave
+  a la etiqueta de **ambos ésteres**, incluido el inyectable
+- La etiqueta japonesa exige **pruebas hepáticas periódicas** en uso prolongado
+
+**Recomendación: medir primero.** La evidencia del TUDCA en este contexto es **extrapolación
+desde colestasis y colangitis biliar primaria, no dato directo** — no existe ensayo humano de
+TUDCA contra daño hepático por andrógenos. **[C]/[D]**.
+
+En la misma extracción del hematocrito, pedir **ALT · AST · GGT · bilirrubina total y directa**.
+Si hay señal hepática real — ALT alta **con GGT alta**, porque ALT sola en alguien que entrena
+es músculo — entonces el TUDCA tiene diana.
+
+**Si se toma igual:** 500 mg con la comida de las 15:00 (prandial, y es la comida grasa).
+Segunda dosis con la cena si se va a 2×/día.
+
+> **El TUDCA es específico de hígado.** No cubre lípidos, hematocrito, ventrículo ni ánimo,
+> que es donde está el peso del riesgo actual.
 
 ### Descartar — seis productos sin mecanismo activo
 
@@ -423,6 +452,7 @@ bajo. Sin analítica tienes 50 % de probabilidad de empeorarlo.
 | Peso en ayunas | 3×/semana, misma hora | Promediar la semana, no leer días sueltos |
 | Peso | Semanal | Estable ±0,2 kg = mantenimiento correcto. Grasa debería bajar con magra estable |
 | **Hematocrito** | **YA — no esperar** | HR en reposo ↑ con actividad ↓ lo pide ahora |
+| **Hepático** | **Con el hematocrito** | ALT · AST · **GGT** · bilirrubina. Decide si el TUDCA tiene diana |
 | Analítica lipídica | Semana 3–4 | La lipasa hepática ya sube a las 3 semanas |
 
 **Sobre el mito de los 30 g:** los estudios clásicos (Moore 2009, Witard 2014) mostraban
