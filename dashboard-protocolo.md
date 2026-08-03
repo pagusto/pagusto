@@ -1,14 +1,58 @@
 # Dashboard de protocolo
 
-**Peso:** 84,5 kg · **Objetivo:** ganancia rápida, 3.600 kcal
+**Peso:** 81,4 kg · **Objetivo:** recomposición · **L–V 3.670 kcal · S–D 2.850 kcal**
 **Entreno:** lunes / miércoles / viernes, 17:30–18:30
+**TDEE medido (Oura, 14 días):** 3.442 kcal
 
 > Documento operativo. La justificación de evidencia está en
 > `informe-farmacologia-androgenos.md`, `mapa-evidencia-primobolan-trt.md` y
 > `marco-decision-monitoreo.md`.
 >
-> **Discrepancia sin resolver:** el contexto maestro indica 80–81 kg; aquí se usa 84,5 kg
-> según confirmación directa. Verificar en la próxima pesada — mueve el objetivo ~180 kcal.
+> **Resuelto:** escáner Evolt 28-07-2026 confirma **81,4 kg**. Todo recalculado sobre ese peso
+> y sobre el TDEE medido por Oura, no estimado.
+
+---
+
+## 0a. Datos medidos — Oura, 20 jul – 2 ago 2026
+
+### Gasto real
+
+| | kcal |
+|---|---|
+| **TDEE medido, media 14 días** | **3.442** |
+| Días de trabajo | 3.400 – 4.400 · 12.000–19.660 pasos |
+| Fines de semana | 2.580 – 3.059 · ~5.300 pasos |
+
+Evolt estimaba 2.687 — se quedaba muy corto. Instalar ductos 10 h/día quema de verdad.
+
+### ⚠️ Recuperación empeorando en reposo
+
+| Periodo | HR mínimo | Readiness | Actividad |
+|---|---|---|---|
+| 20–25 jul | 62–69 | 58–70 | Alta |
+| 27–31 jul | 64–68 | 54–67 | Alta |
+| **1–2 ago** | **77, 75** | **44, 43** | **Baja** |
+
+**El fin de semana descansó y empeoró.** Menos pasos y menos gasto, pero el HR en reposo subió
+~10 bpm sobre la línea base de 64–68 y el readiness cayó a lo peor del periodo. La fatiga
+acumulada mejora con descanso; esto va en dirección contraria.
+
+Candidatos, por orden de encaje temporal:
+1. **Andrógenos → hematocrito ↑ → sangre más viscosa → más trabajo cardíaco.** Coincide con el inicio del ciclo
+2. **HGH** — retención de líquidos
+3. Alcohol de fin de semana — causa más común de +10 bpm con caída de readiness
+4. Deshidratación — **que en presencia de litio también es riesgo de toxicidad**
+
+**Media de HR mínimo: 69 bpm.** Para 33 años, entrenado, con trabajo físico pesado, lo esperable
+sería 55–65. Está por encima incluso antes del repunte.
+
+**Readiness medio ~55 en 14 días, con un solo día por encima de 70.** No es un mal fin de semana:
+es el estado de base.
+
+> **Acción:** adelantar el hematocrito. No esperar a la semana 3–4.
+> El patrón HR↑ con actividad↓ es exactamente lo que pide esa analítica ahora.
+
+**Anomalía puntual:** 26 jul — HR 87, readiness 32, sueño 48. Día atípico, causa desconocida.
 
 ---
 
@@ -65,7 +109,7 @@ Triacana, la TSH deja de ser interpretable — decidir antes cuál de las dos co
 | **Testosterona enantato** (250 mg/ml) | 0,5 ml = **125 mg** | L / X / V | **375 mg** |
 | **HGH** | **3 UI** | Diario, mañana en ayunas | 21 UI |
 | **CJC-1295 + Ipamorelina** | **100 mcg + 100 mcg** | Diario, noche | — |
-| **Retatrutida** | **1 mg** | Domingo | 1 mg |
+| **Retatrutida** | **0,5 mg** | Domingo **y** jueves | 1 mg |
 
 **Volumen de aceite: 2,5 ml por sesión, 7,5 ml/semana.** Repartir en dos sitios por
 sesión — nunca 2,5 ml en un solo punto. Rotar glúteo / deltoides / cuádriceps.
@@ -95,15 +139,15 @@ sesión — nunca 2,5 ml en un solo punto. Rotar glúteo / deltoides / cuádrice
 | **09:30** | 🍽️ **Pote pavo** | + NAC · TMG · NMN |
 | **15:00** | 🍽️ **Pote salmón** | + Resveratrol · D3+K2 (comida grasa) |
 | **17:30–18:30** | 🏋️ **ENTRENO** | — |
-| **18:45** | 🥤 **Batido post** | 1 scoop + avena + plátano + miel + leche |
+| **18:45** | 🍌 **Post-entreno** | 3 plátanos + 30 g miel · + creatina · LMNT |
 | **19:30** | 🍽️ **Pote pavo** | + Zinc |
 | **≥21:30** | 💉 CJC + Ipamorelina | 100 + 100 mcg, ≥2 h post cena |
 | **22:00** | 💊 Noche | Magnesio glicinato · Glicina 3 g |
 
 ## 3. Día tipo — SIN ENTRENO
 
-Igual, quitando entreno y batido. **Sin primo/testo** salvo L/X/V.
-**Domingo añade retatrutida 1 mg.**
+Igual, quitando entreno y post-entreno. **Sin primo/testo** salvo L/X/V.
+**Domingo y jueves: retatrutida 0,5 mg** (fraccionada — menor pico, menos riesgo GI).
 
 | Hora | Acción |
 |---|---|
@@ -118,115 +162,96 @@ Igual, quitando entreno y batido. **Sin primo/testo** salvo L/X/V.
 
 ## 4. Comida — todo en peso COCIDO
 
-### Pote pavo
+### Pote pavo  ×2 (09:30 y 19:30)
 
 | Alimento | Cocido | Prot | Carb | Grasa | kcal |
 |---|---|---|---|---|---|
-| Arroz | 200 g | 5,4 | 56 | 0,6 | 260 |
+| Arroz | 400 g | 10,8 | 112 | 1,2 | 520 |
 | Pavo pechuga | 250 g | 72,5 | 0 | 9 | 375 |
-| Palta | 1 (≈150 g) | 2,7 | 13 | 22 | 240 |
-| Mostaza | al gusto | 0 | 1 | 0 | 5 |
-| **Total** | | **81** | **70** | **32** | **880** |
+| Mostaza | al gusto | 0 | 0,5 | 0 | 3 |
+| **Total** | | **83** | **113** | **10** | **898** |
 
-### Pote salmón
+*Solo el de las 09:30 lleva palta.*
+
+### Pote salmón ×1 (15:00) — la comida grasa del día
 
 | Alimento | Cocido | Prot | Carb | Grasa | kcal |
 |---|---|---|---|---|---|
-| Arroz | 200 g | 5,4 | 56 | 0,6 | 260 |
+| Arroz | 400 g | 10,8 | 112 | 1,2 | 520 |
 | Salmón | 250 g | 62,5 | 0 | 32,5 | 537 |
-| Palta | 1 | 2,7 | 13 | 22 | 240 |
-| **Total** | | **71** | **69** | **55** | **1.037** |
+| Palta | 1 (150 g) | 2,7 | 13 | 22 | 240 |
+| **Total** | | **76** | **125** | **56** | **1.297** |
 
-### Batido post-entreno
+Los liposolubles (D3+K2, omega-3, CoQ10, resveratrol) van **aquí**, no en otra toma.
 
-| Ingrediente | Cantidad | Prot | Carb | Grasa | kcal |
+### Post-entreno — sin lácteos ni avena
+
+| Ingrediente | Cantidad | Carb | kcal |
+|---|---|---|---|
+| Plátano | 3 ud | 81 | 315 |
+| Miel | 30 g | 24 | 91 |
+| **Total** | | **105** | **406** |
+
+### Totales — periodizados al gasto medido
+
+Tu gasto **no es plano**. Separando los 14 días de Oura por día de semana:
+
+| | TDEE medido | Objetivo | Arroz/pote |
+|---|---|---|---|
+| **Laboral (L–V)** | **3.669** | **3.670** | **450 g** |
+| **Fin de semana** | **2.873** | **2.850** | **300 g** |
+
+| | Prot | Carb | Grasa | kcal | Peso comida |
 |---|---|---|---|---|---|
-| Whey isolate | 1 scoop | 27 | 2 | 0,5 | 125 |
-| Avena (peso seco) | 80 g | 10 | 48 | 6 | 305 |
-| Plátano | 1 | 1 | 27 | 0 | 105 |
-| Miel | 1 cda (21 g) | 0 | 17 | 0 | 64 |
-| Leche entera | 300 ml | 10 | 14 | 10 | 190 |
-| **Total** | | **48** | **108** | **17** | **789** |
+| **L–V** | 249 | 497 | 76 | **3.670** | ~2,8 kg |
+| **S–D** | 235 | 309 | 75 | **2.850** | ~2,3 kg |
 
-### Totales del día
+**Semanal: 24.050 kcal.** Oura midió 24.091. Cuadra.
 
-| | Prot | Carb | Grasa | kcal |
-|---|---|---|---|---|
-| 2 potes pavo + 1 salmón | 232 | 207 | 118 | 2.787 |
-| Batido | 48 | 108 | 17 | 789 |
-| **TOTAL** | **280** | **315** | **135** | **3.576** |
+**La proteína casi no se mueve** (249 vs 235) y la grasa tampoco (76 vs 75). **El arroz es la
+única palanca**: 450 g por pote entre semana, 300 g los findes. Nada más cambia — mismo pavo,
+mismo salmón, misma palta.
 
-### Versión optimizada (recomendada)
+Comer 3.480 fijas todos los días significaría sobrar ~600 kcal cada sábado y domingo y quedarse
+corto de lunes a viernes. Mismo promedio semanal, peor reparto.
 
-**Baja a 2 paltas y sube el arroz.** 135 g de grasa (1,6 g/kg) es mucho, y con
-retatrutida el vaciado gástrico ya está lento — la grasa es lo que te va a pesar.
+> **Nota sobre la retatrutida:** el jueves es día laboral de gasto alto. Si la dosis fraccionada
+> del jueves te mata el apetito justo cuando necesitas 3.670 kcal, muévela a domingo + lunes.
 
-| Cambio | Efecto |
-|---|---|
-| −1 palta | −22 g grasa, −240 kcal |
-| +150 g arroz cocido en dos potes | +84 g carbo, +390 kcal |
-| **Resultado** | **283 P / 399 C / 113 F ≈ 3.745 kcal** |
-
-Mejor distribución, misma comida, mucho más digerible.
-
----
-
-## 4b. Cuánto peso de comida al día (versión optimizada)
-
-### Reparto exacto por pote
-
-| Pote | Arroz cocido | Proteína cocida | Palta | Extra |
-|---|---|---|---|---|
-| **09:30** pavo | 275 g | 250 g pavo | 1 | mostaza |
-| **15:00** salmón | 275 g | 250 g salmón | 1 | — |
-| **19:30** pavo | 275 g | 250 g pavo | — | mostaza |
-
-### Total diario en peso cocido
+## 4b. Cuánto peso de comida al día
 
 | Alimento | Peso cocido/día | Prot | Carb | Grasa | kcal |
 |---|---|---|---|---|---|
-| Arroz | **825 g** | 22 | 231 | 2,5 | 1.073 |
-| Pavo | **500 g** | 145 | 0 | 17,5 | 750 |
+| Arroz | **1.200 g** (3 × 400) | 32 | 336 | 3,6 | 1.560 |
+| Pavo | **500 g** (2 × 250) | 145 | 0 | 17,5 | 750 |
 | Salmón | **250 g** | 63 | 0 | 32,5 | 537 |
-| Palta | **300 g** (2 ud) | 5 | 26 | 44 | 480 |
+| Palta | **150 g** (1 ud) | 3 | 13 | 22 | 240 |
+| Plátano | 3 ud | 3 | 81 | 0 | 315 |
+| Miel | 30 g | 0 | 24 | 0 | 91 |
 | Mostaza | 15 g | 0 | 1 | 0 | 5 |
-| *— Batido —* | | | | | |
-| Avena (seca) | 80 g | 10 | 48 | 6 | 305 |
-| Plátano | 120 g | 1 | 27 | 0 | 105 |
-| Miel | 21 g | 0 | 17 | 0 | 64 |
-| Whey isolate | 30 g | 27 | 2 | 0,5 | 125 |
-| Leche entera | 300 ml | 10 | 14 | 10 | 190 |
-| **TOTAL** | **≈ 2.140 g + 300 ml** | **283** | **366** | **113** | **≈ 3.630** |
+| **TOTAL** | **≈ 2,5 kg** | **246** | **455** | **76** | **≈ 3.480** |
 
-> **En bruto: comes unos 2,4 kg al día** (2,14 kg de sólidos + 300 ml de leche).
-> Es mucho volumen con saciedad farmacológica encima — por eso el batido importa: aporta
-> **789 kcal en 550 g**, densidad muy superior a la del arroz.
-
-### Para la compra — equivalencia crudo
-
-Lo que hay que comprar y cocinar para producir el peso cocido de arriba:
+### Para la compra — equivalencia en crudo
 
 | Alimento | Cocido/día | **Crudo/día** | **Crudo/semana** |
 |---|---|---|---|
-| Arroz | 825 g | **305 g** | 2,1 kg |
+| Arroz | 1.200 g | **444 g** | 3,1 kg |
 | Pavo | 500 g | **667 g** | 4,7 kg |
 | Salmón | 250 g | **333 g** | 2,3 kg |
-| Palta | 300 g | 2 unidades | 14 unidades |
-| Avena | — | 80 g | 560 g |
 
-Factores usados: carnes ×0,75 (pierden ~25 % de agua) · arroz ×2,7 (lo gana).
+Factores: carnes ×0,75 (pierden ~25 % de agua) · arroz ×2,7 (lo gana).
 
 ---
 
 ## 5. Intercambios (todo cocido)
 
-**Carbohidrato** — cada opción equivale a 200 g de arroz (56 g carbo):
+**Carbohidrato** — cada opción equivale a 400 g de arroz cocido (112 g carbo):
 
 | Opción | Gramos cocidos | kcal |
 |---|---|---|
-| Arroz blanco | 200 g | 260 |
-| Pasta | 180 g | 285 |
-| Papa | 280 g | 245 |
+| Arroz blanco | 400 g | 520 |
+| Pasta | 360 g | 570 |
+| Papa | 560 g | 490 |
 
 **Proteína** — reemplaza los 250 g:
 
@@ -353,8 +378,9 @@ bajo. Sin analítica tienes 50 % de probabilidad de empeorarlo.
 | Qué | Cuándo | Criterio |
 |---|---|---|
 | Peso en ayunas | 3×/semana, misma hora | Promediar la semana, no leer días sueltos |
-| Ganancia objetivo | Semanal | **0,3–0,5 kg/sem**. Plano 3 semanas → +250 kcal |
-| Analítica | Ver `marco-decision-monitoreo.md` | Primer control lipídico **semana 3–4** |
+| Peso | Semanal | Estable ±0,2 kg = mantenimiento correcto. Grasa debería bajar con magra estable |
+| **Hematocrito** | **YA — no esperar** | HR en reposo ↑ con actividad ↓ lo pide ahora |
+| Analítica lipídica | Semana 3–4 | La lipasa hepática ya sube a las 3 semanas |
 
 **Sobre el mito de los 30 g:** los estudios clásicos (Moore 2009, Witard 2014) mostraban
 meseta de *síntesis* a 20–25 g, no un techo de *absorción*. Trommelen et al. 2023
