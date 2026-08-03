@@ -65,7 +65,7 @@ cualquier optimización de composición corporal. No son notas al pie.
 |---|---|---|
 | **Sodio constante** | 3.500–5.000 mg/día, **igual todos los días** | Bajar sodio → el riñón retiene litio → toxicidad. **Prohibido cortar sal para definir** |
 | **Fluidos constantes** | 5–6 L/día | Deshidratación → litio sube |
-| **Cafeína dosis fija** | Misma cantidad diaria | La cafeína aumenta el clearance; cortarla de golpe sube el litio sérico |
+| **Cafeína: sin cambios bruscos** | Si la dejas, gradual en 1–2 semanas | Aumenta el aclaramiento del litio; cortarla de golpe sube el nivel sérico |
 | **Sin keto ni low-carb oscilante** | — | Vaciar glucógeno arrastra agua y sodio |
 | **Sin cortes de agua ni sauna** | — | Mismo mecanismo |
 | **AINEs prohibidos** | ibuprofeno, naproxeno, diclofenaco | Suben el litio |
@@ -272,7 +272,7 @@ Inventario recuperado del pedido iHerb **#885607653** + contexto maestro.
 
 | Momento | Qué | Razón |
 |---|---|---|
-| **06:00 ayunas** | Café **dosis fija** · LMNT ½–1 sobre | Litio: cafeína y sodio constantes |
+| **06:00 ayunas** | **Sodio**: ½ cdta de sal en agua (≈1.000 mg) o 1 sobre LMNT | Litio: sodio constante todos los días |
 | **09:30** | — | *(NAC movido a la noche)* |
 | **15:00** | **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Quercetina · Espermidina · Citrus Bergamot | **La comida grasa del día** (55 g). Todos son liposolubles o lo necesitan |
 | 15:00 | **Zinc** | ≥4 h del magnesio — compiten por transportador |
@@ -305,12 +305,27 @@ a las 09:30 el pote lleva ~10 g de grasa, a las 15:00 lleva 55 g. Moviendo los t
 **la extracción va a las 10:00 de la mañana siguiente**. A otra hora el número no es
 interpretable. Aplica también al protocolo de rescate por vómito o diarrea.
 
-### Qué es LMNT
+### Qué es LMNT — y por qué no hace falta
 
-Sobres de electrolitos: **sodio 1.000 mg**, potasio 200 mg, magnesio 60 mg, sin azúcar.
-Está en el protocolo por el sodio — es la vía más simple de mantener constante la regla del
-litio. Cualquier electrolito equivalente o sal dietética sirve, **mientras la cantidad diaria
-no varíe**.
+Sobres de polvo de electrolitos: **sodio 1.000 mg**, potasio 200 mg, magnesio 60 mg, sin
+azúcar. Venía del inventario del contexto maestro.
+
+**Sustituto directo: ½ cucharadita de sal de mesa en agua ≈ 1.000 mg de sodio.** Idéntico
+para el propósito que importa aquí. Lo único innegociable es que **la cantidad diaria no
+varíe**, no la marca.
+
+### ☕ Café retirado — con una advertencia
+
+El café sale del protocolo por petición. Pero si **actualmente lo bebes a diario**:
+
+> **No lo cortes de golpe.** La cafeína aumenta el aclaramiento renal del litio. Dejarla
+> bruscamente reduce ese aclaramiento y **sube el litio sérico** — es una de las
+> interacciones registradas en tu propio contexto maestro.
+>
+> Si vas a dejarlo: **reduce de forma gradual a lo largo de 1–2 semanas**, y si tomabas
+> cantidades altas, considera un nivel de litio (12 h post-dosis) al terminar la bajada.
+>
+> Si ya no bebes café, no aplica nada de esto.
 
 ### Descartar — seis productos sin mecanismo activo
 
