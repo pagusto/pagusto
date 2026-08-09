@@ -1,8 +1,9 @@
 # Dashboard de protocolo
 
-**Peso:** 81,4 kg · **Objetivo:** recomposición · **L–V 3.670 kcal · S–D 2.850 kcal**
-**Entreno:** lunes / miércoles / viernes, 17:30–18:30
-**TDEE medido (Oura, 14 días):** 3.442 kcal
+**Peso:** 81,4 kg · 179 cm · 33 a · **21,7 % graso** (Evolt 28-07) · **Objetivo:** recomposición
+**Comidas:** 4 tomas L–V (2 sólidas + 2 batidos) · 3 tomas S–D · **L–V 3.700 kcal · S–D 2.900 kcal**
+**Entreno:** lunes / miércoles / viernes, 17:30–18:30 · 8 ejercicios × 3 series
+**TDEE medido (Oura, 14 días):** 3.442 kcal · 3.669 laboral · 2.873 finde
 
 > Documento operativo. La justificación de evidencia está en
 > `informe-farmacologia-androgenos.md`, `mapa-evidencia-primobolan-trt.md` y
@@ -132,29 +133,47 @@ sesión — nunca 2,5 ml en un solo punto. Rotar glúteo / deltoides / cuádrice
 
 ## 2. Día tipo — ENTRENO (lunes / miércoles / viernes)
 
+**4 tomas: 2 sólidas + 2 batidos.**
+
 | Hora | Acción | Detalle |
 |---|---|---|
-| **06:00** | 💉 HGH | 3 UI, en ayunas |
+| **06:00** | 💉 HGH | 3 UI, en ayunas · 💊 sal + creatina |
 | **06:30** | 💉 Primo + Testo | 2 ml + 0,5 ml, dos sitios |
-| **09:30** | 🍽️ **Pote pavo** | — |
+| **09:30** | 🥤 **Batido 1 — de obra** | 2 scoops + 4 plátanos + 40 g miel |
 | **15:00** | 🍽️ **Pote salmón** | + **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Zinc |
-| **17:30–18:30** | 🏋️ **ENTRENO** | — |
-| **18:45** | 🍌 **Post-entreno** | 3 plátanos + 30 g miel · + creatina · LMNT |
-| **19:30** | 🍽️ **Pote pavo** | — |
-| **≥21:30** | 💉 CJC + Ipamorelina | 100 + 100 mcg, ≥2 h post cena |
+| **17:30–18:30** | 🏋️ **ENTRENO** | 8 ejercicios × 3 series |
+| **18:45** | 🥤 **Batido 2 — post-entreno** | 1 scoop + 2 plátanos + 20 g miel |
+| **19:45** | 🍽️ **Pote pavo** | — |
+| **≥21:45** | 💉 CJC + Ipamorelina | 100 + 100 mcg, ≥2 h post cena |
 | **22:00** | 💊 Noche | **NAC + Glicina 3 g** (GlyNAC) · Taurina · Magnesio · **Litio 450 mg** |
 
-## 3. Día tipo — SIN ENTRENO
+## 3. Día tipo — MARTES / JUEVES (trabajo, sin entreno)
 
-Igual, quitando entreno y post-entreno. **Sin primo/testo** salvo L/X/V.
-**Domingo y jueves: retatrutida 0,5 mg** (fraccionada — menor pico, menos riesgo GI).
+**Mismas 4 tomas y mismos macros.** Lo único que cambia: el batido 2 se adelanta a las
+12:30, porque sin entreno no hay post-entreno que respetar. **Sin primo/testo** — solo L/X/V.
 
 | Hora | Acción |
 |---|---|
-| 06:00 | 💉 HGH 3 UI |
-| 09:30 | 🍽️ Pote |
-| 15:00 | 🍽️ Pote + TMG · NMN · Resveratrol · liposolubles · Zinc |
-| 19:30 | 🍽️ Pote |
+| 06:00 | 💉 HGH 3 UI · 💊 sal + creatina |
+| 09:30 | 🥤 Batido 1 |
+| **12:30** | 🥤 **Batido 2** ← movido |
+| 15:00 | 🍽️ Pote salmón + pastillero día |
+| 19:45 | 🍽️ Pote pavo |
+| ≥21:45 | 💉 CJC + Ipamorelina |
+| 22:00 | 💊 NAC + Glicina · Taurina · Magnesio · Litio 450 mg |
+
+## 3b. Día tipo — SÁBADO / DOMINGO
+
+**3 tomas: 1 batido + 2 sólidas.** El gasto cae ~800 kcal, así que se elimina el batido 2
+entero y baja el arroz. **Domingo y jueves: retatrutida 0,5 mg** (fraccionada — menor pico,
+menos riesgo GI).
+
+| Hora | Acción |
+|---|---|
+| 07:00 | 💉 HGH 3 UI · 💊 sal + creatina |
+| **10:30** | 🥤 Batido único |
+| 15:00 | 🍽️ Pote salmón + pastillero día |
+| 19:30 | 🍽️ Pote pavo |
 | ≥21:30 | 💉 CJC + Ipamorelina |
 | 22:00 | 💊 NAC + Glicina · Taurina · Magnesio · Litio 450 mg |
 
@@ -162,82 +181,124 @@ Igual, quitando entreno y post-entreno. **Sin primo/testo** salvo L/X/V.
 
 ## 4. Comida — todo en peso COCIDO
 
-### Pote pavo ×2 (09:30 y 19:30)
+**Regla de lectura:** todos los gramos de esta sección son **después de cocinar**, en el plato.
+Es donde la gente se equivoca por un 25–30 %. Los pesos en crudo, solo para la compra, están
+en §4c.
 
-| Alimento | L–V | S–D | Prot | Grasa |
-|---|---|---|---|---|
-| **Arroz** | **450 g** | **300 g** | 12 / 8 | 1,4 / 0,9 |
-| Pavo pechuga | 250 g | 250 g | 72,5 | 9 |
-| Mostaza | libre | libre | 0 | 0 |
-| **kcal** | **961** | **766** | | |
+### 🥤 Batido 1 — 09:30, en la obra
 
-### Pote salmón ×1 (15:00) — la comida grasa del día
+Es la toma que resuelve el problema real: 10 h instalando ductos, sin nevera y sin tiempo.
+Se prepara en 40 segundos en una coctelera.
 
-| Alimento | L–V | S–D | Prot | Grasa |
-|---|---|---|---|---|
-| **Arroz** | **450 g** | **300 g** | 12 / 8 | 1,4 / 0,9 |
-| Salmón | 250 g | 250 g | 62,5 | 32,5 |
-| Palta | 1 (150 g) | 1 (150 g) | 2,7 | 22 |
-| **kcal** | **1.362** | **1.167** | | |
+| Ingrediente | L–V | S–D | P | C | G | kcal |
+|---|---|---|---|---|---|---|
+| Whey **aislado** | 2 scoops (60 g) | 2 scoops | 52 | 3 | 1 | 230 |
+| Plátano | **4 ud** | **3 ud** | 4 / 3 | 108 / 81 | 1 | 420 / 315 |
+| Miel | 40 g | 30 g | 0 | 32 / 24 | 0 | 122 / 91 |
+| Agua | 500–600 ml | 500 ml | — | — | — | 0 |
+| **Subtotal** | | | **56 / 55** | **143 / 108** | **2** | **772 / 636** |
 
-Los liposolubles (D3+K2, omega-3, CoQ10, resveratrol) van **aquí**, no en otra toma.
+**Con agua, no con leche** — no tomas lácteos, y el aislado en agua vacía más rápido, que con
+retatrutida importa. Los plátanos van enteros al lado si no tienes batidora: mismo resultado.
 
-### Post-entreno — sin lácteos ni avena
+### 🍽️ Pote salmón — 15:00 · **la comida grasa del día**
 
-| Ingrediente | Cantidad | Carb | kcal |
-|---|---|---|---|
-| Plátano | 3 ud | 81 | 315 |
-| Miel | 30 g | 24 | 91 |
-| **Total** | | **105** | **406** |
+| Ingrediente | L–V | S–D | P | C | G | kcal |
+|---|---|---|---|---|---|---|
+| Salmón cocido | 250 g | 250 g | 63 | 0 | 33 | 537 |
+| **Arroz cocido** | **500 g** | **400 g** | 14 / 11 | 140 / 112 | 2 / 1 | 650 / 520 |
+| Palta | 1 ud (150 g) | 1 ud | 3 | 13 | 22 | 240 |
+| AOVE | 10 ml | — | 0 | 0 | 10 | 90 |
+| **Subtotal** | | | **80 / 77** | **153 / 125** | **67 / 56** | **1.517 / 1.297** |
 
-### Totales — periodizados al gasto medido
+**Todo el pastillero del día va aquí.** Es la única toma con >55 g de grasa, y D3+K2,
+omega-3, CoQ10 y resveratrol son liposolubles: en las otras dos tomas se absorberían mal.
 
-Tu gasto **no es plano**. Separando los 14 días de Oura por día de semana:
+### 🥤 Batido 2 — 18:45 post-entreno (L/X/V) · 12:30 (M/J) · **no existe S–D**
 
-| | TDEE medido | Objetivo | Arroz/pote |
-|---|---|---|---|
-| **Laboral (L–V)** | **3.669** | **3.670** | **450 g** |
-| **Fin de semana** | **2.873** | **2.850** | **300 g** |
-
-| | Prot | Carb | Grasa | kcal | Peso comida |
+| Ingrediente | Cantidad | P | C | G | kcal |
 |---|---|---|---|---|---|
-| **L–V** | 249 | 497 | 76 | **3.670** | ~2,8 kg |
-| **S–D** | 235 | 309 | 75 | **2.850** | ~2,3 kg |
+| Whey aislado | 1 scoop (30 g) | 26 | 2 | 1 | 115 |
+| Plátano | 2 ud | 2 | 54 | 1 | 210 |
+| Miel | 20 g | 0 | 16 | 0 | 61 |
+| **Subtotal** | | **28** | **72** | **2** | **386** |
 
-**Semanal: 24.050 kcal.** Oura midió 24.091. Cuadra.
+Cero grasa a propósito: post-entreno la grasa solo retrasa el vaciado gástrico. **La creatina
+no va aquí** — está en la toma de la mañana, porque actúa por saturación de depósitos y su
+horario es irrelevante.
 
-**La proteína casi no se mueve** (249 vs 235) y la grasa tampoco (76 vs 75). **El arroz es la
-única palanca**: 450 g por pote entre semana, 300 g los findes. Nada más cambia — mismo pavo,
-mismo salmón, misma palta.
+### 🍽️ Pote pavo — 19:45 (L–V) · 19:30 (S–D)
 
-Comer 3.480 fijas todos los días significaría sobrar ~600 kcal cada sábado y domingo y quedarse
-corto de lunes a viernes. Mismo promedio semanal, peor reparto.
+| Ingrediente | L–V | S–D | P | C | G | kcal |
+|---|---|---|---|---|---|---|
+| Pavo o pollo cocido | 250 g | **300 g** | 72,5 / 87 | 0 | 9 / 11 | 375 / 450 |
+| **Arroz cocido** | **500 g** | **400 g** | 14 / 11 | 140 / 112 | 2 / 1 | 650 / 520 |
+| Mostaza | libre | libre | 0 | ~1 | 0 | ~5 |
+| **Subtotal** | | | **86 / 98** | **140 / 112** | **11 / 12** | **1.025 / 970** |
 
-> **Nota sobre la retatrutida:** el jueves es día laboral de gasto alto. Si la dosis fraccionada
-> del jueves te mata el apetito justo cuando necesitas 3.670 kcal, muévela a domingo + lunes.
+**Última ingesta del día.** El CJC + ipamorelina va ≥2 h después: cena 19:45 → inyección
+21:45 como pronto.
+
+---
+
+### Totales del día
+
+| | Tomas | Prot | Carb | Grasa | **kcal** | Objetivo |
+|---|---|---|---|---|---|---|
+| **L–V** (trabajo) | 4 | **250** | 508 | 82 | **3.700** | 3.670 ✅ |
+| **S–D** (descanso) | 3 | **230** | 345 | 70 | **2.900** | 2.850 ✅ |
+
+**Semanal: 24.300 kcal.** Oura midió 24.091 de gasto. Superávit de ~210 kcal/semana —
+deliberadamente pequeño, porque con retatrutida activa un superávit grande se va en
+incomodidad, no en tejido.
+
+**Proteína: 250 g = 3,1 g/kg.** Por encima del rango habitual, a propósito: los agonistas
+GLP-1 causan pérdida de masa magra y tú llevas uno activo.
+
+### Por qué el arroz es la única palanca
+
+Separando los 14 días de Oura por día de semana, tu gasto **no es plano**:
+
+| | TDEE medido | Diferencia |
+|---|---|---|
+| Laboral (L–V) | **3.669** | — |
+| Fin de semana | **2.873** | **−796 kcal** |
+
+Comer 3.480 fijas todos los días sobraría ~600 kcal cada sábado y domingo y se quedaría corto
+de lunes a viernes. Mismo promedio semanal, peor reparto.
+
+**Lo que cambia el finde:** arroz 500 → 400 g, un plátano menos, fuera el batido 2, fuera el
+AOVE. **Lo que no cambia nunca:** salmón, palta, sal, y la hora de las pastillas.
+
+> **Retatrutida:** el jueves es día laboral de gasto alto. Si la dosis fraccionada del jueves
+> te mata el apetito justo cuando necesitas 3.700 kcal, muévela a domingo + lunes.
 
 ## 4b. Cuánto peso de comida al día
 
-| Alimento | Peso cocido/día | Prot | Carb | Grasa | kcal |
-|---|---|---|---|---|---|
-| Arroz | **1.200 g** (3 × 400) | 32 | 336 | 3,6 | 1.560 |
-| Pavo | **500 g** (2 × 250) | 145 | 0 | 17,5 | 750 |
-| Salmón | **250 g** | 63 | 0 | 32,5 | 537 |
-| Palta | **150 g** (1 ud) | 3 | 13 | 22 | 240 |
-| Plátano | 3 ud | 3 | 81 | 0 | 315 |
-| Miel | 30 g | 0 | 24 | 0 | 91 |
-| Mostaza | 15 g | 0 | 1 | 0 | 5 |
-| **TOTAL** | **≈ 2,5 kg** | **246** | **455** | **76** | **≈ 3.480** |
+| Alimento (cocido) | L–V | S–D |
+|---|---|---|
+| Arroz | **1.000 g** (2 × 500) | **800 g** (2 × 400) |
+| Pavo / pollo | 250 g | 300 g |
+| Salmón | 250 g | 250 g |
+| Palta | 150 g (1 ud) | 150 g |
+| Plátano | 6 ud (~720 g) | 3 ud (~360 g) |
+| Whey en polvo | 90 g (3 scoops) | 60 g (2 scoops) |
+| Miel | 60 g | 30 g |
+| **TOTAL en la boca** | **≈ 2,5 kg** | **≈ 1,95 kg** |
 
-### Para la compra — equivalencia en crudo
+El batido descarga ~1,1 kg de esos 2,5 en líquido. Ese es todo el motivo de meterlo: comer
+2,5 kg de sólido en tres platos no es realista trabajando 10 h.
 
-| Alimento | Cocido/día | **Crudo/día** | **Crudo/semana** |
-|---|---|---|---|
-| Arroz | 1.200 g | **444 g** | 3,1 kg |
-| Pavo | 500 g | **667 g** | 4,7 kg |
-| Salmón | 250 g | **333 g** | 2,3 kg |
+## 4c. Equivalencia en crudo — solo para la compra
 
-Factores: carnes ×0,75 (pierden ~25 % de agua) · arroz ×2,7 (lo gana).
+| Alimento | Factor | Cocido L–V | **Crudo L–V** | **Crudo/semana** |
+|---|---|---|---|---|
+| Arroz | ×2,7 | 1.000 g | **370 g** | **2,44 kg** |
+| Pavo / pollo | ×0,75 | 250 g | **333 g** | **2,47 kg** |
+| Salmón | ×0,75 | 250 g | **333 g** | **2,33 kg** |
+
+Las carnes **pierden** ~25 % de agua al cocinarse; el arroz la **gana**. Son las dos
+direcciones opuestas y por eso se confunde.
 
 ---
 
@@ -402,21 +463,28 @@ El fenogreco además baja la glucemia, y ya llevas un agonista triple actuando s
 
 ---
 
-## 7. Proteína — calidad/precio
+## 7. Proteína en polvo — calidad/precio
 
-**Elige aislado, no concentrado.** Con retatrutida el vaciado gástrico está enlentecido; el
-aislado tiene menos lactosa y grasa, y vacía más rápido.
+**Elige aislado (WPI), no concentrado (WPC).** Con retatrutida el vaciado gástrico está
+enlentecido; el aislado tiene menos lactosa y grasa y vacía más rápido. Además tú no tomas
+lácteos: el aislado deja ~0,5 g de lactosa por scoop.
 
-| Opción | Nota |
+**Consumo real del plan: 570 g/semana ≈ 2,5 kg/mes.** A ese volumen la diferencia de precio
+por kilo deja de ser trivial.
+
+| Dónde | Realidad |
 |---|---|
-| California Gold Nutrition Whey Isolate | Marca propia iHerb, buen precio/gramo |
-| Nutricost Whey Isolate | Alternativa de valor |
-| Optimum Gold Standard | Referente, pagas marca |
+| **Bulk Nutrients** (AU, online) | El mejor $/g de proteína en Australia. WPI en 5 kg |
+| **Chemist Warehouse** | Bastante más barato que Coles en las mismas marcas |
+| **Coles** | Surtido corto y caro por gramo. Cómodo, no económico |
 
-*Precios no verificados — iHerb está bloqueado desde este entorno.*
+*Precios no verificados — coles.com.au y las tiendas online están bloqueados desde este
+entorno. Ver `lista-compra-coles.md` para la lista completa.*
 
-**El presupuesto ya lo tienes:** lo que gastas en los seis productos descartados cubre la
-proteína de sobra.
+**El presupuesto ya lo tienes:** lo que gastas en los seis productos descartados (§6) cubre
+los 2,5 kg de aislado al mes de sobra.
+
+> **Sobre el mito de los 30 g:** ver §8. Con 3–4 comidas, 50–60 g por batido es correcto.
 
 ---
 
