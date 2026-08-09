@@ -266,20 +266,49 @@ los pocos condimentos que no hay que contar.
 
 ---
 
-## 6. Pastillero
+## 6. Pastillero — 3 tomas
 
-Inventario recuperado del pedido iHerb **#885607653** + contexto maestro.
+Consolidado a tres compartimentos. **La creatina se movió a la mañana**: su timing es
+irrelevante (actúa por saturación de depósitos, no por efecto agudo), así que no tiene por qué
+depender del entreno. Eso elimina la cuarta toma.
 
-| Momento | Qué | Razón |
+### 🌅 MAÑANA — 06:00, en ayunas
+
+| Qué | Nota |
+|---|---|
+| **Sodio** — ½ cdta de sal en agua (≈1.000 mg) | Regla del litio: misma cantidad todos los días |
+| **Creatina 5 g** | Timing irrelevante · **cruzar con Daylio** (manía en bipolar) |
+
+*HGH 3 UI va aquí, pero es inyección — sin comida 45–60 min después.*
+
+### ☀️ DÍA — 15:00, con el pote de salmón
+
+**Única comida grasa del día (55 g). Todo lo liposoluble va aquí.**
+
+| Qué |
+|---|
+| **TMG · NMN · Resveratrol** |
+| **D3 + K2 · Omega-3 · CoQ10** |
+| **Quercetina · Espermidina · Citrus Bergamot** |
+| **Zinc** |
+| *TUDCA 500 mg — condicional, ver abajo* |
+
+### 🌙 NOCHE — 22:00
+
+| Qué | Nota |
+|---|---|
+| **NAC + Glicina 3 g** | GlyNAC — precursores del glutatión |
+| **Taurina 2 g** | |
+| **Magnesio Albion 400 mg** | ≥4 h del zinc |
+| **Litio 450 mg** | Dosis única nocturna |
+
+### Antagonismos — todos resueltos
+
+| Par | Separación | Estado |
 |---|---|---|
-| **06:00 ayunas** | **Sodio**: ½ cdta de sal en agua (≈1.000 mg) o 1 sobre LMNT | Litio: sodio constante todos los días |
-| **09:30** | — | *(NAC movido a la noche)* |
-| **15:00** | **TMG · NMN · Resveratrol** · D3+K2 · Omega-3 · CoQ10 · Quercetina · Espermidina · Citrus Bergamot | **La comida grasa del día** (55 g). Todos son liposolubles o lo necesitan |
-| 15:00 | **Zinc** | ≥4 h del magnesio — compiten por transportador |
-| **15:00** | **TUDCA 500 mg** — *condicional, ver abajo* | Ácido biliar: la secreción biliar es prandial → con comida grasa |
-| **18:45** post-entreno | Creatina 5 g · sodio | Timing irrelevante (actúa por saturación). Cruzar con Daylio |
-| **22:00** | **NAC + Glicina 3 g** · Taurina 2 g · Magnesio Albion 400 mg | **GlyNAC** — ver abajo |
-| **22:00** | **Litio 450 mg** | 1 comprimido, dosis única nocturna |
+| Zinc ⟷ Magnesio | 15:00 → 22:00 = **7 h** | ✅ (requiere ≥4 h) |
+| Zinc ⟷ NAC | 15:00 → 22:00 = **7 h** | ✅ (requiere ≥2 h) |
+| Liposolubles ⟷ comida grasa | Todos a las 15:00 | ✅ |
 
 ### Por qué NAC y glicina van juntos de noche
 
