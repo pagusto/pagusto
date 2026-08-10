@@ -333,26 +333,37 @@ Consolidado a tres compartimentos. **La creatina se movió a la mañana**: su ti
 irrelevante (actúa por saturación de depósitos, no por efecto agudo), así que no tiene por qué
 depender del entreno. Eso elimina la cuarta toma.
 
-### 🌅 MAÑANA — 06:00, en ayunas
+### 🌅 MAÑANA — 06:00, en ayunas · **todo polvo, un solo vaso**
 
-| Qué | Nota |
-|---|---|
-| **Sodio** — ½ cdta de sal en agua (≈1.000 mg) | Regla del litio: misma cantidad todos los días |
-| **Creatina 5 g** | Timing irrelevante · **cruzar con Daylio** (manía en bipolar) |
+| Qué | Dosis | Nota |
+|---|---|---|
+| **Sal** en agua | ½ cdta (≈1.000 mg Na) | Regla del litio: misma cantidad todos los días |
+| **Creatina** | 5 g | Timing irrelevante · **cruzar con Daylio** (manía en bipolar) |
+| **TMG** (betaína anhidra) | 2,5 g | Donante de metilos — repone lo que consume el NMN |
+| **NMN** | según envase | El NAD⁺ tiene ritmo circadiano: rinde más en fase activa |
+| **HMB** *(opcional)* | 3 g | Ver nota abajo — bajo rendimiento esperado |
 
-*HGH 3 UI va aquí, pero es inyección — sin comida 45–60 min después.*
+*HGH 3 UI va primero; el vaso 15–20 min después. Sin comida hasta las 09:30.*
 
-### ☀️ DÍA — 15:00, con el pote de salmón
+**Por qué TMG y NMN están aquí y no a las 15:00:** la NNMT metila la nicotinamida para
+excretarla, así que el NMN **consume grupos metilo** y el TMG los repone. Van juntos por
+mecanismo, no por comodidad. Y ambos son hidrosolubles: no necesitan la comida grasa.
 
-**Única comida grasa del día (55 g). Todo lo liposoluble va aquí.**
+### ☀️ DÍA — 15:00, con el pote graso (73 g de grasa)
 
-| Qué |
-|---|
-| **TMG · NMN · Resveratrol** |
-| **D3 + K2 · Omega-3 · CoQ10** |
-| **Quercetina · Espermidina · Citrus Bergamot** |
-| **Zinc** |
-| *TUDCA 500 mg — condicional, ver abajo* |
+**Única comida grasa del día. Todo lo liposoluble va aquí.**
+
+| Qué | Dosis | Nota |
+|---|---|---|
+| **Resveratrol** | según envase | Liposoluble, biodisponibilidad ~1 % — **solo funciona aquí** |
+| **Omega-3** | **3–4 cápsulas → 2 g EPA+DHA** | Ver §6b. Una cápsula NO alcanza |
+| **D3 + K2 · CoQ10** | | Liposolubles |
+| **Citrus Bergamot** | | |
+| **Boro** | 6 mg | Añadido por decisión propia — ver §6c |
+| **Hair, Skin & Nails** | | ⚠️ **suspender 72 h antes de cada analítica** — ver §6d |
+| *TUDCA 500 mg* | condicional | Solo si ALT **+ GGT** salen altas |
+
+**Retirados del stack:** zinc, quercetina, espermidina.
 
 ### 🌙 NOCHE — 22:00
 
@@ -367,9 +378,78 @@ depender del entreno. Eso elimina la cuarta toma.
 
 | Par | Separación | Estado |
 |---|---|---|
-| Zinc ⟷ Magnesio | 15:00 → 22:00 = **7 h** | ✅ (requiere ≥4 h) |
-| Zinc ⟷ NAC | 15:00 → 22:00 = **7 h** | ✅ (requiere ≥2 h) |
-| Liposolubles ⟷ comida grasa | Todos a las 15:00 | ✅ |
+| Liposolubles ⟷ comida grasa | Todos a las 15:00 (73 g) | ✅ |
+| NAC ⟷ entreno 17:30 | 22:00 = **4,5 h después** | ✅ |
+| ~~Zinc ⟷ Magnesio~~ | — | **Ya no aplica: zinc retirado** |
+
+**Al quitar el zinc desaparece la única restricción de separación mineral del stack.** El HSN
+probablemente aporte 5–15 mg, que es dosis razonable sin suplementar aparte — y por debajo del
+límite superior de 40 mg/día, que era el problema del picolinato de 50 mg.
+
+## 6b. Omega-3 — la dosis, no el número de cápsulas
+
+**Lo que cuenta son los mg de EPA + DHA, no los mg de "aceite de pescado".** Una cápsula típica
+de 1.000 mg trae ~180 EPA + 120 DHA = **300 mg reales**.
+
+| Objetivo | EPA+DHA/día |
+|---|---|
+| Salud general (ISSFAL/AHA) | 500 mg |
+| **Este protocolo** | **2.000 mg** → normalmente 3–4 cápsulas estándar |
+
+Dos razones para el número alto: los andrógenos suben la lipasa hepática y van a golpear el
+perfil lipídico, y **los días sin salmón la ingesta dietética de EPA/DHA es cero** — carne y
+pollo no aportan.
+
+> **Dos honestidades.** El omega-3 **no arregla la caída de HDL** por andrógenos: esa va por
+> lipasa hepática y el aceite de pescado apenas la toca. Baja triglicéridos, que es otra cosa.
+> Lo que arregla el HDL es bajar dosis.
+>
+> Y **por encima de 3 g/día hay señal de fibrilación auricular** en los ensayos grandes
+> (STRENGTH, REDUCE-IT). No subir de ahí.
+
+## 6c. Boro — incluido por decisión propia, con una regla de vigilancia
+
+**Decisión tomada: dentro, 6 mg con la comida de las 15:00.** Queda registrado el porqué de la
+objeción y qué hacer si aparece.
+
+**Lo que sí tiene respaldo decente** y no depende de la testosterona:
+
+- **Retención de magnesio y calcio** — Nielsen 1987 (*FASEB J*): el boro redujo la excreción
+  urinaria de ambos. Sinérgico con el magnesio de las 22:00
+- **Estado de vitamina D** — varios trabajos muestran 25(OH)D sérica más alta con boro.
+  Sinérgico con el D3+K2 de la misma toma
+
+**La objeción, para que quede escrita:** su mecanismo publicitado es bajar SHBG → subir
+testosterona libre, **y bajar estradiol** (Naghii 2011, n=8, sin control). Con testosterona
+exógena ya nadas en andrógeno libre, y **bajar el E2 es la dirección contraria a la que
+interesa** con bipolar y litio.
+
+> **Regla operativa:** el boro es ahora una variable dentro del estradiol. Si el E2 sale bajo
+> **con síntomas** — dolor articular, sequedad, libido baja, letargo — **el boro es lo primero
+> que se retira**, antes de tocar la dosis de testosterona. Es la variable más barata de quitar.
+
+**Margen de seguridad:** límite superior 20 mg/día. A 6 mg hay holgura.
+
+## 6d. Hair, Skin & Nails — la biotina falsea tus analíticas
+
+Estas fórmulas suelen llevar biotina en dosis alta (1.000–10.000 mcg). **La biotina interfiere
+con los inmunoensayos basados en estreptavidina-biotina.** La FDA emitió alerta de seguridad en
+2017 tras una muerte por infarto no detectado (troponina falsamente baja).
+
+| Ensayo | Efecto | Lo que te haría creer |
+|---|---|---|
+| **TSH** | Falsamente **baja** | Tiroides normal mientras el litio la hunde |
+| **T4 libre** | Falsamente **alta** | Hipertiroidismo inexistente |
+| **Testosterona · Estradiol** | Falsamente **altas** | Ajustar dosis sobre un número inventado |
+
+Son exactamente los dos ejes que este protocolo vigila.
+
+> **Reglas:** no empezarlo antes de la extracción pendiente. Una vez dentro,
+> **suspender 72 h antes de cada analítica.** El estradiol por LC-MS sí es inmune — pero solo
+> si el laboratorio corre LC-MS de verdad y no inmunoensayo.
+
+**Revisar la etiqueta:** si trae zinc, ya no se suma a nada (el picolinato salió del stack),
+pero conviene saber cuánto aporta.
 
 ### Por qué NAC y glicina van juntos de noche
 
@@ -383,12 +463,29 @@ Colocarlos de noche satisface tres restricciones a la vez:
 2. **Glicina mejora calidad de sueño** — relevante con sleep 70 y readiness 55
 3. **Sinergia GlyNAC** para glutatión
 
-### Por qué el resveratrol no va en la mañana
+### Por qué el resveratrol se queda a las 15:00 y no sube con el TMG y el NMN
 
-Agrupar **NMN + TMG + resveratrol** tiene lógica (precursor de NAD+, donante de metilos,
-activador de sirtuinas). Pero el **resveratrol es liposoluble y de biodisponibilidad pobre**:
-a las 09:30 el pote lleva ~10 g de grasa, a las 15:00 lleva 55 g. Moviendo los tres a las
-15:00 siguen juntos y el resveratrol encuentra la grasa.
+Es el único del trío que **no puede ir en la mañana**: liposoluble, biodisponibilidad ~1 %, y
+la toma de las 06:00 es **en ayunas y con la HGH**, que exige 45–60 min sin comer. Sin grasa y
+en ayunas es el peor sitio disponible.
+
+**Lo que se pierde al separarlo es poco.** El argumento para juntarlo con el NMN era la
+activación de SIRT1 — pero **Pacholec et al. 2010 (*JBC*) mostró que el resveratrol no activa
+SIRT1 directamente**: el efecto original era un artefacto del fluoróforo del ensayo. Se cambia
+una sinergia discutida por 73 g de grasa reales.
+
+### HMB — expectativa realista antes de comprarlo
+
+En **entrenados las revisiones no muestran efecto**; su evidencia buena está en desentrenados y
+en estados catabólicos. Y aquí el anticatabolismo ya está saturado por vía farmacológica: 975
+mg/semana de andrógenos más HGH. El estudio de Wilson 2014 reportaba efectos mayores que los
+ensayos de esteroides — que fue exactamente la crítica que recibió.
+
+**La excepción que sí aplica:** la retatrutida causa pérdida de masa magra, y los estados
+catabólicos son donde el HMB tiene su mejor caso. Argumento defendible, no fuerte.
+
+Si entra: **3 g/día**, la mañana sirve. Matiz — es metabolito de la leucina y puede dar
+respuesta insulínica pequeña; para ser estricto con la ventana de la HGH, moverlo a las 15:00.
 
 ### ⚕️ Medición de litio — ventana de 12 horas
 
@@ -446,20 +543,24 @@ Segunda dosis con la cena si se va a 2×/día.
 > **El TUDCA es específico de hígado.** No cubre lípidos, hematocrito, ventrículo ni ánimo,
 > que es donde está el peso del riesgo actual.
 
-### Descartar — seis productos sin mecanismo activo
+### Descartar — cinco productos sin mecanismo activo
 
 **SIXSTAR Testosterone Booster · Tongkat Ali · Fenogreco (Swanson) · Fenogreco
-(Nutricost, duplicado) · Boro · Mucuna Pruriens**
+(Nutricost, duplicado) · Mucuna Pruriens**
 
-Todos actúan estimulando producción endógena de testosterona o liberándola de la SHBG.
-**Con 375 mg/semana de testosterona exógena el eje HPG está apagado** — no hay producción
-endógena que estimular. No es que rindan poco: el mecanismo no está operando.
+Todos actúan **estimulando producción endógena** de testosterona. **Con 375 mg/semana exógenos
+el eje HPG está apagado** — no hay producción endógena que estimular. No es que rindan poco:
+el mecanismo no está operando.
 
-El fenogreco además baja la glucemia, y ya llevas un agonista triple actuando sobre glucosa.
+El fenogreco además baja la glucemia, y ya hay un agonista triple actuando sobre glucosa.
+
+*(El boro salió de esta lista: su mecanismo es distinto — actúa sobre SHBG, no sobre el eje —
+y está incluido por decisión. Ver §6c.)*
 
 > **Revisar:** compraste **Betaine HCl**. El ergogénico con literatura (potencia,
 > composición corporal, 2,5 g/día) es **betaína anhidra / TMG** — molécula distinta. La
-> HCl es un acidificante digestivo.
+> HCl es un acidificante digestivo. **Esto importa ahora más**, porque el TMG pasó a ser
+> pieza del emparejamiento con el NMN.
 
 ---
 
